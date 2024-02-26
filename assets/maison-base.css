@@ -30,6 +30,10 @@ body {
 
 .multicolumn-card__info .inline-richtext {
   font-family: "Biryani", sans-serif !important;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 178%; /* 42.72px */
 }
 
 .h0 {
