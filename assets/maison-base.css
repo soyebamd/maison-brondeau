@@ -2,6 +2,6 @@
   .header--middle-left {
     grid-template-columns: 1fr 1fr 1fr;
 
-    text-align: center;
+    text-align: left;
   }
 }
