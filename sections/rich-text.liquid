@@ -37,7 +37,7 @@
 
 </div>
 
-  {% if block.settings.inline_block !='' %}
+  {% if section.settings.inline_block !='' %}
 
             {%- when 'heading' -%}
               <h2
@@ -73,7 +73,7 @@
                 {% endif %}
               >
               
-              {% if block.settings.inline_block %}
+              {% if section.settings.inline_block %}
 
               <span> {{ block.settings.heading }} </span>  {% endif %} {{ block.settings.text }}
               </div>
@@ -148,6 +148,12 @@
       "label": "t:sections.rich-text.settings.desktop_content_position.label",
       "info": "t:sections.rich-text.settings.desktop_content_position.info"
     },
+      {
+          "type": "checkbox",
+          "id": "inline_block",
+          "default": false,
+          "label": "Heading Inline"
+        },
     {
       "type": "select",
       "id": "content_alignment",
@@ -233,12 +239,7 @@
           "default": "Talk about your brand",
           "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
         },
-        {
-          "type": "checkbox",
-          "id": "inline_block",
-          "default": false,
-          "label": "Heading Inline"
-        },
+      
         {
           "type": "select",
           "id": "heading_size",
