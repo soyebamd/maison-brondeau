@@ -28,6 +28,11 @@ h6,
   font-size: 10rem;
 }
 
+.page-width-full {
+  width: 100;
+  height: 100%;
+}
+
 @media screen and (min-width: 990px) {
   .header--middle-left {
     grid-template-columns: 1fr 1fr 1fr;
