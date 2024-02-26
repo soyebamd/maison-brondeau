@@ -76,7 +76,10 @@ body {
 .justify-content-center {
   justify-content: center;
 }
-
+.footer__content-bottom-wrapper {
+  justify-content: space-between;
+  align-items: center;
+}
 /* .image-with-text__custom-text:after {
   background: white;
   height: 80%;
