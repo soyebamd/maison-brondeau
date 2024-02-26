@@ -37,7 +37,7 @@
 
 </div>
 
-
+  {% if block.settings.inline_block !='' %}
 
             {%- when 'heading' -%}
               <h2
@@ -50,6 +50,8 @@
               >
                 {{ block.settings.heading }}
               </h2>
+
+              {% endif %}
             {%- when 'caption' -%}
               <p
                 class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -70,7 +72,10 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                {{ block.settings.text }}
+              
+              {% if block.settings.inline_block %}
+
+              <span> {{ block.settings.heading }} </span>  {% endif %} {{ block.settings.text }}
               </div>
             {%- when 'button' -%}
               <div
@@ -227,6 +232,12 @@
           "id": "heading",
           "default": "Talk about your brand",
           "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "inline_block",
+          "default": false,
+          "label": "Heading Inline"
         },
         {
           "type": "select",
