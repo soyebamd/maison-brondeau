@@ -57,13 +57,6 @@
             "image": "shopify:\/\/shop_images\/Vector_3.svg"
           }
         },
-        "heading_NgQ3Tq": {
-          "type": "heading",
-          "settings": {
-            "heading": "At Maison Brondeau",
-            "heading_size": "h1"
-          }
-        },
         "text_kkH6Hp": {
           "type": "text",
           "settings": {
@@ -86,7 +79,6 @@
       },
       "block_order": [
         "image_4V7Twk",
-        "heading_NgQ3Tq",
         "text_kkH6Hp",
         "button_a9CTJW"
       ],
