@@ -75,7 +75,10 @@
               
               {% if section.settings.inline_heading %}
 
-              <span> {{ block.settings.heading }} </span>  {% endif %} {{ block.settings.text }}
+              <span> {{ block.settings.heading }} </span>  {% endif %} 
+              
+              
+              {{ block.settings.text }}
               </div>
             {%- when 'button' -%}
               <div
