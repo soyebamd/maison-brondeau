@@ -37,7 +37,7 @@
 
 </div>
 
-  {% if section.settings.inline_block !='' %}
+  {% if section.settings.inline_heading !='' %}
 
             {%- when 'heading' -%}
               <h2
@@ -73,7 +73,7 @@
                 {% endif %}
               >
               
-              {% if section.settings.inline_block %}
+              {% if section.settings.inline_heading %}
 
               <span> {{ block.settings.heading }} </span>  {% endif %} {{ block.settings.text }}
               </div>
