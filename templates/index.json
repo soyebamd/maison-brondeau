@@ -1,1 +1,302 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Experience the spirit of winemaking","heading_size":"h1"}},"text_9WYtH7":{"type":"text","settings":{"text":"","text_style":"subtitle"}},"button":{"type":"buttons","settings":{"button_label_1":"SHOP ALL","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":false,"button_label_2":"BOOK AN EVENT","button_link_2":"shopify:\/\/pages\/private-events","button_style_secondary_2":false}}},"block_order":["heading","text_9WYtH7","button"],"settings":{"image":"shopify:\/\/shop_images\/slider.jpg","image_overlay_opacity":20,"image_height":"large","desktop_content_position":"middle-center","show_text_box":false,"desktop_content_alignment":"left","color_scheme":"scheme-3","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":false,"show_text_below":false}},"rich_text_GMnR7k":{"type":"rich-text","blocks":{"heading_NgQ3Tq":{"type":"heading","settings":{"heading":"At Maison Brondeau","heading_size":"h1"}},"text_kkH6Hp":{"type":"text","settings":{"text":"<p>At Maison Brondeau we merge the contemporary allure of Westchester with the enduring charm of French vineyards. Our tasting room and wine store invite you to explore a carefully curated selection, transforming each bottle into a chapter in the story of your exceptional taste.<\/p>"}},"button_a9CTJW":{"type":"button","settings":{"button_label":"Button label","button_link":"","button_style_secondary":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_NgQ3Tq","text_kkH6Hp","button_a9CTJW"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"featured_collection":{"type":"featured-collection","settings":{"title":"","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":8,"columns_desktop":4,"full_width":true,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"scheme-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":0,"padding_bottom":0}},"multirow_hWLqtm":{"type":"multirow","blocks":{"row_mXgytr":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/bar.jpg","caption":"Caption","heading":"Public Tastings","text":"<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. See schedule for upcoming tasting events with winemakers, experts, educators and more.<\/p>","button_label":"VIEW SCHEDULE","button_link":"shopify:\/\/pages\/public-tastings"}}},"block_order":["row_mXgytr"],"settings":{"image_height":"medium","desktop_image_width":"medium","heading_size":"h1","text_style":"body","button_style":"primary","desktop_content_position":"middle","desktop_content_alignment":"left","image_layout":"alternate-left","section_color_scheme":"","row_color_scheme":"scheme-4","mobile_content_alignment":"left","padding_top":0,"padding_bottom":0}},"multirow_f9AEV4":{"type":"multirow","blocks":{"row_JVDf8i":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/wine.jpg","caption":"JOIN US","heading":"Private Events","text":"<p>Indulge in a personalized interactive wine tasting experience at our tasting bar and lounge, or at your company's location. Contact us today to plan your next private event.<\/p>","button_label":"BOOK PRIVATE TASTING","button_link":"shopify:\/\/pages\/private-events"}}},"block_order":["row_JVDf8i"],"settings":{"image_height":"adapt","desktop_image_width":"medium","heading_size":"h1","text_style":"body","button_style":"primary","desktop_content_position":"middle","desktop_content_alignment":"left","image_layout":"alternate-right","section_color_scheme":"","row_color_scheme":"scheme-3","mobile_content_alignment":"left","padding_top":0,"padding_bottom":0}},"multicolumn_imHgfq":{"type":"multicolumn","blocks":{"column_bbag7a":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/cellar.jpg","title":"Build Your At-Home Cellar","text":"","link_label":"LEARN MORE","link":"shopify:\/\/pages\/build-your-at-home-cellar"}},"column_3dA9h4":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/wine-list.jpg","title":"Restaurant Wine List Curation","text":"","link_label":"Learn More","link":"shopify:\/\/pages\/restaurant-wine-list-curation"}},"column_MPP8qN":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/hospitality.jpg","title":"Hospitality Services","text":"","link_label":"Learn More","link":"shopify:\/\/pages\/hospitality-services"}}},"block_order":["column_bbag7a","column_3dA9h4","column_MPP8qN"],"settings":{"title":"Custom Services","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":3,"column_alignment":"left","background_style":"none","button_label":"","button_link":"","color_scheme":"scheme-4","columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"image_with_text_X6fkja":{"type":"image-with-text","blocks":{"heading_aAfLiF":{"type":"heading","settings":{"heading":"The Wine Club","heading_size":"h1"}},"text_UBwRkU":{"type":"text","settings":{"text":"<ul><li>4 hand-selected wines from around the globe right to your doorstep<\/li><li>Monthly or quarterly shipments based on the latest theme or region<\/li><li>10% member discount on any purchase at Maison Brondeau<\/li><\/ul>","text_style":"body"}},"button_wm4PfQ":{"type":"button","settings":{"button_label":"JOIN NOW","button_link":"","button_style_secondary":false}}},"block_order":["heading_aAfLiF","text_UBwRkU","button_wm4PfQ"],"settings":{"image":"shopify:\/\/shop_images\/wine-club.jpg","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","section_color_scheme":"scheme-5","color_scheme":"","image_behavior":"none","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}}},"order":["image_banner","rich_text_GMnR7k","featured_collection","multirow_hWLqtm","multirow_f9AEV4","multicolumn_imHgfq","image_with_text_X6fkja"]}
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Experience the spirit of winemaking",
+            "heading_size": "h0"
+          }
+        },
+        "text_9WYtH7": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "subtitle"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP ALL",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "BOOK AN EVENT",
+            "button_link_2": "shopify:\/\/pages\/private-events",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_9WYtH7",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/slider.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "large",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "rich_text_GMnR7k": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NgQ3Tq": {
+          "type": "heading",
+          "settings": {
+            "heading": "At Maison Brondeau",
+            "heading_size": "h1"
+          }
+        },
+        "text_kkH6Hp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Maison Brondeau we merge the contemporary allure of Westchester with the enduring charm of French vineyards. Our tasting room and wine store invite you to explore a carefully curated selection, transforming each bottle into a chapter in the story of your exceptional taste.<\/p>"
+          }
+        },
+        "button_a9CTJW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_NgQ3Tq",
+        "text_kkH6Hp",
+        "button_a9CTJW"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_hWLqtm": {
+      "type": "multirow",
+      "blocks": {
+        "row_mXgytr": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bar.jpg",
+            "caption": "Caption",
+            "heading": "Public Tastings",
+            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. See schedule for upcoming tasting events with winemakers, experts, educators and more.<\/p>",
+            "button_label": "VIEW SCHEDULE",
+            "button_link": "shopify:\/\/pages\/public-tastings"
+          }
+        }
+      },
+      "block_order": [
+        "row_mXgytr"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "scheme-4",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_f9AEV4": {
+      "type": "multirow",
+      "blocks": {
+        "row_JVDf8i": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wine.jpg",
+            "caption": "JOIN US",
+            "heading": "Private Events",
+            "text": "<p>Indulge in a personalized interactive wine tasting experience at our tasting bar and lounge, or at your company's location. Contact us today to plan your next private event.<\/p>",
+            "button_label": "BOOK PRIVATE TASTING",
+            "button_link": "shopify:\/\/pages\/private-events"
+          }
+        }
+      },
+      "block_order": [
+        "row_JVDf8i"
+      ],
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "",
+        "row_color_scheme": "scheme-3",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_imHgfq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bbag7a": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cellar.jpg",
+            "title": "Build Your At-Home Cellar",
+            "text": "",
+            "link_label": "LEARN MORE",
+            "link": "shopify:\/\/pages\/build-your-at-home-cellar"
+          }
+        },
+        "column_3dA9h4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wine-list.jpg",
+            "title": "Restaurant Wine List Curation",
+            "text": "",
+            "link_label": "Learn More",
+            "link": "shopify:\/\/pages\/restaurant-wine-list-curation"
+          }
+        },
+        "column_MPP8qN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hospitality.jpg",
+            "title": "Hospitality Services",
+            "text": "",
+            "link_label": "Learn More",
+            "link": "shopify:\/\/pages\/hospitality-services"
+          }
+        }
+      },
+      "block_order": [
+        "column_bbag7a",
+        "column_3dA9h4",
+        "column_MPP8qN"
+      ],
+      "settings": {
+        "title": "Custom Services",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_X6fkja": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_aAfLiF": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Wine Club",
+            "heading_size": "h1"
+          }
+        },
+        "text_UBwRkU": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep<\/li><li>Monthly or quarterly shipments based on the latest theme or region<\/li><li>10% member discount on any purchase at Maison Brondeau<\/li><\/ul>",
+            "text_style": "body"
+          }
+        },
+        "button_wm4PfQ": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_aAfLiF",
+        "text_UBwRkU",
+        "button_wm4PfQ"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/wine-club.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "rich_text_GMnR7k",
+    "featured_collection",
+    "multirow_hWLqtm",
+    "multirow_f9AEV4",
+    "multicolumn_imHgfq",
+    "image_with_text_X6fkja"
+  ]
+}
