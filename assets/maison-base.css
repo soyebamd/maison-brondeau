@@ -61,6 +61,11 @@ h6,
 .text-center {
   text-align: center;
 }
+
+.justify-content-center {
+  justify-content: center;
+}
+
 /* .image-with-text__custom-text:after {
   background: white;
   height: 80%;
