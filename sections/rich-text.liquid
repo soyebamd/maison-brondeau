@@ -53,8 +53,7 @@
 
              
             {%- when 'caption' -%}
-              {%- when 'heading' -%}
-{{ block.settings.heading }}vfdsfg
+
               
               <p
                 class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -76,9 +75,7 @@
                 {% endif %}
               >
               
-              {% if section.settings.inline_heading %}
-asdsadsadsad
-              <span> {{ block.settings.heading }} </span>  {% endif %} 
+         
               
               
               {{ block.settings.text }}
@@ -155,12 +152,7 @@ asdsadsadsad
       "info": "t:sections.rich-text.settings.desktop_content_position.info"
     },
 
-    {
-      "type": "checkbox",
-      "id": "inline_heading",
-      "default": true,
-      "label": "Inline Heading"
-    },
+    
       
     {
       "type": "select",
@@ -333,7 +325,40 @@ asdsadsadsad
           "id": "text",
           "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
           "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        },
+  {
+          "type": "text",
+          "id": "heading_caption",
+          "default": "Add a tagline",
+          "label": "t:sections.rich-text.blocks.caption.settings.text.label"
+        },
+
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
         }
+
+
       ]
     },
     {
