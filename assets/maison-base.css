@@ -12,7 +12,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Allura", cursive;
+  font-family: "Allura", cursive !important;
   font-weight: 400;
   font-style: normal;
 }
