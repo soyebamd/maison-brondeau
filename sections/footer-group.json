@@ -18,11 +18,18 @@
             "heading": "Quick links",
             "menu": "main-menu"
           }
+        },
+        "checkbox_rgXVAz": {
+          "type": "checkbox",
+          "settings": {
+            "news_letter": true
+          }
         }
       },
       "block_order": [
         "link_list_LDAGq7",
-        "link_list_JEMNzA"
+        "link_list_JEMNzA",
+        "checkbox_rgXVAz"
       ],
       "settings": {
         "color_scheme": "scheme-3",
