@@ -24,6 +24,14 @@ h6,
   font-style: normal;
 }
 
+body {
+  font-family: "Biryani", sans-serif;
+}
+
+.multicolumn-card__info .inline-richtext {
+  font-family: "Biryani", sans-serif !important;
+}
+
 .h0 {
   font-size: 10rem;
 }
