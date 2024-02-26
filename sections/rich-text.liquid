@@ -72,14 +72,23 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-
-              {{block.settings.image}}
              
               {% if section.settings.inline_heading %}
 
-              {{ block.settings.heading }} 
-            
-            Headinbg {% endif %} 
+                 {%- when 'heading' -%}
+              <h2
+                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.heading }}
+              </h2>
+
+
+              {{ block.settings.heading }} Headinbg {% endif %} 
               
               
               {{ block.settings.text }}
