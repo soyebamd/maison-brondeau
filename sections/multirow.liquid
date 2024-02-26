@@ -43,7 +43,7 @@
 -%}
 
 <div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="multirow__inner page-width">
+  <div class="multirow__inner  {% if section.settings.full_width %}  page-width-full  {% else %} page-width {% endif %}">
     {%- for block in section.blocks -%}
       <div
         class="image-with-text isolate{{ borders_class }}{{ corners_class }}{{ padding_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -139,6 +139,15 @@
       "default": "medium",
       "label": "t:sections.multirow.settings.image_height.label"
     },
+
+      {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-text.settings.full_width.label"
+    },
+
+
     {
       "type": "select",
       "id": "desktop_image_width",
