@@ -33,6 +33,10 @@ h6,
   height: 100%;
 }
 
+.text-wrapper {
+  max-width: 500px;
+}
+
 @media screen and (min-width: 990px) {
   .header--middle-left {
     grid-template-columns: 1fr 1fr 1fr;
