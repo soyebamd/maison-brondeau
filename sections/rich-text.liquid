@@ -28,11 +28,10 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}>
 
- {{ block.settings.image |  file_url |  img_tag  }}
+
 
  {{
-        block.settings.image | image_url: width: 3840
-        | image_tag
+        block.settings.image 
         
           }}
 
