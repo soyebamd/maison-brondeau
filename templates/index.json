@@ -177,63 +177,6 @@
         "padding_bottom": 0
       }
     },
-    "multicolumn_imHgfq": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_bbag7a": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cellar.jpg",
-            "title": "Build Your At-Home Cellar",
-            "text": "",
-            "link_label": "LEARN MORE",
-            "link": "shopify:\/\/pages\/build-your-at-home-cellar"
-          }
-        },
-        "column_3dA9h4": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/wine-list.jpg",
-            "title": "Restaurant Wine List Curation",
-            "text": "",
-            "link_label": "Learn More",
-            "link": "shopify:\/\/pages\/restaurant-wine-list-curation"
-          }
-        },
-        "column_MPP8qN": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/hospitality.jpg",
-            "title": "Hospitality Services",
-            "text": "",
-            "link_label": "Learn More",
-            "link": "shopify:\/\/pages\/hospitality-services"
-          }
-        }
-      },
-      "block_order": [
-        "column_bbag7a",
-        "column_3dA9h4",
-        "column_MPP8qN"
-      ],
-      "settings": {
-        "title": "Custom Services",
-        "heading_size": "h1",
-        "full_width": true,
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-4",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_with_text_X6fkja": {
       "type": "image-with-text",
       "blocks": {
@@ -281,6 +224,63 @@
         "padding_top": 76,
         "padding_bottom": 76
       }
+    },
+    "multicolumn_imHgfq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bbag7a": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cellar.jpg",
+            "title": "Build Your At-Home Cellar",
+            "text": "",
+            "link_label": "LEARN MORE",
+            "link": "shopify:\/\/pages\/build-your-at-home-cellar"
+          }
+        },
+        "column_3dA9h4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wine-list.jpg",
+            "title": "Restaurant Wine List Curation",
+            "text": "",
+            "link_label": "Learn More",
+            "link": "shopify:\/\/pages\/restaurant-wine-list-curation"
+          }
+        },
+        "column_MPP8qN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hospitality.jpg",
+            "title": "Hospitality Services",
+            "text": "",
+            "link_label": "Learn More",
+            "link": "shopify:\/\/pages\/hospitality-services"
+          }
+        }
+      },
+      "block_order": [
+        "column_bbag7a",
+        "column_3dA9h4",
+        "column_MPP8qN"
+      ],
+      "settings": {
+        "title": "Custom Services",
+        "heading_size": "h1",
+        "full_width": true,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -289,7 +289,7 @@
     "featured_collection",
     "multirow_hWLqtm",
     "multirow_f9AEV4",
-    "multicolumn_imHgfq",
-    "image_with_text_X6fkja"
+    "image_with_text_X6fkja",
+    "multicolumn_imHgfq"
   ]
 }
