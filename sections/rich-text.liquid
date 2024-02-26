@@ -12,6 +12,29 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+
+    .rich-text__text-custom{
+   
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 135%; 
+  }
+
+
+
+  .rich-text__text-custom   .heading-text{
+    text-align: center;
+
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 135%; /* 64.8px */ 
+
+  }
+
+  
 {%- endstyle -%}
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
@@ -67,7 +90,7 @@
               </p>
             {%- when 'text' -%}
               <div
-                class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__text rich-text__text-custom rich rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -76,9 +99,7 @@
               >
               
          
-             <span class="heading-text">  {{ block.settings.heading_caption }}</span>
-              
-              {{ block.settings.text }}
+             <span class="heading-text">  {{ block.settings.heading_caption }}</span>         {{ block.settings.text }}
               </div>
             {%- when 'button' -%}
               <div
