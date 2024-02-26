@@ -32,6 +32,7 @@
         "checkbox_rgXVAz"
       ],
       "settings": {
+        "image_footer": "shopify:\/\/shop_images\/Vector_3.svg",
         "color_scheme": "scheme-3",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
