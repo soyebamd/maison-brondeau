@@ -74,12 +74,19 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "image_4V7Twk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot2024-02-24at8.15.00PM.png"
+          }
         }
       },
       "block_order": [
         "heading_NgQ3Tq",
         "text_kkH6Hp",
-        "button_a9CTJW"
+        "button_a9CTJW",
+        "image_4V7Twk"
       ],
       "settings": {
         "desktop_content_position": "center",
