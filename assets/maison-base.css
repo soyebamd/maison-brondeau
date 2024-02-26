@@ -92,6 +92,10 @@ body {
   font-family: "Anybody", sans-serif !important;
 }
 
+.footer-block--newsletter {
+  flex-wrap: nowrap;
+}
+
 @media screen and (min-width: 990px) {
   .header--middle-left {
     grid-template-columns: 1fr 1fr 1fr;
