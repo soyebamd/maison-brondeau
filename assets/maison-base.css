@@ -42,9 +42,9 @@ h6,
 
 .image-with-text__custom-text {
   background: #dfe3d3;
-  height: 86%;
+  height: 86% !important;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) !important;
 }
 
 /* .image-with-text__custom-text:after {
