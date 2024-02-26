@@ -448,6 +448,32 @@
           </ul>
         {%- endif -%}
       </div>
+
+{%- if section.settings.show_policy -%}
+      
+
+       <div class="footer-section__details-content footer-section-image {{ section.settings.alignment }}">
+                      {%- if section.settings.image_footer != blank -%}
+                        {%- assign image_size_2x = section.settings.image_footer_width | times: 2 | at_most: 5760 -%}
+                        <div
+                          class="footer-section__image-wrapper"
+                          style="max-width: min(100%, {{ section.settings.image_footer_width }}px);"
+                        >
+                          <img
+                            srcset="{{ section.settings.image_footer | image_url: width: section.settings.image_footer_width }}, {{ section.settings.image_footer | image_url: width: image_size_2x }} 2x"
+                            src="{{ section.settings.image_footer | image_url: width: 760 }}"
+                            alt="{{ section.settings.image_footer.alt | escape }}"
+                            loading="lazy"
+                            width="{{ section.settings.image_footer.width }}"
+                            height="{{ section.settings.image_footer.height }}"
+                          >
+                        </div>
+                      {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                      {%- endif -%}
+                    </div>
+
+{% endif %}
     </div>
   </div>
 </footer>
@@ -574,6 +600,11 @@
     }
   ],
   "settings": [
+      {
+          "type": "image_picker",
+          "id": "image_footer",
+          "label": "Image"
+        },
     {
       "type": "color_scheme",
       "id": "color_scheme",
