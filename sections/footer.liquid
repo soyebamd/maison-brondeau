@@ -79,6 +79,15 @@
                 {%- endif -%}
 
                 {%- case block.type -%}
+
+ {%- when 'checkbox' -%}
+
+                news_letter
+
+                 {{ block.settings.news_letter }}
+
+
+
                   {%- when '@app' -%}
                     {% render block %}
                   {%- when 'text' -%}
