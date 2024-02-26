@@ -64,23 +64,11 @@
             "heading_caption": "At Maison Brondeau",
             "heading_size": "h1"
           }
-        },
-        "button_a9CTJW": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "image_4V7Twk",
-        "text_kkH6Hp",
-        "button_a9CTJW"
+        "text_kkH6Hp"
       ],
       "settings": {
         "desktop_content_position": "center",
