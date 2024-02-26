@@ -20,6 +20,20 @@
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
+
+ {%- when 'image' -%}
+
+<div class="logo-image text-center" {{ block.shopify_attributes }}  {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}>
+
+ {{ block.settings.image| image_url: 'master' | image_tag  }}
+
+</div>
+
+
+
             {%- when 'heading' -%}
               <h2
                 class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
