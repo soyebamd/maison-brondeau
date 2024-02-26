@@ -17,6 +17,10 @@ h6,
   font-style: normal;
 }
 
+.h0 {
+  font-size: 10rem;
+}
+
 @media screen and (min-width: 990px) {
   .header--middle-left {
     grid-template-columns: 1fr 1fr 1fr;
