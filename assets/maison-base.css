@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Average&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Average&family=Biryani:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
 h1,
 h2,
 h3,
@@ -86,6 +87,10 @@ body {
   top: 50%;
   transform: translateY(-50%);
 } */
+
+.footer * {
+  font-family: "Anybody", sans-serif !important;
+}
 
 @media screen and (min-width: 990px) {
   .header--middle-left {
