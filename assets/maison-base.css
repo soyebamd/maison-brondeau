@@ -41,15 +41,18 @@ h6,
 }
 
 .image-with-text__custom-text {
-  background: transparent;
+  background: #dfe3d3;
+  height: 90%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.image-with-text__custom-text:after {
+/* .image-with-text__custom-text:after {
   background: white;
   height: 80%;
   top: 50%;
   transform: translateY(-50%);
-}
+} */
 
 @media screen and (min-width: 990px) {
   .header--middle-left {
