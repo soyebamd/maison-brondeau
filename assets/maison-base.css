@@ -58,7 +58,9 @@ h6,
     list-style: disc;
   }
 }
-
+.text-center {
+  text-align: center;
+}
 /* .image-with-text__custom-text:after {
   background: white;
   height: 80%;
