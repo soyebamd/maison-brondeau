@@ -67,7 +67,9 @@
         "text_kkH6Hp": {
           "type": "text",
           "settings": {
-            "text": "<p>At Maison Brondeau we merge the contemporary allure of Westchester with the enduring charm of French vineyards. Our tasting room and wine store invite you to explore a carefully curated selection, transforming each bottle into a chapter in the story of your exceptional taste.<\/p>"
+            "text": "<p>At Maison Brondeau we merge the contemporary allure of Westchester with the enduring charm of French vineyards. Our tasting room and wine store invite you to explore a carefully curated selection, transforming each bottle into a chapter in the story of your exceptional taste.<\/p>",
+            "heading_caption": "At Maison Brondeau",
+            "heading_size": "h1"
           }
         },
         "button_a9CTJW": {
@@ -90,7 +92,6 @@
       ],
       "settings": {
         "desktop_content_position": "center",
-        "inline_heading": true,
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
