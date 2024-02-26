@@ -82,9 +82,19 @@
 
  {%- when 'checkbox' -%}
 
-                news_letter
+                
 
-                 {{ block.settings.news_letter }}
+                 {% if block.settings.news_letter %}
+
+                 <div class="newsletter-form"  {{ block.shopify_attributes }}>
+
+
+
+                 </div>
+
+                 {% endif %}
+
+                 
 
 
 
