@@ -204,6 +204,10 @@
   margin-top: 0;
   margin-bottom: 0;
   font-family: "Biryani", sans-serif !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .card__heading:last-child {
