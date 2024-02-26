@@ -27,7 +27,7 @@
   <div
 
   
-    class=" {% if section.settings.full_width %}  page-width-full  {% else %} page-width {% elseif %}section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class=" {% if section.settings.full_width %}  page-width-full  {% else %} page-width {% endif %}section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
