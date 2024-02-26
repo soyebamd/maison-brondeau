@@ -40,6 +40,17 @@ h6,
   margin-right: auto !important;
 }
 
+.image-with-text__custom-text {
+  background: transparent;
+}
+
+.image-with-text__custom-text:after {
+  background: white;
+  height: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @media screen and (min-width: 990px) {
   .header--middle-left {
     grid-template-columns: 1fr 1fr 1fr;
