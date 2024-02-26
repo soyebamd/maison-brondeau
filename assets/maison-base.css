@@ -53,6 +53,12 @@ h6,
   }
 }
 
+.image-with-text__custom-text {
+  .rte li {
+    list-style: disc;
+  }
+}
+
 /* .image-with-text__custom-text:after {
   background: white;
   height: 80%;
