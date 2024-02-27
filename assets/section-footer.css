@@ -513,8 +513,13 @@
   /*Subscribe newsletter*/
 
   .newsletter-form .newsletter-form__button {
+    margin: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: 2;
     width: 113px;
-    background: #dfe3d3;
+    background: #dfe3d3 !important;
     color: #141414;
     font-size: 14px;
     font-style: normal;
