@@ -99,6 +99,14 @@ body {
   flex-wrap: nowrap;
 }
 
+.field:hover.field:after {
+  box-shadow: none;
+}
+
+.newsletter-form__button {
+  border: solid 1px #141414;
+}
+
 .newsletter-form__field-wrapper .field {
   width: 446px;
 }
