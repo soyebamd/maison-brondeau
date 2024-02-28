@@ -73,6 +73,9 @@ body {
 .text-center {
   text-align: center;
 }
+.text-left {
+  text-align: left;
+}
 
 .justify-content-center {
   justify-content: center;
