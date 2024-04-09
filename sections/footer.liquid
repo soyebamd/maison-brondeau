@@ -370,6 +370,11 @@
     {% endif %}
   >
     <div class="footer__content-bottom-wrapper page-width">
+
+  {%- if section.settings.show_social and has_social_icons -%}
+            {%- render 'social-icons', class: 'footer__list-social' -%}
+          {%- endif -%}
+    
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
