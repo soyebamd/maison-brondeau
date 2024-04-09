@@ -20,6 +20,13 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .button-custom{
+    min-width: calc(12rem + var(--buttons-border-width)* 2);
+    min-height: calc(4.5rem + var(--buttons-border-width)* 2);
+}
+
+
 {%- endstyle -%}
 
 {%- liquid
@@ -108,7 +115,10 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="button button--{{ section.settings.button_style }} gradient color-{{ block.settings.button_color_scheme }}"
+
+                  
+
+                  class="button-custom button--{{ section.settings.button_style }}  color-{{ block.settings.button_color_scheme }}"
                 >
                   {{ block.settings.button_label | escape }}
                 </a>
