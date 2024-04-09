@@ -108,7 +108,7 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="button button--{{ section.settings.button_style }}"
+                  class="button button--{{ section.settings.button_style }} {{ block.settings.button_color_scheme }}"
                 >
                   {{ block.settings.button_label | escape }}
                 </a>
@@ -400,6 +400,12 @@
           "type": "url",
           "id": "button_link",
           "label": "t:sections.multirow.blocks.row.settings.button_link.label"
+        },
+
+         {
+          "type": "color_scheme",
+          "id": "button_color_scheme",
+          "label": "Button Color"
         }
       ]
     }
