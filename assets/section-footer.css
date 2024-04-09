@@ -50,11 +50,6 @@ a.link.list-social__link:first-child {
   padding-left: 0;
 }
 
-.list-social__item .icon {
-  height: 3.2rem !important;
-  width: 3.2rem !important;
-}
-
 .footer__content-bottom:only-child {
   border-top: 0;
 }
