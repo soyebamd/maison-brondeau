@@ -345,6 +345,13 @@
                   </h3>
                 {%- endif -%}
               {%- endform -%}
+
+
+                {%- if section.settings.show_social and has_social_icons -%}
+            {%- render 'social-icons', class: 'footer__list-social' -%}
+          {%- endif -%}
+
+          
             </div>
           {%- endif -%}
 
@@ -475,9 +482,7 @@
       
       <div class="footer__copyright caption">
 
-        {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons', class: 'footer__list-social' -%}
-          {%- endif -%}
+      
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
