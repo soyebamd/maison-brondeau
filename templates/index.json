@@ -123,12 +123,12 @@
           "type": "row",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screenshot_2024-02-17_at_5.11_1.jpg",
-            "caption": "Caption",
+            "caption": "",
             "heading": "Public Tastings",
             "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. See schedule for upcoming tasting events with winemakers, experts, educators and more.<\/p>",
             "button_label": "VIEW SCHEDULE",
             "button_link": "shopify:\/\/pages\/public-tastings",
-            "button_color_scheme": "scheme-3"
+            "button_color_scheme": "scheme-5"
           }
         }
       },
@@ -145,7 +145,7 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "image_layout": "alternate-left",
-        "section_color_scheme": "",
+        "section_color_scheme": "scheme-2",
         "row_color_scheme": "scheme-4",
         "mobile_content_alignment": "left",
         "padding_top": 0,
