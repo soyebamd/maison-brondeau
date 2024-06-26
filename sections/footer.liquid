@@ -122,9 +122,6 @@
 
           <!-- change this newsletter only -->      
 
-            {%- render 'social-icons', class: 'footer__list-social' -%}
-          
-
                  {% if block.settings.news_letter %}
 
                  <div class="newsletter-form"  {{ block.shopify_attributes }}>
@@ -192,6 +189,12 @@
               {%- endform -%}
             </div>
 
+            
+            {%- if section.settings.show_social and has_social_icons -%}
+         Connect   {%- render 'social-icons', class: 'footer__list-social' -%}
+          {%- endif -%}
+
+          
                  </div>
 
                  {% endif %}
@@ -355,11 +358,9 @@
             </div>
 
             
-           
+
 
           {%- endif -%}
-
-
 
           {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
             <div class="footer__follow-on-shop">
