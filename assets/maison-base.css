@@ -137,6 +137,9 @@ body {
 .newsletter-form__field-wrapper .field {
   width: 446px;
 }
+.d-flex {
+  display: flex;
+}
 @media screen and (min-width: 990px) {
   .header--middle-left {
     grid-template-columns: 1fr 8fr 1fr;
@@ -153,4 +156,11 @@ body {
 .button {
   min-width: 212px;
   min-height: 60px;
+}
+
+.social-icon-adjust {
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0;
 }
