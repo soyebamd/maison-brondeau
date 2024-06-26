@@ -132,7 +132,7 @@ body {
 }
 @media screen and (min-width: 990px) {
   .header--middle-left {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 8fr 1fr;
     text-align: center;
   }
 }
