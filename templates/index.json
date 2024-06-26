@@ -122,8 +122,8 @@
         "row_mXgytr": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-02-17_at_5.11_1.jpg",
-            "caption": "Caption",
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-02-17_at_5.11_1_90beafec-679d-4944-af93-4085bf176e05.jpg",
+            "caption": "",
             "heading": "Public Tastings",
             "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. See schedule for upcoming tasting events with winemakers, experts, educators and more.<\/p>",
             "button_label": "VIEW SCHEDULE",
@@ -145,7 +145,7 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "image_layout": "alternate-left",
-        "section_color_scheme": "",
+        "section_color_scheme": "scheme-2",
         "row_color_scheme": "scheme-4",
         "mobile_content_alignment": "left",
         "padding_top": 0,
@@ -164,7 +164,7 @@
             "text": "<p>Indulge in a personalized interactive wine tasting experience at our tasting bar and lounge, or at your company's location. Contact us today to plan your next private event.<\/p>",
             "button_label": "BOOK PRIVATE TASTING",
             "button_link": "shopify:\/\/pages\/private-events",
-            "button_color_scheme": ""
+            "button_color_scheme": "scheme-4"
           }
         }
       },

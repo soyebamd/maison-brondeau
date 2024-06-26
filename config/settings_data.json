@@ -83,7 +83,7 @@
     "text_boxes_shadow_horizontal_offset": 0,
     "text_boxes_shadow_vertical_offset": 4,
     "text_boxes_shadow_blur": 5,
-    "media_border_thickness": 1,
+    "media_border_thickness": 0,
     "media_border_opacity": 5,
     "media_radius": 0,
     "media_shadow_opacity": 0,
@@ -172,7 +172,7 @@
         "settings": {
           "background": "#141414",
           "background_gradient": "",
-          "text": "#ffffff",
+          "text": "#f8f8f8",
           "button": "#dfe3d3",
           "button_label": "#141414",
           "secondary_button_label": "#ffffff",
