@@ -329,6 +329,15 @@ a.link.list-social__link:first-child {
   margin-bottom: 4rem;
 }
 
+.footer-block__details-content p {
+  gap: 18px;
+  display: flex;
+}
+
+.footer-block__details-content a {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 750px) {
   .footer-block__details-content {
     margin-bottom: 0;
