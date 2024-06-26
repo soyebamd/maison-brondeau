@@ -492,3 +492,7 @@
     color: currentColor;
   }
 }
+
+.btn-big {
+  padding: 2.1rem 5rem !important;
+}
