@@ -85,7 +85,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 76,
-        "padding_bottom": 100
+        "padding_bottom": 124
       }
     },
     "featured_collection": {
@@ -100,7 +100,7 @@
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": true,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-2",
