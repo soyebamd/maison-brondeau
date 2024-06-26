@@ -347,12 +347,16 @@
               {%- endform -%}
 
 
+
+
+            </div>
+
+            
                 {%- if section.settings.show_social and has_social_icons -%}
             {%- render 'social-icons', class: 'footer__list-social' -%}
           {%- endif -%}
 
           
-            </div>
           {%- endif -%}
 
           {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
