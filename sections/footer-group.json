@@ -17,15 +17,15 @@
         "link_list_LDAGq7": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "main-menu"
+            "heading": "Shop",
+            "menu": "footer"
           }
         },
         "link_list_JEMNzA": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "main-menu"
+            "heading": "Company",
+            "menu": "company"
           }
         },
         "checkbox_rgXVAz": {
