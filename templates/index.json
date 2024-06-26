@@ -164,7 +164,7 @@
             "text": "<p>Indulge in a personalized interactive wine tasting experience at our tasting bar and lounge, or at your company's location. Contact us today to plan your next private event.<\/p>",
             "button_label": "BOOK PRIVATE TASTING",
             "button_link": "shopify:\/\/pages\/private-events",
-            "button_color_scheme": ""
+            "button_color_scheme": "scheme-4"
           }
         }
       },
