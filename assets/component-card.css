@@ -200,11 +200,6 @@
   height: 100%;
 }
 
-.collection .card__heading {
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
@@ -213,6 +208,16 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.collection .card__heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.maison-product-grid .card__heading {
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .card--horizontal .card__heading,
