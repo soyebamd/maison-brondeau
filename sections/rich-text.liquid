@@ -78,7 +78,7 @@ line-height: 0;
 
             {%- when 'heading' -%}
               <h2
-                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__heading rte inline-richtext {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -104,7 +104,7 @@ line-height: 0;
               </p>
             {%- when 'text' -%}
               <div
-                class="rich-text__text rich-text__text-custom rich rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__text rich-text__text-custom rich  {{ block.settings.heading_size }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -374,7 +374,7 @@ line-height: 0;
           "options": [
             {
               "value": "h2",
-              "label": "sadfsdf"
+              "label": "t:sections.all.heading_size.options__1.label"
             },
             {
               "value": "h1",
