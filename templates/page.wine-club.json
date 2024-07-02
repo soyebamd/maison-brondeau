@@ -57,8 +57,8 @@
         "content_alignment": "center",
         "color_scheme": "scheme-119fbec3-c716-4883-a5b6-6a826182a9d6",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 100,
+        "padding_bottom": 12
       }
     },
     "main": {
@@ -86,7 +86,7 @@
         "column_jafDDw": {
           "type": "column",
           "settings": {
-            "color_scheme_box": "",
+            "color_scheme_box": "scheme-4",
             "image": "shopify:\/\/shop_images\/Group_25.svg",
             "title": "",
             "text": "<p>10% member discount on any in-store purchases<\/p>",
@@ -97,7 +97,7 @@
         "column_7rtXRr": {
           "type": "column",
           "settings": {
-            "color_scheme_box": "",
+            "color_scheme_box": "scheme-4",
             "image": "shopify:\/\/shop_images\/ph_wine.svg",
             "title": "",
             "text": "<p>Background, pairing & tasting notes<\/p>",
@@ -126,7 +126,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 68
       }
     },
     "multirow_TU9XFn": {
