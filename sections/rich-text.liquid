@@ -48,9 +48,6 @@ line-height: 0;
 
 }
 
-.s-small{font-size: 18px; font-weight: 400;}
-.s-medium{font-size: 36px; font-weight: 400; }
-.s-large{font-size: 46px; font-weight: 400;}
   
 {%- endstyle -%}
 
@@ -81,7 +78,7 @@ line-height: 0;
 
             {%- when 'heading' -%}
               <h2
-                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__heading rte inline-richtext {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -107,7 +104,7 @@ line-height: 0;
               </p>
             {%- when 'text' -%}
               <div
-                class="rich-text__text rich-text__text-custom rich {{ block.settings.text_size_1 }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__text rich-text__text-custom rich  {{ block.settings.heading_size }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -373,21 +370,24 @@ line-height: 0;
 
         {
           "type": "select",
-          "id": "text_size_1",
+          "id": "heading_size",
           "options": [
             {
-              "value": "s-small",
+              "value": "h2",
               "label": "t:sections.all.heading_size.options__1.label"
             },
             {
-              "value": "s-medium",
+              "value": "h1",
               "label": "t:sections.all.heading_size.options__2.label"
             },
             {
-              "value": "s-large",
+              "value": "h0",
               "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
             }
-           
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
