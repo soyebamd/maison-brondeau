@@ -9,7 +9,7 @@
   }
 
   .collection-bg-{{ section.id }}{
-    background:url({{ section.settings.custom_image }});
+    background:url({{ section.settings.custom_image | image_url: width: 2000 }});
   }
 
 {%- endstyle -%}
