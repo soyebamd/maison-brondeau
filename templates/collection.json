@@ -12,6 +12,7 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/Screenshot_2024-02-17_at_5.11_1_90beafec-679d-4944-af93-4085bf176e05.jpg",
         "show_collection_description": true,
         "show_collection_image": true,
         "color_scheme": "scheme-1"
