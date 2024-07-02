@@ -375,7 +375,7 @@
     padding: 6rem 10rem 7rem;
   }
 
-  .image-with-text:nth-child .text-wrapper {
+  .image-with-text .text-wrapper {
     margin: 0 auto 0 0;
     padding: 0rem;
   }
