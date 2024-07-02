@@ -47,22 +47,10 @@
             "heading_caption": "",
             "heading_size": "h2"
           }
-        },
-        "button_wEH33k": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
-        "text_VcGUbM",
-        "button_wEH33k"
+        "text_VcGUbM"
       ],
       "settings": {
         "desktop_content_position": "center",
