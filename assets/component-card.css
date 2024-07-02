@@ -213,6 +213,10 @@
   line-height: normal;
 }
 
+.gap-35 {
+  gap: 35px !important;
+}
+
 .collection .card__heading {
   font-size: 1.4rem;
   font-weight: 700;
