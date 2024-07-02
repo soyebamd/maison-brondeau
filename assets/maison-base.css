@@ -96,11 +96,6 @@ body {
   height: 100%;
 }
 
-.text-wrapper {
-  max-width: 500px;
-  width: 100%;
-}
-
 .image-with-text__custom-text {
   background: #dfe3d3;
   height: 86% !important;

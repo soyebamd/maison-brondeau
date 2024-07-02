@@ -365,6 +365,19 @@
   .image-with-text__content {
     padding: 6rem 10rem 7rem;
   }
+
+  .image-with-text:nth-child(2n) .image-with-text__content {
+    padding: 6rem 10rem 7rem;
+  }
+
+  .image-with-text:nth-child(2n) .text-wrapper {
+    margin: 0 0 0 auto;
+  }
+}
+
+.text-wrapper {
+  max-width: 500px;
+  width: 100%;
 }
 
 .image-with-text__content > * + * {
