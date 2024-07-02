@@ -15,7 +15,7 @@
         "heading_UMpXpJ": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "The Maison Brondeau Wine Club",
             "heading_size": "h1"
           }
         }
@@ -24,12 +24,13 @@
         "heading_UMpXpJ"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_18.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
