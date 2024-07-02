@@ -221,7 +221,7 @@
 }
 
 .maison-product-grid .price {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .card--horizontal .card__heading,
