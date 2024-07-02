@@ -14,7 +14,6 @@
 
 {%- endstyle -%}
 
-v2
 
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient
 
@@ -55,7 +54,7 @@ v2
       {%- endif -%}
     </div>
 
-    {% if section.settings.custom_image != ''%} 
+    {% if section.settings.custom_image == '' %} 
 
     {%- if section.settings.show_collection_image and collection.image -%}
       <div class="collection-hero__image-container media gradient">
