@@ -99,6 +99,9 @@ body {
   .p-13 {
     padding: 13px;
   }
+  .gap-35 {
+    gap: 35px !important;
+  }
 }
 
 .page-width-full {
