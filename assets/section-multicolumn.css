@@ -27,11 +27,18 @@
   width: 33%;
 }
 
+.multicolumn-card__image-wrapper--forth-width {
+  width: 16%;
+}
+
 .multicolumn-card__image-wrapper--half-width {
   width: 50%;
 }
 
-.multicolumn-list__item.center .multicolumn-card__image-wrapper:not(.multicolumn-card__image-wrapper--full-width),
+.multicolumn-list__item.center
+  .multicolumn-card__image-wrapper:not(
+    .multicolumn-card__image-wrapper--full-width
+  ),
 .multicolumn-list__item:only-child {
   margin-left: auto;
   margin-right: auto;
@@ -68,7 +75,10 @@
 
 .multicolumn.background-primary .multicolumn-card {
   background: rgb(var(--color-background))
-    linear-gradient(rgba(var(--color-foreground), 0.04), rgba(var(--color-foreground), 0.04));
+    linear-gradient(
+      rgba(var(--color-foreground), 0.04),
+      rgba(var(--color-foreground), 0.04)
+    );
 }
 
 .multicolumn-list h3 {
@@ -162,11 +172,17 @@
   padding-left: 0.5rem;
 }
 
-.background-none .slider .multicolumn-card__image-wrapper + .multicolumn-card__info {
+.background-none
+  .slider
+  .multicolumn-card__image-wrapper
+  + .multicolumn-card__info {
   padding-left: 1.5rem;
 }
 
-.background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info {
+.background-none
+  .multicolumn-list:not(.slider)
+  .center
+  .multicolumn-card__info {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
@@ -188,7 +204,10 @@
   }
 
   .background-none .multicolumn-list .multicolumn-card__info,
-  .background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info {
+  .background-none
+    .multicolumn-list:not(.slider)
+    .center
+    .multicolumn-card__info {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
@@ -199,9 +218,16 @@
   box-sizing: border-box;
 }
 
-.multicolumn-card > .multicolumn-card__image-wrapper--full-width:not(.multicolumn-card-spacing) {
-  border-top-left-radius: calc(var(--text-boxes-radius) - var(--text-boxes-border-width));
-  border-top-right-radius: calc(var(--text-boxes-radius) - var(--text-boxes-border-width));
+.multicolumn-card
+  > .multicolumn-card__image-wrapper--full-width:not(
+    .multicolumn-card-spacing
+  ) {
+  border-top-left-radius: calc(
+    var(--text-boxes-radius) - var(--text-boxes-border-width)
+  );
+  border-top-right-radius: calc(
+    var(--text-boxes-radius) - var(--text-boxes-border-width)
+  );
   overflow: hidden;
 }
 
