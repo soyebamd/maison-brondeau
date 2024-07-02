@@ -13,6 +13,13 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+
+  .px-10-py-28{
+    padding:28px 40px; 
+  }
+
+
 {%- endstyle -%}
 
 {%- liquid
@@ -82,7 +89,7 @@
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}  {% if section.settings.image_width == 'forth'  %} px-10-py-28 {% endif %}">
                   <div
                     class="media  media--transparent media--{{ section.settings.image_ratio }}"
                     {% if section.settings.image_ratio == 'adapt' %}
@@ -130,7 +137,7 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info {% if section.settings.image_width == 'forth'  %} fs-18 {% endif %}">
+              <div class="multicolumn-card__info {% if section.settings.image_width == 'forth'  %} fs-18 px-10-py-28 {% endif %}">
                 {%- if block.settings.title != blank -%}
                   <h3 class="inline-richtext">{{ block.settings.title }}</h3>
                 {%- endif -%}
