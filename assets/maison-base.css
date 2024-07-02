@@ -91,6 +91,10 @@ body {
   }
 }
 
+.fs-18 {
+  font-size: 1.8rem;
+}
+
 .page-width-full {
   width: 100;
   height: 100%;
