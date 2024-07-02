@@ -86,7 +86,7 @@
         "column_jafDDw": {
           "type": "column",
           "settings": {
-            "color_scheme_box": "",
+            "color_scheme_box": "scheme-4",
             "image": "shopify:\/\/shop_images\/Group_25.svg",
             "title": "",
             "text": "<p>10% member discount on any in-store purchases<\/p>",
@@ -97,7 +97,7 @@
         "column_7rtXRr": {
           "type": "column",
           "settings": {
-            "color_scheme_box": "",
+            "color_scheme_box": "scheme-4",
             "image": "shopify:\/\/shop_images\/ph_wine.svg",
             "title": "",
             "text": "<p>Background, pairing & tasting notes<\/p>",
