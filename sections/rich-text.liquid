@@ -51,6 +51,8 @@ line-height: 0;
 .s-small{font-size: 18px; font-weight: 400;}
 .s-medium{font-size: 36px; font-weight: 400; }
 .s-large{font-size: 46px; font-weight: 400;}
+
+.opacity-1{ opacity:1!important; }
   
 {%- endstyle -%}
 
@@ -107,7 +109,7 @@ line-height: 0;
               </p>
             {%- when 'text' -%}
               <div
-                class="rich-text__text rich-text__text-custom rich {{ block.settings.text_size_1 }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__text rich-text__text-custom opacity-1 rich {{ block.settings.text_size_1 }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
