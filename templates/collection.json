@@ -12,10 +12,9 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "custom_image": "shopify:\/\/shop_images\/Rectangle_26_1.png",
         "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "scheme-3"
+        "show_collection_image": true,
+        "color_scheme": "scheme-1"
       }
     },
     "product-grid": {
