@@ -64,7 +64,7 @@
         "row_pLGeR6": {
           "type": "row",
           "settings": {
-            "row_bg": "",
+            "row_bg": "scheme-1",
             "image": "shopify:\/\/shop_images\/Rectangle_28_1.png",
             "caption": "",
             "heading": "Book an Event",
