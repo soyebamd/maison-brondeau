@@ -1222,3 +1222,18 @@ input.mobile-facets__checkbox {
 .facets-container .h6 {
   font-family: "Biryani", sans-serif !important;
 }
+
+.facets h1,
+.facets h2,
+.facets h3,
+.facets h4,
+.facets h5,
+.facets h6,
+.facets .h1,
+.facets .h2,
+.facets .h3,
+.facets .h4,
+.facets .h5,
+.facets .h6 {
+  font-family: "Biryani", sans-serif !important;
+}
