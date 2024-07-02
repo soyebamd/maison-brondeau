@@ -167,44 +167,6 @@
         "padding_bottom": 0
       }
     },
-    "multirow_f9AEV4": {
-      "type": "multirow",
-      "blocks": {
-        "row_JVDf8i": {
-          "type": "row",
-          "settings": {
-            "row_bg": "scheme-3",
-            "image": "shopify:\/\/shop_images\/Rectangle_5_1.jpg",
-            "caption": "JOIN US",
-            "heading": "Private Events",
-            "text": "<p>Indulge in a personalized interactive wine tasting experience at our tasting bar and lounge, or at your company's location. Contact us today to plan your next private event.<\/p>",
-            "button_label": "BOOK PRIVATE TASTING",
-            "button_link": "shopify:\/\/pages\/private-events",
-            "button_color_scheme": "scheme-4"
-          }
-        }
-      },
-      "block_order": [
-        "row_JVDf8i"
-      ],
-      "disabled": true,
-      "settings": {
-        "image_height": "adapt",
-        "full_width": true,
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "primary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-right",
-        "section_color_scheme": "",
-        "row_color_scheme": "scheme-3",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "image_with_text_X6fkja": {
       "type": "image-with-text",
       "blocks": {
@@ -316,7 +278,6 @@
     "rich_text_GMnR7k",
     "featured_collection",
     "multirow_hWLqtm",
-    "multirow_f9AEV4",
     "image_with_text_X6fkja",
     "multicolumn_imHgfq"
   ]
