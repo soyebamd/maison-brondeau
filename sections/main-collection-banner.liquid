@@ -24,7 +24,7 @@
 
     {{ collection.image  }}
 test
-    {%- if section.settings.show_collection_image and collection.image -%}
+    {%- if section.settings.image  -%}
       <div class="collection-hero__image-container media gradient">
         <img
           srcset="
@@ -52,10 +52,17 @@ test
   "name": "t:sections.main-collection-banner.name",
   "class": "section",
   "settings": [
+
     {
       "type": "paragraph",
       "content": "t:sections.main-collection-banner.settings.paragraph.content"
     },
+    {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         }
+         ,
     {
       "type": "checkbox",
       "id": "show_collection_description",
