@@ -15,8 +15,8 @@
         "heading_UMpXpJ": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
+            "heading": "Tastings & Events",
+            "heading_size": "h0"
           }
         }
       },
@@ -24,10 +24,11 @@
         "heading_UMpXpJ"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_26_1.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "",
         "image_behavior": "none",
@@ -38,6 +39,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
