@@ -361,7 +361,7 @@
   word-break: break-word;
 }
 
-.image-with-text:nth-child(2n) .text-wrapper {
+.image-with-text .text-wrapper {
   margin: 0 auto;
   padding: 3rem;
 }
