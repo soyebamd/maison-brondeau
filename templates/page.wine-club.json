@@ -1,0 +1,174 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "image_banner_Y4pDXT": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_UMpXpJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Maison Brondeau Wine Club",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UMpXpJ"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_18.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_btKPTz": {
+      "type": "rich-text",
+      "blocks": {
+        "text_VcGUbM": {
+          "type": "text",
+          "settings": {
+            "text": "Join the Maison Brondeau Wine Club today and let us be your personal shoppers for all things wine. Our in-house, world-class sommeliers will do the work for you, navigating the latest industry trends, finding the undervalued bottles, spotting the up-and-coming producers, and selecting the can’t miss grapes. With a mix of reds, whites, and the occasional sparkling or rose, we’ll ship directly to your door, along with pairing tips, tasting notes, and backgrounds of each bottle.",
+            "heading_caption": "",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "text_VcGUbM"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "multicolumn_LJWiNe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_4xhPx9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-park-outline_time.svg",
+            "title": "",
+            "text": "<p>4 hand-selected wines monthly\/quarterly<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jafDDw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_25.svg",
+            "title": "",
+            "text": "<p>10% member discount on any in-store purchases<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7rtXRr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ph_wine.svg",
+            "title": "",
+            "text": "<p>Background, pairing & tasting notes<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_4xhPx9",
+        "column_jafDDw",
+        "column_7rtXRr"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "full_width": false,
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_TU9XFn": {
+      "type": "multirow",
+      "blocks": {
+        "row_iNXceJ": {
+          "type": "row",
+          "settings": {
+            "row_bg": "scheme-4",
+            "image": "shopify:\/\/shop_images\/Rectangle_27.png",
+            "caption": "",
+            "heading": "Join the Club",
+            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep<\/li><li>Monthly or quarterly shipments based on the latest theme or region<\/li><li>10% member discount on any purchase at Maison Brondeau<\/li><\/ul>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_color_scheme": "scheme-3"
+          }
+        }
+      },
+      "block_order": [
+        "row_iNXceJ"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "full_width": true,
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "image_banner_Y4pDXT",
+    "rich_text_btKPTz",
+    "main",
+    "multicolumn_LJWiNe",
+    "multirow_TU9XFn"
+  ]
+}
