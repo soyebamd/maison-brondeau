@@ -1207,3 +1207,18 @@ input.mobile-facets__checkbox {
     padding: 0 1rem 1rem;
   }
 }
+
+.facets-container h1,
+.facets-container h2,
+.facets-container h3,
+.facets-container h4,
+.facets-container h5,
+.facets-container h6,
+.facets-container .h1,
+.facets-container .h2,
+.facets-container .h3,
+.facets-container .h4,
+.facets-container .h5,
+.facets-container .h6 {
+  font-family: "Biryani", sans-serif !important;
+}
