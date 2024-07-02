@@ -200,6 +200,11 @@
   height: 100%;
 }
 
+.collection .card__heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
@@ -210,10 +215,6 @@
   line-height: normal;
 }
 
-.collection .card__heading {
-  font-size: 1.4rem;
-  font-weight: 700;
-}
 .card--horizontal .card__heading,
 .card--horizontal .price__container .price-item,
 .card--horizontal__quick-add {
