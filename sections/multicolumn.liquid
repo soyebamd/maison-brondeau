@@ -99,6 +99,8 @@
                         assign image_width = 0.5
                       elsif section.settings.image_width == 'third'
                         assign image_width = 0.33
+                         elsif section.settings.image_width == 'forth'
+                        assign image_width = 0.25
                       else
                         assign image_width = 1
                       endif
@@ -110,7 +112,7 @@
                       calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
                     {% endcapture %}
 
-                    {% if section.settings.image_width != 'icon' %}
+                    {% if section.settings.image_width != 'forth' %}
 
                       
                     {{
@@ -256,7 +258,7 @@
       "id": "image_width",
       "options": [
           {
-          "value": "icon",
+          "value": "forth",
           "label": "Icon"
         },
         {
