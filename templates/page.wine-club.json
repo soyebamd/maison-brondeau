@@ -85,8 +85,9 @@
         "column_jafDDw": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_25.svg",
+            "title": "",
+            "text": "<p>10% member discount on any in-store purchases<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -117,7 +118,7 @@
         "background_style": "primary",
         "button_label": "Button label",
         "button_link": "",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
