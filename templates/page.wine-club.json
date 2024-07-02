@@ -129,13 +129,14 @@
     "multirow_TU9XFn": {
       "type": "multirow",
       "blocks": {
-        "row_Kd6qnh": {
+        "row_iNXceJ": {
           "type": "row",
           "settings": {
             "row_bg": "scheme-4",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_27.png",
+            "caption": "",
+            "heading": "Join the Club",
+            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep<\/li><li>Monthly or quarterly shipments based on the latest theme or region<\/li><li>10% member discount on any purchase at Maison Brondeau<\/li><\/ul>",
             "button_label": "Button label",
             "button_link": "",
             "button_color_scheme": "scheme-3"
@@ -143,7 +144,7 @@
         }
       },
       "block_order": [
-        "row_Kd6qnh"
+        "row_iNXceJ"
       ],
       "settings": {
         "image_height": "medium",
