@@ -100,7 +100,7 @@ body {
     padding: 13px;
   }
   .gap-35 {
-    gap: 35px !important;
+    --grid-desktop-horizontal-spacing: 35px !important;
   }
 }
 
