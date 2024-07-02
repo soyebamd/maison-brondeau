@@ -44,6 +44,10 @@ h6,
   font-style: normal;
 }
 
+.font-biryani {
+  font-family: "Biryani", sans-serif;
+}
+
 body {
   font-family: "Biryani", sans-serif;
 }
