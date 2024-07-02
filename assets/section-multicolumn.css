@@ -145,10 +145,10 @@
   }
 }
 
-/* .background-none .multicolumn-card-spacing {
+.background-none .multicolumn-card-spacing {
   padding: 0;
   margin: 0;
-} */
+}
 
 .multicolumn-card__info {
   padding: 2.5rem;
