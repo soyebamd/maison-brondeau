@@ -187,6 +187,7 @@
       "block_order": [
         "row_JVDf8i"
       ],
+      "disabled": true,
       "settings": {
         "image_height": "adapt",
         "full_width": true,
