@@ -109,6 +109,10 @@
                       (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
                       calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
                     {% endcapture %}
+
+                    {% if section.settings.image_width != 'icon' %}
+
+                      
                     {{
                       block.settings.image
                       | image_url: width: 3200
@@ -117,6 +121,20 @@
                         sizes: sizes,
                         class: 'multicolumn-card__image'
                     }}
+
+                      {% else %}
+
+                  
+                    {{
+                      block.settings.image
+                      | image_url: width: 48
+                      | image_tag:
+                        widths: '48',
+                        sizes: 48,
+                        class: 'multicolumn-card__image'
+                    }}
+
+                      {% endif %}
                   </div>
                 </div>
               {%- endif -%}
