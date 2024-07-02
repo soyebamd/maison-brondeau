@@ -68,7 +68,7 @@
   endunless
 -%}
 
-<div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+<div class="multirow section-{{ section.id }}-padding ">
   <div class="multirow__inner  {% if section.settings.full_width %}  page-width-full  {% else %} page-width {% endif %}">
     {%- for block in section.blocks -%}
       <div
