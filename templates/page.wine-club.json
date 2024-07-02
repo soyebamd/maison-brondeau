@@ -95,8 +95,9 @@
         "column_7rtXRr": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/ph_wine.svg",
+            "title": "",
+            "text": "<p>Background, pairing & tasting notes<\/p>",
             "link_label": "",
             "link": ""
           }
