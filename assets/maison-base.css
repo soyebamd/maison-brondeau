@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Average&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Average&family=Biryani:wght@200;300;400;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -12,7 +13,11 @@
     url("https://cdn.shopify.com/s/files/1/0683/4008/9055/files/abcdiatypesemi-monocondensed-regular-webfont_f0009024-763d-49b6-98cf-1472cff56e17.woff?v=1711859131")
       format("woff");
 }
-/* .noto-sans-<uniquifier> {
+/* 
+
+  font-family: "Amaranth", sans-serif;
+  
+  .noto-sans-<uniquifier> {
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;

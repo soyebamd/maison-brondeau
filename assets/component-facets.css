@@ -1223,17 +1223,7 @@ input.mobile-facets__checkbox {
   font-family: "Biryani", sans-serif !important;
 }
 
-.facets h1,
-.facets h2,
-.facets h3,
-.facets h4,
-.facets h5,
-.facets h6,
-.facets .h1,
-.facets .h2,
-.facets .h3,
-.facets .h4,
-.facets .h5,
-.facets .h6 {
-  font-family: "Biryani", sans-serif !important;
+.facets-vertical-sort,
+.facets-vertical-sort * {
+  font-family: "Amaranth", sans-serif !important;
 }
