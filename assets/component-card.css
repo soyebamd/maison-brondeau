@@ -204,16 +204,16 @@
   margin-top: 0;
   margin-bottom: 0;
   font-family: "abc_diatype_semi-monobold" !important;
-  font-size: 14px;
+  font-size: 1.8rem;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: normal;
 }
 
-.card__heading:last-child {
-  margin-bottom: 0;
+.collection .card__heading {
+  font-size: 1.4rem;
+  font-weight: 700;
 }
-
 .card--horizontal .card__heading,
 .card--horizontal .price__container .price-item,
 .card--horizontal__quick-add {
