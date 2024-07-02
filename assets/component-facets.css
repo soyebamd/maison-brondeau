@@ -112,7 +112,7 @@
 }
 
 .facet-filters__sort + .icon-caret {
-  right: 0;
+  right: 20px;
 }
 
 @media screen and (forced-colors: active) {
@@ -1226,4 +1226,9 @@ input.mobile-facets__checkbox {
 .facets-vertical-sort,
 .facets-vertical-sort * {
   font-family: "Amaranth", sans-serif !important;
+}
+
+.facet-filters__sort {
+  background: #dfe3d3;
+  padding: 5px 24px;
 }
