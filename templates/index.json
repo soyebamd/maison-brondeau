@@ -232,7 +232,7 @@
         "column_3dA9h4": {
           "type": "column",
           "settings": {
-            "color_scheme_box": "",
+            "color_scheme_box": "scheme-4",
             "image": "shopify:\/\/shop_images\/wine-list.jpg",
             "title": "Restaurant Wine List Curation",
             "text": "",
@@ -243,7 +243,7 @@
         "column_MPP8qN": {
           "type": "column",
           "settings": {
-            "color_scheme_box": "",
+            "color_scheme_box": "scheme-4",
             "image": "shopify:\/\/shop_images\/hospitality.jpg",
             "title": "Hospitality Services",
             "text": "",
