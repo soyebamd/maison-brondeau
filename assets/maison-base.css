@@ -72,6 +72,10 @@ body {
   max-width: 100%;
 }
 
+.h-400 {
+  min-height: 480px;
+}
+
 @media (min-width: 990px) {
   h1,
   .h1 {
