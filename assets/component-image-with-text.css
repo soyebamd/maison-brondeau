@@ -361,6 +361,11 @@
   word-break: break-word;
 }
 
+.image-with-text:nth-child(2n) .text-wrapper {
+  margin: 0 auto;
+  padding: 3rem;
+}
+
 @media screen and (min-width: 990px) {
   .image-with-text__content {
     padding: 6rem 10rem 7rem;
