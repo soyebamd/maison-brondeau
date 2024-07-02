@@ -131,10 +131,23 @@
             "button_link": "shopify:\/\/pages\/public-tastings",
             "button_color_scheme": "scheme-3"
           }
+        },
+        "row_7zmiLr": {
+          "type": "row",
+          "settings": {
+            "row_bg": "",
+            "caption": "",
+            "heading": "Private Events",
+            "text": "<p>Indulge in a personalized interactive wine tasting experience at our tasting bar and lounge, or at your company's location. Contact us today to plan your next private event.<\/p>",
+            "button_label": "BOOK PRIVATE TASTING",
+            "button_link": "shopify:\/\/pages\/private-events",
+            "button_color_scheme": ""
+          }
         }
       },
       "block_order": [
-        "row_mXgytr"
+        "row_mXgytr",
+        "row_7zmiLr"
       ],
       "settings": {
         "image_height": "medium",
