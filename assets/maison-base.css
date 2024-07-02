@@ -99,8 +99,6 @@ body {
 .text-wrapper {
   max-width: 500px;
   width: 100%;
-  margin-left: auto !important;
-  margin-right: auto !important;
 }
 
 .image-with-text__custom-text {
