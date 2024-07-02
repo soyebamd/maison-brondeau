@@ -408,12 +408,14 @@
 }
 
 .image-with-text__heading {
-  margin-bottom: 0;
+  margin-bottom: 35px;
 }
 
 .image-with-text__text p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2.3rem;
+  font-size: 14px;
+  color: #000;
 }
 
 @media screen and (max-width: 749px) {
