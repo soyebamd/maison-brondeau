@@ -189,6 +189,77 @@
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {{ product.description }}
                   </div>
+
+
+
+
+
+
+                  {% comment %} Variations extra meta data {% endcomment %}
+
+                  <ul class="meta-data">
+                    <ul class="meta-data">
+  {% if product.metafields.custom.country %}
+  <li>
+    <span><strong>Country:</strong></span> <span>{{ product.metafields.custom.country }}</span>
+  </li>
+  {% endif %}
+
+  {% if product.metafields.custom.region %}
+  <li>
+    <span><strong>Region:</strong></span> <span>{{ product.metafields.custom.region }}</span>
+  </li>
+  {% endif %}
+
+  {% if product.metafields.custom.appellation %}
+  <li>
+    <span><strong>Appellation:</strong></span> <span>{{ product.metafields.custom.appellation }}</span>
+  </li>
+  {% endif %}
+
+  {% if product.metafields.custom.style %}
+  <li>
+    <span><strong>Style:</strong></span> <span>{{ product.metafields.custom.style }}</span>
+  </li>
+  {% endif %}
+
+  {% if product.metafields.custom.producer %}
+  <li>
+    <span><strong>Producer:</strong></span> <span>{{ product.metafields.custom.producer }}</span>
+  </li>
+  {% endif %}
+
+  {% if product.metafields.custom.farming_practices %}
+  <li>
+    <span><strong>Farming Practices:</strong></span> <span>{{ product.metafields.custom.farming_practices }}</span>
+  </li>
+  {% endif %}
+
+  {% if product.metafields.custom.grapes %}
+  <li>
+    <span><strong>Grapes:</strong></span> <span>{{ product.metafields.custom.grapes }}</span>
+  </li>
+  {% endif %}
+
+  {% if product.metafields.custom.food_pairings %}
+  <li>
+    <span><strong>Food Pairings:</strong></span> <span>{{ product.metafields.custom.food_pairings }}</span>
+  </li>
+  {% endif %}
+
+  {% if product.metafields.custom.characteristics %}
+  <li>
+    <span><strong>Characteristics:</strong></span> <span>{{ product.metafields.custom.characteristics }}</span>
+  </li>
+  {% endif %}
+</ul>
+
+                  </ul>
+
+
+
+
+
                 {%- endif -%}
               {%- when 'sku' -%}
                 <p
