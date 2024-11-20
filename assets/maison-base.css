@@ -201,6 +201,7 @@ body {
   padding: 20px;
   border: 1px solid #872229;
   list-style: none;
+  font-size: 13px;
 }
 
 .meta-data li {
@@ -213,4 +214,5 @@ body {
 
 .meta-data li span:first-child {
   max-width: 130px;
+  width: 100%;
 }
