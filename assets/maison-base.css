@@ -210,9 +210,6 @@ body {
 .mb-10 {
   margin-bottom: 10px !important;
 }
-.meta-data:last-child {
-  border-bottom: 0;
-}
 
 .meta-data li {
   color: #872229;
@@ -221,7 +218,9 @@ body {
   border-bottom: 1px solid #8722295c;
   display: flex;
 }
-
+.meta-data li:last-child {
+  border-bottom: 0;
+}
 .meta-data li span:first-child {
   max-width: 170px;
   width: 100%;
