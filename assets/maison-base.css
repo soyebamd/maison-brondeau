@@ -210,3 +210,7 @@ body {
   border-bottom: 1px solid;
   display: flex;
 }
+
+.meta-data li span:first-child {
+  max-width: 130px;
+}
