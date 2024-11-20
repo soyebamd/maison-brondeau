@@ -206,6 +206,10 @@ body {
 .m-0 {
   margin: 0 !important;
 }
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
 .meta-data:last-child {
   border-bottom: 0;
 }
