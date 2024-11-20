@@ -203,6 +203,12 @@ body {
   list-style: none;
   font-size: 13px;
 }
+.m-0 {
+  margin: 0 !important;
+}
+.meta-data:last-child {
+  border-bottom: 0;
+}
 
 .meta-data li {
   color: #872229;
