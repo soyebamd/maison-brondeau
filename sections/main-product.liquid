@@ -214,12 +214,20 @@
   </li>
 {% endif %}
 
+{% comment %} Name & Producer {% endcomment %}
+{% if product.metafields.custom.name_producer %}
+  <li>
+    <span><strong>Name & Producer:</strong></span> <span>{{ product.metafields.custom.name_producer }}</span>
+  </li>
+{% endif %}
+
 {% comment %} Appellation (previously sub_region) Field {% endcomment %}
 {% if product.metafields.custom.sub_region %}
   <li>
     <span><strong>Appellation:</strong></span> <span>{{ product.metafields.custom.sub_region }}</span>
   </li>
 {% endif %}
+
 
 {% comment %} Appellation Field (Updated) {% endcomment %}
 {% if product.metafields.custom.appellation %}
@@ -228,19 +236,20 @@
   </li>
 {% endif %}
 
-{% comment %} Distributor Field with "Internal Use Only" {% endcomment %}
+{% comment %} Distributor Field with "Internal Use Only" 
 {% if product.metafields.custom.distributor_internal_use_only %}
   <li>
     <span><strong>Distributor:</strong></span> <span>Internal Use Only - {{ product.metafields.custom.distributor_internal_use_only }}</span>
   </li>
 {% endif %}
+{% endcomment %}
 
-{% comment %} Case Count Field with "Internal Use Only" {% endcomment %}
+{% comment %} Case Count Field with "Internal Use Only"
 {% if product.metafields.custom.case_count_internal_use_only %}
   <li>
     <span><strong>Case Count:</strong></span> <span>Internal Use Only - {{ product.metafields.custom.case_count_internal_use_only }}</span>
   </li>
-{% endif %}
+{% endif %} {% endcomment %}
 
 {% comment %} Farming Practices Field {% endcomment %}
 {% if product.metafields.custom.farming_practices %}
@@ -277,19 +286,19 @@
   </li>
 {% endif %}
 
-{% comment %} Display Location Field with "Internal Use Only" {% endcomment %}
+{% comment %} Display Location Field with "Internal Use Only"
 {% if product.metafields.custom.display_location_internal_use_only %}
   <li>
     <span><strong>Display Location:</strong></span> <span>Internal Use Only - {{ product.metafields.custom.display_location_internal_use_only }}</span>
   </li>
-{% endif %}
+{% endif %} {% endcomment %}
 
-{% comment %} Storage Location Field with "Internal Use Only" {% endcomment %}
+{% comment %} Storage Location Field with "Internal Use Only" 
 {% if product.metafields.custom.storage_location_internal_use_only %}
   <li>
     <span><strong>Storage Location:</strong></span> <span>Internal Use Only - {{ product.metafields.custom.storage_location_internal_use_only }}</span>
   </li>
-{% endif %}
+{% endif %}{% endcomment %}
 
 {% comment %} Grapes / Raw Material Field {% endcomment %}
 {% if product.metafields.custom.grapes %}
