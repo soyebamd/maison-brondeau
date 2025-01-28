@@ -198,60 +198,108 @@
 
 <ul class="meta-data">
   <h3 class="h2 m-0 mb-10">Specs</h3>
+  {%  comment  %} Country Field  {% endcomment %}
 
-  {% if product.metafields.custom.country %}
-    <li>
-      <span><strong>Country:</strong></span> <span>{{ product.metafields.custom.country }}</span>
-    </li>
-  {% endif %}
+{% if product.metafields.custom.country %}
+  <!-- Country Field -->
+  <li>
+    <span><strong>Country:</strong></span> <span>{{ product.metafields.custom.country }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.region %}
-    <li>
-      <span><strong>Region:</strong></span> <span>{{ product.metafields.custom.region }}</span>
-    </li>
-  {% endif %}
+{% comment %} Region Field {% endcomment %}
+{% if product.metafields.custom.region %}
+  <li>
+    <span><strong>Region:</strong></span> <span>{{ product.metafields.custom.region }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.appellation %}
-    <li>
-      <span><strong>Appellation:</strong></span> <span>{{ product.metafields.custom.appellation }}</span>
-    </li>
-  {% endif %}
+{% comment %} Appellation (previously sub_region) Field {% endcomment %}
+{% if product.metafields.custom.sub_region %}
+  <li>
+    <span><strong>Appellation:</strong></span> <span>{{ product.metafields.custom.sub_region }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.style %}
-    <li>
-      <span><strong>Style:</strong></span> <span>{{ product.metafields.custom.style }}</span>
-    </li>
-  {% endif %}
+{% comment %} Appellation Field (Updated) {% endcomment %}
+{% if product.metafields.custom.appellation %}
+  <li>
+    <span><strong>Appellation:</strong></span> <span>{{ product.metafields.custom.appellation }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.producer %}
-    <li>
-      <span><strong>Producer:</strong></span> <span>{{ product.metafields.custom.producer }}</span>
-    </li>
-  {% endif %}
+{% comment %} Distributor Field with "Internal Use Only" {% endcomment %}
+{% if product.metafields.custom.distributor_internal_use_only %}
+  <li>
+    <span><strong>Distributor:</strong></span> <span>Internal Use Only - {{ product.metafields.custom.distributor_internal_use_only }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.farming_practices %}
-    <li>
-      <span><strong>Farming Practices:</strong></span> <span>{{ product.metafields.custom.farming_practices }}</span>
-    </li>
-  {% endif %}
+{% comment %} Case Count Field with "Internal Use Only" {% endcomment %}
+{% if product.metafields.custom.case_count_internal_use_only %}
+  <li>
+    <span><strong>Case Count:</strong></span> <span>Internal Use Only - {{ product.metafields.custom.case_count_internal_use_only }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.grapes %}
-    <li>
-      <span><strong>Grapes:</strong></span> <span>{{ product.metafields.custom.grapes }}</span>
-    </li>
-  {% endif %}
+{% comment %} Farming Practices Field {% endcomment %}
+{% if product.metafields.custom.farming_practices %}
+  <li>
+    <span><strong>Farming Practices:</strong></span> <span>{{ product.metafields.custom.farming_practices }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.food_pairings %}
-    <li>
-      <span><strong>Food Pairings:</strong></span> <span>{{ product.metafields.custom.food_pairings }}</span>
-    </li>
-  {% endif %}
+{% comment %} Extras Field {% endcomment %}
+{% if product.metafields.custom.extras %}
+  <li>
+    <span><strong>Extras:</strong></span> <span>{{ product.metafields.custom.extras }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.characteristics %}
-    <li>
-      <span><strong>Characteristics:</strong></span> <span>{{ product.metafields.custom.characteristics }}</span>
-    </li>
-  {% endif %}
+{% comment %} Vintage Field {% endcomment %}
+{% if product.metafields.custom.vintage %}
+  <li>
+    <span><strong>Vintage:</strong></span> <span>{{ product.metafields.custom.vintage }}</span>
+  </li>
+{% endif %}
+
+{% comment %} Flavor Profile Field {% endcomment %}
+{% if product.metafields.custom.flavor_profile %}
+  <li>
+    <span><strong>Flavor Profile:</strong></span> <span>{{ product.metafields.custom.flavor_profile }}</span>
+  </li>
+{% endif %}
+
+{% comment %} Price Range Field {% endcomment %}
+{% if product.metafields.custom.price_range %}
+  <li>
+    <span><strong>Price Range:</strong></span> <span>{{ product.metafields.custom.price_range }}</span>
+  </li>
+{% endif %}
+
+{% comment %} Display Location Field with "Internal Use Only" {% endcomment %}
+{% if product.metafields.custom.display_location_internal_use_only %}
+  <li>
+    <span><strong>Display Location:</strong></span> <span>Internal Use Only - {{ product.metafields.custom.display_location_internal_use_only }}</span>
+  </li>
+{% endif %}
+
+{% comment %} Storage Location Field with "Internal Use Only" {% endcomment %}
+{% if product.metafields.custom.storage_location_internal_use_only %}
+  <li>
+    <span><strong>Storage Location:</strong></span> <span>Internal Use Only - {{ product.metafields.custom.storage_location_internal_use_only }}</span>
+  </li>
+{% endif %}
+
+{% comment %} Grapes / Raw Material Field {% endcomment %}
+{% if product.metafields.custom.grapes %}
+  <li>
+    <span><strong>Grapes / Raw Material:</strong></span> <span>{{ product.metafields.custom.grapes }}</span>
+  </li>
+{% endif %}
+
+
+  
 </ul>
 
 
