@@ -225,3 +225,18 @@ body {
   max-width: 170px;
   width: 100%;
 }
+
+.media-fit {
+  left: 50% !important;
+  height: 100% !important;
+  width: auto !important;
+  transform: translateX(-50%) !important;
+  position: relative !important;
+  display: flex;
+  justify-content: center;
+}
+.media-fit img {
+  height: 100% !important;
+  width: auto !important;
+  position: relative !important;
+}
