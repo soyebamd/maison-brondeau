@@ -97,3 +97,10 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+.media-fit {
+  left: 50% !important;
+  height: 100% !important;
+  width: auto !important;
+  transform: translateX(-50%) !important;
+}
