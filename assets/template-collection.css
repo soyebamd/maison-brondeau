@@ -108,4 +108,5 @@
 .media-fit img {
   height: 100% !important;
   width: auto !important;
+  position: relative !important;
 }
