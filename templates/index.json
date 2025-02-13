@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -30,10 +30,10 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "SHOP ALL",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": true,
             "button_label_2": "BOOK AN EVENT",
-            "button_link_2": "shopify:\/\/pages\/private-events",
+            "button_link_2": "shopify://pages/private-events",
             "button_style_secondary_2": true
           }
         }
@@ -44,7 +44,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/slider.jpg",
+        "image": "shopify://shop_images/slider.jpg",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
@@ -63,7 +63,7 @@
         "image_4V7Twk": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Vector_3.svg"
+            "image": "shopify://shop_images/Vector_3.svg"
           }
         },
         "text_kkH6Hp": {
@@ -104,7 +104,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-2",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -123,12 +123,12 @@
           "type": "row",
           "settings": {
             "row_bg": "scheme-4",
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-02-17_at_5.11_1_90beafec-679d-4944-af93-4085bf176e05.jpg",
+            "image": "shopify://shop_images/Screenshot_2024-02-17_at_5.11_1_90beafec-679d-4944-af93-4085bf176e05.jpg",
             "caption": "",
             "heading": "Public Tastings",
-            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. See schedule for upcoming tasting events with winemakers, experts, educators and more.<\/p>",
+            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. See schedule for upcoming tasting events with winemakers, experts, educators and more.</p>",
             "button_label": "VIEW SCHEDULE",
-            "button_link": "shopify:\/\/pages\/public-tastings",
+            "button_link": "shopify://pages/public-tastings",
             "button_color_scheme": "scheme-3"
           }
         },
@@ -136,12 +136,12 @@
           "type": "row",
           "settings": {
             "row_bg": "scheme-3",
-            "image": "shopify:\/\/shop_images\/wine.jpg",
+            "image": "shopify://shop_images/wine.jpg",
             "caption": "",
             "heading": "Private Events",
-            "text": "<p>Indulge in a personalized interactive wine tasting experience at our tasting bar and lounge, or at your company's location. Contact us today to plan your next private event.<\/p>",
+            "text": "<p>Indulge in a personalized interactive wine tasting experience at our tasting bar and lounge, or at your company's location. Contact us today to plan your next private event.</p>",
             "button_label": "BOOK PRIVATE TASTING",
-            "button_link": "shopify:\/\/pages\/private-events",
+            "button_link": "shopify://pages/private-events",
             "button_color_scheme": ""
           }
         }
@@ -180,7 +180,7 @@
         "text_UBwRkU": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep<\/li><li>Monthly or quarterly shipments based on the latest theme or region<\/li><li>10% member discount on any purchase at Maison Brondeau<\/li><\/ul>",
+            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep</li><li>Monthly or quarterly shipments based on the latest theme or region</li><li>10% member discount on any purchase at Maison Brondeau</li></ul>",
             "text_style": "body"
           }
         },
@@ -200,7 +200,7 @@
       ],
       "settings": {
         "custom_style": true,
-        "image": "shopify:\/\/shop_images\/wine-club.jpg",
+        "image": "shopify://shop_images/wine-club.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -222,33 +222,33 @@
           "type": "column",
           "settings": {
             "color_scheme_box": "scheme-4",
-            "image": "shopify:\/\/shop_images\/cellar.jpg",
+            "image": "shopify://shop_images/cellar.jpg",
             "title": "Build Your At-Home Cellar",
             "text": "",
             "link_label": "LEARN MORE",
-            "link": "shopify:\/\/pages\/build-your-at-home-cellar"
+            "link": "shopify://pages/build-your-at-home-cellar"
           }
         },
         "column_3dA9h4": {
           "type": "column",
           "settings": {
             "color_scheme_box": "scheme-4",
-            "image": "shopify:\/\/shop_images\/wine-list.jpg",
+            "image": "shopify://shop_images/wine-list.jpg",
             "title": "Restaurant Wine List Curation",
             "text": "",
             "link_label": "Learn More",
-            "link": "shopify:\/\/pages\/restaurant-wine-list-curation"
+            "link": "shopify://pages/restaurant-wine-list-curation"
           }
         },
         "column_MPP8qN": {
           "type": "column",
           "settings": {
             "color_scheme_box": "scheme-4",
-            "image": "shopify:\/\/shop_images\/hospitality.jpg",
+            "image": "shopify://shop_images/hospitality.jpg",
             "title": "Hospitality Services",
             "text": "",
             "link_label": "Learn More",
-            "link": "shopify:\/\/pages\/hospitality-services"
+            "link": "shopify://pages/hospitality-services"
           }
         }
       },
