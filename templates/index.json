@@ -104,7 +104,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-2",
-        "image_ratio": "portrait",
+        "image_ratio": "media-fit",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
