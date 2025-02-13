@@ -103,4 +103,9 @@
   height: 100% !important;
   width: auto !important;
   transform: translateX(-50%) !important;
+  position: relative !important;
+}
+.media-fit img {
+  height: 100% !important;
+  width: auto !important;
 }
