@@ -240,3 +240,8 @@ body {
   width: auto !important;
   position: relative !important;
 }
+
+.footer-section__image-wrapper img {
+  max-width: 200px;
+  height: auto;
+}
