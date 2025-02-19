@@ -262,3 +262,8 @@ body {
   max-width: 200px;
   height: auto;
 }
+
+.button-full {
+  min-height: 50px;
+  width: 100%;
+}
