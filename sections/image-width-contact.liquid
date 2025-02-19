@@ -85,7 +85,7 @@
                     {{ block.settings.text }}
                   </div>
 
-                {%- when 'contactForm' -%}
+                {%- when 'customContactForm' -%}
                     {{ block.settings.contact_form }}
 
 
@@ -452,7 +452,7 @@
 
 
     {
-      "type": "contactForm",
+      "type": "customContactForm",
       "name": "t:sections.image-with-text.blocks.text.name",
       "limit": 1,
       "settings": [
@@ -506,7 +506,7 @@
           "type": "text"
         },
         {
-             "type": "contactForm"
+             "type": "customContactForm"
         },
         {
           "type": "button"
