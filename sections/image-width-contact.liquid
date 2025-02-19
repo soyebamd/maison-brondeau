@@ -86,7 +86,14 @@
                   </div>
 
                 {%- when 'customContactForm' -%}
-                    {{ block.settings.contact_form }}
+
+                    {%- if  block.settings.contact_form -%}
+                   
+
+                    {%  render 'contact-form' %}
+
+                    {%- endif -%}
+
 
 
                 {%- when 'button' -%}
