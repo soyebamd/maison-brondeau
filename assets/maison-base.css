@@ -88,6 +88,10 @@ body {
   padding: 0 !important;
 }
 
+.ms-100 {
+  margin-left: 40px !important;
+}
+
 @media (min-width: 990px) {
   h1,
   .h1 {
@@ -100,6 +104,10 @@ body {
 }
 
 @media (min-width: 750px) {
+  .ms-100 {
+    margin-left: 100px !important;
+  }
+
   .p-13 {
     padding: 13px;
   }
