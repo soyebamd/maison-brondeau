@@ -96,6 +96,7 @@
       ],
       "settings": {
         "custom_style": true,
+        "image": "shopify://shop_images/Rectangle_27_f9a90745-4547-47ae-8fa6-4297745dc7f0.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
