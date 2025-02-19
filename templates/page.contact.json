@@ -1,1 +1,111 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":36,"padding_bottom":36}},"form":{"type":"contact-form","settings":{"heading":"","heading_size":"h1","color_scheme":"scheme-1","padding_top":36,"padding_bottom":36}}},"order":["main","form"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_fqNiEq": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_KrTbTd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KrTbTd"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_18_71d3e673-cd3c-470e-b0ac-ba1a294f7ad1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-ac610470-7a7f-48d7-b416-213b812b1186",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-5",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_mk4Ynx": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_iYCiT6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_wbX7M6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_YNWfpx": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_iYCiT6",
+        "text_wbX7M6",
+        "button_YNWfpx"
+      ],
+      "settings": {
+        "custom_style": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_fqNiEq",
+    "main",
+    "form",
+    "image_with_text_mk4Ynx"
+  ]
+}
