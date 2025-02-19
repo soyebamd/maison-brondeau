@@ -92,6 +92,10 @@ body {
   margin-left: 40px !important;
 }
 
+.max-500 {
+  max-width: 500px;
+}
+
 @media (min-width: 990px) {
   h1,
   .h1 {
