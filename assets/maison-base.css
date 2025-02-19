@@ -267,3 +267,7 @@ body {
   min-height: 50px;
   width: 100%;
 }
+
+.pt--70 {
+  padding-top: 70px;
+}
