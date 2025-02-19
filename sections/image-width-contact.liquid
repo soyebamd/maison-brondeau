@@ -12,6 +12,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .image-w-contact-form, .image-w-contact-form #ContactForm, .image-w-contact-form .contact__fields--full, .image-w-contact-form .field{
+    width:100%
+  }
+
+
 {%- endstyle -%}
 
 {%- liquid
@@ -87,7 +93,7 @@
 
                 {%- when 'customContactForm' -%}
 
-                    <div>
+                    <div class="image-w-contact-form">
 
                     {%- if  block.settings.contact_form -%}
                    
