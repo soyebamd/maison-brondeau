@@ -10,11 +10,10 @@
 {
   "sections": {
     "main": {
-      "type": "main-gift-product",
+      "type": "main-product",
       "blocks": {
         "vendor": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
@@ -24,13 +23,8 @@
           "type": "title",
           "settings": {}
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "price": {
           "type": "price",
-          "disabled": true,
           "settings": {}
         },
         "variant_picker": {
@@ -47,9 +41,13 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false,
+            "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
         },
         "product_meta_4ej7d8": {
           "type": "product_meta",
@@ -65,28 +63,28 @@
       "block_order": [
         "vendor",
         "title",
-        "description",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "description",
         "product_meta_4ej7d8",
         "share"
       ],
       "settings": {
-        "enable_sticky_info": true,
-        "color_scheme": "scheme-1",
+        "enable_sticky_info": false,
+        "color_scheme": "scheme-6417b91d-cb41-4df6-a1bd-7cc59a6c1364",
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "related-products": {
