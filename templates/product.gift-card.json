@@ -51,6 +51,7 @@
         },
         "product_meta_4ej7d8": {
           "type": "product_meta",
+          "disabled": true,
           "settings": {}
         },
         "share": {
