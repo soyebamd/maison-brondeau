@@ -111,7 +111,8 @@ body {
   max-width: 65rem;
   justify-self: end;
   height: auto;
-
+  float: right;
+  margin-right: 5rem;
   width: 100%;
 }
 
@@ -203,6 +204,14 @@ body {
 }
 .d-flex {
   display: flex;
+}
+
+.justify-content-right {
+  justify-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
 }
 @media screen and (min-width: 990px) {
   .header--middle-left {
