@@ -35,7 +35,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "circle"
+            "swatch_shape": "square"
           }
         },
         "quantity_selector": {
@@ -51,6 +51,7 @@
         },
         "product_meta_4ej7d8": {
           "type": "product_meta",
+          "disabled": true,
           "settings": {}
         },
         "share": {
