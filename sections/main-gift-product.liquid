@@ -908,10 +908,24 @@
         ]
       }
 
-      document.querySelector('.recipient-checkbox span').textContent = '🎁 Sending as a gift? Add a personal note!';
+     
 
 
     </script>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        document.querySelectorAll('.recipient-checkbox span').forEach(span => {
+            span.textContent = '🎁 Sending as a gift? Add a personal note!';
+        });
+    }, 1000); // 2 seconds delay
+});
+
+
+
+</script>
   </div>
 </section>
 
