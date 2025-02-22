@@ -122,7 +122,7 @@
         "row_mXgytr": {
           "type": "row",
           "settings": {
-            "row_bg": "scheme-4",
+            "row_bg": "scheme-64344b5e-ab98-4571-8c49-c9f8d40e5b18",
             "image": "shopify://shop_images/Screenshot_2024-02-17_at_5.11_1_90beafec-679d-4944-af93-4085bf176e05.jpg",
             "caption": "",
             "heading": "Public Tastings",
@@ -268,7 +268,7 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-64344b5e-ab98-4571-8c49-c9f8d40e5b18",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 60,
