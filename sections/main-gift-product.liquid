@@ -18,6 +18,8 @@
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
 
+  
+
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -30,6 +32,20 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+
+    .gift-card-product label {
+  width: 103px;
+  height: 59px;
+  border-radius: 0 !important;
+  display: flex !important;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 18px !important;
+  background: transparent !important;
+  color: #000 !important;
+}
+
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -66,7 +82,7 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-  <div class="page-width page-width-full p-0">
+  <div class="gift-card-product page-width page-width-full p-0">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="d-flex justify-content-right align-items-center grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
        <div class="product-left">   {% render 'product-media-gallery', variant_images: variant_images %} </div>
