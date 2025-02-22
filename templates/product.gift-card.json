@@ -88,6 +88,54 @@
         "padding_bottom": 0
       }
     },
+    "image_with_text_UbkRgU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fXTbhh": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Wine Club",
+            "heading_size": "h1"
+          }
+        },
+        "text_rxbCjx": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep</li><li>Monthly or quarterly shipments based on the latest theme or region</li><li>10% member discount on any purchase at Maison Brondeau</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_ecJeC7": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fXTbhh",
+        "text_rxbCjx",
+        "button_ecJeC7"
+      ],
+      "settings": {
+        "custom_style": true,
+        "image": "shopify://shop_images/wine-club.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 76,
+        "padding_bottom": 76
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -109,6 +157,7 @@
   },
   "order": [
     "main",
+    "image_with_text_UbkRgU",
     "related-products"
   ]
 }
