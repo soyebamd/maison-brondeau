@@ -5,6 +5,16 @@
 
   {{ product.type   }}
 
+  
+{% if product.type %}
+  <!-- product.type -->
+  <li>
+    <span><strong>Type:</strong></span> <span>{{ product.type }}</span>
+  </li>
+{% endif %}
+
+
+
 {% if product.metafields.custom.country %}
   <!-- Country Field -->
   <li>
