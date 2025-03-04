@@ -20,14 +20,17 @@
 {% comment %} Name & Producer {% endcomment %}
 {% if product.metafields.custom.name_producer %}
   <li>
-
- 
-
-
-    <span><strong>{{product.metafields.custom.name_producer.label}}  :</strong></span> <span>{{ product.metafields.custom.name_producer }}</span>
+    <span><strong>
+      {% if product.metafields.custom.name_producer.definition.label %}
+        {{ product.metafields.custom.name_producer.definition.label }}
+      {% else %}
+        Name & Producer
+      {% endif %}
+      :
+    </strong></span> 
+    <span>{{ product.metafields.custom.name_producer.value }}</span>
   </li>
 {% endif %}
-
 
 {% comment %} Name & Producer {% endcomment %}
 {% if product.metafields.custom.producer %}
