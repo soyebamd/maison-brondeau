@@ -90,6 +90,21 @@
       </facet-filters-form>
     {%- endif -%}
 
+
+    {% if collection.metafields.custom.filter_options.value %}
+    <div class="collection-filters">
+        <h3>Filter by:</h3>
+        <ul>
+            {% for filter in collection.metafields.custom.filter_options.value %}
+                <li>
+                    <a href="{{ collection.url }}?filter={{ filter | handleize }}">{{ filter }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
+
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
       {{ 'component-facets.css' | asset_url | stylesheet_tag }}
       <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
