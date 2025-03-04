@@ -18,17 +18,17 @@
 {% endif %}
 
 {% comment %} Name & Producer {% endcomment %}
-{% if product.metafields.custom.name_producer %}
+{% if product.metafields.custom.flavor_profile %}
   <li>
     <span><strong>
-      {% if product.metafields.custom.name_producer.definition.label %}
-        {{ product.metafields.custom.name_producer.definition.label }}
+      {% if product.metafields.custom.flavor_profile.definition.label %}
+        {{ product.metafields.custom.flavor_profile.definition.label }}
       {% else %}
-      x
+        Body and Style
       {% endif %}
       :
     </strong></span> 
-    <span>{{ product.metafields.custom.name_producer.value }}</span>
+    <span>{{ product.metafields.custom.flavor_profile.value }}</span>
   </li>
 {% endif %}
 
