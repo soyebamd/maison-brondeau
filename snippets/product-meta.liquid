@@ -20,7 +20,11 @@
 {% comment %} Name & Producer {% endcomment %}
 {% if product.metafields.custom.name_producer %}
   <li>
-    <span><strong>Name & Producer:</strong></span> <span>{{ product.metafields.custom.name_producer }}</span>
+
+  {{ product.metafields.custom.name_producer_label }}
+
+
+    <span><strong>sss:</strong></span> <span>{{ product.metafields.custom.name_producer }}</span>
   </li>
 {% endif %}
 
