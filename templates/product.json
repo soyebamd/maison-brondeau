@@ -58,6 +58,13 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "text_x37JF6": {
+          "type": "text",
+          "settings": {
+            "text": "Allergen Info: {{ product.metafields.shopify[\"allergen-information\"] | metafield_text: field: 'label' }}",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
@@ -69,7 +76,8 @@
         "buy_buttons",
         "description",
         "product_meta_4ej7d8",
-        "share"
+        "share",
+        "text_x37JF6"
       ],
       "settings": {
         "enable_sticky_info": true,
