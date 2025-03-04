@@ -26,6 +26,20 @@
   }
 {%- endstyle -%}
 
+<h1>TEST</h1>
+
+    {% if collection.metafields.custom.filter_options.value %}
+    <div class="collection-filters">
+        <h3>Filter by:</h3>
+        <ul>
+            {% for filter in collection.metafields.custom.filter_options.value %}
+                <li>
+                    <a href="{{ collection.url }}?filter={{ filter | handleize }}">{{ filter }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
@@ -91,18 +105,6 @@
     {%- endif -%}
 
 
-    {% if collection.metafields.custom.filter_options.value %}
-    <div class="collection-filters">
-        <h3>Filter by:</h3>
-        <ul>
-            {% for filter in collection.metafields.custom.filter_options.value %}
-                <li>
-                    <a href="{{ collection.url }}?filter={{ filter | handleize }}">{{ filter }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-{% endif %}
 
 
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
