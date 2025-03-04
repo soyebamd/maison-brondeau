@@ -24,6 +24,14 @@
   </li>
 {% endif %}
 
+
+{% comment %} Name & Producer {% endcomment %}
+{% if product.metafields.custom.producer %}
+  <li>
+    <span><strong>Name & Producer:</strong></span> <span>{{ product.metafields.custom.producer }}</span>
+  </li>
+{% endif %}
+
 {% comment %} Appellation (previously sub_region) Field {% endcomment %}
 {% if product.metafields.custom.sub_region %}
   <li>
