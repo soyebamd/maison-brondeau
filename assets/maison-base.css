@@ -261,6 +261,10 @@ body {
   border-bottom: 1px solid #8722295c;
   display: flex;
 }
+.meta-data li span:nth-child(2) {
+  color: #141414;
+}
+
 .meta-data li:last-child {
   border-bottom: 0;
 }
