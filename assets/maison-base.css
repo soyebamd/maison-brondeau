@@ -243,6 +243,7 @@ body {
   color: #872229;
   list-style: none;
   font-size: 13px;
+  padding: 0;
 }
 .m-0 {
   margin: 0 !important;
@@ -254,7 +255,7 @@ body {
 
 .meta-data li {
   color: #872229;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   margin-bottom: 10px;
 
   display: flex;
