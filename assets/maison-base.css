@@ -257,6 +257,10 @@ body {
   background-color: #dfe3d3;
 }
 
+.quantity--bg:after {
+  display: none;
+}
+
 .mb-10 {
   margin-bottom: 10px !important;
 }
