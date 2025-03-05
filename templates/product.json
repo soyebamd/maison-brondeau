@@ -96,24 +96,6 @@
         "padding_bottom": 12
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "image_ratio": "media-fit",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
-      }
-    },
     "image_banner_FzXj9M": {
       "type": "image-banner",
       "blocks": {
@@ -164,11 +146,78 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "media-fit",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_himPck": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BbfMwh": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Wine Club",
+            "heading_size": "h1"
+          }
+        },
+        "text_HcUy3n": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep</li><li>Monthly or quarterly shipments based on the latest theme or region</li><li>10% member discount on any purchase at Maison Brondeau</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_p8pCif": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_BbfMwh",
+        "text_HcUy3n",
+        "button_p8pCif"
+      ],
+      "settings": {
+        "custom_style": true,
+        "image": "shopify://shop_images/wine-club.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "scheme-64344b5e-ab98-4571-8c49-c9f8d40e5b18",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "image_banner_FzXj9M",
-    "related-products"
+    "related-products",
+    "image_with_text_himPck"
   ]
 }
