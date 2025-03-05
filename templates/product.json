@@ -113,10 +113,62 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "image_banner_FzXj9M": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_eFmqMt": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_M34xQa": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_neiJfc": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_eFmqMt",
+        "text_M34xQa",
+        "buttons_neiJfc"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2024-02-17_at_5.11_1_0b0f8674-438f-40a1-9126-2f6c4eaf50e3.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
     "main",
+    "image_banner_FzXj9M",
     "related-products"
   ]
 }
