@@ -23,6 +23,14 @@
           "type": "title",
           "settings": {}
         },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "product_meta_4ej7d8": {
+          "type": "product_meta",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -45,14 +53,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "product_meta_4ej7d8": {
-          "type": "product_meta",
-          "settings": {}
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -61,6 +61,7 @@
         },
         "text_x37JF6": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Allergen Info: {{ product.metafields.shopify[\"allergen-information\"] | metafield_text: field: 'label' }}",
             "text_style": "body"
@@ -70,12 +71,12 @@
       "block_order": [
         "vendor",
         "title",
+        "description",
+        "product_meta_4ej7d8",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "product_meta_4ej7d8",
         "share",
         "text_x37JF6"
       ],
