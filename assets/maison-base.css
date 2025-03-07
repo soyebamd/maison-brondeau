@@ -392,6 +392,13 @@ body {
   left: 50% !important;
 }
 
+.tmenu_app .tmenu_nav .tmenu_item--root > .tmenu_item_link {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  font-weight: bold;
+  color: #000;
+}
+
 /* END Menu dropdown multiple */
 @keyframes fadeIn {
   from {
