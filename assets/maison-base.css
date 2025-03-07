@@ -392,7 +392,12 @@ body {
   left: 50% !important;
 }
 
-.tmenu_app .tmenu_nav .tmenu_item--root > .tmenu_item_link {
+.tmenu_item
+  .tmenu_app
+  .tmenu_nav
+  .tmenu_item--root
+  > .tmenu_item
+  .tmenu_item_link {
   padding-left: 20px !important;
   padding-right: 20px !important;
   font-weight: bold;
