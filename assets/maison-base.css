@@ -385,7 +385,7 @@ body {
   max-width: 1400px;
 
   left: 50% !important;
-  transform: translateX(-50%);
+  transform: translateX(-50%) !important;
 }
 
 /* END Menu dropdown multiple */
