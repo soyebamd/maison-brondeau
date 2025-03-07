@@ -455,13 +455,20 @@
   customElements.define('sticky-header', StickyHeader);
 
 
-  document.addEventListener('DOMContentLoaded', () => {
-   setTimeout(() => {
-    const tmenu_watermark = document.querySelector('.tmenu-watermark');
-      tmenu_watermark.style.display = 'none';
-    }, 3000);
-  });
+  // document.addEventListener('DOMContentLoaded', () => {
+  //  setTimeout(() => {
+  //   const tmenu_watermark = document.querySelector('.tmenu-watermark');
+  //   tmenu_watermark.remove()
+  //     tmenu_watermark.style.display = 'none';
+  //   }, 3000);
+  // });
 
+  document.addEventListener('DOMContentLoaded', () => {
+  const tmenu_watermark = document.querySelector('.tmenu-watermark');
+  if (tmenu_watermark) {
+    tmenu_watermark.remove(); // Immediately removes the watermark element
+  }
+});
 
 
 
