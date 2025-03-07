@@ -406,7 +406,8 @@ body {
   max-width: 20% !important;
 }
 
-.tmenu-watermark * {
+.tmenu-watermark *,
+.tmenu-watermark a {
   color: #fff !important;
 }
 
