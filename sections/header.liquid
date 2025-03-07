@@ -454,14 +454,17 @@
 
   customElements.define('sticky-header', StickyHeader);
 
+
+  document.addEventListener('DOMContentLoaded', () => {
+   setTimeout(() => {
 const tmenu_watermark = document.querySelector('.tmenu-watermark');
 
-
-setTimeout(() => {
-  
   tmenu_watermark.style.display = 'none';
 
 }, 2000);
+  });
+
+
 
 
 {% endjavascript %}
