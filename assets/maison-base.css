@@ -406,7 +406,7 @@ body {
   max-width: 20% !important;
 }
 
-.tmenu-watermark.tmenu_item_link {
+.tmenu_item_link {
   display: none !important;
 }
 
