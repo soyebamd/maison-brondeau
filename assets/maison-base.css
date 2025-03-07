@@ -407,7 +407,7 @@ body {
 }
 
 .tmenu-watermark {
-  display: none !important;
+  color: #fff !important;
 }
 
 /* END Menu dropdown multiple */
