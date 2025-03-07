@@ -402,6 +402,9 @@ body {
   font-weight: bold !important;
   color: #000 !important;
 }
+.tmenu_col-2 {
+  max-width: 20% !important;
+}
 
 /* END Menu dropdown multiple */
 @keyframes fadeIn {
