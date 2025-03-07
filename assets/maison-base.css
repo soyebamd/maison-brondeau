@@ -388,6 +388,12 @@ body {
   transform: translateX(-50%) !important;
 }
 
+.tmenu_submenu_type_mega .tmenu_submenu {
+  width: 100%;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
 /* END Menu dropdown multiple */
 @keyframes fadeIn {
   from {
