@@ -383,7 +383,7 @@ body {
 
 .tmenu_submenu {
   max-width: 1400px;
-
+  width: 100%;
   left: 50% !important;
   transform: translateX(-50%) !important;
 }
