@@ -379,6 +379,16 @@ body {
   background: #c82333;
 }
 
+/* Menu dropdown multiple */
+
+.tmenu_submenu {
+  max-width: 1400px;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* END Menu dropdown multiple */
 @keyframes fadeIn {
   from {
     opacity: 0;
