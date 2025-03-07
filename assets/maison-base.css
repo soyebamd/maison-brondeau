@@ -397,8 +397,8 @@ body {
   .tmenu_nav
   .tmenu_item--root
   > .tmenu_item_link {
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
   font-weight: bold !important;
   color: #000 !important;
 }
