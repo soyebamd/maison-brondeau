@@ -414,6 +414,7 @@ body {
 .heading-logo {
   margin: auto;
   display: block;
+  max-width: 280px;
 }
 
 /* END Menu dropdown multiple */
