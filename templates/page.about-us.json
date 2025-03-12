@@ -24,12 +24,13 @@
         "heading_UMpXpJ"
       ],
       "settings": {
+        "image": "shopify://shop_images/Rectangle_18_1.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-ac610470-7a7f-48d7-b416-213b812b1186",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -38,14 +39,57 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "rich_text_CbbTGT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RADnFL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bienvenue chez Maison Brondeau! ",
+            "heading_size": "h1"
+          }
+        },
+        "text_ejDjHa": {
+          "type": "text",
+          "settings": {
+            "text": "So, a bit about us – we’re a hospitality-driven wine store and a one stop shop to explore, buy, and learn about all things wine and spirits in the heart of Westchester, New York. Whether you’re new to the world of wine and looking for a helping hand, a wine lover in search of an expansive, global selection of top-notch winemakers and under-the-radar producers, or simply passing through the neighborhood and intrigued by our glowing red sign out front, our team of wine experts is here to help. ",
+            "heading_caption": "",
+            "text_size_1": "s-small"
+          }
+        },
+        "text_TWtkKE": {
+          "type": "text",
+          "settings": {
+            "text": "Our owner, Ben Brondeau, comes from a wine-loving culture and family, where no meal or celebration is complete without a glass of wine in hand. Further inspired by a trip to Napa Valley with his wife where he discovered a wine store that offered a retail experience unlike any other, Ben sought to create a New York version with a European flare. Part of the City Square Arcade Shops on Main Street in White Plains, Maison Brondeau focuses on customer experience and community above all else. ",
+            "heading_caption": "",
+            "text_size_1": "s-small"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RADnFL",
+        "text_ejDjHa",
+        "text_TWtkKE"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-6417b91d-cb41-4df6-a1bd-7cc59a6c1364",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "image_banner_Y4pDXT",
-    "main"
+    "main",
+    "rich_text_CbbTGT"
   ]
 }
