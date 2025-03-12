@@ -19,7 +19,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.sub_region.value }} {{ product.metafields.custom.appellation.value }} , {{ product.metafields.custom.country.value }}",
+            "text": "{{ product.metafields.custom.region.value }}, {{ product.metafields.custom.country.value }}",
             "text_style": "uppercase"
           }
         },
