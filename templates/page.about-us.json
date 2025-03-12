@@ -58,23 +58,7 @@
         "text_ejDjHa": {
           "type": "text",
           "settings": {
-            "text": "So, a bit about us – we’re a hospitality-driven wine store and a one stop shop to explore, buy, and learn about all things wine and spirits in the heart of Westchester, New York. Whether you’re new to the world of wine and looking for a helping hand, a wine lover in search of an expansive, global selection of top-notch winemakers and under-the-radar producers, or simply passing through the neighborhood and intrigued by our glowing red sign out front, our team of wine experts is here to help. ",
-            "heading_caption": "",
-            "text_size_1": "s-small"
-          }
-        },
-        "text_TWtkKE": {
-          "type": "text",
-          "settings": {
-            "text": "Our owner, Ben Brondeau, comes from a wine-loving culture and family, where no meal or celebration is complete without a glass of wine in hand. Further inspired by a trip to Napa Valley with his wife where he discovered a wine store that offered a retail experience unlike any other, Ben sought to create a New York version with a European flare. Part of the City Square Arcade Shops on Main Street in White Plains, Maison Brondeau focuses on customer experience and community above all else. ",
-            "heading_caption": "",
-            "text_size_1": "s-small"
-          }
-        },
-        "text_cGEDQD": {
-          "type": "text",
-          "settings": {
-            "text": "Our owner, Ben Brondeau, comes from a wine-loving culture and family, where no meal or celebration is complete without a glass of wine in hand. Further inspired by a trip to Napa Valley with his wife where he discovered a wine store that offered a retail experience unlike any other, Ben sought to create a New York version with a European flare. Part of the City Square Arcade Shops on Main Street in White Plains, Maison Brondeau focuses on customer experience and community above all else. ",
+            "text": "<p>So, a bit about us – we’re a hospitality-driven wine store and a one stop shop to explore, buy, and learn about all things wine and spirits in the heart of Westchester, New York. Whether you’re new to the world of wine and looking for a helping hand, a wine lover in search of an expansive, global selection of top-notch winemakers and under-the-radar producers, or simply passing through the neighborhood and intrigued by our glowing red sign out front, our team of wine experts is here to help. </p><p>Our owner, Ben Brondeau, comes from a wine-loving culture and family, where no meal or celebration is complete without a glass of wine in hand. Further inspired by a trip to Napa Valley with his wife where he discovered a wine store that offered a retail experience unlike any other, Ben sought to create a New York version with a European flare. Part of the City Square Arcade Shops on Main Street in White Plains, Maison Brondeau focuses on customer experience and community above all else. </p><p>Education is at the core of what we do, and through our in-house wine school, École Brondeau, we aim to demystify the world of wine, making it enjoyable and understandable for everyone who walks through our doors. Join us at our tasting bar where we host an array of product samplings, tasting classes, and educational sessions led by world-renowned winemakers and trained sommeliers. Check out our calendar to see what we have coming up!</p><p>Our store is open 7 days a week, but we’re more than happy to bring our products directly to your doorstep instead. Browse our site, place an order, and we’ll either deliver within White Plains for free, or ship your items directly to you if you’re in New York. Feel free to place an order for pick-up too, and we’ll have your items packaged and ready upon arrival.</p><p>For any inquiries, checkout our Contact Us page for more information on how to get in touch.</p><p>Merci et à très bientôt!</p><p></p>",
             "heading_caption": "",
             "text_size_1": "s-small"
           }
@@ -82,9 +66,7 @@
       },
       "block_order": [
         "heading_RADnFL",
-        "text_ejDjHa",
-        "text_TWtkKE",
-        "text_cGEDQD"
+        "text_ejDjHa"
       ],
       "settings": {
         "desktop_content_position": "center",
