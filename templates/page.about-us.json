@@ -112,12 +112,24 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_P3dFy9": {
+          "type": "column",
+          "settings": {
+            "color_scheme_box": "scheme-1",
+            "image": "shopify://shop_images/Rectangle_54.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_ffWhPQ",
         "column_ttf74q",
-        "column_bMWGJP"
+        "column_bMWGJP",
+        "column_P3dFy9"
       ],
       "settings": {
         "title": "",
@@ -125,7 +137,7 @@
         "full_width": true,
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "primary",
         "button_label": "",
