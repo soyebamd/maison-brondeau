@@ -131,6 +131,9 @@
         "column_bMWGJP",
         "column_P3dFy9"
       ],
+      "custom_css": [
+        ".multicolumn-card-spacing {padding-top: 2rem; margin-left: 2rem; margin-right: 2rem; padding-bottom: 2rem;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
