@@ -124,7 +124,16 @@
               class="banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
+
+
+            
+
+              {{ block.settings.block_image | image_url: width: 300 | image_tag }}
+
+
               {{ block.settings.heading }}
+
+
             </h2>
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -367,6 +376,11 @@
       "name": "t:sections.image-banner.blocks.heading.name",
       "limit": 1,
       "settings": [
+       {
+      "type": "image_picker",
+      "id": "block_image",
+      "label": "t:sections.image-banner.settings.image_2.label"
+    },
         {
           "type": "inline_richtext",
           "id": "heading",
