@@ -128,7 +128,7 @@
 
             {% if block.settings.block_image %}
 
-              {{ block.settings.block_image | image_url: width: 300 | image_tag }}
+              {{ block.settings.block_image | image_url: width: 300 | image_tag: class:'heading-logo' }}
 
             {% endif %}
 
