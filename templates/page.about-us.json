@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "heading": "About Us",
-            "heading_size": "h1"
+            "heading_size": "h0"
           }
         }
       },
