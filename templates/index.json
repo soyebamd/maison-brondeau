@@ -15,6 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
+            "block_image": "shopify://shop_images/MB_Logo_-_Stacked_Light_Gray.png",
             "heading": "",
             "heading_size": "h0"
           }
