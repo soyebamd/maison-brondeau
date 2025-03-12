@@ -411,6 +411,11 @@ body {
   color: #fff !important;
 }
 
+.heading-logo {
+  margin: auto;
+  display: block;
+}
+
 /* END Menu dropdown multiple */
 @keyframes fadeIn {
   from {
