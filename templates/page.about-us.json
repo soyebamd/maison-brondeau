@@ -132,7 +132,8 @@
         "column_P3dFy9"
       ],
       "custom_css": [
-        ".multicolumn-card-spacing {padding-top: 2rem; margin-left: 2rem; margin-right: 2rem; padding-bottom: 2rem;}"
+        ".multicolumn-card-spacing {padding-top: 2rem; margin-left: 2rem; margin-right: 2rem; padding-bottom: 2rem;}",
+        ".section-template--18582156673187__multicolumn_cwCinJ-padding {max-width: 1640px!important; width:100%;}"
       ],
       "settings": {
         "title": "",
