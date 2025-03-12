@@ -70,12 +70,21 @@
             "heading_caption": "",
             "text_size_1": "s-small"
           }
+        },
+        "text_cGEDQD": {
+          "type": "text",
+          "settings": {
+            "text": "Our owner, Ben Brondeau, comes from a wine-loving culture and family, where no meal or celebration is complete without a glass of wine in hand. Further inspired by a trip to Napa Valley with his wife where he discovered a wine store that offered a retail experience unlike any other, Ben sought to create a New York version with a European flare. Part of the City Square Arcade Shops on Main Street in White Plains, Maison Brondeau focuses on customer experience and community above all else. ",
+            "heading_caption": "",
+            "text_size_1": "s-small"
+          }
         }
       },
       "block_order": [
         "heading_RADnFL",
         "text_ejDjHa",
-        "text_TWtkKE"
+        "text_TWtkKE",
+        "text_cGEDQD"
       ],
       "settings": {
         "desktop_content_position": "center",
