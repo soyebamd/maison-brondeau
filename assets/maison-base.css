@@ -417,6 +417,11 @@ body {
   max-width: 280px;
 }
 
+.section-template--18582156673187__multicolumn_cwCinJ-padding {
+  max-width: 1640px !important;
+  width: 100% !important;
+}
+
 /* END Menu dropdown multiple */
 @keyframes fadeIn {
   from {
