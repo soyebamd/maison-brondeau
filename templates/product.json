@@ -12,16 +12,16 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.sub_region.value }} {{ product.metafields.custom.appellation.value }} , {{ product.metafields.custom.country.value }}",
+            "text_style": "uppercase"
+          }
         },
         "description": {
           "type": "description",
@@ -69,8 +69,8 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
+        "vendor",
         "description",
         "product_meta_4ej7d8",
         "price",
