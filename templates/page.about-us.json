@@ -134,7 +134,7 @@
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "full_width": true,
+        "full_width": false,
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 4,
