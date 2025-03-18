@@ -258,6 +258,7 @@
         "column_3dA9h4",
         "column_MPP8qN"
       ],
+      "disabled": true,
       "settings": {
         "title": "Custom Services",
         "heading_size": "h1",
