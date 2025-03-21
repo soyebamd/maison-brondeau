@@ -32,7 +32,21 @@
     }
 
     .product-bg{
-      background-image:url({{'MB_Logo_Rooster.svg' |  file_url}});
+     position:relative;
+    }
+
+    .product-bg:after {
+  background-image:url({{'MB_Logo_Rooster.svg' |  file_url}});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:
+top right;
+  opacity: .1;
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0; top:0;
+
     }
   {%- endstyle -%}
 
