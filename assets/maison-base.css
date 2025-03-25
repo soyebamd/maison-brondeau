@@ -433,7 +433,8 @@ body {
     transform: scale(1);
   }
 }
-/* 
-.modal__content {
+
+.modal__content,
+.z-999 {
   z-index: 999;
-} */
+}
