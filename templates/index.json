@@ -129,7 +129,7 @@
             "heading": "Public Tastings",
             "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. See schedule for upcoming tasting events with winemakers, experts, educators and more.</p>",
             "button_label": "VIEW SCHEDULE",
-            "button_link": "shopify://pages/public-tastings",
+            "button_link": "https://www.exploretock.com/maisonbrondeau",
             "button_color_scheme": "scheme-3"
           }
         },
