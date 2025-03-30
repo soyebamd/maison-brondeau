@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_Y4pDXT": {
@@ -24,7 +24,7 @@
         "heading_UMpXpJ"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Rectangle_26_1.png",
+        "image": "shopify://shop_images/Rectangle_26_1.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-center",
@@ -52,10 +52,10 @@
           "type": "row",
           "settings": {
             "row_bg": "scheme-4",
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-02-17_at_5.11_1.png",
+            "image": "shopify://shop_images/Screenshot_2024-02-17_at_5.11_1.png",
             "caption": "",
             "heading": "Tastings",
-            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau.<\/p><p>Each week, we host tasting events at our store’s very own bar and lounge where we swirl, sample and discuss all things wine with educators, producers, experts, and more.<\/p><p>See schedule for upcoming tasting events to book your spot today.<\/p>",
+            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau.</p><p>Each week, we host tasting events at our store’s very own bar and lounge where we swirl, sample and discuss all things wine with educators, producers, experts, and more.</p><p>See schedule for upcoming tasting events to book your spot today.</p>",
             "button_label": "VIEW SCHEDULE",
             "button_link": "#",
             "button_color_scheme": "scheme-3"
@@ -65,12 +65,12 @@
           "type": "row",
           "settings": {
             "row_bg": "scheme-1",
-            "image": "shopify:\/\/shop_images\/Rectangle_28_1.png",
+            "image": "shopify://shop_images/Rectangle_28_1.png",
             "caption": "",
             "heading": "Book an Event",
-            "text": "<p>Birthday Party. Corporate Event. Date Night. Maison Brondeau can host it for you!<\/p><p>Indulge in a personalized interactive wine tasting experience at our bar and lounge, or at your company's location. We will design the tasting event that fits your needs.<\/p><p>Contact us today to plan your next private event.<\/p>",
+            "text": "<p>Birthday Party. Corporate Event. Date Night. Maison Brondeau can host it for you!</p><p>Indulge in a personalized interactive wine tasting experience at our bar and lounge, or at your company's location. We will design the tasting event that fits your needs.</p><p>Contact us today to plan your next private event.</p>",
             "button_label": "CONTACT US",
-            "button_link": "",
+            "button_link": "shopify://pages/contact",
             "button_color_scheme": "scheme-3"
           }
         }
