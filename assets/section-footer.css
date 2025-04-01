@@ -57,6 +57,7 @@ a.link.list-social__link:first-child {
 .footer__content-bottom-wrapper {
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 
 @media screen and (max-width: 749px) {
