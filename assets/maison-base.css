@@ -13,6 +13,10 @@
     url("https://cdn.shopify.com/s/files/1/0683/4008/9055/files/abcdiatypesemi-monocondensed-regular-webfont_f0009024-763d-49b6-98cf-1472cff56e17.woff?v=1711859131")
       format("woff");
 }
+
+/*Stoke, Poppins*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Stoke:wght@300;400&display=swap");
+
 /* 
 
   font-family: "Amaranth", sans-serif;
@@ -26,6 +30,18 @@
     "wdth" 100;
 } */
 
+.stoke-light {
+  font-family: "Stoke", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.stoke-regular {
+  font-family: "Stoke", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h1,
 h2,
 h3,
@@ -38,27 +54,27 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Allura", cursive !important;
+  font-family: "Stoke", serif !important;
   font-weight: 400;
   font-style: normal;
 }
 
 .heading-text {
-  font-family: "Allura", cursive !important;
+  font-family: "Stoke", serif !important;
   font-weight: 400;
   font-style: normal;
 }
 
 .font-biryani {
-  font-family: "Biryani", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 body {
-  font-family: "Biryani", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .multicolumn-card__info .inline-richtext {
-  font-family: "Biryani", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
