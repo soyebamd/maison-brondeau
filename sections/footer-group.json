@@ -21,6 +21,14 @@
             "menu": "footer"
           }
         },
+        "image_KbeT86": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/MB_Logos_-_Light_Gray_Line_1_1.svg",
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
         "link_list_JEMNzA": {
           "type": "link_list",
           "settings": {
@@ -44,6 +52,7 @@
       },
       "block_order": [
         "link_list_LDAGq7",
+        "image_KbeT86",
         "link_list_JEMNzA",
         "checkbox_rgXVAz",
         "text_YyMKEb"
