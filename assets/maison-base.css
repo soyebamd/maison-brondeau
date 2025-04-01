@@ -473,3 +473,7 @@ body {
 .z-0 {
   z-index: 0;
 }
+
+.footer-block {
+  width: calc(19% - var(--grid-desktop-horizontal-spacing) * 2 / 3) !important;
+}
