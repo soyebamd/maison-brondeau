@@ -28,10 +28,12 @@
             "menu": "company"
           }
         },
-        "checkbox_rgXVAz": {
-          "type": "checkbox",
+        "image_KbeT86": {
+          "type": "image",
           "settings": {
-            "news_letter": true
+            "image": "shopify://shop_images/MB_Logos_-_Light_Gray_Line_1_1.png",
+            "image_width": 100,
+            "alignment": "center"
           }
         },
         "text_YyMKEb": {
@@ -40,13 +42,20 @@
             "heading": "CONTACT",
             "subtext": "<p><a href=\"mailto:hello@maisonbrondeau.com\" title=\"mailto:hello@maisonbrondeau.com\">hello@maisonbrondeau.com</a> <a href=\"tel:+1 (404) 345-3233\" title=\"tel:+1 (404) 345-3233\">+1 (404) 345-3233 </a></p>"
           }
+        },
+        "checkbox_rgXVAz": {
+          "type": "checkbox",
+          "settings": {
+            "news_letter": true
+          }
         }
       },
       "block_order": [
         "link_list_LDAGq7",
         "link_list_JEMNzA",
-        "checkbox_rgXVAz",
-        "text_YyMKEb"
+        "image_KbeT86",
+        "text_YyMKEb",
+        "checkbox_rgXVAz"
       ],
       "settings": {
         "image_footer": "shopify://shop_images/MB_Logo_-_Stacked_e4445038-13b4-409a-a58f-0ddf22fc2384.png",
