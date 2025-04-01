@@ -58,11 +58,10 @@
         "checkbox_rgXVAz"
       ],
       "settings": {
-        "image_footer": "shopify://shop_images/MB_Logo_-_Stacked_e4445038-13b4-409a-a58f-0ddf22fc2384.png",
         "color_scheme": "scheme-3",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
+        "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": true,
         "enable_language_selector": true,
