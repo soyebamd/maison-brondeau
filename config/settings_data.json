@@ -197,7 +197,7 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "#872229",
+          "background": "#5d1619",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
@@ -258,6 +258,17 @@
           "button": "#872229",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-c9f4b5e4-1e37-4726-8fac-c78afc2e5da0": {
+        "settings": {
+          "background": "#85272e",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#872229",
+          "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
       }
