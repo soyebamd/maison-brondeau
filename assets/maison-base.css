@@ -437,11 +437,11 @@ body {
 .position-relative {
   position: relative;
 }
-.modal__content {
+/* .modal__content {
   z-index: 999;
 }
 
 .modal__content,
 .z-999 {
   z-index: 10;
-}
+} */
