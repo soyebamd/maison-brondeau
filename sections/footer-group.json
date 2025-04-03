@@ -17,7 +17,7 @@
         "link_list_LDAGq7": {
           "type": "link_list",
           "settings": {
-            "heading": "Shop",
+            "heading": "INFORMATION",
             "menu": "footer"
           }
         },
@@ -39,7 +39,7 @@
         "text_YyMKEb": {
           "type": "text",
           "settings": {
-            "heading": "CONTACT",
+            "heading": "Find Us",
             "subtext": "<p><a href=\"mailto:hello@maisonbrondeau.com\" title=\"mailto:hello@maisonbrondeau.com\">hello@maisonbrondeau.com</a> <a href=\"tel:+1 (404) 345-3233\" title=\"tel:+1 (404) 345-3233\">+1 (404) 345-3233 </a></p>"
           }
         },
@@ -58,6 +58,7 @@
         "checkbox_rgXVAz"
       ],
       "settings": {
+        "custom_figma_footer": true,
         "color_scheme": "scheme-3",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
