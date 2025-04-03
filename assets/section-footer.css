@@ -555,3 +555,5 @@ a.link.list-social__link:first-child {
 .footer-block:nth-child(2) .footer-block__heading {
  text-indent: -9999px;
 }
+
+.custom_figma_footer .field__label{ color:#fff!important; }
