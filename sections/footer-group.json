@@ -17,7 +17,7 @@
         "link_list_LDAGq7": {
           "type": "link_list",
           "settings": {
-            "heading": "Shop",
+            "heading": "INFORMATION",
             "menu": "footer"
           }
         },
@@ -58,6 +58,7 @@
         "checkbox_rgXVAz"
       ],
       "settings": {
+        "custom_figma_footer": true,
         "color_scheme": "scheme-3",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
