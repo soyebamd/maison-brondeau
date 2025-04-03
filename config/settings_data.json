@@ -177,8 +177,8 @@
         "settings": {
           "background": "#5e5e5e",
           "background_gradient": "",
-          "text": "#f8f8f8",
-          "button": "#dfe3d3",
+          "text": "#ffffff",
+          "button": "#82282a",
           "button_label": "#141414",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
