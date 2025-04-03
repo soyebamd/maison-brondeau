@@ -557,3 +557,8 @@ a.link.list-social__link:first-child {
 }
 
 .custom_figma_footer .field__label{ color:#ccc!important; }
+
+
+.custom_figma_footer .newsletter-form__field-wrapper .field {
+    width: 376px!important;
+}
