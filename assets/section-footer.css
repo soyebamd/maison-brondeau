@@ -569,3 +569,7 @@ a.link.list-social__link:first-child {
 .custom_figma_footer .field:after{
   display: none!important;
 }
+
+.custom_figma_footer .list-social__link svg{
+  background: #82282A;
+}
