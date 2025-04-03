@@ -65,7 +65,7 @@
 
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding {% if section.settings.custom_figma_footer %} custom_figma_footer {% endif %}">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -663,6 +663,15 @@
     }
   ],
   "settings": [
+
+   {
+      "type": "checkbox",
+      "id": "custom_figma_footer",
+      "default": true,
+      "label": "Figma Footer New"
+    },
+
+
       {
           "type": "image_picker",
           "id": "image_footer",
@@ -795,15 +804,23 @@
       "default": 36
     }
   ],
-  "default": {
-    "blocks": [
-      {
-        "type": "link_list"
-      },
-      {
-        "type": "text"
-      }
-    ]
-  }
+
+    "presets": [
+    {
+      "name": "t:sections.rich-text.presets.name",
+      "blocks": [
+        {
+          "type": "link_list"
+        },
+        {
+          "type": "text"
+        }
+       
+      ]
+    }
+  ]
+
+  
+
 }
 {% endschema %}
