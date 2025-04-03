@@ -195,7 +195,10 @@
             
             {%- if section.settings.show_social and has_social_icons -%}
               <div class="d-flex social-icon-adjust">
-        <h2 class="footer-block__heading inline-richtext text-left m-0"> Connect </h2>  <div> {%- render 'social-icons', class: 'footer__list-social' -%}</div>
+        {% comment %} <h2 class="footer-block__heading inline-richtext text-left m-0"> Connect </h2>  {% endcomment %}
+        
+        
+        <div> {%- render 'social-icons', class: 'footer__list-social' -%}</div>
         </div>
           {%- endif -%}
 
