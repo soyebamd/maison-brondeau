@@ -544,6 +544,10 @@ a.link.list-social__link:first-child {
 
 
 
-.custom_figma_footer{
-  
+.custom_figma_footer .footer-block__heading{
+  border-bottom: solid 1px #fff;
+}
+
+.footer-block:nth-child(2) .footer-block__heading {
+ text-indent: -9999px;
 }
