@@ -590,9 +590,35 @@ a.link.list-social__link:first-child {
   padding: 10px 0;
 }
 
-.field {
-   
+.field {   
   flex-direction: column;
+}
+
+
+
+}
+@media(max-width:1150px){
+.footer__blocks-wrapper{ display: flex;}
+
+.footer-block:first-child{
+ order:2;
+}
+
+
+.footer-block:nth-child(2){
+ order:3;
+}
+
+.footer-block:nth-child(3){
+ order:1;
+}
+
+.footer-block:nth-child(4){
+ order:4;
+}
+
+.footer-block:last-child{
+ order:5;
 }
 
 
