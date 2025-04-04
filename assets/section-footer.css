@@ -628,7 +628,7 @@ a.link.list-social__link:first-child {
 
   .newsletter-form {
    
-    max-width: 100%;
+    max-width: 100%!important;
   }
 
 }
