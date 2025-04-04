@@ -626,6 +626,9 @@ a.link.list-social__link:first-child {
   max-width: 100%;
 }
 
-
+  .newsletter-form {
+   
+    max-width: 100%;
+  }
 
 }
