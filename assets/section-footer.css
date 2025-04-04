@@ -598,27 +598,28 @@ a.link.list-social__link:first-child {
 
 }
 @media(max-width:1150px){
-.footer__blocks-wrapper{ display: flex;}
+.footer__blocks-wrapper{ display: flex; flex-wrap: wrap;
+}
 
 .footer-block:first-child{
- order:2;
+ order:2; width: 50% !important;
 }
 
 
 .footer-block:nth-child(2){
- order:3;
+ order:3; width: 50% !important;
 }
 
 .footer-block:nth-child(3){
- order:1;
+ order:1; width: 100% !important;
 }
 
 .footer-block:nth-child(4){
- order:4;
+ order:4; width: 50% !important;
 }
 
 .footer-block:last-child{
- order:5;
+ order:5; width: 50% !important;
 }
 
 
