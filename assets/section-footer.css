@@ -598,7 +598,7 @@ a.link.list-social__link:first-child {
 
 }
 @media(max-width:1150px){
-.footer__blocks-wrapper{ display: flex; flex-wrap: wrap;
+.footer__blocks-wrapper{ display: flex; flex-wrap: wrap;  align-items: flex-start;
 }
 
 .footer-block:first-child{
