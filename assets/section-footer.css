@@ -573,3 +573,11 @@ a.link.list-social__link:first-child {
 .custom_figma_footer .list-social__link svg{
   background: #82282A;
 }
+
+@media(max-width:1480px){
+
+  .custom_figma_footer .newsletter-form__field-wrapper .field {
+  width: auto!important;
+}
+
+}
