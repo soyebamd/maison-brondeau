@@ -622,6 +622,10 @@ a.link.list-social__link:first-child {
  order:5; width: 50% !important;
 }
 
+.newsletter-form .field__input {
+  max-width: 100%;
+}
+
 
 
 }
