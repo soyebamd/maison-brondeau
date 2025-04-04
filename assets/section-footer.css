@@ -585,9 +585,14 @@ a.link.list-social__link:first-child {
 }
 
 .newsletter-form__button { 
-  width: 100%; 
+  width: 100%!important; 
   line-height: 178%;
   padding: 10px 0;
+}
+
+.field {
+   
+  flex-direction: column;
 }
 
 
