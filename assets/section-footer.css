@@ -634,5 +634,5 @@ a.link.list-social__link:first-child {
 
 @media(max-width:749px){
 .footer-block{
- order:1; width: 100% !important;}
+  width: 100% !important;}
 }
