@@ -580,4 +580,16 @@ a.link.list-social__link:first-child {
   width: auto!important;
 }
 
+.field__button{
+  position:relative;
+}
+
+.newsletter-form__button { 
+  width: 100%; 
+  line-height: 178%;
+  padding: 10px 0;
+}
+
+
+
 }
