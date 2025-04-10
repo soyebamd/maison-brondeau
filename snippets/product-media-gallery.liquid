@@ -66,7 +66,7 @@
     >
 
 
-
+{% comment %} 
 
 <div>
    {% if product.featured_image %}
@@ -74,7 +74,7 @@ YES
     {% else %}
 No x
     {% endif %}
-</div>
+</div> {% endcomment %}
 
 
       {%- if product.selected_or_first_available_variant.featured_media != null -%}
