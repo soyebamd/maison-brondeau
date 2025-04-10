@@ -70,7 +70,9 @@
 
 
     {%- if product.selected_or_first_available_variant.featured_media == null -%}
-      {{ product.selected_or_first_available_variant.featured_media  }}
+      
+      {{ product.featured_image | img_url: 'medium' }}
+
 <p>x </p>
     {% endif %}
 
