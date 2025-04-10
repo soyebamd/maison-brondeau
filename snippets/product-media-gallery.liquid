@@ -69,11 +69,10 @@
 
 
 
-    {%- if product.selected_or_first_available_variant.featured_media == null -%}
-      
-      {{ product.featured_image | img_url: 'medium' }}
-
-<p>x </p>
+   {% if product.featured_image %}
+YES
+    {% else %}
+No x
     {% endif %}
 
 
