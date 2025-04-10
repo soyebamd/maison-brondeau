@@ -128,7 +128,7 @@
         
             <h3
               class="card__heading"
-              {% if card_product.featured_media == null or card_product.featured_media == null and settings.card_style == 'standard' %}
+              {% if card_product.featured_media == null and  card_product.featured_media == null and settings.card_style == 'standard' %}
                 id="title-{{ section_id }}-{{ card_product.id }}"
               {% endif %}
             >
