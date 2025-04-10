@@ -64,17 +64,14 @@
       class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
       role="list"
     >
-    
 
-{% comment %} 
 
-<div>
-   {% if product.featured_image %}
-YES
-    {% else %}
-No x
-    {% endif %}
-</div> {% endcomment %}
+  {% unless product.featured_image %}
+    <div>
+    <img src="https://cdn.shopify.com/s/files/1/0643/5415/6707/files/comingsoon_R2_8787dd7a-b785-4eb7-ba8c-e5d30c013f76.png?v=1744129273" class="default-product-image" alt="Coming Soon" width ="" height="" />
+</div>  
+{% endunless %}
+
 
 
       {%- if product.selected_or_first_available_variant.featured_media != null -%}
