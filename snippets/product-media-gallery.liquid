@@ -63,6 +63,7 @@
       id="Slider-Gallery-{{ section.id }}{{ id_append }}"
       class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
       role="list"
+        {% unless product.featured_image %} style="justify-content-center" {% endunless %}
     >
 
 
