@@ -68,7 +68,7 @@
 
   {% unless product.featured_image %}
    
-    <img src="https://cdn.shopify.com/s/files/1/0643/5415/6707/files/comingsoon_R2_8787dd7a-b785-4eb7-ba8c-e5d30c013f76.png?v=1744129273" class="default-product-image" alt="Coming Soon" width ="100%" height="auto" />
+    {{'comingsoon_R_2.png' |  file_url | image_tag: 'Coming Soon' }}
  
 {% endunless %}
 
