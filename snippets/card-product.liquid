@@ -52,6 +52,11 @@
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
+
+
+      {%  unless card_product.featured_media  %} 
+        <img src="{{'comingsoon_R_2.png' |  file_url   }}" style="width: 100%; height: auto;"/>
+  {% endunless %} 
         {%- if card_product.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
             <div class="media media--transparent media--hover-effect {{ media_aspect_ratio }}">
