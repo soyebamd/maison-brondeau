@@ -64,6 +64,17 @@
       class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
       role="list"
     >
+
+
+
+
+
+    {%- if product.selected_or_first_available_variant.featured_media == null -%}
+<p>Feature product image here</p>
+    {% endeif %}
+
+
+
       {%- if product.selected_or_first_available_variant.featured_media != null -%}
         {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
         <li
@@ -87,8 +98,7 @@
             lazy_load: false
           %}
         </li>
-        {% else %}
-      <p> Default media image</p> 
+       
       {%- endif -%}
       {%- for media in product.media -%}
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
