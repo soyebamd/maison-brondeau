@@ -131,6 +131,43 @@
         "padding_bottom": 68
       }
     },
+    "multirow_eTJFai": {
+      "type": "multirow",
+      "blocks": {
+        "row_GQ6FDk": {
+          "type": "row",
+          "settings": {
+            "row_bg": "scheme-5",
+            "image": "shopify://shop_images/image_3.png",
+            "caption": "",
+            "heading": "",
+            "text": "<p>Join the <strong>Maison Brondeau Wine Club</strong> today and let us be your personal shoppers for all things wine. Our in-house, world-class sommeliers will do the work for you, navigating the latest industry trends, finding the undervalued bottles, spotting the up-and-coming producers, and selecting the can’t miss grapes. With a mix of reds, whites, and the occasional sparkling or rose, we’ll ship directly to your door, along with pairing tips, tasting notes, and backgrounds of each bottle.<br/><br/></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color_scheme": "scheme-5"
+          }
+        }
+      },
+      "block_order": [
+        "row_GQ6FDk"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "full_width": true,
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "image_width_contact_e6pfPQ": {
       "type": "image-width-contact",
       "blocks": {
@@ -172,43 +209,6 @@
         "section_color_scheme": "scheme-ba0f0ccf-b5d1-4bfa-8c05-01536b281897",
         "color_scheme": "scheme-ba0f0ccf-b5d1-4bfa-8c05-01536b281897",
         "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "multirow_eTJFai": {
-      "type": "multirow",
-      "blocks": {
-        "row_GQ6FDk": {
-          "type": "row",
-          "settings": {
-            "row_bg": "scheme-5",
-            "image": "shopify://shop_images/image_3.png",
-            "caption": "",
-            "heading": "",
-            "text": "<p>Join the Maison Brondeau Wine Club today and let us be your personal shoppers for all things wine. Our in-house, world-class sommeliers will do the work for you, navigating the latest industry trends, finding the undervalued bottles, spotting the up-and-coming producers, and selecting the can’t miss grapes. With a mix of reds, whites, and the occasional sparkling or rose, we’ll ship directly to your door, along with pairing tips, tasting notes, and backgrounds of each bottle.<br/><br/></p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color_scheme": "scheme-5"
-          }
-        }
-      },
-      "block_order": [
-        "row_GQ6FDk"
-      ],
-      "settings": {
-        "image_height": "medium",
-        "full_width": true,
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "image_layout": "alternate-right",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
         "mobile_content_alignment": "left",
         "padding_top": 0,
         "padding_bottom": 0
