@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_Y4pDXT": {
@@ -24,7 +24,7 @@
         "heading_UMpXpJ"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Rectangle_18.png",
+        "image": "shopify://shop_images/Rectangle_18.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-center",
@@ -43,7 +43,7 @@
         "text_VcGUbM": {
           "type": "text",
           "settings": {
-            "text": "Join the Maison Brondeau Wine Club today and let us be your personal shoppers for all things wine. Our in-house, world-class sommeliers will do the work for you, navigating the latest industry trends, finding the undervalued bottles, spotting the up-and-coming producers, and selecting the can’t miss grapes. With a mix of reds, whites, and the occasional sparkling or rose, we’ll ship directly to your door, along with pairing tips, tasting notes, and backgrounds of each bottle.",
+            "text": "<p>Join the Maison Brondeau Wine Club today and let us be your personal shoppers for all things wine. Our in-house, world-class sommeliers will do the work for you, navigating the latest industry trends, finding the undervalued bottles, spotting the up-and-coming producers, and selecting the can’t miss grapes. With a mix of reds, whites, and the occasional sparkling or rose, we’ll ship directly to your door, along with pairing tips, tasting notes, and backgrounds of each bottle.</p>",
             "heading_caption": "",
             "text_size_1": "s-small"
           }
@@ -76,9 +76,9 @@
           "type": "column",
           "settings": {
             "color_scheme_box": "scheme-4",
-            "image": "shopify:\/\/shop_images\/icon-park-outline_time.svg",
+            "image": "shopify://shop_images/icon-park-outline_time.svg",
             "title": "",
-            "text": "<p>4 hand-selected wines monthly\/quarterly<\/p>",
+            "text": "<p>4 hand-selected wines monthly/quarterly</p>",
             "link_label": "",
             "link": ""
           }
@@ -87,9 +87,9 @@
           "type": "column",
           "settings": {
             "color_scheme_box": "scheme-4",
-            "image": "shopify:\/\/shop_images\/Group_25.svg",
+            "image": "shopify://shop_images/Group_25.svg",
             "title": "",
-            "text": "<p>10% member discount on any in-store purchases<\/p>",
+            "text": "<p>10% member discount on any in-store purchases</p>",
             "link_label": "",
             "link": ""
           }
@@ -98,9 +98,9 @@
           "type": "column",
           "settings": {
             "color_scheme_box": "scheme-4",
-            "image": "shopify:\/\/shop_images\/ph_wine.svg",
+            "image": "shopify://shop_images/ph_wine.svg",
             "title": "",
-            "text": "<p>Background, pairing & tasting notes<\/p>",
+            "text": "<p>Background, pairing & tasting notes</p>",
             "link_label": "",
             "link": ""
           }
@@ -136,10 +136,10 @@
           "type": "row",
           "settings": {
             "row_bg": "scheme-4",
-            "image": "shopify:\/\/shop_images\/Rectangle_27.png",
+            "image": "shopify://shop_images/Rectangle_27.png",
             "caption": "",
             "heading": "Join the Club",
-            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep<\/li><li>Monthly or quarterly shipments based on the latest theme or region<\/li><li>10% member discount on any purchase at Maison Brondeau<\/li><\/ul>",
+            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep</li><li>Monthly or quarterly shipments based on the latest theme or region</li><li>10% member discount on any purchase at Maison Brondeau</li></ul>",
             "button_label": "Button label",
             "button_link": "",
             "button_color_scheme": "scheme-3"
@@ -165,6 +165,52 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_width_contact_e6pfPQ": {
+      "type": "image-width-contact",
+      "blocks": {
+        "heading_gFV8G3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the Club",
+            "heading_size": "h1"
+          }
+        },
+        "text_pkqhDx": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "custom_contact_form_YrBtJq": {
+          "type": "customContactForm",
+          "settings": {
+            "contact_form": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_gFV8G3",
+        "text_pkqhDx",
+        "custom_contact_form_YrBtJq"
+      ],
+      "settings": {
+        "custom_style": true,
+        "image": "shopify://shop_images/Rectangle_27.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -172,6 +218,7 @@
     "rich_text_btKPTz",
     "main",
     "multicolumn_LJWiNe",
-    "multirow_TU9XFn"
+    "multirow_TU9XFn",
+    "image_width_contact_e6pfPQ"
   ]
 }
