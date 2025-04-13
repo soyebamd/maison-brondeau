@@ -184,10 +184,10 @@
           "type": "row",
           "settings": {
             "row_bg": "",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
+            "caption": "",
+            "heading": "",
+            "text": "<p>Join the Maison Brondeau Wine Club today and let us be your personal shoppers for all things wine. Our in-house, world-class sommeliers will do the work for you, navigating the latest industry trends, finding the undervalued bottles, spotting the up-and-coming producers, and selecting the can’t miss grapes. With a mix of reds, whites, and the occasional sparkling or rose, we’ll ship directly to your door, along with pairing tips, tasting notes, and backgrounds of each bottle.<br/><br/></p>",
+            "button_label": "",
             "button_link": "",
             "button_color_scheme": ""
           }
