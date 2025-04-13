@@ -1,0 +1,126 @@
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .embed-container iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .embed-title {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+
+  .schedule-block {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+{% endstyle %}
+
+
+<div class="section-{{ section.id }}-padding">
+  <div class="page-width page-width-full p-0">
+    <div class="grid grid--1-col grid--2-col-tablet">
+      
+      <!-- First Column: Embed Code and Title -->
+      <div class="grid__item">
+        {% if section.settings.embed_code != blank %}
+          <div class="embed-container">
+            {{ section.settings.embed_code }}
+          </div>
+        {% endif %}
+        {% if section.settings.title != blank %}
+          <h2 class="embed-title">{{ section.settings.title }}</h2>
+        {% endif %}
+      </div>
+
+      <!-- Second Column: Blocks as list -->
+      <div class="grid__item">
+        <ul class="list-unstyled">
+          {% for block in section.blocks %}
+            {% if block.type == 'schedule' %}
+              <li class="schedule-block" {{ block.shopify_attributes }}>
+                <strong>{{ block.settings.day }}</strong>: {{ block.settings.time }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Embed and Schedule List",
+  "class": "section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "embed_code",
+      "label": "Embed Code"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title below embed"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 40,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "schedule",
+      "name": "Schedule Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "day",
+          "label": "Day"
+        },
+        {
+          "type": "text",
+          "id": "time",
+          "label": "Time"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Embed with List"
+    }
+  ]
+}
+{% endschema %}
