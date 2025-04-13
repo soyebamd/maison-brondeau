@@ -12,9 +12,14 @@
     }
   }
 
+  .embed-warpper{
+    padding:52px;
+    background-color: #82282A;
+  }
+
   .embed-container iframe {
     max-width: 100%;
-    height: auto;
+    height: 440;
   }
 
   .embed-title {
@@ -35,7 +40,12 @@
       
       <!-- First Column: Embed Code and Title -->
       <div class="grid__item">
+
+
+      <div class="embed-warpper">
+
         {% if section.settings.embed_code != blank %}
+
           <div class="embed-container">
             {{ section.settings.embed_code }}
           </div>
@@ -43,6 +53,7 @@
         {% if section.settings.title != blank %}
           <h2 class="embed-title">{{ section.settings.title }}</h2>
         {% endif %}
+        </div>
       </div>
 
       <!-- Second Column: Blocks as list -->
