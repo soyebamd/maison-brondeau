@@ -70,6 +70,10 @@
       <!-- Second Column: Blocks as list -->
       <div class="grid__item">
         <ul class="list-unstyled">
+            {% if section.settings.title_2 != blank %}
+          <h2 class="embed-title_2">{{ section.settings.title_2 }}</h2>
+        {% endif %}
+            
           {% for block in section.blocks %}
             {% if block.type == 'schedule' %}
               <li class="schedule-block" {{ block.shopify_attributes }}>
@@ -99,6 +103,12 @@
       "id": "title",
       "label": "Title below embed"
     },
+     {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title Second"
+    },
+
     {
       "type": "range",
       "id": "padding_top",
