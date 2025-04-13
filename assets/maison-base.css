@@ -117,6 +117,13 @@ body {
   margin: auto;
 }
 
+@media (max-width: 1150px) {
+  .max-500--width {
+    max-width: 400px;
+    margin: 0 30px;
+  }
+}
+
 @media (min-width: 990px) {
   h1,
   .h1 {
