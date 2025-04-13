@@ -205,8 +205,8 @@
         "text_style": "body",
         "button_style": "secondary",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-right",
         "section_color_scheme": "",
         "row_color_scheme": "",
         "mobile_content_alignment": "left",
@@ -220,7 +220,7 @@
     "rich_text_btKPTz",
     "main",
     "multicolumn_LJWiNe",
-    "image_width_contact_e6pfPQ",
-    "multirow_eTJFai"
+    "multirow_eTJFai",
+    "image_width_contact_e6pfPQ"
   ]
 }
