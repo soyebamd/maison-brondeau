@@ -69,10 +69,16 @@
 
       <!-- Second Column: Blocks as list -->
       <div class="grid__item">
-        <ul class="list-unstyled">
-            {% if section.settings.title_2 != blank %}
+
+      <div class="time-table">
+
+         {% if section.settings.title_2 != blank %}
           <h2 class="embed-title_2">{{ section.settings.title_2 }}</h2>
         {% endif %}
+
+
+        <ul class="list-unstyled">
+         
             
           {% for block in section.blocks %}
             {% if block.type == 'schedule' %}
@@ -83,7 +89,7 @@
           {% endfor %}
         </ul>
       </div>
-
+</div>
     </div>
   </div>
 </div>
