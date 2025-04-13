@@ -45,8 +45,11 @@
    display: flex;
   justify-content: space-between;
   font-size: 26px;
-  font-weight: 300;
+ 
   }
+
+  
+  .schedule-block span{ font-weight: 300; }
 
 .time-table{
     max-width:540px;
@@ -106,7 +109,7 @@
           {% for block in section.blocks %}
             {% if block.type == 'schedule' %}
               <li class="schedule-block" {{ block.shopify_attributes }}>
-                <strong>{{ block.settings.day }}</strong> <strong> {{ block.settings.time }}</strong>
+                <strong>{{ block.settings.day }}</strong> <span> {{ block.settings.time }}</span>
               </li>
             {% endif %}
           {% endfor %}
