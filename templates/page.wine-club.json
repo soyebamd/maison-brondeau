@@ -52,6 +52,7 @@
       "block_order": [
         "text_VcGUbM"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -111,6 +112,7 @@
         "column_jafDDw",
         "column_7rtXRr"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -127,43 +129,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 68
-      }
-    },
-    "multirow_TU9XFn": {
-      "type": "multirow",
-      "blocks": {
-        "row_iNXceJ": {
-          "type": "row",
-          "settings": {
-            "row_bg": "scheme-4",
-            "image": "shopify://shop_images/Rectangle_27.png",
-            "caption": "",
-            "heading": "Join the Club",
-            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep</li><li>Monthly or quarterly shipments based on the latest theme or region</li><li>10% member discount on any purchase at Maison Brondeau</li></ul>",
-            "button_label": "Button label",
-            "button_link": "",
-            "button_color_scheme": "scheme-3"
-          }
-        }
-      },
-      "block_order": [
-        "row_iNXceJ"
-      ],
-      "settings": {
-        "image_height": "medium",
-        "full_width": true,
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "image_width_contact_e6pfPQ": {
@@ -218,7 +183,6 @@
     "rich_text_btKPTz",
     "main",
     "multicolumn_LJWiNe",
-    "multirow_TU9XFn",
     "image_width_contact_e6pfPQ"
   ]
 }
