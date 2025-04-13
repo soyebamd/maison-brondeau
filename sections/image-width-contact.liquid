@@ -79,13 +79,13 @@
         <div class="image-with-text__text-item grid__item">
           <div
             id="ImageWithText--{{ section.id }}"
-            class="   p-0 ms-100 max-500  image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
+            class="   p-0 ms-100 max-500  image-with-text__content justify-content-center align-items-center image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
           >
             {%- for block in section.blocks -%}
               {% case block.type %}
                 {%- when 'heading' -%}
                   <h2             
-                    class="image-with-text__heading pt--70 inline-richtext {{ block.settings.heading_size }}"
+                    class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
                     {{ block.shopify_attributes }}
                   >
                     {{ block.settings.heading }}
