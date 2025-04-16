@@ -529,6 +529,7 @@ body {
   text-transform: uppercase;
 }
 
-.tmenu_navbar {
+.tmenu_navbar,
+.product__title {
   font-family: "Alegreya", serif;
 }
