@@ -528,3 +528,7 @@ body {
 .tmenu_nav li a {
   text-transform: uppercase;
 }
+
+.tmenu_navbar {
+  font-family: "Alegreya", serif;
+}
