@@ -531,5 +531,5 @@ body {
 
 .tmenu_navbar,
 .product__title h1 {
-  font-family: "Alegreya", serif;
+  font-family: "Alegreya", serif !important;
 }
