@@ -541,3 +541,7 @@ body {
 .tmenu_navbar {
   font-family: "Stoke", serif !important;
 }
+
+.product__text {
+  font-size: 20px;
+}
