@@ -261,9 +261,14 @@ body {
   padding: 0 5rem;
 }
 
-.button {
+.button,
+.button--primary,
+.button-custom {
   min-width: 212px;
   min-height: 60px;
+  font-family: Poppins, sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 200;
 }
 
 .social-icon-adjust {
