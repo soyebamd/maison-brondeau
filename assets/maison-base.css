@@ -63,7 +63,7 @@ h6,
 .h6 {
   font-family: "Stoke", serif !important;
   font-weight: 400;
-  font-style: normal;
+  font-style: normal !important;
 }
 
 .heading-text {
