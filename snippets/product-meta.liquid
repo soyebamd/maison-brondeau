@@ -1,12 +1,12 @@
 <ul class="meta-data">
 
    
-
+{% comment %} 
   {% if product.metafields.custom.name_producer %}
     <li>
       <span><strong>Name & Producer :</strong></span> <span>{{ product.metafields.custom.name_producer }}</span>
     </li>
-  {% endif %}
+  {% endif %} {% endcomment %}
 
   {% if product.metafields.custom.grapes %}
     <li>
