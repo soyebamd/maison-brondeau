@@ -105,6 +105,7 @@
 
 .card-information {
   text-align: var(--text-alignment);
+  text-align: center;
 }
 
 .card__media,
