@@ -142,7 +142,7 @@
                     >
                       <div>
                         <span class="facets__summary-label">
-                          {{- filter.label | escape }} label
+                          {{- filter.label | escape }}
                           {%- if filter_type == 'vertical' -%}
                             <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
                               ({{ filter.active_values.size }})</span
@@ -202,7 +202,9 @@
                                 assign is_disabled = true
                               endif
                             %}
-asfsfds
+
+                          {% if filter.label | escape  != "Price Range" %} 
+
                             <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                               <label
                                 for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
@@ -272,7 +274,7 @@ asfsfds
                                   )</span
                                 >
                               </label>
-                            </li>
+                            </li>{% endif %}
                           {%- endfor -%}
                         </ul>
                         {% comment %} No show more for no JS {% endcomment %}
