@@ -9,10 +9,11 @@
   {% endif %} {% endcomment %}
 
   {% if product.metafields.custom.grapes %}
-    <li>
-      <span><strong>Grape(s) / Raw Material:</strong></span> <span>{{ product.metafields.custom.grapes }}</span>
+    <li><a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes }}">
+      <span><strong>Grape(s) / Raw Material:</strong></span> <span>{{ product.metafields.custom.grapes }}</span></a>
     </li>
   {% endif %}
+
 
   {% if product.metafields.custom.producer %}
     <li>
