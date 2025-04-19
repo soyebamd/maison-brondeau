@@ -82,7 +82,7 @@
                       </a>
                     </facet-remove>
                   {%- endfor -%}
-                 
+                 aaaaaaaaaaaaaa
                   {% if filter.type == 'price_range' %}
                     {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                       <facet-remove>
@@ -356,7 +356,7 @@
                         </show-more-button>
                       {%- endif %}
                     </div>
-                  </details>
+                  </details>bbbbbbbbbbbbbbbb
                 {% when 'price_range' %}
                   {% liquid
                     assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,UYU,VES,VND' | split: ','
@@ -382,7 +382,7 @@
                     <div
                       id="Facet-{{ forloop.index }}-{{ section.id }}"
                       class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
-                    >
+                    > ccccccccccccccccccc
                       <div class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
                         {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
                         <span class="facets__selected">
@@ -477,7 +477,7 @@
                       </span>
                     </a>
                   </facet-remove>
-                {%- endfor -%}
+                {%- endfor -%}dddddddddddddddddddddddddd
                 {% if filter.type == 'price_range' %}
                   {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                     <facet-remove>
@@ -839,7 +839,7 @@
                             >
                           </div>
                         </div>
-                      </details>
+                      </details>eeeeeeeeeeeeeeeee
                     {% when 'price_range' %}
                       {% liquid
                         assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,UYU,VES,VND' | split: ','
@@ -872,7 +872,7 @@
                             {% render 'icon-arrow' %}
                             {{ filter.label | escape }}
                           </button>
-
+fffffffffffffffffffffff
                           {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
                           <p class="mobile-facets__info">
                             {{ 'products.facets.max_price' | t: price: max_price_amount }}
@@ -1041,7 +1041,7 @@
           </a>
         </facet-remove>
       {%- endfor -%}
-ew4r
+ggggggggggggggggggggggggggggg
       {%- if filter.type == 'price_range' -%}
         {%- if filter.min_value.value != null or filter.max_value.value != null -%}
           <facet-remove>
@@ -1158,7 +1158,7 @@ ew4r
                 </a>
               </facet-remove>
             {%- endfor -%}
-
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
             {%- if filter.type == 'price_range' -%}
               {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                 <facet-remove>
