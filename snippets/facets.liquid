@@ -282,6 +282,8 @@
                             </li>{% endif %}
                           {%- endfor -%}
 
+                             {% if filter.label   == "Price Range" %} 
+
 {% assign price_ranges = 
   "Under $25|filter.v.price.lte=25,
    $25 to $50|filter.v.price.gte=25&filter.v.price.lte=50,
@@ -353,7 +355,7 @@
     </label>
   </li>
 {% endfor %}
-
+{% endif %}
                           
                         </ul>
 
