@@ -282,22 +282,7 @@
                             </li>{% endif %}
                           {%- endfor -%}
 
-
-                          
-                        </ul>
-
-
-                        <div class="facets__disclosure">
-  <details class="facets__disclosure-parent" open>
-    <summary class="facets__summary">
-      <div>
-        <span class="facets__summary-label">Price Range</span>
-      </div>
-    </summary>
-
-    <div class="facets__display">
-      <ul class="facets__list list-unstyled" role="list">
-        {% assign price_filters = 
+{% assign price_filters = 
           "Under $25|filter.v.price.lte=25,
            $25 to $50|filter.v.price.gte=25&filter.v.price.lte=50,
            $50 to $75|filter.v.price.gte=50&filter.v.price.lte=75,
@@ -325,10 +310,10 @@
             </a>
           </li>
         {% endfor %}
-      </ul>
-    </div>
-  </details>
-</div>
+                          
+                        </ul>
+
+
 
 
 
