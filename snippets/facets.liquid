@@ -284,18 +284,17 @@
                           {%- endfor -%}
 
 
+
 {% if filter.label == "Price Range" %}
 
   {% assign custom_price_ranges = "<$25, $25 to $50, $50 to $75, $75 to $100, $100 to $150, $150+" | split: "," %}
   {% assign filter_param = "filter.p.m.custom.price_range" %}
+  {% assign current_filters = request.params[filter_param] %}
 
   {% for price in custom_price_ranges %}
     {% assign trimmed_label = price | strip %}
-    {% assign index = forloop.index %}
-    {% assign input_id = "Filter-" | append: filter_param | append: "-" | append: index %}
-    
-    {%- assign is_checked = false -%}
-    {%- assign current_filters = request.params[filter_param] -%}
+    {% assign input_id = "Filter-" | append: filter_param | append: "-" | append: forloop.index %}
+    {% assign is_checked = false %}
 
     {%- if current_filters -%}
       {%- if current_filters contains trimmed_label -%}
@@ -327,9 +326,10 @@
     </li>
   {% endfor %}
 
-  
-
 {% endif %}
+
+
+
 
                           
                         </ul>
