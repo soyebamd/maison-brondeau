@@ -9,15 +9,15 @@
   {% endif %} {% endcomment %}
 
   {% if product.metafields.custom.grapes %}
-    <li><a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes }}">
-      <span><strong>Grape(s) / Raw Material:</strong></span> <span>{{ product.metafields.custom.grapes }}</span></a>
+    <li>
+      <span><strong>Grape(s) / Raw Material:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes }}">{{ product.metafields.custom.grapes }}</a><span></span>
     </li>
   {% endif %}
 
 
   {% if product.metafields.custom.producer %}
     <li>
-      <span><strong>Producer:</strong></span> <span>{{ product.metafields.custom.producer }}</span>
+      <span><strong>Producer:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.producer }}"><span>{{ product.metafields.custom.producer }}</a></span>
     </li>
   {% endif %}
 
