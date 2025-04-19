@@ -204,15 +204,6 @@
                             %}
 
 
-                            <div class="custom-price-filter">
-  <h4>Price</h4>
-  <ul>
-    <li><a href="?filter.v.price.gte=500&sort_by=price-descending">Over $500</a></li>
-    <li><a href="?filter.v.price.gte=300&filter.v.price.lte=499&sort_by=price-descending">$300 – $499</a></li>
-    <li><a href="?filter.v.price.gte=100&filter.v.price.lte=299&sort_by=price-descending">$100 – $299</a></li>
-    <li><a href="?filter.v.price.lte=99&sort_by=price-descending">Under $100</a></li>
-  </ul>
-</div>
 
 
 
@@ -290,6 +281,20 @@
                               </label>
                             </li>{% endif %}
                           {%- endfor -%}
+
+
+                          
+                            <div class="custom-price-filter">
+  <h4>Price</h4>
+  <ul>
+    <li><a href="?filter.v.price.gte=500&sort_by=price-descending">Over $500</a></li>
+    <li><a href="?filter.v.price.gte=300&filter.v.price.lte=499&sort_by=price-descending">$300 – $499</a></li>
+    <li><a href="?filter.v.price.gte=100&filter.v.price.lte=299&sort_by=price-descending">$100 – $299</a></li>
+    <li><a href="?filter.v.price.lte=99&sort_by=price-descending">Under $100</a></li>
+  </ul>
+</div>
+
+
                         </ul>
                         {% comment %} No show more for no JS {% endcomment %}
                         <ul
