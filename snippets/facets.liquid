@@ -281,81 +281,83 @@
                               </label>
                             </li>{% endif %}
                           {%- endfor -%}
+{% if filter.label == "Price Range" %}
 
-                             {% if filter.label   == "Price Range" %} 
+  {% assign price_ranges = 
+    "Under $25|filter.v.price.lte=25,
+     $25 to $50|filter.v.price.gte=25&filter.v.price.lte=50,
+     $50 to $75|filter.v.price.gte=50&filter.v.price.lte=75,
+     $75 to $100|filter.v.price.gte=75&filter.v.price.lte=100,
+     $100 to $150|filter.v.price.gte=100&filter.v.price.lte=150,
+     Over $150|filter.v.price.gte=150" | split: "," %}
 
-{% assign price_ranges = 
-  "Under $25|filter.v.price.lte=25,
-   $25 to $50|filter.v.price.gte=25&filter.v.price.lte=50,
-   $50 to $75|filter.v.price.gte=50&filter.v.price.lte=75,
-   $75 to $100|filter.v.price.gte=75&filter.v.price.lte=100,
-   $100 to $150|filter.v.price.gte=100&filter.v.price.lte=150,
-   Over $150|filter.v.price.gte=150" | split: "," %}
+  {% assign show_more_number = 1000 %}
 
-{% assign show_more_number = 1000 %} {# just to keep the structure matching yours #}
+  {% for range in price_ranges %}
+    {% assign parts = range | strip | split: "|" %}
+    {% assign label = parts[0] %}
+    {% assign url_parts = parts[1] %}
+    {% assign input_id = "custom-price-" | append: forloop.index %}
+    {% assign values = url_parts | split: "&" %}
 
-{% for range in price_ranges %}
-  {% assign parts = range | strip | split: "|" %}
-  {% assign label = parts[0] %}
-  {% assign url_parts = parts[1] %}
-  {% assign input_id = "custom-price-" | append: forloop.index %}
-  {% assign values = url_parts | split: "&" %}
+    {% assign is_checked = false %}
+    {% for param in values %}
+      {% assign pair = param | split: "=" %}
+      {% assign key = pair[0] %}
+      {% assign val = pair[1] %}
+      {% if request.params[key] == val %}
+        {% assign is_checked = true %}
+      {% endif %}
+    {% endfor %}
 
-  {% assign is_checked = false %}
-  {% for param in values %}
-    {% assign pair = param | split: "=" %}
-    {% assign key = pair[0] %}
-    {% assign val = pair[1] %}
-    {% if request.params[key] == val %}
-      {% assign is_checked = true %}
-    {% endif %}
+    <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+      <label
+        for="{{ input_id }}"
+        class="facets__label facet-checkbox{% if is_checked %} active{% endif %}"
+      >
+        {% for param in values %}
+          {% assign pair = param | split: "=" %}
+          <input
+            type="checkbox"
+            name="{{ pair[0] }}"
+            value="{{ pair[1] }}"
+            id="{{ input_id }}-{{ forloop.index }}"
+            {% if request.params[pair[0]] == pair[1] %}checked{% endif %}
+          >
+        {% endfor %}
+
+        <svg
+          width="1.6rem"
+          height="1.6rem"
+          viewBox="0 0 16 16"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+        </svg>
+
+        <svg
+          aria-hidden="true"
+          class="icon icon-checkmark"
+          width="1.1rem"
+          height="0.7rem"
+          viewBox="0 0 11 7"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
+            stroke="currentColor"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+
+        <span class="facet-checkbox__text" aria-hidden="true">{{ label }}</span>
+      </label>
+    </li>
   {% endfor %}
-
-  <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
-    <label
-      for="{{ input_id }}"
-      class="facets__label facet-checkbox{% if is_checked %} active{% endif %}"
-    >
-      <input
-        type="checkbox"
-        id="{{ input_id }}"
-        name=""
-        value=""
-        {% if is_checked %} checked{% endif %}
-        onclick="togglePriceFilter('{{ values | join: '&' }}')"
-      >
-
-      <svg
-        width="1.6rem"
-        height="1.6rem"
-        viewBox="0 0 16 16"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-      </svg>
-
-      <svg
-        aria-hidden="true"
-        class="icon icon-checkmark"
-        width="1.1rem"
-        height="0.7rem"
-        viewBox="0 0 11 7"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
-          stroke="currentColor"
-          stroke-width="1.75"
-          stroke-linecap="round"
-          stroke-linejoin="round" />
-      </svg>
-
-      <span class="facet-checkbox__text" aria-hidden="true">{{ label }}</span>
-    </label>
-  </li>
-{% endfor %}
 {% endif %}
+
                           
                         </ul>
 
