@@ -12,7 +12,7 @@
 {% if product.metafields.custom.producer %}
   <li>
     <span><strong>Producer:</strong></span> 
-    <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.producer={{ product.metafields.custom.grapes | url_encode }}">
+    <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.producer={{ product.metafields.custom.grapes | url_encode }}" class="text-link">
       <span>{{ product.metafields.custom.producer }}</span>
     </a>
   </li>
@@ -22,7 +22,7 @@
   {% if product.metafields.custom.grapes %}
    <li>
   <span><strong>Grape(s) / Raw Material:</strong></span> 
-  <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes | url_encode }}">
+  <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes | url_encode }}" class="text-link">
     {{ product.metafields.custom.grapes }}
   </a>
 </li>

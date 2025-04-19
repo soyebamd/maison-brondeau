@@ -545,3 +545,7 @@ body {
 .product__text {
   font-size: 20px;
 }
+
+.text-link {
+  color: #000;
+}
