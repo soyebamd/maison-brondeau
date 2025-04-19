@@ -206,7 +206,7 @@
 
 
 
-
+{% if filter.label != "Price Range" %}
 
                          
 
@@ -280,6 +280,7 @@
                                 >
                               </label>
                             </li>
+                                {% endif %}
                           {%- endfor -%}
 {% if filter.label == "Price Range" %}
 
@@ -289,7 +290,7 @@
    $50 to $75,
    $75 to $100,
    $100 to $150,
-   Over $150" | split: "," %}
+   $150+" | split: "," %}
 
 {% assign filter_param = "filter.p.m.custom.price_range" %}
 
