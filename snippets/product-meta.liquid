@@ -30,54 +30,54 @@
 {% endif %}
 
 
+{% if product.metafields.custom.country != blank %}
+  <li>
+    <span><strong>Country:</strong></span> <span>{{ product.metafields.custom.country }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.country %}
-    <li>
-      <span><strong>Country:</strong></span> <span>{{ product.metafields.custom.country }}</span>
-    </li>
-  {% endif %}
+{% if product.metafields.custom.region != blank %}
+  <li>
+    <span><strong>Region:</strong></span> <span>{{ product.metafields.custom.region }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.region %}
-    <li>
-      <span><strong>Region:</strong></span> <span>{{ product.metafields.custom.region }}</span>
-    </li>
-  {% endif %}
+{% if product.metafields.custom.sub_region != blank %}
+  <li>
+    <span><strong>Sub-Region:</strong></span> <span>{{ product.metafields.custom.sub_region }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.sub_region %}
-    <li>
-      <span><strong>Sub-Region:</strong></span> <span>{{ product.metafields.custom.sub_region }}</span>
-    </li>
-  {% endif %}
+{% comment %} Appellation is usually same as appellation, but if you want both, leave this block. {% endcomment %}
+{% if product.metafields.custom.appellation != blank %}
+  <li>
+    <span><strong>Appellation:</strong></span> <span>{{ product.metafields.custom.appellation }}</span>
+  </li>
+{% endif %}
 
-  {% comment %} Appellation is usually same as appellation, but if you want both, leave this block. {% endcomment %}
-  {% if product.metafields.custom.appellation %}
-    <li>
-      <span><strong>Appellation:</strong></span> <span>{{ product.metafields.custom.appellation }}</span>
-    </li>
-  {% endif %}
+{% if product.metafields.custom.farming_practices != blank %}
+  <li>
+    <span><strong>Farming Practices:</strong></span> <span>{{ product.metafields.custom.farming_practices }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.farming_practices %}
-    <li>
-      <span><strong>Farming Practices:</strong></span> <span>{{ product.metafields.custom.farming_practices }}</span>
-    </li>
-  {% endif %}
+{% if product.metafields.custom.extras != blank %}
+  <li>
+    <span><strong>Extras:</strong></span> <span>{{ product.metafields.custom.extras }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.extras %}
-    <li>
-      <span><strong>Extras:</strong></span> <span>{{ product.metafields.custom.extras }}</span>
-    </li>
-  {% endif %}
+{% if product.metafields.custom.flavor_profile != blank %}
+  <li>
+    <span><strong>Body & Style:</strong></span> <span>{{ product.metafields.custom.flavor_profile }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.flavor_profile %}
-    <li>
-      <span><strong>Body & Style:</strong></span> <span>{{ product.metafields.custom.flavor_profile }}</span>
-    </li>
-  {% endif %}
+{% if product.metafields.custom.volume_of_the_product != blank %}
+  <li>
+    <span><strong>Size:</strong></span> <span>{{ product.metafields.custom.volume_of_the_product }}</span>
+  </li>
+{% endif %}
 
-  {% if product.metafields.custom.volume_of_the_product %}
-    <li>
-      <span><strong>Size:</strong></span> <span>{{ product.metafields.custom.volume_of_the_product }}</span>
-    </li>
-  {% endif %}
 
 </ul>
