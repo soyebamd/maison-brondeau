@@ -206,7 +206,7 @@
 
 
 
-{% if filter.label != "Price Range" %}
+
 
                          
 
@@ -280,10 +280,10 @@
                                 >
                               </label>
                             </li>
-                                {% endif %}
+                              
                           {%- endfor -%}
 
-
+{% comment %} 
 
 {% if filter.label == "Price Range" %}
 
@@ -327,7 +327,7 @@
   {% endfor %}
 
 {% endif %}
-
+ {% endcomment %}
 
 
 
