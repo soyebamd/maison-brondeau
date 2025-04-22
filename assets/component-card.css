@@ -222,11 +222,11 @@
 
 .maison-product-grid .card__heading {
   font-size: 1.8rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .maison-product-grid .price {
-  font-weight: 600 !important;
+  font-weight: 300 !important;
 }
 
 .card--horizontal .card__heading,
