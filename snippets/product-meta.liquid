@@ -58,7 +58,7 @@
 
 {% if product.metafields.custom.sub_region != blank %}
   <li>
-    <span><strong>Sub-Region:</strong></span> <span>{{ product.metafields.custom.sub_region }}</span>
+    <span><strong>Sub-Region:</strong></span><a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.sub_region={{ product.metafields.custom.sub_region | url_encode }}" class="text-link"> <span>{{ product.metafields.custom.sub_region }}</span> </a>
   </li>
 {% endif %}
 
