@@ -65,7 +65,7 @@
 {% comment %} Appellation is usually same as appellation, but if you want both, leave this block. {% endcomment %}
 {% if product.metafields.custom.appellation != blank %}
   <li>
-    <span><strong>Appellation:</strong></span> <span>{{ product.metafields.custom.appellation }}</span>
+    <span><strong>Appellation:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.appellation={{ product.metafields.custom.appellation | url_encode }}" class="text-link"><span>{{ product.metafields.custom.appellation }}</span></a>
   </li>
 {% endif %}
 
