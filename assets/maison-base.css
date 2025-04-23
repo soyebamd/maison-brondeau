@@ -549,3 +549,7 @@ body {
 .text-link {
   color: #000;
 }
+
+.tags a {
+  color: #000;
+}
