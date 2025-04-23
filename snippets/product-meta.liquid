@@ -24,21 +24,21 @@
     {% comment %} Varietals: Grape(s) / Raw Material {% endcomment %}
   <span><strong>Varietals:</strong></span> 
 
-
+ {% comment %} 
   <ul class="tags">
-      {% for tag in product.tags %}
+     {% for tag in product.tags %}
         <li>
           <a href="{{ routes.all_products_collection_url }}/{{ tag | handle }}">
             {{ tag }}
           </a>
         </li>
       {% endfor %}
-    </ul>
+    </ul> {% endcomment %}
 
 
-  {% comment %} <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes | url_encode }}" class="text-link">
+ <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes | url_encode }}" class="text-link">
     {{ product.metafields.custom.grapes }}
-  </a> {% endcomment %}
+  </a> 
 </li>
 
 {% endif %}
