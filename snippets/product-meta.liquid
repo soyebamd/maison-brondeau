@@ -21,10 +21,24 @@
 
   {% if product.metafields.custom.grapes != blank %}
    <li>
-  <span><strong>Grape(s) / Raw Material:</strong></span> 
-  <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes | url_encode }}" class="text-link">
+    {% comment %} Varietals: Grape(s) / Raw Material {% endcomment %}
+  <span><strong>Varietals:</strong></span> 
+
+
+  <ul>
+      {% for tag in product.tags %}
+        <li>
+          <a href="{{ routes.all_products_collection_url }}/{{ tag | handle }}">
+            {{ tag }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+
+  {% comment %} <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes | url_encode }}" class="text-link">
     {{ product.metafields.custom.grapes }}
-  </a>
+  </a> {% endcomment %}
 </li>
 
 {% endif %}
