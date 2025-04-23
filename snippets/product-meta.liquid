@@ -46,7 +46,7 @@
 
 {% if product.metafields.custom.country != blank %}
   <li>
-    <span><strong>Country:</strong></span> <span>{{ product.metafields.custom.country }}</span>
+    <span><strong>Country:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.country={{ product.metafields.custom.country | url_encode }}" class="text-link"><span>{{ product.metafields.custom.country }}</span></a>
   </li>
 {% endif %}
 
