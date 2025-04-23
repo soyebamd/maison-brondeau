@@ -52,7 +52,7 @@
 
 {% if product.metafields.custom.region != blank %}
   <li>
-    <span><strong>Region:</strong></span> <span>{{ product.metafields.custom.region }}</span>
+    <span><strong>Region:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.region={{ product.metafields.custom.region | url_encode }}" class="text-link"><span>{{ product.metafields.custom.region }}</span></a>
   </li>
 {% endif %}
 
