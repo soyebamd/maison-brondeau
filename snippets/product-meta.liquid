@@ -69,29 +69,43 @@
   </li>
 {% endif %}
 
-{% if product.metafields.custom.farming_practices != blank %}
-  <li>
-    <span><strong>Farming Practices:</strong></span> <span>{{ product.metafields.custom.farming_practices }}</span>
-  </li>
-{% endif %}
 
-{% if product.metafields.custom.extras != blank %}
-  <li>
-    <span><strong>Extras:</strong></span> <span>{{ product.metafields.custom.extras }}</span>
-  </li>
-{% endif %}
+  {% if product.metafields.custom.farming_practices != blank %}
+    <li>
+      <span><strong>Farming Practices:</strong></span>
+      <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.farming_practices={{ product.metafields.custom.farming_practices | url_encode }}" class="text-link">
+        <span>{{ product.metafields.custom.farming_practices }}</span>
+      </a>
+    </li>
+  {% endif %}
 
-{% if product.metafields.custom.flavor_profile != blank %}
-  <li>
-    <span><strong>Body & Style:</strong></span> <span>{{ product.metafields.custom.flavor_profile }}</span>
-  </li>
-{% endif %}
+  {% if product.metafields.custom.extras != blank %}
+    <li>
+      <span><strong>Extras:</strong></span>
+      <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.extras={{ product.metafields.custom.extras | url_encode }}" class="text-link">
+        <span>{{ product.metafields.custom.extras }}</span>
+      </a>
+    </li>
+  {% endif %}
 
-{% if product.metafields.custom.volume_of_the_product != blank %}
-  <li>
-    <span><strong>Size:</strong></span> <span>{{ product.metafields.custom.volume_of_the_product }}</span>
-  </li>
-{% endif %}
+  {% if product.metafields.custom.flavor_profile != blank %}
+    <li>
+      <span><strong>Body & Style:</strong></span>
+      <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.flavor_profile={{ product.metafields.custom.flavor_profile | url_encode }}" class="text-link">
+        <span>{{ product.metafields.custom.flavor_profile }}</span>
+      </a>
+    </li>
+  {% endif %}
+
+  {% if product.metafields.custom.volume_of_the_product != blank %}
+    <li>
+      <span><strong>Size:</strong></span>
+      <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.volume_of_the_product={{ product.metafields.custom.volume_of_the_product | url_encode }}" class="text-link">
+        <span>{{ product.metafields.custom.volume_of_the_product }}</span>
+      </a>
+    </li>
+  {% endif %}
+
 
 
 </ul>
