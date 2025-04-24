@@ -438,7 +438,7 @@ body {
 }
 
 .tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 .tmenu_col-2 {
   max-width: 20% !important;
