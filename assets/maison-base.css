@@ -557,3 +557,6 @@ body {
 .tags a {
   color: #000;
 }
+.tmenu_item_level_3 .tmenu_item_text {
+  font-family: "Poppins", sans-serif !important;
+}
