@@ -437,7 +437,7 @@ body {
   color: #000 !important;
 }
 
-.tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
+body .tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
   font-weight: 400 !important;
 }
 .tmenu_col-2 {
