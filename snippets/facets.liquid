@@ -332,30 +332,18 @@
 
 {% endif %}
  {% endcomment %}
-{% assign all_tags = '' %}
-{% for collection in collections %}
-  {% for product in collection.products %}
-    {% for tag in product.tags %}
-      {% assign tag = tag | downcase %}
-      {% unless all_tags contains tag %}
-        {% assign all_tags = all_tags | append: tag | append: ',' %}
-      {% endunless %}
-    {% endfor %}
-  {% endfor %}
-{% endfor %}
 
-{% assign unique_tags = all_tags | split: ',' | uniq | sort %}
+
+ {% assign wine_tags = "Cabernet Franc,Cabernet Sauvignon,Carignan,Carmenere,Chardonnay,Cinsault,Corvina,Corvinone,Counoise,Friulano,Graciano,Grenache,Malbec,Mazuelo,Merlot,Mollinara,Mourvedre,Nascetta,Nerello Cappuccio,Nerello Mascalese,Petit Verdot,Petite Sirah,Pinot Auxerrois,Pinot Grigio,Pinot Gris,Pinot Meunier,Pinot Noir,Riesling,Rondinella,Sangiovese,Sauvignon Blanc,Semillon,Syrah,Tempranillo,Tinta Barroca,Tinta Roriz,Tinto Cao,Touriga Franca,Touriga Nacional,Zinfandel" | split: "," %}
 
 <h2>All Product Tags</h2>
 <ul>
-  {% for tag in unique_tags %}
-    {% if tag != '' %}
-      <li>
-        <a href="/collections/all/{{ tag | handleize }}">{{ tag | capitalize }}</a>
-      </li>
-    {% endif %}
+  {% for tag in wine_tags %}
+    <li><a href="/collections/all/{{ tag | handleize }}">{{ tag }}</a></li>
   {% endfor %}
 </ul>
+
+
                         </ul>
 
 
