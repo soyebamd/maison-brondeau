@@ -334,18 +334,15 @@
  {% endcomment %}
 
 
+{% assign all_tags = '' | split: ',' %}
 
-        <h1>       tag  </h1>         
-  <ul class="tags">
-     {% for tag in product.tags %}
-        <li>
-          <a href="{{ routes.all_products_collection_url }}/{{ tag | handle }}">
-            {{ tag }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-                          
+{% for product in collection.products %}
+  {% for tag in product.tags %}
+    {% unless all_tags contains tag %}
+      {% assign all_tags = all_tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
                         </ul>
 
 
