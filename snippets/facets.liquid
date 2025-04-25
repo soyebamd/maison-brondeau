@@ -1269,7 +1269,7 @@
 {{collection.current_tags}}
 <ul>
   {% for tag in wine_tags %}
-    <li><a href="/collections/all/{{ tag | handleize }}">{{ tag }}</a></li>
+    <li class="facet-checkbox__text"><a href="/collections/all/{{ tag | handleize }}">{{ tag }}</a></li>
   {% endfor %}
 </ul>
 </div>
