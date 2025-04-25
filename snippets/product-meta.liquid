@@ -24,7 +24,7 @@
     {% comment %} Varietals: Grape(s) / Raw Material {% endcomment %}
   <span><strong>Varietals:</strong></span> 
 
-
+ {% comment %} 
   <ul class="tags">
      {% for tag in product.tags %}
         <li>
@@ -33,7 +33,7 @@
           </a>
         </li>
       {% endfor %}
-    </ul>
+    </ul> {% endcomment %}
 
 
  <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes | url_encode }}" class="text-link">

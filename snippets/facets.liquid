@@ -283,6 +283,20 @@
                               
                           {%- endfor -%}
 
+
+                          
+  <ul class="tags">
+     {% for tag in product.tags %}
+        <li>
+          <a href="{{ routes.all_products_collection_url }}/{{ tag | handle }}">
+            {{ tag }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    
+
 {% comment %} 
 
 {% if filter.label == "Price Range" %}
