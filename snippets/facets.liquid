@@ -332,16 +332,30 @@
 
 {% endif %}
  {% endcomment %}
-
-
-{% assign all_tags = '' | split: ',' %}
-
-{% for product in collection.products %}
-  test
-  {% for tag in product.tags %}
-   
+{% assign all_tags = '' %}
+{% for collection in collections %}
+  {% for product in collection.products %}
+    {% for tag in product.tags %}
+      {% assign tag = tag | downcase %}
+      {% unless all_tags contains tag %}
+        {% assign all_tags = all_tags | append: tag | append: ',' %}
+      {% endunless %}
+    {% endfor %}
   {% endfor %}
 {% endfor %}
+
+{% assign unique_tags = all_tags | split: ',' | uniq | sort %}
+
+<h2>All Product Tags</h2>
+<ul>
+  {% for tag in unique_tags %}
+    {% if tag != '' %}
+      <li>
+        <a href="/collections/all/{{ tag | handleize }}">{{ tag | capitalize }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
                         </ul>
 
 
