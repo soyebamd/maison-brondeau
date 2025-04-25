@@ -561,6 +561,7 @@ body .tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 1.4rem;
 }
 
 .facets_list a {
