@@ -334,17 +334,6 @@
  {% endcomment %}
 
 
- {% assign wine_tags = "Cabernet Franc,Cabernet Sauvignon,Carignan,Carmenere,Chardonnay,Cinsault,Corvina,Corvinone,Counoise,Friulano,Graciano,Grenache,Malbec,Mazuelo,Merlot,Mollinara,Mourvedre,Nascetta,Nerello Cappuccio,Nerello Mascalese,Petit Verdot,Petite Sirah,Pinot Auxerrois,Pinot Grigio,Pinot Gris,Pinot Meunier,Pinot Noir,Riesling,Rondinella,Sangiovese,Sauvignon Blanc,Semillon,Syrah,Tempranillo,Tinta Barroca,Tinta Roriz,Tinto Cao,Touriga Franca,Touriga Nacional,Zinfandel" | split: "," %}
-
-<h2>All Product Tags</h2>
-
-{{collection.current_tags}}
-<ul>
-  {% for tag in wine_tags %}
-    <li><a href="/collections/all/{{ tag | handleize }}">{{ tag }}</a></li>
-  {% endfor %}
-</ul>
-
 
                         </ul>
 
