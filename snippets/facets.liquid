@@ -1266,6 +1266,10 @@
 <div class="facets__disclosure-vertical js-filter">
 <h2 class="facets__summary">Grapes / Raw Material</h2>
 
+
+{% assign current_tag = collection.current_tags | first | handleize %}
+
+{{current_tag}}
 {{collection.current_tags}}
 <ul class="facets_list">
   {% for tag in wine_tags %}
