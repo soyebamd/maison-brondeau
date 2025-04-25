@@ -336,13 +336,17 @@
 
 {% assign all_tags = '' | split: ',' %}
 
-{% for product in collection.products %}
-  {% for tag in product.tags %}
-    {% unless all_tags contains tag %}
-      {% assign all_tags = all_tags | push: tag %}
-    {% endunless %}
+
+
+<ul class="list-unstyled">
+  {% for tag in all_tags %}
+    <li>
+      <a href="{{ collection.url }}?constraint={{ tag | handleize }}">
+        {{ tag }}
+      </a>
+    </li>
   {% endfor %}
-{% endfor %}
+  </ul>
                         </ul>
 
 
