@@ -561,8 +561,13 @@ body .tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
   margin: 0;
   padding: 0;
   list-style: none;
-  a {
-    color: #000;
-    text-decoration: none;
-  }
+}
+
+.facets_list a {
+  color: #000;
+  text-decoration: none;
+}
+
+#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid {
+  display: none !important;
 }
