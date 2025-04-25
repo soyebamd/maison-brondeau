@@ -1266,11 +1266,34 @@
 <div class="facets__disclosure-vertical js-filter">
 <h2 class="facets__summary">Grapes / Raw Material</h2>
 
+{% assign wine_tags = "Cabernet Franc,Cabernet Sauvignon,Carignan,Carmenere,Chardonnay,Cinsault,Corvina,Corvinone,Counoise,Friulano,Graciano,Grenache,Malbec,Mazuelo,Merlot,Mollinara,Mourvedre,Nascetta,Nerello Cappuccio,Nerello Mascalese,Petit Verdot,Petite Sirah,Pinot Auxerrois,Pinot Grigio,Pinot Gris,Pinot Meunier,Pinot Noir,Riesling,Rondinella,Sangiovese,Sauvignon Blanc,Semillon,Syrah,Tempranillo,Tinta Barroca,Tinta Roriz,Tinto Cao,Touriga Franca,Touriga Nacional,Zinfandel" | split: "," %}
 
+{% comment %} Get the current tag from the URL {% endcomment %}
+{% assign current_tag = collection.current_tags | first | handleize %}
 
-<ul class="facets_list">
-  {% for tag in wine_tags %}
-    <li class="facet-checkbox__text"><a href="/collections/all/{{ tag | handleize }}">{{ tag }}</a></li>
-  {% endfor %}
-</ul>
-</div>
+<details id="Details-filter.p.tag.grape_varietal-template--{{ template.name }}" class="facets__disclosure-vertical js-filter" data-index="grape_varietal">
+  <summary class="facets__summary caption-large focus-offset" aria-label="Grape Varietal" role="button" aria-expanded="false" aria-controls="Facet-grape_varietal-template--{{ template.name }}">
+    <div>
+      <span class="facets__summary-label">Grape Varietal
+        <span class="facets__selected no-js-hidden{% unless current_tag %} hidden{% endunless %}">
+          ({{ collection.current_tags | size }})
+        </span>
+      </span>
+      <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+      </svg>
+    </div>
+  </summary>
+  <div id="Facet-grape_varietal-template--{{ template.name }}" class="parent-display facets__display-vertical">
+    <ul class="facets_list facets-layout-list facets__list--vertical list-unstyled no-js-hidden" role="list">
+      {% for tag in wine_tags %}
+        {% assign tag_handle = tag | handleize %}
+        <li class="list-menu__item facets__item{% if current_tag == tag_handle %} facet-checkbox--checked{% endif %}">
+          <a href="/collections/all/{{ tag_handle }}" class="facet-checkbox__text">
+            {{ tag }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</details>
