@@ -556,3 +556,9 @@ body .tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
 .tmenu_item_level_3 .tmenu_item_text {
   font-family: "Poppins", sans-serif !important;
 }
+
+.facets_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
