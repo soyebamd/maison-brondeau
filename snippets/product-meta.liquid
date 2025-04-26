@@ -12,7 +12,7 @@
 {% if product.metafields.custom.producer != blank %}
   <li>
     <span><strong>Producer:</strong></span> 
-    <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.producer={{ product.metafields.custom.grapes | url_encode }}" class="text-link">
+    <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.producer={{ product.metafields.custom.producer | url_encode }}" class="text-link">
       <span>{{ product.metafields.custom.producer }}</span>
     </a>
   </li>
