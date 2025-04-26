@@ -52,7 +52,7 @@
       <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
         <div class="js-contents">
           {%- if cart != empty -%}
-            <table class="cart-items">title
+            <table class="cart-items">
               <caption class="visually-hidden">
                 {{ 'sections.cart.title' | t }}
               </caption>
@@ -94,7 +94,11 @@
                             height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
                           >
                         </div>
+                      {% else %}
+                       custom image
                       {% endif %}
+
+
                     </td>
 
                     <td class="cart-item__details">
