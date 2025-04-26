@@ -571,3 +571,7 @@ body .tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
 details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid {
   display: none !important;
 }
+
+.cart-default-image {
+  width: 110px;
+}
