@@ -36,9 +36,37 @@
     </ul> {% endcomment %}
 
 
+<ul id="wine-list"></ul>
+
+<span id="grapes-data" style="display:none;">
+  {{ product.metafields.custom.grapes }}
+</span>
+
+<script>
+const grapesText = document.getElementById('grapes-data').innerText || '';
+const wineList = document.getElementById('wine-list');
+
+if (grapesText.trim() !== '') {
+    grapesText.split(',').forEach(wine => {
+        const wineName = wine.trim();
+        const slug = wineName.toLowerCase().replace(/\s+/g, '-');
+        
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `/${slug}`; // make URL dynamic
+        a.textContent = wineName;
+        
+        li.appendChild(a);
+        wineList.appendChild(li);
+    });
+}
+</script>
+
+
+{% comment %} 
  <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes | url_encode }}" class="text-link">
     {{ product.metafields.custom.grapes }}
-  </a> 
+  </a>  {% endcomment %}
 </li>
 
 {% endif %}
