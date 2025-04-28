@@ -53,7 +53,7 @@ if (grapesText.trim() !== '') {
         
         const li = document.createElement('li');
         const a = document.createElement('a');
-        a.href = `/${slug}`; // make URL dynamic
+        a.href = `/collections/all/${slug}`; // make URL dynamic
         a.textContent = wineName;
         
         li.appendChild(a);
