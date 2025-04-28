@@ -36,7 +36,7 @@
     </ul> {% endcomment %}
 
 
-<ul id="wine-list"></ul>
+<ul id="grapes-list"></ul>
 
 <span id="grapes-data" style="display:none;">
   {{ product.metafields.custom.grapes }}
@@ -44,7 +44,7 @@
 
 <script>
 const grapesText = document.getElementById('grapes-data').innerText || '';
-const wineList = document.getElementById('wine-list');
+const wineList = document.getElementById('grapes-list');
 
 if (grapesText.trim() !== '') {
     grapesText.split(',').forEach(wine => {
