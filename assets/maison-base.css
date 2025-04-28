@@ -575,3 +575,11 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
 .cart-default-image {
   width: 110px;
 }
+
+#grapes-list {
+  padding: 0;
+}
+
+#grapes-list li a {
+  color: #000;
+}
