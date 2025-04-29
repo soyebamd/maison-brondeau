@@ -435,6 +435,7 @@ body {
   padding-right: 24px !important;
 
   color: #000 !important;
+  font-weight: 600;
 }
 
 body .tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
