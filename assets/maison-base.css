@@ -554,8 +554,7 @@ body .tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
 .tags a {
   color: #000;
 }
-.tmenu_item_level_3 .tmenu_item_text,
-.tmenu_item.tmenu_item_level_1 .tmenu_item_level_2 .tmenu_item_text {
+.tmenu_item_level_3 .tmenu_item_text {
   font-family: "Poppins", sans-serif !important;
 }
 
