@@ -117,6 +117,14 @@
         {% if section.settings.title != blank %}
           <h2 class="embed-title">{{ section.settings.title }}</h2>
         {% endif %}
+
+
+        {% if section.settings.desc != blank %}
+          <h2 class="embed-title">{{ section.settings.desc }}</h2>
+        {% endif %}
+
+
+
         </div>
       </div>
 
@@ -168,6 +176,11 @@
       "type": "text",
       "id": "title_2",
       "label": "Title Second"
+    },
+      {
+      "type": "text",
+      "id": "desc",
+      "label": "Desc"
     },
 
     {
