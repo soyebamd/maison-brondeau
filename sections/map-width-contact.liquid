@@ -119,8 +119,10 @@
         {% endif %}
 
 
-        {% if section.settings.desc != blank %}
-          <h2 class="embed-title">{{ section.settings.desc }}</h2>
+        {% if section.settings.text2 != blank && if section.settings.url1 != blank  %}
+          <h2 class="embed-title">
+            <a href="tel:{{ section.settings.url1 }}">{{ section.settings.text2 }}</a>
+            </h2>
         {% endif %}
 
 
@@ -177,11 +179,19 @@
       "id": "title_2",
       "label": "Title Second"
     },
-      {
+ {
       "type": "text",
-      "id": "desc",
-      "label": "Desc"
+      "id": "text2",
+      "label": "Text"
     },
+    
+    
+      {
+        "type": "url",
+        "id": "url1",
+        "label": "External Link",
+        "default": "https://example.com"
+      },
 
     {
       "type": "range",
