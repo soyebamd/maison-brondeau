@@ -559,6 +559,22 @@ body .tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
   font-family: "Poppins", sans-serif !important;
 }
 
+a[title="Spirits & More"] .tmenu_item_text,
+a[title="Whiskey"] .tmenu_item_text,
+a[title="Bourbon"] .tmenu_item_text,
+a[title="Scotch"] .tmenu_item_text,
+a[title="Gin"] .tmenu_item_text,
+a[title="Tequila"] .tmenu_item_text,
+a[title="Mezcal"] .tmenu_item_text,
+a[title="Rum"] .tmenu_item_text,
+a[title="Vodka"] .tmenu_item_text,
+a[title="Sake"] .tmenu_item_text,
+a[title="Can Cocktails"] .tmenu_item_text,
+a[title="Cider"] .tmenu_item_text,
+a[title="Everything Else"] .tmenu_item_text {
+  font-family: "Poppins", sans-serif !important;
+}
+
 .facets_list {
   margin: 0;
   padding: 0;
