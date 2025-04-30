@@ -174,21 +174,21 @@
         "heading_aAfLiF": {
           "type": "heading",
           "settings": {
-            "heading": "The Wine Club",
-            "heading_size": "h1"
+            "heading": "WINE CLUB Deux Chevaux",
+            "heading_size": "h2"
           }
         },
         "text_UBwRkU": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep</li><li>Monthly or quarterly shipments based on the latest theme or region</li><li>10% member discount on any purchase at Maison Brondeau</li></ul>",
+            "text": "<ul><li>Three hand-selected wines from around the globe.</li><li>Coming soon! Sign up to be added to the waitlist and learn more.</li></ul><p></p>",
             "text_style": "body"
           }
         },
         "button_wm4PfQ": {
           "type": "button",
           "settings": {
-            "button_label": "JOIN NOW",
+            "button_label": "JOIN THE WAITLIST",
             "button_link": "shopify://pages/wine-club",
             "button_style_secondary": false
           }
