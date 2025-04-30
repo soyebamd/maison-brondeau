@@ -573,11 +573,6 @@ a[title="Everything Else"] .tmenu_item_text {
   font-family: "Poppins", sans-serif !important;
 }
 
-a[title="Whiskey"] .tmenu_item_text {
-  color: red !important;
-  font-family: "Poppins", sans-serif !important;
-}
-
 .facets_list {
   margin: 0;
   padding: 0;
