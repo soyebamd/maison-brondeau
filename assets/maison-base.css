@@ -573,12 +573,14 @@ a[title="Everything Else"] .tmenu_item_text {
   font-family: "Poppins", sans-serif !important;
 }
 
-a[title="Wine"].tmenu_item_link {
+a[title="Wine"].tmenu_item_link,
+a[title="Spirits & More"].tmenu_item_link {
   background-color: #85272e !important;
   color: #fff !important;
 }
 
-a[title="Wine"].tmenu_item_link span {
+a[title="Wine"].tmenu_item_link span,
+a[title="Spirits & More"].tmenu_item_link span {
   color: #fff !important;
 }
 
