@@ -422,7 +422,7 @@ body {
   transform: translateX(-50%) !important;
 }
 
-.tmenu_submenu.tmenu_submenu_type_automatic.tmenu_submenu--desktop {
+.tmenu_submenu .tmenu_submenu_type_automatic.tmenu_submenu--desktop {
   left: 50% !important;
 }
 
