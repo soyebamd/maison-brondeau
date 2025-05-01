@@ -426,6 +426,10 @@ body {
   left: 50% !important;
 }
 
+.tmenu_submenu_type_mega > .tmenu_item {
+  padding: 0px !important;
+}
+
 .header__inline-menu
   .tmenu_app
   .tmenu_nav
