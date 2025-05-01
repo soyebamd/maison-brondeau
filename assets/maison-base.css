@@ -574,8 +574,8 @@ a[title="Everything Else"] .tmenu_item_text {
 }
 
 a[title="Wine"] {
-  background-color: #85272e;
-  color: #fff;
+  background-color: #85272e !important;
+  color: #fff !important;
 }
 
 .facets_list {
