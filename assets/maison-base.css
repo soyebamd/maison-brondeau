@@ -599,3 +599,8 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
 #grapes-list li a {
   color: #000;
 }
+
+.ph-link {
+  color: #fff !important;
+  text-decoration: none !important;
+}

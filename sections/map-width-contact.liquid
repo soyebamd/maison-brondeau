@@ -121,7 +121,7 @@
 
         {% if section.settings.text2 != blank  %}
           <h2 class="embed-title">
-            <a href="tel:{{ section.settings.url1 }}">{{ section.settings.text2 }}</a>
+            <a href="{{ section.settings.url1 }}" class="ph-link">{{ section.settings.text2 }}</a>
             </h2>
         {% endif %}
 
