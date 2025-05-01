@@ -127,7 +127,7 @@
             "image": "shopify://shop_images/Screenshot_2024-02-17_at_5.11_1_90beafec-679d-4944-af93-4085bf176e05.jpg",
             "caption": "",
             "heading": "Public Tastings",
-            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. See schedule for upcoming tasting events with winemakers, experts, educators and more.</p>",
+            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. </p><p>See schedule for upcoming weeky tasting events with winemakers, experts, educators and more.</p>",
             "button_label": "VIEW SCHEDULE",
             "button_link": "https://www.exploretock.com/maisonbrondeau",
             "button_color_scheme": "scheme-3"
@@ -140,7 +140,7 @@
             "image": "shopify://shop_images/wine.jpg",
             "caption": "",
             "heading": "Private Events",
-            "text": "<p>Indulge in a personalized interactive wine tasting experience at our tasting bar and lounge, or at your company's location. Contact us today to plan your next private event. </p>",
+            "text": "<p>Indulge in a personalized interactive wine tasting experience at our tasting bar and lounge, or at your company's location.</p><p>Contact us today to plan your next private event. </p>",
             "button_label": "BOOK PRIVATE TASTING",
             "button_link": "https://www.exploretock.com/maisonbrondeau/private-dininge Events",
             "button_color_scheme": ""
@@ -174,7 +174,7 @@
         "heading_aAfLiF": {
           "type": "heading",
           "settings": {
-            "heading": "WINE CLUB Deux Chevaux",
+            "heading": "Deux Chevaux WINE CLUB",
             "heading_size": "h2"
           }
         },
