@@ -426,7 +426,7 @@ body {
   left: 50% !important;
 }
 
-.tmenu_submenu .tmenu_submenu_type_mega > .tmenu_item {
+.tmenu_submenu .tmenu_submenu_type_mega .tmenu_item {
   padding: 0px !important;
 }
 
