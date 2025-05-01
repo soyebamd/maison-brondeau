@@ -581,7 +581,13 @@ a[title="Wine"].tmenu_item_link,
 a[title="Spirits & More"].tmenu_item_link {
   background-color: #85272e !important;
   color: #fff !important;
-  padding: 0 20px;
+}
+
+li:not(.tmenu_item_mobile) .tmenu_submenu .tmenu_item_link,
+li:not(.tmenu_item_mobile) .tmenu_submenu .tmenu_custom_content,
+li:not(.tmenu_item_mobile) .tmenu_submenu .tmenu_contact_title {
+  color: #000 !important;
+  padding: 0 10px;
 }
 
 a[title="Wine"].tmenu_item_link span,
