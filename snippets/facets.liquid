@@ -1261,12 +1261,14 @@
       </form>
     </facet-filters-form>
   {%- endif -%}
-</div>
+
+
+  
 {% assign wine_tags = "Cabernet Franc,Cabernet Sauvignon,Carignan,Carmenere,Chardonnay,Cinsault,Corvina,Corvinone,Counoise,Friulano,Graciano,Grenache,Malbec,Mazuelo,Merlot,Mollinara,Mourvedre,Nascetta,Nerello Cappuccio,Nerello Mascalese,Petit Verdot,Petite Sirah,Pinot Auxerrois,Pinot Grigio,Pinot Gris,Pinot Meunier,Pinot Noir,Riesling,Rondinella,Sangiovese,Sauvignon Blanc,Semillon,Syrah,Tempranillo,Tinta Barroca,Tinta Roriz,Tinto Cao,Touriga Franca,Touriga Nacional,Zinfandel" | split: "," %}
 {% assign current_tag = collection.current_tags | first | handleize %}
 
 {% comment %} {{ collection.handle }} {% endcomment %}
-<details class="facets__disclosure-vertical js-filter" id="Details-filter.p.tag.grape_varietal">
+<details class="facets__disclosure-vertical js-filter" id="Details-filter.p.tag.grape_varietal" data-id="data-custom">
   <summary class="facets__summary caption-large focus-offset" aria-label="Grapes / Raw Material" role="button" aria-expanded="false" aria-controls="Facet-grape_varietal">
     <div>
       <span class="facets__summary-label">Grapes / Raw Material</span>
@@ -1288,20 +1290,18 @@
 </details>
 
 
+
+</div>
+
 <script>// Select the source and target elements
 window.addEventListener('load', function() {
   setTimeout(function() {
-    const target = document.querySelector('.Details-filter.p.t.category-template--16985639780515__product-grid');
-const elementToMove = document.querySelector('#Details-filter.p.tag.grape_varietal');
-
-console.log(target);
-console.log(elementToMove);
+    const target = document.querySelector('details[data-id="data-2"]');
+    const elementToMove = document.querySelector('details[data-id="data-custom"]');
     
     if (target && elementToMove) {
       target.insertAdjacentElement('afterend', elementToMove);
     }
-  }, 1000); // 1 second = 1000 milliseconds
+  }, 1000); // 1 second delay
 });
-
-
 </script>
