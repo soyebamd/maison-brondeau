@@ -129,7 +129,7 @@
               {% case filter.type %}
                 {% when 'boolean', 'list' %}
                   <details
-                    id="Details-{{ filter.param_name | escape }}-{{ section.id }}" data-id="data-{{ section.id }}"
+                    id="Details-{{ filter.param_name | escape }}-{{ section.id }}" data-id="data-{{forloop.index}}"
                     class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
                     data-index="{{ forloop.index }}"
                     {% if filter_type == 'vertical' and forloop.index == 1 %}
