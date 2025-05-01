@@ -1292,6 +1292,9 @@ window.addEventListener('load', function() {
   setTimeout(function() {
     const target = document.querySelector('.Details-filter.p.t.category-template--16985639780515__product-grid');
 const elementToMove = document.querySelector('#Details-filter.p.tag.grape_varietal');
+
+console.log(target);
+console.log(elementToMove);
     
     if (target && elementToMove) {
       target.insertAdjacentElement('afterend', elementToMove);
