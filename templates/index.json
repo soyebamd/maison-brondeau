@@ -174,14 +174,14 @@
         "heading_aAfLiF": {
           "type": "heading",
           "settings": {
-            "heading": "Deux Chevaux WINE CLUB",
+            "heading": "Deux Chevaux Wine Club",
             "heading_size": "h2"
           }
         },
         "text_UBwRkU": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Three hand-selected wines from around the globe.</li><li>Coming soon! Sign up to be added to the waitlist and learn more.</li></ul><p></p>",
+            "text": "<ul><li>Coming soon! We can't wait to launch the Deux Chevaux wine club later this year.</li></ul><p></p><ul><li>Sign up to be added to the waitlist and learn more!</li></ul><p></p>",
             "text_style": "body"
           }
         },
