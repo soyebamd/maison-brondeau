@@ -386,6 +386,12 @@ body {
   color: #fff;
 }
 
+.glass-logo {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+}
+
 .age-popup-btn {
   padding: 12px 24px;
   font-size: 26px;
