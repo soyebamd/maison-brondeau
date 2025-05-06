@@ -367,7 +367,7 @@ body {
   color: #fff;
   padding: 30px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 0;
   max-width: 980px;
   min-height: 470px;
   width: 90%;
@@ -391,9 +391,10 @@ body {
   border: none;
   cursor: pointer;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 0;
   transition: all 0.3s ease-in-out;
   max-width: 250px;
+  width: 100%;
   height: 64px;
   background-color: #ebeae9;
   color: #5d1619;
