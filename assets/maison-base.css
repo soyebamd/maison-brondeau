@@ -381,7 +381,8 @@ body {
 
 #age-popup h2 {
   font-size: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 0;
   color: #fff;
 }
 
