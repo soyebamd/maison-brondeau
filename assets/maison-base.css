@@ -404,24 +404,6 @@ body {
   display: none;
 }
 
-#yes-btn {
-  background: #872229;
-  color: white;
-}
-
-#yes-btn:hover {
-  background: #141414;
-}
-
-#no-btn {
-  background: #141414;
-  color: white;
-}
-
-#no-btn:hover {
-  background: #c82333;
-}
-
 /* Menu dropdown multiple */
 
 .tmenu_submenu {
