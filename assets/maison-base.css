@@ -363,15 +363,21 @@ body {
 }
 
 #age-popup-box {
-  background: #dfe3d3;
-  color: #000;
+  background: #000
+    url("https://cdn.shopify.com/s/files/1/0643/5415/6707/files/Rectangle_84_1.png?v=1746562443");
+  color: #fff;
   padding: 30px;
   text-align: center;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 980px;
+  min-height: 470px;
   width: 90%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   animation: fadeIn 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #age-popup h2 {
