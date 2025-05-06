@@ -366,6 +366,7 @@ body {
   background: url("https://cdn.shopify.com/s/files/1/0643/5415/6707/files/Rectangle_84_1.png?v=1746562443");
   color: #fff;
   padding: 30px;
+  position: relative;
   text-align: center;
   border-radius: 0;
   max-width: 980px;
