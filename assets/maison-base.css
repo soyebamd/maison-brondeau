@@ -363,8 +363,7 @@ body {
 }
 
 #age-popup-box {
-  background: #000
-    url("https://cdn.shopify.com/s/files/1/0643/5415/6707/files/Rectangle_84_1.png?v=1746562443");
+  background: url("https://cdn.shopify.com/s/files/1/0643/5415/6707/files/Rectangle_84_1.png?v=1746562443");
   color: #fff;
   padding: 30px;
   text-align: center;
