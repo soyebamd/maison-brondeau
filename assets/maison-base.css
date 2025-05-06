@@ -388,6 +388,7 @@ body {
 .age-popup-btn {
   padding: 12px 24px;
   font-size: 26px;
+  font-weight: 500;
   border: none;
   cursor: pointer;
   margin: 10px;
