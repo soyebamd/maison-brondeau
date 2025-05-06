@@ -315,17 +315,7 @@
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
 
 
-  <div id="age-popup">
-                <div id="age-popup-box">
-                  <div class="position-relative">
-                    <h2>Are you 21 or older?</h2>
-                    <div class="d-flex">
-                    <button id="yes-btn" class="button age-popup-btn">Yes</button>
-                    <button id="no-btn" class="button age-popup-btn">No</button>
-                    </div>
-                    <img src="{{ 'MB_Logos_-_Light_Gray_Line_1_2.png' |  file_url }}" class="glass-logo"></div>
-                </div>
-            </div>
+
 
 
 
@@ -401,11 +391,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     if (!localStorage.getItem("ageVerified")) {
         document.body.insertAdjacentHTML("beforeend", `
-            <div id="age-popup">
+             <div id="age-popup">
                 <div id="age-popup-box">
+                  <div class="position-relative">
                     <h2>Are you 21 or older?</h2>
+                    <div class="d-flex">
                     <button id="yes-btn" class="button age-popup-btn">Yes</button>
                     <button id="no-btn" class="button age-popup-btn">No</button>
+                    </div>
+                    <img src="{{ 'MB_Logos_-_Light_Gray_Line_1_2.png' |  file_url }}" class="glass-logo"></div>
                 </div>
             </div>
         `);
