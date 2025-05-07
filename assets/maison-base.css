@@ -180,6 +180,12 @@ body {
   transform: translateY(-50%) !important;
 }
 
+@media screen and (max-width: 1232px) {
+  .image-with-text__custom-text {
+    height: 100% !important;
+  }
+}
+
 @media screen and (min-width: 990px) {
   .image-with-text__custom-text .image-with-text__content {
     padding: 4.8rem 5.9rem;
