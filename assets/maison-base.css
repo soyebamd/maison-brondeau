@@ -447,6 +447,11 @@ body {
   color: #000 !important;
 }
 
+.placeholder-image {
+  max-width: 600px;
+  width: 100%;
+}
+
 body .tmenu_submenu_type_mega .tmenu_item_display_header > .tmenu_item_link {
   font-weight: 400 !important;
 }
