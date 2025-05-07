@@ -447,7 +447,7 @@ body {
   color: #000 !important;
 }
 
-.placeholder-image {
+.placeholder-image img {
   max-width: 600px;
   width: 100%;
 }
