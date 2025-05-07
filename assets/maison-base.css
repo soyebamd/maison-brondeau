@@ -629,5 +629,5 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
 }
 
 .ProductGridContainer .card__badge {
-  display: none;
+  display: none !important;
 }
