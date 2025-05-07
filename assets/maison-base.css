@@ -447,6 +447,10 @@ body {
   color: #000 !important;
 }
 
+.placeholder-image {
+  padding: 0 20px;
+}
+
 .placeholder-image img {
   max-width: 600px;
   width: 100%;

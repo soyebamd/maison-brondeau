@@ -68,8 +68,13 @@
 
 
   {% unless product.featured_image %}
+
+
    <div class="placeholder-image">
-    {{'Artboard_1.png' |  file_url | img_tag: 'Coming Soon'}}</div>
+    
+      {{'Artboard_1.png' |  file_url | img_tag: 'Coming Soon'}}
+    
+    </div>
  
 {% endunless %}
 
