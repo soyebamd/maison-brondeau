@@ -210,7 +210,7 @@
 
 
 
-                            <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}" id="label-Filter-{{ filter.param_name | escape }}-{{ forloop.index }}">
+                            <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}" id="label-Filter-{{ value.param_name }}">
                               <label
                                 for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
                                 class="facets__label facet-checkbox{% if is_disabled %} facet-checkbox--disabled disabled{% endif %}{% if has_visual_display %} visual-display-parent visual-display-parent--{{ filter.presentation }}{% endif %}{% if value.active %} active{% endif %}"
