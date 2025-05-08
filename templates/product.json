@@ -153,14 +153,14 @@
         "heading_BbfMwh": {
           "type": "heading",
           "settings": {
-            "heading": "The Wine Club",
+            "heading": "The Deux Chevaux Wine Club",
             "heading_size": "h1"
           }
         },
         "text_HcUy3n": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep</li><li>Monthly or quarterly shipments based on the latest theme or region</li><li>10% member discount on any purchase at Maison Brondeau</li></ul>",
+            "text": "<ul><li>Three hand-selected wines from around the globe.</li><li>Coming soon!</li><li>Join now to be added to the waitlist!</li></ul>",
             "text_style": "body"
           }
         },
