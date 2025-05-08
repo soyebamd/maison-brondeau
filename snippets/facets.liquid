@@ -1300,7 +1300,7 @@ window.addEventListener('load', function() {
     const elementToMove = document.querySelector('details[data-id="data-custom"]');    
     if (target && elementToMove) {      
       target.insertAdjacentElement('afterend', elementToMove);
-     a
+      elementToMove.style.display="block";
     }
   }, 100); // 1 second delay
 });
