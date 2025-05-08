@@ -655,3 +655,8 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
 .details[data-id="data-2"] {
   display: none;
 }
+
+.product-form__input--pill input[type="radio"]:checked + label {
+  background: #5d1619 !important;
+  color: #fff !important;
+}
