@@ -183,7 +183,8 @@
                       {%- endif -%}
                       <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
                         <legend class="visually-hidden">{{ filter.label | escape }}</legend>
-                        <ul
+                        <ul 
+                          id="{{ filter.label | strip | replace: ' ', '_' }}"
                           class="{{ visual_layout_class }}{% if filter_type == 'vertical' %} facets__list--vertical{% else %} facets__list{% endif %} list-unstyled no-js-hidden"
                           role="list"
                         >
@@ -208,7 +209,7 @@
 
 
 
-                            <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}" id="label-Filter-{{ value.param_name }}">
+                            <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}" id="label-Filter-{{ forloop.index }}">
                               <label
                                 for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
                                 class="facets__label facet-checkbox{% if is_disabled %} facet-checkbox--disabled disabled{% endif %}{% if has_visual_display %} visual-display-parent visual-display-parent--{{ filter.presentation }}{% endif %}{% if value.active %} active{% endif %}"
