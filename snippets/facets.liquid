@@ -82,7 +82,7 @@
                       </a>
                     </facet-remove>
                   {%- endfor -%}
-                  {% if filter.type == 'price_range' %}55555555555
+                  {% if filter.type == 'price_range' %}
                     {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                       <facet-remove>
                         <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -383,7 +383,7 @@
                       {%- endif %}
                     </div>
                   </details>
-                {% when 'price_range' %}6666666
+                {% when 'price_range' %}
                   {% liquid
                     assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,UYU,VES,VND' | split: ','
                     assign uses_comma_decimals = false
@@ -481,13 +481,9 @@
                       </price-range>
                     </div>
                   </details>
-              {% endcase %}
-            {%- endfor -%}
 
 
-
-            
-
+                  
   {% assign custom_price_ranges = "<$25, $25 to $50, $50 to $75, $75 to $100, $100 to $150, $150+" | split: "," %}
   {% assign filter_param = "filter.p.m.custom.price_range" %}
   {% assign current_filters = request.params[filter_param] %}
@@ -527,6 +523,13 @@
     </li>
   {% endfor %}
 
+  
+              {% endcase %}
+            {%- endfor -%}
+
+
+
+            
 
 
 
@@ -552,10 +555,6 @@
                   </facet-remove>
                 {%- endfor -%}
                 {% if filter.type == 'price_range' %}
-
-                  11111
-
-                 
                   {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                     <facet-remove>
                       <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -917,7 +916,7 @@
                           </div>
                         </div>
                       </details>
-                    {% when 'price_range' %} 222222
+                    {% when 'price_range' %}
                       {% liquid
                         assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,UYU,VES,VND' | split: ','
                         assign uses_comma_decimals = false
@@ -1119,7 +1118,7 @@
         </facet-remove>
       {%- endfor -%}
 
-      {%- if filter.type == 'price_range' -%} 333333333333
+      {%- if filter.type == 'price_range' -%}
         {%- if filter.min_value.value != null or filter.max_value.value != null -%}
           <facet-remove>
             <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -1236,7 +1235,7 @@
               </facet-remove>
             {%- endfor -%}
 
-            {%- if filter.type == 'price_range' -%}44444444444
+            {%- if filter.type == 'price_range' -%}
               {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                 <facet-remove>
                   <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
