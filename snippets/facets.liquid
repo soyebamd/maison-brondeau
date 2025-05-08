@@ -1296,9 +1296,10 @@ window.addEventListener('load', function() {
   setTimeout(function() {
     const target = document.querySelector('details[data-id="data-2"]');
     const elementToMove = document.querySelector('details[data-id="data-custom"]');    
-    if (target && elementToMove) {
+    if (target && elementToMove) {      
       target.insertAdjacentElement('afterend', elementToMove);
+      target.style.display="block";
     }
-  }, 1000); // 1 second delay
+  }, 100); // 1 second delay
 });
 </script>
