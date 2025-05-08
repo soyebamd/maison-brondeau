@@ -1293,12 +1293,11 @@
 
 <script>// Select the source and target elements
 window.addEventListener('load', function() {
-   const target = document.querySelector('details[data-id="data-2"]');
-   const elementToMove = document.querySelector('details[data-id="data-custom"]');    
-  target.style.display="none";
+ 
   setTimeout(function() {
-   
-  
+    const target = document.querySelector('details[data-id="data-2"]');
+     target.style.display="none";
+    const elementToMove = document.querySelector('details[data-id="data-custom"]');    
     if (target && elementToMove) {      
       target.insertAdjacentElement('afterend', elementToMove);
       target.style.display="block";
