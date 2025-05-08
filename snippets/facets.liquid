@@ -82,7 +82,7 @@
                       </a>
                     </facet-remove>
                   {%- endfor -%}
-                  {% if filter.type == 'price_range' %}
+                  {% if filter.type == 'price_range' %} 111111111111
                     {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                       <facet-remove>
                         <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -288,51 +288,6 @@
 
     
 
-{% comment %} 
-
-{% if filter.label == "Price Range" %}
-
-  {% assign custom_price_ranges = "<$25, $25 to $50, $50 to $75, $75 to $100, $100 to $150, $150+" | split: "," %}
-  {% assign filter_param = "filter.p.m.custom.price_range" %}
-  {% assign current_filters = request.params[filter_param] %}
-
-  {% for price in custom_price_ranges %}
-    {% assign trimmed_label = price | strip %}
-    {% assign input_id = "Filter-" | append: filter_param | append: "-" | append: forloop.index %}
-    {% assign is_checked = false %}
-
-    {%- if current_filters -%}
-      {%- if current_filters contains trimmed_label -%}
-        {% assign is_checked = true %}
-      {%- endif -%}
-    {%- endif -%}
-
-    <li class="list-menu__item facets__item">
-      <label for="{{ input_id }}" class="facets__label facet-checkbox{% if is_checked %} active{% endif %}">
-        <input
-          type="checkbox"
-          name="{{ filter_param }}"
-          value="{{ trimmed_label }}"
-          id="{{ input_id }}"
-          {% if is_checked %}checked{% endif %}
-        >
-
-        <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-          <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-        </svg>
-
-        <svg aria-hidden="true" class="icon icon-checkmark" width="1.1rem" height="0.7rem" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-
-        <span class="facet-checkbox__text" aria-hidden="true">{{ trimmed_label }}</span>
-        <span class="visually-hidden">{{ trimmed_label }} filter</span>
-      </label>
-    </li>
-  {% endfor %}
-
-{% endif %}
- {% endcomment %}
 
 
  
@@ -426,7 +381,7 @@
                       {%- endif %}
                     </div>
                   </details>
-                {% when 'price_range' %}
+                {% when 'price_range' %}666666666666666666666
                   {% liquid
                     assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,UYU,VES,VND' | split: ','
                     assign uses_comma_decimals = false
@@ -547,7 +502,7 @@
                     </a>
                   </facet-remove>
                 {%- endfor -%}
-                {% if filter.type == 'price_range' %}
+                {% if filter.type == 'price_range' %}555555555555555555555
                   {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                     <facet-remove>
                       <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -909,7 +864,7 @@
                           </div>
                         </div>
                       </details>
-                    {% when 'price_range' %}
+                    {% when 'price_range' %}44444444444444444444444
                       {% liquid
                         assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,UYU,VES,VND' | split: ','
                         assign uses_comma_decimals = false
@@ -1111,7 +1066,7 @@
         </facet-remove>
       {%- endfor -%}
 
-      {%- if filter.type == 'price_range' -%}
+      {%- if filter.type == 'price_range' -%}3333333333333333333333
         {%- if filter.min_value.value != null or filter.max_value.value != null -%}
           <facet-remove>
             <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -1228,7 +1183,7 @@
               </facet-remove>
             {%- endfor -%}
 
-            {%- if filter.type == 'price_range' -%}
+            {%- if filter.type == 'price_range' -%}22222222222222
               {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                 <facet-remove>
                   <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
