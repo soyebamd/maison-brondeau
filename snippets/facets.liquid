@@ -81,9 +81,8 @@
                         </span>
                       </a>
                     </facet-remove>
-                    
                   {%- endfor -%}
-                  {% if filter.type == 'price_range' %} 111111111111
+                  {% if filter.type == 'price_range' %}
                     {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                       <facet-remove>
                         <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -382,7 +381,7 @@
                       {%- endif %}
                     </div>
                   </details>
-                {% when 'price_range' %}666666666666666666666
+                {% when 'price_range' %}
                   {% liquid
                     assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,UYU,VES,VND' | split: ','
                     assign uses_comma_decimals = false
@@ -503,7 +502,7 @@
                     </a>
                   </facet-remove>
                 {%- endfor -%}
-                {% if filter.type == 'price_range' %}555555555555555555555
+                {% if filter.type == 'price_range' %}
                   {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                     <facet-remove>
                       <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -865,7 +864,7 @@
                           </div>
                         </div>
                       </details>
-                    {% when 'price_range' %}44444444444444444444444
+                    {% when 'price_range' %}
                       {% liquid
                         assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,UYU,VES,VND' | split: ','
                         assign uses_comma_decimals = false
@@ -1067,7 +1066,7 @@
         </facet-remove>
       {%- endfor -%}
 
-      {%- if filter.type == 'price_range' -%}3333333333333333333333
+      {%- if filter.type == 'price_range' -%}
         {%- if filter.min_value.value != null or filter.max_value.value != null -%}
           <facet-remove>
             <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -1184,7 +1183,7 @@
               </facet-remove>
             {%- endfor -%}
 
-            {%- if filter.type == 'price_range' -%}22222222222222
+            {%- if filter.type == 'price_range' -%}
               {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                 <facet-remove>
                   <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
