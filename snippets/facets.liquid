@@ -1296,11 +1296,11 @@ window.addEventListener('load', function() {
  
   setTimeout(function() {
     const target = document.querySelector('details[data-id="data-2"]');
-     target.style.display="none";
+    
     const elementToMove = document.querySelector('details[data-id="data-custom"]');    
     if (target && elementToMove) {      
       target.insertAdjacentElement('afterend', elementToMove);
-      target.style.display="block";
+      elementToMove.style.display="block";
     }
   }, 100); // 1 second delay
 });
