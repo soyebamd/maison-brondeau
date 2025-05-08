@@ -480,11 +480,10 @@
                         </div>
                       </price-range>
                     </div>
-                  </details>
 
 
-                  
-  {% assign custom_price_ranges = "<$25, $25 to $50, $50 to $75, $75 to $100, $100 to $150, $150+" | split: "," %}
+
+                      {% assign custom_price_ranges = "<$25, $25 to $50, $50 to $75, $75 to $100, $100 to $150, $150+" | split: "," %}
   {% assign filter_param = "filter.p.m.custom.price_range" %}
   {% assign current_filters = request.params[filter_param] %}
 
@@ -523,7 +522,13 @@
     </li>
   {% endfor %}
 
+
   
+                  </details>
+
+
+                  
+
               {% endcase %}
             {%- endfor -%}
 
