@@ -269,7 +269,7 @@
 
                                 <span class="facet-checkbox__text" aria-hidden="true">
                                   {{- value.label | escape }} ({{ value.count }})</span
-                                > 1
+                                >
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
                                   {%- if value.count == 1 -%}
@@ -288,6 +288,7 @@
 
     
 
+{% comment %} 
 
 {% if filter.label == "Price Range" %}
 
@@ -324,14 +325,14 @@
           <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
 
-        <span class="facet-checkbox__text" aria-hidden="true">{{ trimmed_label }}</span>2
+        <span class="facet-checkbox__text" aria-hidden="true">{{ trimmed_label }}</span>
         <span class="visually-hidden">{{ trimmed_label }} filter</span>
       </label>
     </li>
   {% endfor %}
 
 {% endif %}
-
+ {% endcomment %}
 
 
  
@@ -872,7 +873,7 @@
 
                                   <span class="facet-checkbox__text" aria-hidden="true">
                                     {{- value.label | escape }} ({{ value.count }})</span
-                                  >3
+                                  >
                                   <span class="visually-hidden">
                                     {{- value.label | escape }} (
                                     {%- if value.count == '1' -%}
@@ -1281,7 +1282,7 @@
       {% for tag in wine_tags %}
         {% assign tag_handle = tag | handleize %}
         <li class="facet-checkbox__text{% if current_tag == tag_handle %} facet-checkbox--checked{% endif %}">
-          <a href="/collections/all/{{ tag_handle }}">{{ tag }}</a>4
+          <a href="/collections/all/{{ tag_handle }}">{{ tag }}</a>
         </li>
       {% endfor %}
     </ul>
