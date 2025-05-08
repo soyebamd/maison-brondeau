@@ -647,7 +647,7 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
   text-decoration: none !important;
 }
 
-#label-Filter-filter.p.m.custom.price_range-2,
-#label-Filter-filter.p.m.custom.price_range-1 {
+#Price_Range #label-Filter-1,
+#Price_Range #label-Filter-2 {
   display: none !important;
 }
