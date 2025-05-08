@@ -529,7 +529,7 @@
 
 
 
-  
+
             <noscript>
               <button type="submit" class="facets__button-no-js button button--secondary">
                 {{ 'products.facets.filter_button' | t }}
@@ -552,6 +552,8 @@
                   </facet-remove>
                 {%- endfor -%}
                 {% if filter.type == 'price_range' %}
+
+                  asfsda
                   {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                     <facet-remove>
                       <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
