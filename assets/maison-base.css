@@ -660,3 +660,13 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
   background: #5d1619 !important;
   color: #fff !important;
 }
+
+@media (max-width: 749px) {
+  .product__title h1 {
+    font-size: 2.2rem;
+  }
+
+  .product__text {
+    font-size: 116px;
+  }
+}
