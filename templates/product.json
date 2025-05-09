@@ -53,6 +53,10 @@
             "show_gift_card_recipient": true
           }
         },
+        "zestard_gift_wrap_giftwrap_product_block_jY7qdY": {
+          "type": "shopify://apps/zestard-gift-wrap/blocks/giftwrap-product-block/812385b4-6785-4a00-a40d-150927008708",
+          "settings": {}
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -77,6 +81,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "zestard_gift_wrap_giftwrap_product_block_jY7qdY",
         "share",
         "text_x37JF6"
       ],
