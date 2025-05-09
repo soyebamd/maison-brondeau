@@ -101,7 +101,7 @@
         "text_rxbCjx": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Three hand-selected wines from around the globe.</li><li>Coming soon!</li><li>Join now to be added to the waitlist!</li></ul>",
+            "text": "<p><strong>Introducing our upcoming wine club—an intimate, curated experience for both adventurous beginners and devoted connoisseurs.</strong></p><ul><li> Hand-selected by our expert team, showcasing distinct terroirs and hidden gems from around the globe.</li><li>Thoughtful selections that overdeliver in the glass.</li><li>Be among the first to receive details and secure your spot below.</li></ul>",
             "text_style": "body"
           }
         },
