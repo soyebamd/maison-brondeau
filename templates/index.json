@@ -181,7 +181,7 @@
         "text_UBwRkU": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Coming soon! We can't wait to launch the Deux Chevaux wine club later this year.</li></ul><p></p><ul><li>Sign up to be added to the waitlist and learn more!</li></ul><p></p>",
+            "text": "<p><strong>Introducing our upcoming wine club—an intimate, curated experience for both adventurous beginners and devoted connoisseurs.</strong><br/>\t•Hand-selected by our expert team, showcasing distinct terroirs and hidden gems from around the globe.<br/>\t•Thoughtful selections that overdeliver in the glass.<br/>\t•Be among the first to receive details and secure your spot below.</p>",
             "text_style": "body"
           }
         },
