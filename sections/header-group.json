@@ -25,7 +25,7 @@
           "type": "announcement",
           "settings": {
             "text": "Grand Opening Weekend!",
-            "link": ""
+            "link": "shopify://collections/grand-opening-weekend-selections"
           }
         }
       },
