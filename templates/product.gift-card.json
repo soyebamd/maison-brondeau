@@ -101,14 +101,14 @@
         "text_rxbCjx": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>4 hand-selected wines from around the globe right to your doorstep</li><li>Monthly or quarterly shipments based on the latest theme or region</li><li>10% member discount on any purchase at Maison Brondeau</li></ul>",
+            "text": "<ul><li>Three hand-selected wines from around the globe.</li><li>Coming soon!</li><li>Join now to be added to the waitlist!</li></ul>",
             "text_style": "body"
           }
         },
         "button_ecJeC7": {
           "type": "button",
           "settings": {
-            "button_label": "JOIN NOW",
+            "button_label": "Join Waitlist",
             "button_link": "shopify://pages/wine-club",
             "button_style_secondary": false
           }
