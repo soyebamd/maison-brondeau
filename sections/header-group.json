@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_ePQaXY": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
@@ -23,14 +30,15 @@
         }
       },
       "block_order": [
+        "announcement_ePQaXY",
         "announcement-bar-0"
       ],
       "settings": {
         "color_scheme": "scheme-c9f4b5e4-1e37-4726-8fac-c78afc2e5da0",
         "show_line_separator": true,
         "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 8,
+        "auto_rotate": true,
+        "change_slides_speed": 4,
         "enable_country_selector": false,
         "enable_language_selector": false
       }
