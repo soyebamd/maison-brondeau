@@ -187,7 +187,7 @@ body {
   justify-content: center;
 }
 .ImageWithText__text-col .image-with-text__heading {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .ImageWithText__wrapper-inner {
