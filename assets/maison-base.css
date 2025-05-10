@@ -206,6 +206,12 @@ body {
     padding: 4.8rem 5.9rem;
   }
 }
+@media screen and (min-width: 750px) {
+  .image-with-text__content--top {
+    justify-content: center;
+    align-self: center;
+  }
+}
 
 .image-with-text__custom-text {
   .rte li {
