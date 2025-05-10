@@ -180,6 +180,10 @@ body {
   transform: translateY(-50%) !important;
 }
 
+.ImageWithText__text-col {
+  padding: 0 !important;
+}
+
 @media screen and (max-width: 1232px) {
   .image-with-text__custom-text {
     height: 100% !important;
