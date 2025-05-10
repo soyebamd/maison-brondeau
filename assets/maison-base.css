@@ -699,3 +699,9 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
     font-size: 1.6rem;
   }
 }
+
+@media (max-width: 992px) {
+  .image-with-text__content {
+    padding: 0;
+  }
+}
