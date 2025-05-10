@@ -175,7 +175,7 @@ body {
 
 .image-with-text__custom-text {
   background: #dfe3d3;
-  min-height: 86% !important;
+  height: 86% !important;
   top: 50%;
   transform: translateY(-50%) !important;
 }
