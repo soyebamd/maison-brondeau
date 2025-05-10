@@ -190,6 +190,10 @@ body {
   margin-bottom: 20px;
 }
 
+.mt-0 {
+  margin-top: 0 !important;
+}
+
 .ImageWithText__wrapper-inner {
   max-width: calc(85% + 40px);
   padding: 40px;
