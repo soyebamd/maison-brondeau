@@ -213,6 +213,10 @@ body {
   }
 }
 
+.m-0 {
+  margin: 0 !important;
+}
+
 .image-with-text__custom-text {
   .rte li {
     list-style: disc;
