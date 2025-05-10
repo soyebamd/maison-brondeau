@@ -178,13 +178,13 @@ body {
   height: 86% !important;
   top: 50%;
   transform: translateY(-50%) !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .ImageWithText__text-col {
-  padding: 00px !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ImageWithText__text-col .image-with-text__heading {
   margin-bottom: 0;
