@@ -183,6 +183,9 @@ body {
 .ImageWithText__text-col {
   padding: 30px !important;
 }
+.ImageWithText__text-col .image-with-text__heading {
+  margin-bottom: 0;
+}
 
 @media screen and (max-width: 1232px) {
   .image-with-text__custom-text {
