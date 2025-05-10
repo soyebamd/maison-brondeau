@@ -362,7 +362,7 @@
 }
 
 .image-with-text .text-wrapper {
-  margin: 0 auto;
+  margin: 0;
   padding: 3rem;
 }
 
@@ -376,7 +376,7 @@
   }
 
   .image-with-text .text-wrapper {
-    margin: 0 auto;
+    margin: 0;
     padding: 0rem;
   }
 
