@@ -181,7 +181,7 @@ body {
 }
 
 .ImageWithText__text-col {
-  padding: 0 !important;
+  padding: 40px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,7 +191,7 @@ body {
 }
 
 .ImageWithText__wrapper-inner {
-  max-width: 85%;
+  max-width: calc(85% - 40px);
   align-self: center !important;
 }
 
