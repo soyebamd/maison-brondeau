@@ -181,14 +181,15 @@ body {
 }
 
 .ImageWithText__text-col {
-  padding: 30px !important;
+  padding: 00px !important;
 }
 .ImageWithText__text-col .image-with-text__heading {
   margin-bottom: 0;
 }
 
 .ImageWithText__wrapper-inner {
-  max-width: 80%;
+  max-width: 85%;
+  align-self: center !important;
 }
 
 @media screen and (max-width: 1232px) {
