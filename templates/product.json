@@ -86,7 +86,8 @@
         "text_x37JF6"
       ],
       "custom_css": [
-        "span.zt_gift_label span.giftwrap-price {display: none !important;}"
+        "span.zt_gift_label span.giftwrap-price {display: none !important;}",
+        ".icon_img {margin-left: 20px; vertical-align: middle; width: 75px; height: 75px;}"
       ],
       "settings": {
         "enable_sticky_info": true,
