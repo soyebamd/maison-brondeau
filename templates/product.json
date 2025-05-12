@@ -87,7 +87,7 @@
       ],
       "custom_css": [
         "span.zt_gift_label span.giftwrap-price {display: none !important;}",
-        ".icon_img {width: 35px; height: 35px;}"
+        ".icon_img {width: 30px; height: 30px;}"
       ],
       "settings": {
         "enable_sticky_info": true,
