@@ -137,7 +137,7 @@
         id="ImageWithText--{{ section.id }}"
         class="ImageWithText__text-col {% if section.settings.custom_style %} image-with-text__custom-text {% endif %} image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment1 }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }}"
       >
-      
+      <div class="text-wrapper">
 
           <div class="time-table">
             {% if section.settings.title_2 != blank %}
@@ -157,7 +157,7 @@
           </div>
         </div> <!-- .padding-20px -->
       </div> <!-- .grid__item (Second Column) -->
-
+</div>
     </div> <!-- .image-with-text__grid -->
   </div> <!-- .page-width -->
 </div> <!-- .section-padding -->
