@@ -159,7 +159,7 @@
         "text_style": "body",
         "button_style": "secondary",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "right",
         "image_layout": "alternate-right",
         "section_color_scheme": "",
         "row_color_scheme": "",
