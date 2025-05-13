@@ -165,6 +165,7 @@
         "schedule_QGqX8Q"
       ],
       "settings": {
+        "desktop_content_alignment": "right",
         "embed_code": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.7077931880376!2d-73.77610082354894!3d41.03164841798481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c294486881d549%3A0x3198a49a7492b7f3!2sLubin%20Graduate%20Center%2C%2050%20Main%20St%20Suite%20165%2C%20White%20Plains%2C%20NY%2010606%2C%20USA!5e0!3m2!1sen!2sin!4v1744527619992!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
         "title": "50 Main Street, Suite 165, White Plains, NY 10606",
         "title_2": "Store Hours",
