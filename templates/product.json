@@ -162,7 +162,7 @@
         "heading_BbfMwh": {
           "type": "heading",
           "settings": {
-            "heading": "The Deux Chevaux Wine Club",
+            "heading": "Deux Chevaux Wine Club",
             "heading_size": "h2"
           }
         },
@@ -189,7 +189,7 @@
       ],
       "settings": {
         "custom_style": true,
-        "image": "shopify://shop_images/wine-club.jpg",
+        "image": "shopify://shop_images/MJ-19_2_copy.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
