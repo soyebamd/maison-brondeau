@@ -693,10 +693,12 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
 
 @media (max-width: 749px) {
   .product__title h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
+
   .product__text {
     font-size: 1.6rem;
+    margin: 20px 0;
   }
 }
 
