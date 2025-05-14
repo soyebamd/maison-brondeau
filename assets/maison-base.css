@@ -700,6 +700,10 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
   }
 }
 
+.text-right {
+  text-align: right !important;
+}
+
 @media (max-width: 990px) {
   .image-with-text__content {
     padding: 0 !important;
