@@ -8,6 +8,107 @@
     </li>
   {% endif %} {% endcomment %}
 
+
+  
+  {% if product.metafields.custom.grapes != blank %}
+    <li>
+     {% comment %} Varietals: Grape(s) / Raw Material {% endcomment %}
+   <span><strong>Varietals:</strong></span> 
+ 
+  {% comment %} 
+   <ul class="tags">
+      {% for tag in product.tags %}
+         <li>
+           <a href="{{ routes.all_products_collection_url }}/{{ tag | handle }}">
+             {{ tag }}
+           </a>
+         </li>
+       {% endfor %}
+     </ul> {% endcomment %}
+ 
+ <ul id="grapes-list"></ul>
+ 
+ <span id="grapes-data" style="display:none;">
+   {{ product.metafields.custom.grapes }}
+ </span>
+ 
+ <script>
+ const grapesText = document.getElementById('grapes-data').innerText || '';
+ const wineList = document.getElementById('grapes-list');
+ 
+ if (grapesText.trim() !== '') {
+     grapesText.split(',').forEach(wine => {
+         const wineName = wine.trim();
+         const slug = wineName.toLowerCase().replace(/\s+/g, '-');
+         
+         const li = document.createElement('li');
+         const a = document.createElement('a');
+         a.href = `/collections/all/${slug}`; // make URL dynamic
+         a.textContent = wineName;
+         
+         li.appendChild(a);
+         wineList.appendChild(li);
+     });
+ }
+ </script>
+ 
+ 
+ {% comment %} 
+  <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes | url_encode }}" class="text-link">
+     {{ product.metafields.custom.grapes }}
+   </a>  {% endcomment %}
+ </li>
+ 
+ {% endif %}
+
+
+
+ 
+
+
+{% if product.metafields.custom.country != blank %}
+  <li>
+    <span><strong>Country:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.country={{ product.metafields.custom.country | url_encode }}" class="text-link"><span>{{ product.metafields.custom.country }}</span></a>
+  </li>
+{% endif %}
+
+
+
+
+
+{% if product.metafields.custom.region != blank %}
+  <li>
+    <span><strong>Region:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.region={{ product.metafields.custom.region | url_encode }}" class="text-link"><span>{{ product.metafields.custom.region }}</span></a>
+  </li>
+{% endif %}
+
+
+
+
+
+
+{% if product.metafields.custom.sub_region != blank %}
+  <li>
+    <span><strong>Sub-Region:</strong></span><a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.sub_region={{ product.metafields.custom.sub_region | url_encode }}" class="text-link"> <span>{{ product.metafields.custom.sub_region }}</span> </a>
+  </li>
+{% endif %}
+
+
+
+
+
+{% comment %} Appellation is usually same as appellation, but if you want both, leave this block. {% endcomment %}
+{% if product.metafields.custom.appellation != blank %}
+  <li>
+    <span><strong>Appellation:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.appellation={{ product.metafields.custom.appellation | url_encode }}" class="text-link"><span>{{ product.metafields.custom.appellation }}</span></a>
+  </li>
+{% endif %}
+
+
+
+
+
+
   
 {% if product.metafields.custom.producer != blank %}
   <li>
@@ -19,82 +120,7 @@
 {% endif %}
 
 
-  {% if product.metafields.custom.grapes != blank %}
-   <li>
-    {% comment %} Varietals: Grape(s) / Raw Material {% endcomment %}
-  <span><strong>Varietals:</strong></span> 
 
- {% comment %} 
-  <ul class="tags">
-     {% for tag in product.tags %}
-        <li>
-          <a href="{{ routes.all_products_collection_url }}/{{ tag | handle }}">
-            {{ tag }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul> {% endcomment %}
-
-<ul id="grapes-list"></ul>
-
-<span id="grapes-data" style="display:none;">
-  {{ product.metafields.custom.grapes }}
-</span>
-
-<script>
-const grapesText = document.getElementById('grapes-data').innerText || '';
-const wineList = document.getElementById('grapes-list');
-
-if (grapesText.trim() !== '') {
-    grapesText.split(',').forEach(wine => {
-        const wineName = wine.trim();
-        const slug = wineName.toLowerCase().replace(/\s+/g, '-');
-        
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = `/collections/all/${slug}`; // make URL dynamic
-        a.textContent = wineName;
-        
-        li.appendChild(a);
-        wineList.appendChild(li);
-    });
-}
-</script>
-
-
-{% comment %} 
- <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.grapes={{ product.metafields.custom.grapes | url_encode }}" class="text-link">
-    {{ product.metafields.custom.grapes }}
-  </a>  {% endcomment %}
-</li>
-
-{% endif %}
-
-
-{% if product.metafields.custom.country != blank %}
-  <li>
-    <span><strong>Country:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.country={{ product.metafields.custom.country | url_encode }}" class="text-link"><span>{{ product.metafields.custom.country }}</span></a>
-  </li>
-{% endif %}
-
-{% if product.metafields.custom.region != blank %}
-  <li>
-    <span><strong>Region:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.region={{ product.metafields.custom.region | url_encode }}" class="text-link"><span>{{ product.metafields.custom.region }}</span></a>
-  </li>
-{% endif %}
-
-{% if product.metafields.custom.sub_region != blank %}
-  <li>
-    <span><strong>Sub-Region:</strong></span><a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.sub_region={{ product.metafields.custom.sub_region | url_encode }}" class="text-link"> <span>{{ product.metafields.custom.sub_region }}</span> </a>
-  </li>
-{% endif %}
-
-{% comment %} Appellation is usually same as appellation, but if you want both, leave this block. {% endcomment %}
-{% if product.metafields.custom.appellation != blank %}
-  <li>
-    <span><strong>Appellation:</strong></span> <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.appellation={{ product.metafields.custom.appellation | url_encode }}" class="text-link"><span>{{ product.metafields.custom.appellation }}</span></a>
-  </li>
-{% endif %}
 
 
   {% if product.metafields.custom.farming_practices != blank %}
