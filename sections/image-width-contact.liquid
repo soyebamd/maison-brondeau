@@ -13,6 +13,10 @@
     }
   }
 
+  .max-800{
+    max-width:800px;
+  }
+
   .image-w-contact-form, .image-w-contact-form #ContactForm, .image-w-contact-form .contact__fields--full, .image-w-contact-form .field{
     width:100%
   }
@@ -79,7 +83,7 @@
         <div class="image-with-text__text-item grid__item py-50">
           <div
             id="ImageWithText--{{ section.id }}"
-            class="     max-500 image-with-text__content align-items-center image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
+            class="max-800 image-with-text__content align-items-center image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
           >
             {%- for block in section.blocks -%}
               {% case block.type %}
