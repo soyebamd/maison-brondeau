@@ -1295,7 +1295,7 @@ window.addEventListener('load', function() {
     const target = document.querySelector('details[data-id="data-2"]');    
     const elementToMove = document.querySelector('details[data-id="data-custom"]');    
     if (target && elementToMove) {      
-      target.insertAdjacentElement('afterend', elementToMove);
+      target.insertAdjacentElement('before', elementToMove);
       elementToMove.style.display="block";
     }
   }, 100); // 1 second delay
