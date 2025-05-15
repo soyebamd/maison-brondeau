@@ -37,15 +37,15 @@
 
 }
 
-.pos-left{
+.pos-{{ section.id }}-left{
 margin:0 auto 0 0 !important;
 }
 
-.pos-center {
+.pos-{{ section.id }}-center {
   margin:0 auto !important
 } 
 
-.pos-right {margin:0 0 0 auto !important;
+.pos-{{ section.id }}-right {margin:0 0 0 auto !important;
 }
 
 
@@ -121,7 +121,7 @@ margin:0 auto 0 0 !important;
             <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %} gradient color-{{ section.settings.row_color_scheme }}{% else %} background-transparent{% endunless %}">
              
              
-             <div class="text-wrapper pos-{{ section.settings.desktop_content_pos }}">
+             <div class="text-wrapper pos-{{ section.id }}-{{ section.settings.desktop_content_pos }}">
 
 
                {%- if block.settings.caption -%}
