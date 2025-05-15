@@ -139,6 +139,7 @@
           "settings": {
             "row_bg": "scheme-5",
             "image": "shopify://shop_images/image_3.png",
+            "desktop_content_pos": "right",
             "caption": "",
             "heading": "",
             "text": "<p>Join the waitlist for the much anticipated <strong>Deux Chevaux</strong> <strong>Wine Club</strong> today and let us be your personal shoppers for all things wine. </p><p>Our in-house, world-class sommeliers will do the work for you, navigating the latest industry trends, finding the undervalued bottles, spotting the up-and-coming producers, and selecting the can’t miss grapes. </p><p>With a mix of reds, whites, and the occasional sparkling or rose, we’ll include pairing tips, tasting notes, and backgrounds of each bottle.</p><p>We'll be launching the <strong>Deux Chevaux</strong> <strong>Wine Club </strong>later this year! Stay tuned and join the waitlist below!<br/></p>",
@@ -160,7 +161,6 @@
         "button_style": "secondary",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
-        "desktop_content_pos": "right",
         "image_layout": "alternate-right",
         "section_color_scheme": "",
         "row_color_scheme": "",
