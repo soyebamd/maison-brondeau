@@ -38,6 +38,8 @@
 }
 
 
+
+
 {%- endstyle -%}
 
 {%- liquid
@@ -108,8 +110,21 @@
             
             <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %} gradient color-{{ section.settings.row_color_scheme }}{% else %} background-transparent{% endunless %}">
              
+            <style>
+              .pos-{{ block.id }}-left{
+              margin:0 auto 0 0 !important;
+              }
+              
+              .pos-{{ block.id }}-center {
+                margin:0 auto !important
+              } 
+              
+              .pos-{{ block.id }}-right {margin:0 0 0 auto !important;
+              }
+              
+              </style>
              
-               <div class="text-wrapper">
+             <div class="text-wrapper pos-{{ block.id }}-{{ block.settings.desktop_content_pos }}">
 
 
                {%- if block.settings.caption -%}
@@ -303,6 +318,10 @@
       "default": "left",
       "label": "t:sections.multirow.settings.desktop_content_alignment.label"
     },
+
+   
+
+
     {
       "type": "select",
       "id": "image_layout",
@@ -407,6 +426,29 @@
           "id": "image",
           "label": "t:sections.multirow.blocks.row.settings.image.label"
         },
+
+        {
+      "type": "select",
+      "id": "desktop_content_pos",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.multirow.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.multirow.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.multirow.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "Content X position"
+    },
+
+    
         {
           "type": "text",
           "id": "caption",
