@@ -160,6 +160,7 @@
         "button_style": "primary",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
+        "desktop_content_pos": "left",
         "image_layout": "alternate-left",
         "section_color_scheme": "scheme-1",
         "row_color_scheme": "scheme-1",
