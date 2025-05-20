@@ -445,6 +445,10 @@ body {
   color: #5d1619;
 }
 
+.text-link {
+  color: #5d1619;
+}
+
 .age-popup-btn:after,
 .age-popup-btn:before {
   display: none;
