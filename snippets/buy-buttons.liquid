@@ -94,6 +94,16 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+
+
+          {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+
+          {% endif %}
+
+          <p>If you're interested in placing a special order or would like help finding something similar, please reach out to us at 
+            <a href="mailto:hello@maisonbrondeau.com">hello@maisonbrondeau.com</a>
+            — we’d love to assist you!
+            </p>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
