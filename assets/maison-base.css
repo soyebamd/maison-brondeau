@@ -737,6 +737,15 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
     width: 100%;
     margin: 0 0 0 auto;
   }
+
+  #shopify-section-template--16985640108195__174801135714e6c379::before {
+    position: relative;
+
+    width: 100%;
+
+    display: block;
+    height: 500px;
+  }
 }
 
 @media (max-width: 990px) {
