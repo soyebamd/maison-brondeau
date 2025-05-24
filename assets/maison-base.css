@@ -695,25 +695,8 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
   color: #fff !important;
 }
 
-@media (max-width: 749px) {
-  .product__title h1 {
-    font-size: 1.8rem;
-  }
-
-  .product__text {
-    font-size: 1.6rem;
-    margin: 20px 0;
-  }
-}
-
 .contact__button.text-right {
   text-align: right !important;
-}
-
-@media (max-width: 990px) {
-  .image-with-text__content {
-    padding: 0 !important;
-  }
 }
 
 #shopify-section-template--16985640108195__174801135714e6c379 {
@@ -739,4 +722,25 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
   background-size: cover;
   background-position: left;
   z-index: 0;
+}
+@media (max-width: 749px) {
+  .product__title h1 {
+    font-size: 1.8rem;
+  }
+
+  .product__text {
+    font-size: 1.6rem;
+    margin: 20px 0;
+  }
+
+  #shopify-section-template--16985640108195__174801135714e6c379 .page-width {
+    width: 100%;
+    margin: 0 0 0 auto;
+  }
+}
+
+@media (max-width: 990px) {
+  .image-with-text__content {
+    padding: 0 !important;
+  }
 }
