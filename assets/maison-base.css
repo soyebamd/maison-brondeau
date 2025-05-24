@@ -722,7 +722,12 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
   overflow: hidden; /* Optional: prevent overflow of ::after */
 }
 
-#shopify-section-template--16985640108195__174801135714e6c379::after {
+#shopify-section-template--16985640108195__174801135714e6c379 .page-width {
+  width: 50%;
+  margin: 0 0 0 auto;
+}
+
+#shopify-section-template--16985640108195__174801135714e6c379::before {
   content: "";
   position: absolute;
   top: 0;
