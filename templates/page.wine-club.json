@@ -221,7 +221,7 @@
         "forms_inline_g8L7Gw": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "",
+            "form_id": "462673",
             "text_color": "#202020",
             "button_background_color": "#202020",
             "button_label_color": "#FFFFFF",
@@ -229,8 +229,8 @@
             "errors_color": "#E02229",
             "text_alignment": "center",
             "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 0,
+            "padding_top": 64,
+            "padding_bottom": 64,
             "padding_right": 0,
             "padding_left": 0
           }
