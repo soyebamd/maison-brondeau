@@ -85,6 +85,7 @@
         "custom_contact_form_fmFphJ",
         "button_qcVU3P"
       ],
+      "disabled": true,
       "settings": {
         "custom_style": true,
         "image": "shopify://shop_images/Rectangle_27_f9a90745-4547-47ae-8fa6-4297745dc7f0.png",
@@ -208,8 +209,8 @@
   "order": [
     "image_banner_fqNiEq",
     "main",
+    "174801135714e6c379",
     "image_width_contact_Bmd6ne",
-    "map_width_contact_hJXAzC",
-    "174801135714e6c379"
+    "map_width_contact_hJXAzC"
   ]
 }
