@@ -717,9 +717,21 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
 }
 
 #shopify-section-template--16985640108195__174801135714e6c379 {
-  background: #dfe3d3;
+  position: relative;
+  background-color: #dfe3d3;
+  overflow: hidden; /* Optional: prevent overflow of ::after */
+}
+
+#shopify-section-template--16985640108195__174801135714e6c379::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* matches your original background-size: 50% */
+  height: 100%;
   background-image: url(//maisonbrondeau.com/cdn/shop/files/Rectangle_27_f9a90745-4547-47ae-8fa6-4297745dc7f0.png?v=1747765841&width=1500);
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: cover;
   background-position: left;
+  z-index: 0;
 }
