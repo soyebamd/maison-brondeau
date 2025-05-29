@@ -1,6 +1,170 @@
+{% doc %}
+  @prompt
+    Make button text bold in theme
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-bold-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.text_color }};
+    font-weight: bold;
+    font-size: {{ block.settings.font_size }}px;
+    text-align: center;
+    text-decoration: none;
+    border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    min-width: {{ block.settings.min_width }}px;max-width: 100%;
+  }
+
+  .ai-bold-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.hover_color }};
+    color: {{ block.settings.hover_text_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-bold-button-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size | times: 0.9 }}px;padding: {{ block.settings.padding_vertical | times: 0.9 }}px {{ block.settings.padding_horizontal | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<a 
+  href="{{ block.settings.button_link }}" 
+  class="ai-bold-button-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  {{ block.settings.button_text }}
+</a>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Bold Button",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Button Content"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Button Style"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "hover_color",
+      "label": "Hover background color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "hover_text_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "min_width",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Minimum width",
+      "default": 200
+    },
+    {
+      "type": "header",
+      "content": "Border"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bold Button"
+    }
+  ]
+}
 {% endschema %}
