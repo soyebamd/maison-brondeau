@@ -12,10 +12,10 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "custom_image": "shopify://shop_images/Rectangle_18.png",
+        "custom_image": "shopify://shop_images/MJ-348.jpg",
         "show_collection_description": true,
         "show_collection_image": false,
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-6417b91d-cb41-4df6-a1bd-7cc59a6c1364"
       }
     },
     "product-grid": {
