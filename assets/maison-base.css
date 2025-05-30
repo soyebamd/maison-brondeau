@@ -760,4 +760,7 @@ details#Details-filter.p.m.custom.grapes-template--16985639780515__product-grid 
   .image-with-text__content {
     padding: 0 !important;
   }
+  .search .field__button {
+    position: absolute !important;
+  }
 }
