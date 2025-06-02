@@ -19,7 +19,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.region.value }}, {{ product.metafields.custom.country.value }}",
+            "text": "École Brondeau",
             "text_style": "uppercase"
           }
         },
@@ -29,6 +29,7 @@
         },
         "product_meta_4ej7d8": {
           "type": "product_meta",
+          "disabled": true,
           "settings": {}
         },
         "price": {
@@ -55,6 +56,7 @@
         },
         "zestard_gift_wrap_giftwrap_product_block_jY7qdY": {
           "type": "shopify://apps/zestard-gift-wrap/blocks/giftwrap-product-block/812385b4-6785-4a00-a40d-150927008708",
+          "disabled": true,
           "settings": {}
         },
         "share": {
