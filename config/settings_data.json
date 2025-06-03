@@ -303,6 +303,17 @@
           "secondary_button_label": "#ebeae9",
           "shadow": "#121212"
         }
+      },
+      "scheme-458df786-a5bd-4b61-8797-70e4071f8011": {
+        "settings": {
+          "background": "#ebeae9",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "{{ shop.brand.colors.primary[0].background }}",
+          "shadow": "#121212"
+        }
       }
     }
   },
