@@ -15,7 +15,7 @@
         "heading_UMpXpJ": {
           "type": "heading",
           "settings": {
-            "heading": "Events",
+            "heading": "Events Schedule",
             "heading_size": "h1"
           }
         }
@@ -28,9 +28,9 @@
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
