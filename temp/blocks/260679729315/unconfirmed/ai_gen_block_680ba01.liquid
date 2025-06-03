@@ -1,6 +1,97 @@
+{% doc %}
+  @prompt
+    Create a code block that ensures product prices are visible for the featured collection section with ID template--18981203148963__featured_collection_NAHKtB on the restaurant-wine-list-curation page. The code should use CSS with !important to override any existing styles that might be hiding prices, ensuring price elements have display:block and visibility:visible
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .price-visibility-fix-{{ ai_gen_id }} {
+    /* This is a wrapper class that doesn't affect styling */
+  }
+
+  /* Target the specific featured collection section */
+  #shopify-section-template--18981203148963__featured_collection_NAHKtB .price,
+  #shopify-section-template--18981203148963__featured_collection_NAHKtB .price-item,
+  #shopify-section-template--18981203148963__featured_collection_NAHKtB .price__regular,
+  #shopify-section-template--18981203148963__featured_collection_NAHKtB .price__sale,
+  #shopify-section-template--18981203148963__featured_collection_NAHKtB .price-container,
+  #shopify-section-template--18981203148963__featured_collection_NAHKtB [class*="price"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;width: auto !important;
+    overflow: visible !important;clip: auto !important;
+    position: relative !important;
+    margin: {{ block.settings.price_margin }}px0 !important;
+    color: {{ block.settings.price_color }} !important;
+    font-weight: {{ block.settings.price_weight }} !important;
+    font-size: {{ block.settings.price_size }}px !important;
+  }
+
+  /* Additional selector for any elements with price-related classes */
+  .restaurant-wine-list-curation #shopify-section-template--18981203148963__featured_collection_NAHKtB [class*="price"] {
+    display: block !important;
+    visibility: visible !important;
+  }
+{% endstyle %}<div class="price-visibility-fix-{{ ai_gen_id }}" {{ block.shopify_attributes }}></div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Price Visibility Fix",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Price Display Settings"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price text color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "price_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Price font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "price_weight",
+      "label": "Price font weight",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "bold",
+          "label": "Bold"
+        }
+      ],
+      "default": "bold"
+    },
+    {
+      "type": "range",
+      "id": "price_margin",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Price margin",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Price Visibility Fix"
+    }
+  ]
+}
 {% endschema %}
