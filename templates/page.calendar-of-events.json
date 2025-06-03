@@ -95,8 +95,40 @@
         "padding_bottom": 36
       }
     },
+    "1748931233dad08085": {
+      "type": "apps",
+      "blocks": {
+        "evey_events_tickets_event_list_HHxfjV": {
+          "type": "shopify://apps/evey-events-tickets/blocks/event-list/0ff19eb4-83c2-40c2-b780-a501fc99b6d8",
+          "settings": {
+            "style": "stack",
+            "search_background_color": "",
+            "search_font_color": "",
+            "background_color": "#f3f3f3",
+            "background_color2": "#5e5e5e",
+            "text_color": "#242833",
+            "button_color": "#872229",
+            "button_text_color": "#ebeae9",
+            "padding_x": 0,
+            "padding_y": 0,
+            "horizontal_alignment": "center",
+            "heading": "Events",
+            "button_label": "Learn More",
+            "search_label": "Search",
+            "no_results_label": "No results, try changing your search or filter options."
+          }
+        }
+      },
+      "block_order": [
+        "evey_events_tickets_event_list_HHxfjV"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -165,6 +197,7 @@
     "image_banner_Y4pDXT",
     "featured_collection_H3jAVa",
     "featured_collection_jXFiD8",
+    "1748931233dad08085",
     "main",
     "1748930774d337bf91",
     "174893100927c9cb74",
