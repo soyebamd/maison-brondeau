@@ -1,6 +1,107 @@
+{% doc %}
+  @prompt
+    Create a code block that hides product prices only for the specific featured collection section with ID template--18981203148963__featured_collection_FiTrJk on the restaurant-wine-list-curation page. The CSS should target price elements only within this specific section ID, leaving all other price displays on the site untouched
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-price-modifier-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+  }
+
+  /* Target the specific featured collection section */
+  #shopify-section-template--18981203148963__featured_collection_FiTrJk .price,
+  #shopify-section-template--18981203148963__featured_collection_FiTrJk .price-item,
+  #shopify-section-template--18981203148963__featured_collection_FiTrJk .price__regular,
+  #shopify-section-template--18981203148963__featured_collection_FiTrJk .price__sale,
+  #shopify-section-template--18981203148963__featured_collection_FiTrJk .price-item--regular,
+  #shopify-section-template--18981203148963__featured_collection_FiTrJk .price-item--sale,
+  #shopify-section-template--18981203148963__featured_collection_FiTrJk .price__current-price,
+  #shopify-section-template--18981203148963__featured_collection_FiTrJk [data-price] {
+    display: none !important;
+  }
+
+  /* Optional: Add custom message in place of prices if needed */
+  {% if block.settings.show_custom_message %}
+    #shopify-section-template--18981203148963__featured_collection_FiTrJk .price:after,
+    #shopify-section-template--18981203148963__featured_collection_FiTrJk .price__regular:after,
+    #shopify-section-template--18981203148963__featured_collection_FiTrJk .price__sale:after,
+    #shopify-section-template--18981203148963__featured_collection_FiTrJk [data-price]:after {
+      content: "{{ block.settings.custom_message }}";
+      display: block;
+      color: {{ block.settings.message_color }};
+      font-size: {{ block.settings.message_font_size }}px;
+      font-style: {{ block.settings.message_font_style }};
+    }
+  {% endif %}
+{% endstyle %}
+
+<div class="ai-price-modifier-{{ ai_gen_id }}" {{ block.shopify_attributes }}></div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Hide Collection Prices",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Price Display Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "This block hides prices for the featured collection section with ID: template--18981203148963__featured_collection_FiTrJk"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_custom_message",
+      "label": "Show custom message instead of price",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_message",
+      "label": "Custom message",
+      "default": "Price upon request"
+    },
+    {
+      "type": "color",
+      "id": "message_color",
+      "label": "Message color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "message_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Message font size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "message_font_style",
+      "label": "Message font style",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "italic",
+          "label": "Italic"
+        }
+      ],
+      "default": "normal"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hide Collection Prices"
+    }
+  ]
+}
 {% endschema %}
