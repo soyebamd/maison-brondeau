@@ -44,7 +44,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/MJ-285.jpg",
+        "image": "shopify://shop_images/MJ-285_wide.jpg",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
