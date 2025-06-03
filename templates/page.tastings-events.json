@@ -56,7 +56,7 @@
             "desktop_content_pos": "center",
             "caption": "",
             "heading": "Weekly Tastings & Classes",
-            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. </p><p>Each week, we host tasting events at our store’s very own bar and lounge where we swirl, sample and discuss all things wine with educators, producers, experts, and more. </p><p>See schedule for upcoming tasting events to book your spot today. <br/><br/></p>",
+            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. </p><p>Each week, we host tasting events at our store’s very own bar and lounge where we swirl, sample and discuss all things wine with educators, producers, experts, and more. </p><p><a href=\"/pages/calendar-list-view\" title=\"Calendar List View\">See the schedule for upcoming tasting events to book your spot today. </a><br/><br/></p>",
             "button_label": "VIEW SCHEDULE",
             "button_link": "/apps/events/calendar",
             "button_color_scheme": "scheme-2"
