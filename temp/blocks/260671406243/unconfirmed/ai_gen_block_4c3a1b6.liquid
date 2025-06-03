@@ -1,6 +1,498 @@
+{% doc %}
+  @prompt
+    A magazine-style editorial layout
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .magazine-editorial-{{ ai_gen_id }} {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: {{ block.settings.padding }}px;
+    background-color: {{ block.settings.background_color }};
+    font-family: {{ block.settings.font_family }};
+  }
+
+  .magazine-editorial__container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .magazine-editorial__header-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+    margin-bottom: 20px;
+  }
+
+  .magazine-editorial__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: {{ block.settings.title_color }};
+    line-height: 1.2;
+    {% if block.settings.title_style == 'uppercase' %}
+      text-transform: uppercase;
+    {% endif %}
+  }
+
+  .magazine-editorial__subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: {{ block.settings.subtitle_color }};
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  .magazine-editorial__author-{{ ai_gen_id }} {
+    font-size: {{ block.settings.author_size }}px;
+    color: {{ block.settings.author_color }};
+    margin-bottom: 20px;
+  }
+
+  .magazine-editorial__image-container-{{ ai_gen_id }} {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .magazine-editorial__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .magazine-editorial__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: {{ block.settings.image_aspect_ratio }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .magazine-editorial__image-placeholder-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+  }
+
+  .magazine-editorial__caption-{{ ai_gen_id }} {
+    font-size:14px;
+    color: {{ block.settings.caption_color }};
+    margin-top: 8px;
+    font-style: italic;text-align: {{ block.settings.text_alignment }};
+  }
+
+  .magazine-editorial__content-{{ ai_gen_id }} {
+    font-size: {{ block.settings.body_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.body_color }};
+  }
+
+  .magazine-editorial__content-{{ ai_gen_id }} p {
+    margin-bottom: 20px;
+  }
+
+  .magazine-editorial__content-{{ ai_gen_id }} p:first-of-type::first-letter {
+    {% if block.settings.enable_drop_cap %}
+      font-size: {{ block.settings.body_size | times: 3 }}px;
+      float: left;
+      line-height: 0.8;
+      padding-right: 8px;
+      color: {{ block.settings.drop_cap_color }};
+      font-weight: 700;
+    {% endif %}
+  }
+
+  .magazine-editorial__divider-{{ ai_gen_id }} {
+    border: none;
+    border-top: 1px solid {{ block.settings.divider_color }};
+    margin: 20px 0;width: 100%;{% if block.settings.divider_style == 'dashed' %}
+      border-top-style: dashed;
+    {% elsif block.settings.divider_style == 'dotted' %}
+      border-top-style: dotted;
+    {% endif %}
+  }
+
+  @media screen and (min-width: 750px) {
+    .magazine-editorial__container-{{ ai_gen_id }} {
+      grid-template-columns: {% if block.settings.layout == 'image_left' %}1fr 1fr{% elsif block.settings.layout == 'image_right' %}1fr 1fr{% else %}1fr{% endif %};
+    }
+
+    {% if block.settings.layout == 'image_left' %}
+      .magazine-editorial__image-container-{{ ai_gen_id }} {
+        order: 1;
+      }.magazine-editorial__content-wrapper-{{ ai_gen_id }} {
+        order: 2;
+      }
+    {% elsif block.settings.layout == 'image_right' %}
+      .magazine-editorial__image-container-{{ ai_gen_id }} {
+        order: 2;
+      }
+      .magazine-editorial__content-wrapper-{{ ai_gen_id }} {
+        order: 1;
+      }
+    {% else %}
+      .magazine-editorial__container-{{ ai_gen_id }} {
+        grid-template-columns: 1fr;
+      }
+    {% endif %}
+
+    {% if block.settings.layout == 'full_width' %}
+      .magazine-editorial__image-container-{{ ai_gen_id }} {
+        margin-bottom: 30px;
+      }
+    {% endif %}
+  }
+
+  @media screen and (max-width: 749px) {
+    .magazine-editorial__container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;}
+
+    .magazine-editorial__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+
+    .magazine-editorial__subtitle-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subtitle_size | times: 0.9 }}px;
+    }
+
+    .magazine-editorial__image-container-{{ ai_gen_id }} {
+      margin-bottom: 20px;
+    }
+  }
+{% endstyle %}
+
+<div class="magazine-editorial-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="magazine-editorial__header-{{ ai_gen_id }}"><h2 class="magazine-editorial__title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+    <div class="magazine-editorial__subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</div>{% if block.settings.author != blank %}
+      <div class="magazine-editorial__author-{{ ai_gen_id }}">By {{ block.settings.author }}</div>
+    {% endif %}
+  </div>
+
+  <div class="magazine-editorial__container-{{ ai_gen_id }}"><div class="magazine-editorial__image-container-{{ ai_gen_id }}">
+      {% if block.settings.image %}
+        <img
+          src="{{ block.settings.image | image_url: width: 1500 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+          class="magazine-editorial__image-{{ ai_gen_id }}"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+        >
+      {% else %}
+        <div class="magazine-editorial__image-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+      {% if block.settings.caption != blank %}
+        <div class="magazine-editorial__caption-{{ ai_gen_id }}">{{ block.settings.caption }}</div>
+      {% endif %}
+    </div>
+
+    <div class="magazine-editorial__content-wrapper-{{ ai_gen_id }}">
+      <div class="magazine-editorial__content-{{ ai_gen_id }}">
+        {{ block.settings.content }}
+      </div>
+    </div>
+  </div>
+  {% if block.settings.show_divider %}
+    <hr class="magazine-editorial__divider-{{ ai_gen_id }}">
+  {% endif %}
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Magazine Editorial",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "The Art of Design"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Exploring the intersection of form and function in modern spaces"
+    },
+    {
+      "type": "text",
+      "id": "author",
+      "label": "Author",
+      "default": "Jane Smith"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Featured image"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Image caption",
+      "default": "Photo: Courtesy of the designer"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p><p>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "full_width",
+          "label": "Image above content"
+        },
+        {
+          "value": "image_left",
+          "label": "Image on left"
+        },
+        {
+          "value": "image_right",
+          "label": "Image on right"
+        }
+      ],
+      "default": "image_left"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        {
+          "value": "1/1",
+          "label": "Square (1:1)"
+        },
+        {
+          "value": "16/9",
+          "label": "Landscape (16:9)"
+        },
+        {
+          "value": "4/3",
+          "label": "Standard (4:3)"
+        },
+        {
+          "value": "3/4",
+          "label": "Portrait (3:4)"
+        }
+      ],
+      "default": "16/9"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "select",
+      "id": "font_family",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "serif",
+          "label": "Serif"
+        },
+        {
+          "value": "sans-serif",
+          "label": "Sans-serif"
+        }
+      ],
+      "default": "serif"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 42
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title style",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "author_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Author size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Body text size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle color",
+      "default": "#4a4a4a"
+    },
+    {
+      "type": "color",
+      "id": "author_color",
+      "label": "Author color",
+      "default": "#6a6a6a"
+    },
+    {
+      "type": "color",
+      "id": "caption_color",
+      "label": "Caption color",
+      "default": "#6a6a6a"
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Body text color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Styling options"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_drop_cap",
+      "label": "Enable drop cap",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "drop_cap_color",
+      "label": "Drop cap color",
+      "default": "#000000"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "Show divider",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "divider_style",
+      "label": "Divider style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "dashed",
+          "label": "Dashed"
+        },
+        {
+          "value": "dotted",
+          "label": "Dotted"
+        }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#e0e0e0"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Magazine Editorial"
+    }
+  ]
+}
 {% endschema %}
