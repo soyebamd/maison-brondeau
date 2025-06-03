@@ -53,11 +53,12 @@
           "settings": {
             "row_bg": "scheme-5",
             "image": "shopify://shop_images/Screenshot_2024-02-17_at_5.11_1.png",
+            "desktop_content_pos": "center",
             "caption": "",
             "heading": "Weekly Tastings & Classes",
             "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. </p><p>Each week, we host tasting events at our store’s very own bar and lounge where we swirl, sample and discuss all things wine with educators, producers, experts, and more. </p><p>See schedule for upcoming tasting events to book your spot today. <br/><br/></p>",
             "button_label": "VIEW SCHEDULE",
-            "button_link": "https://www.exploretock.com/maisonbrondeau",
+            "button_link": "/apps/events/calendar",
             "button_color_scheme": "scheme-2"
           }
         },
@@ -66,6 +67,7 @@
           "settings": {
             "row_bg": "scheme-2",
             "image": "shopify://shop_images/Rectangle_28_1.png",
+            "desktop_content_pos": "center",
             "caption": "",
             "heading": "Book an Event",
             "text": "<p>Birthday Party. Corporate Event. Date Night. Maison Brondeau can host it for you!</p><p>Indulge in a personalized interactive wine tasting experience at our bar and lounge, or at your company's location. We will design the tasting event that fits your needs.</p><p>Contact us today to plan your next private event.</p>",
