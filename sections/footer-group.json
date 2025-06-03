@@ -16,6 +16,7 @@
       "blocks": {
         "evey_events_tickets_event_list_fXhitb": {
           "type": "shopify://apps/evey-events-tickets/blocks/event-list/0ff19eb4-83c2-40c2-b780-a501fc99b6d8",
+          "disabled": true,
           "settings": {
             "style": "stack",
             "search_background_color": "",
