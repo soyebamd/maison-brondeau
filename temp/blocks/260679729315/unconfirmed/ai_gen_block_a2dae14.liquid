@@ -1,6 +1,112 @@
+{% doc %}
+  @prompt
+    Create a code block that hides product prices only for the restaurant-wine-list-curation page. The code should check if the current page is the restaurant-wine-list-curation page and only hide prices on that specific page while leaving prices visible on all other pages
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .price-visibility-controller-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;}
+
+  .price-visibility-notice-{{ ai_gen_id }} {
+    display: none;padding: 10px 15px;
+    margin: 10px 0;
+    background-color: {{ block.settings.notice_background_color }};
+    color: {{ block.settings.notice_text_color }};
+    border-radius: 4px;
+    font-size: {{ block.settings.notice_font_size }}px;
+    text-align: center;
+  }
+
+  {% if request.page_type == 'page' and request.path contains '/pages/restaurant-wine-list-curation' %}
+    .price-visibility-notice-{{ ai_gen_id }} {
+      display: block;
+    }
+    
+    /* Hide prices on the target page */
+    .price,
+    .price__regular,
+    .price__sale,
+    .price__compare,
+    .price-item,
+    .product__price,
+    .product-price,
+    [data-price],
+    [class*="price"],
+    [id*="price"] {
+      display: none !important;
+    }
+    
+    /* Hide any cart buttons or quantity selectors */
+    form[action*="/cart/add"],
+    [data-cart-add],
+    [data-add-to-cart],
+    .product-form__cart-submit,
+    .product-form__submit,
+    .quantity-selector,
+    .quantity-input,
+    .quantity-wrapper {
+      display: none !important;
+    }
+  {% endif %}
+{% endstyle %}
+
+<div class="price-visibility-controller-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if request.page_type == 'page' and request.path contains '/pages/restaurant-wine-list-curation' %}
+    <div class="price-visibility-notice-{{ ai_gen_id }}">
+      {{ block.settings.price_hidden_message }}
+    </div>
+  {% endif %}
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Price Visibility Control",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Price Visibility Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "This block hides prices on the restaurant-wine-list-curation page only."
+    },
+    {
+      "type": "richtext",
+      "id": "price_hidden_message",
+      "label": "Hidden prices message",
+      "default": "<p>Prices are available upon request. Please contact us for wholesale pricing.</p>"
+    },
+    {
+      "type": "color",
+      "id": "notice_background_color",
+      "label": "Notice background color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "notice_text_color",
+      "label": "Notice text color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "notice_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Notice font size",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Price Visibility Control"
+    }
+  ]
+}
 {% endschema %}
