@@ -93,13 +93,13 @@
             "background_color": "",
             "background_color2": "",
             "text_color": "",
-            "button_color": "",
-            "button_text_color": "",
+            "button_color": "#872229",
+            "button_text_color": "#f3f3f3",
             "padding_x": 0,
             "padding_y": 0,
             "horizontal_alignment": "center",
-            "heading": "Events",
-            "button_label": "Get Tickets",
+            "heading": "Upcoming Events",
+            "button_label": "Learn More",
             "search_label": "Search",
             "no_results_label": "No results, try changing your search or filter options."
           }
