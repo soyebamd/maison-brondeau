@@ -61,6 +61,35 @@
         "padding_bottom": 8
       }
     },
+    "image_banner_g4KKDr": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_3VWtE7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Upcoming Event",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3VWtE7"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/MJ-196.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-ac610470-7a7f-48d7-b416-213b812b1186",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "custom_liquid_EBxeAP": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -117,6 +146,7 @@
   "order": [
     "announcement-bar",
     "header",
+    "image_banner_g4KKDr",
     "custom_liquid_EBxeAP",
     "custom_liquid_HXLdm6",
     "17489741716bf23d6f"
