@@ -94,7 +94,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n#Evey__EventListContainer h2{\n    display: none!important;\n    margin-bottom: 20px!important;\n}\n#Evey__EventListContainer{\n    margin-top: 20px;\n}\n#shopify-section-template--18981203148963__image_banner_Y4pDXT,\n#shopify-section-sections--16985639321763__17489741716bf23d6f {\n  display: none !important;\n}\n#Evey__EventListContainer h2{\n    text-align: center!important;\n}\nbody:has(.calendar-page-container) #shopify-section-template--18981203148963__image_banner_Y4pDXT,\nbody:has(.calendar-page-container) #shopify-section-sections--16985639321763__17489741716bf23d6f{\n    display: block!important;\n}\n\n</style>",
+        "custom_liquid": "<style>\n#Evey__EventListContainer h2{\n    display: none!important;\n    margin-bottom: 20px!important;\n}\n#Evey__EventListContainer{\n    margin-top: 20px;\n}\n\n#shopify-section-sections--16985639321763__image_banner_g4KKDr,\n#shopify-section-sections--16985639321763__17489741716bf23d6f {\n  display: none !important;\n}\n\n#shopify-section-template--18981203148963__image_banner_Y4pDXT,\n#shopify-section-sections--16985639321763__17489741716bf23d6f {\n  display: none !important;\n}\n#Evey__EventListContainer h2{\n    text-align: center!important;\n}\nbody:has(.calendar-page-container) #shopify-section-template--18981203148963__image_banner_Y4pDXT,\nbody:has(.calendar-page-container) #shopify-section-sections--16985639321763__17489741716bf23d6f{\n    display: block!important;\n}\n\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
