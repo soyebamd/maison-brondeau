@@ -73,6 +73,39 @@
         "include_margins": true
       }
     },
+    "rich_text_MWTX9x": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WMNKxM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Garage Parking Available",
+            "heading_size": "h2"
+          }
+        },
+        "text_i6FcmY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The City Square parking garage entrance is on S.Lexington Street for the Arcade Shops.</p><p> <em>Please bring in your parking ticket for validation!</em></p>",
+            "heading_caption": "",
+            "text_size_1": "s-small"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WMNKxM",
+        "text_i6FcmY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_width_contact_Bmd6ne": {
       "type": "image-width-contact",
       "blocks": {
@@ -211,6 +244,7 @@
     "main",
     "174801135714e6c379",
     "image_width_contact_Bmd6ne",
-    "map_width_contact_hJXAzC"
+    "map_width_contact_hJXAzC",
+    "rich_text_MWTX9x"
   ]
 }
