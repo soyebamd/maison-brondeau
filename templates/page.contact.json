@@ -24,8 +24,8 @@
         "heading_KrTbTd"
       ],
       "settings": {
-        "image": "shopify://shop_images/Rectangle_18_71d3e673-cd3c-470e-b0ac-ba1a294f7ad1.png",
-        "image_overlay_opacity": 0,
+        "image": "shopify://shop_images/MJ-330.jpg",
+        "image_overlay_opacity": 50,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
