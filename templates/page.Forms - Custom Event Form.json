@@ -70,6 +70,9 @@
       "block_order": [
         "d8356629-9980-48b6-bff1-9bd0c70c23cb"
       ],
+      "custom_css": [
+        "{background: #dfe3d3;}"
+      ],
       "settings": {
         "include_margins": true
       }
