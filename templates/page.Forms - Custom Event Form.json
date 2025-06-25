@@ -9,6 +9,35 @@
  */
 {
   "sections": {
+    "image_banner_KBXnbg": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_WaL4yF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom Event",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WaL4yF"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_18_1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-ac610470-7a7f-48d7-b416-213b812b1186",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "72eeeb0e-05f9-423f-b2d3-0fa0d788d81d": {
       "type": "main-page",
       "settings": {
@@ -46,6 +75,7 @@
     }
   },
   "order": [
+    "image_banner_KBXnbg",
     "72eeeb0e-05f9-423f-b2d3-0fa0d788d81d",
     "forms"
   ]
