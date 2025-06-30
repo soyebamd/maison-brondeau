@@ -1,6 +1,398 @@
+{% doc %}
+  @prompt
+    Create a pop-up notification banner for announcing temporary hours changes for the current week. The pop-up should be eye-catching, easily dismissible, and allow customization of the message text, hours information, and styling to match the store's branding. "Modified Hours: Closing at 7pm on July 4th. Have a wonderful holiday!"
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-hours-popup-{{ ai_gen_id }} {
+    position: fixed;
+    bottom: {{ block.settings.position_bottom }}px;
+    {% if block.settings.position == 'left' %}
+      left: {{ block.settings.position_side }}px;
+    {% else %}
+      right: {{ block.settings.position_side }}px;
+    {% endif %}
+    max-width: {{ block.settings.popup_width }}px;
+    width: calc(100% - 40px);
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+    padding: 20px;
+    border-radius: {{ block.settings.border_radius }}px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transform: translateY(150%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    display: none;
+  }
+
+  .ai-hours-popup-{{ ai_gen_id }}.active {
+    transform: translateY(0);
+    opacity: 1;
+    display: block;
+  }
+
+  .ai-hours-popup-content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ai-hours-popup-header-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .ai-hours-popup-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ai-hours-popup-close-{{ ai_gen_id }} {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    margin: -5px -5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-hours-popup-close-{{ ai_gen_id }}:hover {
+    opacity: 1;
+  }
+
+  .ai-hours-popup-message-{{ ai_gen_id }} {
+    font-size: {{ block.settings.message_size }}px;
+    line-height: 1.4;
+  }
+
+  .ai-hours-popup-hours-{{ ai_gen_id }} {
+    font-size: {{ block.settings.hours_size }}px;
+    font-weight: {{ block.settings.hours_bold | default: false | plus: 0 | times: 300 | plus: 400 }};
+    line-height: 1.4;
+  }
+
+  .ai-hours-popup-icon-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  .ai-hours-popup-icon-{{ ai_gen_id }} svg {
+    width: 24px;
+    height: 24px;
+    fill: {{ block.settings.icon_color }};
+  }
+
+  @media screen and (max-width: 767px) {
+    .ai-hours-popup-{{ ai_gen_id }} {
+      bottom: 20px;
+      {% if block.settings.position == 'left' %}
+        left: 20px;
+      {% else %}
+        right: 20px;
+      {% endif %}
+      width: calc(100% - 40px);
+    }
+    
+    .ai-hours-popup-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | minus: 2 }}px;
+    }
+    
+    .ai-hours-popup-message-{{ ai_gen_id }} {
+      font-size: {{ block.settings.message_size | minus: 1 }}px;
+    }
+    
+    .ai-hours-popup-hours-{{ ai_gen_id }} {
+      font-size: {{ block.settings.hours_size | minus: 1 }}px;
+    }
+  }
+{% endstyle %}
+
+<hours-popup-notification-{{ ai_gen_id }} 
+  class="ai-hours-popup-{{ ai_gen_id }}"
+  data-auto-show="{{ block.settings.auto_show }}"
+  data-delay="{{ block.settings.delay }}"
+  data-days-to-remember="{{ block.settings.days_to_remember }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-hours-popup-content-{{ ai_gen_id }}">
+    <div class="ai-hours-popup-header-{{ ai_gen_id }}">
+      <div style="display: flex; align-items: center;">
+        {% if block.settings.show_icon %}
+          <div class="ai-hours-popup-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z" />
+            </svg>
+          </div>
+        {% endif %}
+        <h3 class="ai-hours-popup-title-{{ ai_gen_id }}">{{ block.settings.title }}</h3>
+      </div>
+      <button class="ai-hours-popup-close-{{ ai_gen_id }}" aria-label="Close notification">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.3332 3.99998L3.99984 13.3333M3.99984 3.99998L13.3332 13.3333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="ai-hours-popup-message-{{ ai_gen_id }}">
+      {{ block.settings.message }}
+    </div><div class="ai-hours-popup-hours-{{ ai_gen_id }}">
+      {{ block.settings.hours_text }}
+    </div>
+  </div>
+</hours-popup-notification-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class HoursPopupNotification{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.closeButton = this.querySelector('.ai-hours-popup-close-{{ ai_gen_id }}');
+        this.autoShow = this.dataset.autoShow === 'true';
+        this.delay = parseInt(this.dataset.delay, 10) || 0;
+        this.daysToRemember = parseInt(this.dataset.daysToRemember, 10) || 1;
+        this.storageKey = 'hours_popup_dismissed_{{ ai_gen_id }}';
+      }
+
+      connectedCallback() {
+        this.setupEventListeners();
+        
+        if (this.autoShow) {
+          this.checkAndShowPopup();
+        }
+      }
+
+      setupEventListeners() {
+        this.closeButton.addEventListener('click', () => this.dismissPopup());
+      }
+
+      checkAndShowPopup() {
+        const lastDismissed = localStorage.getItem(this.storageKey);
+        
+        if (!lastDismissed || this.isDismissalExpired(lastDismissed)) {
+          setTimeout(() => {
+            this.showPopup();
+          }, this.delay * 1000);
+        }
+      }
+
+      isDismissalExpired(lastDismissed) {
+        const dismissedDate = new Date(parseInt(lastDismissed, 10));
+        const now = new Date();
+        const daysDifference = Math.floor((now - dismissedDate) / (1000 * 60 * 60 * 24));
+        
+        return daysDifference >= this.daysToRemember;
+      }
+
+      showPopup() {
+        this.classList.add('active');
+      }
+
+      dismissPopup() {
+        this.classList.remove('active');
+        localStorage.setItem(this.storageKey, Date.now().toString());
+      }
+    }
+
+    customElements.define('hours-popup-notification-{{ ai_gen_id }}', HoursPopupNotification{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Hours Notification",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Modified Hours"
+    },
+    {
+      "type": "textarea",
+      "id": "message",
+      "label": "Message",
+      "default": "Please note our temporary change in operating hours for this week."
+    },
+    {
+      "type": "textarea",
+      "id": "hours_text",
+      "label": "Hours information",
+      "default": "Closing at 7pm on July 4th. Have a wonderful holiday!"
+    },
+    {
+      "type": "header",
+      "content": "Display Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_show",
+      "label": "Automatically show popup",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "delay",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "s",
+      "label": "Delay before showing",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "days_to_remember",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "unit": "day",
+      "label": "Days to remember dismissal",
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Bottom Left"
+        },
+        {
+          "value": "right",
+          "label": "Bottom Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "range",
+      "id": "position_bottom",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Distance from bottom",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "position_side",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Distance from side",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "popup_width",
+      "min": 200,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 350
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show clock icon",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Title size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "message_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Message size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "hours_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Hours text size",
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "hours_bold",
+      "label": "Bold hours text",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hours Notification"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
