@@ -1,6 +1,336 @@
+{% doc %}
+  @prompt
+    Create a pop-up notification banner for announcing temporary hours changes for the current week. The pop-up should be eye-catching, easily dismissible, and allow customization of the message text, hours information, and styling to match the store's branding. "Closing at 7pm on Friday. Happy 4th of July!"
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-hours-popup-{{ ai_gen_id }} {
+    position: fixed;
+    bottom: {{ block.settings.position_bottom }}px;
+    {{ block.settings.position }}: {{ block.settings.position_side }}px;
+    z-index: 999;
+    width: {{ block.settings.popup_width }}px;
+    max-width: calc(100% - 40px);
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    display: none;
+    animation: slideIn-{{ ai_gen_id }} 0.3s ease forwards;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-hours-popup-{{ ai_gen_id }} {
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 40px);
+      max-width: 450px;
+    }
+  }
+
+  .ai-hours-popup-{{ ai_gen_id }}.show {
+    display: block;
+  }
+
+  .ai-hours-popup-{{ ai_gen_id }}.hide {
+    animation: slideOut-{{ ai_gen_id }} 0.3s ease forwards;
+  }
+
+  @keyframes slideIn-{{ ai_gen_id }} {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideOut-{{ ai_gen_id }} {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  .ai-hours-popup-content-{{ ai_gen_id }} {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .ai-hours-popup-icon-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .ai-hours-popup-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    fill: {{ block.settings.icon_color }};
+  }
+
+  .ai-hours-popup-text-{{ ai_gen_id }} {
+    flex-grow: 1;
+  }
+
+  .ai-hours-popup-heading-{{ ai_gen_id }} {
+    font-weight: bold;
+    font-size: {{ block.settings.heading_size }}px;
+    margin: 0 0 5px 0;
+  }
+
+  .ai-hours-popup-message-{{ ai_gen_id }} {
+    font-size: {{ block.settings.message_size }}px;
+    margin: 0;
+  }
+
+  .ai-hours-popup-close-{{ ai_gen_id }} {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: {{ block.settings.text_color }};
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .ai-hours-popup-close-{{ ai_gen_id }}:hover {
+    opacity: 1;
+  }
+{% endstyle %}
+
+<hours-notification-popup-{{ ai_gen_id }} 
+  data-cookie-days="{{ block.settings.cookie_days }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-hours-popup-{{ ai_gen_id }}">
+    <div class="ai-hours-popup-content-{{ ai_gen_id }}">
+      <div class="ai-hours-popup-icon-{{ ai_gen_id }}">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M12,20c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8 S16.4,20,12,20z M12.5,7H11v6l5.2,3.2l0.8-1.3l-4.5-2.7V7z"/>
+        </svg>
+      </div>
+      <div class="ai-hours-popup-text-{{ ai_gen_id }}">
+        {% if block.settings.heading != blank %}
+          <h3 class="ai-hours-popup-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h3>
+        {% endif %}
+        <div class="ai-hours-popup-message-{{ ai_gen_id }}">{{ block.settings.message }}</div>
+      </div>
+    </div>
+    <button class="ai-hours-popup-close-{{ ai_gen_id }}" aria-label="Close notification">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 1L1 13M1 1L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</hours-notification-popup-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class HoursNotificationPopup extends HTMLElement {
+      constructor() {
+        super();
+        this.popup = this.querySelector('.ai-hours-popup-{{ ai_gen_id }}');
+        this.closeButton = this.querySelector('.ai-hours-popup-close-{{ ai_gen_id }}');
+        this.cookieDays = parseInt(this.dataset.cookieDays, 10) || 1;
+        this.cookieName = 'hours_popup_dismissed_{{ ai_gen_id }}';
+      }
+
+      connectedCallback() {
+        if (!this.hasBeenDismissed()) {
+          setTimeout(() => {
+            this.showPopup();
+          }, 1000);
+          
+          this.closeButton.addEventListener('click', () => {
+            this.hidePopup();
+          });
+        }
+      }
+
+      showPopup() {
+        this.popup.classList.add('show');
+      }
+
+      hidePopup() {
+        this.popup.classList.add('hide');
+        this.setDismissedCookie();
+        
+        setTimeout(() => {
+          this.popup.classList.remove('show', 'hide');
+        }, 300);
+      }
+
+      hasBeenDismissed() {
+        return document.cookie.split(';').some(item => {
+          return item.trim().indexOf(`${this.cookieName}=true`) === 0;
+        });
+      }
+
+      setDismissedCookie() {
+        const date = new Date();
+        date.setTime(date.getTime() + (this.cookieDays * 24 * 60 * 60 * 1000));
+        const expires = `expires=${date.toUTCString()}`;
+        document.cookie = `${this.cookieName}=true;${expires};path=/`;
+      }
+    }
+
+    customElements.define('hours-notification-popup-{{ ai_gen_id }}', HoursNotificationPopup);
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Hours Notification",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Special Hours Notice"
+    },
+    {
+      "type": "richtext",
+      "id": "message",
+      "label": "Message",
+      "default": "<p>Closing at 7pm on Friday. Happy 4th of July!</p>"
+    },
+    {
+      "type": "header",
+      "content": "Display Settings"
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Horizontal position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "range",
+      "id": "position_side",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Side distance",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "position_bottom",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom distance",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "popup_width",
+      "min": 250,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Width",
+      "default": 350
+    },
+    {
+      "type": "range",
+      "id": "cookie_days",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "unit": "d",
+      "label": "Days until showing again",
+      "default": 1
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#4a90e2"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "message_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Message size",
+      "default": 14
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hours Notification"
+    }
+  ]
+}
 {% endschema %}
