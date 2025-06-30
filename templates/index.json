@@ -277,6 +277,40 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "1751302509b3ef4b77": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_521eaf2_hzFKqw": {
+          "type": "ai_gen_block_521eaf2",
+          "settings": {
+            "title": "Modified Hours",
+            "message": "Please note our temporary change in operating hours for this week.",
+            "hours_text": "We are closing at 7pm on July 4th. \nHave a wonderful holiday!",
+            "auto_show": true,
+            "delay": 2,
+            "days_to_remember": 1,
+            "position": "right",
+            "position_bottom": 30,
+            "position_side": 30,
+            "popup_width": 350,
+            "background_color": "#ffffff",
+            "text_color": "#333333",
+            "border_radius": 8,
+            "show_icon": true,
+            "icon_color": "#333333",
+            "title_size": 18,
+            "message_size": 14,
+            "hours_size": 16,
+            "hours_bold": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_521eaf2_hzFKqw"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -285,6 +319,7 @@
     "featured_collection",
     "multirow_hWLqtm",
     "image_with_text_X6fkja",
-    "multicolumn_imHgfq"
+    "multicolumn_imHgfq",
+    "1751302509b3ef4b77"
   ]
 }
