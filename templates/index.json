@@ -286,7 +286,7 @@
           "settings": {
             "title": "Wine Class!",
             "message": "In addition to our Thursday Tasting Table with Polaner Selections, we have a wine class this Wednesday all about FRANCE!",
-            "hours_text": "Come visit us to taste some spectacular Champagne, Burgundy, Bordeaux and more! \n<br>\n<a href=\"/apps/events/calendar\"> Click here to view our Events Calendar and save your seat!</a>",
+            "hours_text": "Come learn and taste some spectacular Champagne, Burgundy, Bordeaux and more! \n<br>\n<a href=\"/apps/events/calendar\"> Click here to view our Events Calendar and save your seat!</a>",
             "auto_show": true,
             "delay": 2,
             "days_to_remember": 1,
