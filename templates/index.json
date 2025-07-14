@@ -284,8 +284,8 @@
         "ai_gen_block_521eaf2_hzFKqw": {
           "type": "ai_gen_block_521eaf2",
           "settings": {
-            "title": "Wine Class!",
-            "message": "In addition to our Thursday Tasting Table with Polaner Selections, we have a wine class this Wednesday all about FRANCE!",
+            "title": "French Wine Class!",
+            "message": "In addition to our Thursday Tasting Table with Polaner Selections, we have a wine class this Wednesday all about FRANCE! (Tickets Required)",
             "hours_text": "Come learn and taste some spectacular Champagne, Burgundy, Bordeaux and more! \n<br>\n<a href=\"/apps/events/calendar\"> Click here to view our Events Calendar and save your seat!</a>",
             "auto_show": true,
             "delay": 2,
