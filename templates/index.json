@@ -284,9 +284,9 @@
         "ai_gen_block_521eaf2_hzFKqw": {
           "type": "ai_gen_block_521eaf2",
           "settings": {
-            "title": "French Wine Class!",
-            "message": "In addition to our Thursday Tasting Table with Polaner Selections, we have a wine class this Wednesday all about FRANCE! (Tickets Required)",
-            "hours_text": "Come learn and taste some spectacular Champagne, Burgundy, Bordeaux and more! \n<br>\n<a href=\"/apps/events/calendar\"> Click here to view our Events Calendar and save your seat!</a>",
+            "title": "New York or Nowhere!",
+            "message": "This Thursday we'll be tasting some New York gems! Sparkling wine from the Finger Lakes, Long Island Reds, Hudson Valley Vermouth and more! Stop by between 5-7pm!",
+            "hours_text": "<br>\n<a href=\"/apps/events/calendar\"> Click here to view our Events Calendar!</a>",
             "auto_show": true,
             "delay": 2,
             "days_to_remember": 1,
