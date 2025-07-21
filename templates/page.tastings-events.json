@@ -66,7 +66,7 @@
           "type": "row",
           "settings": {
             "row_bg": "scheme-3",
-            "image": "shopify://shop_images/MJ-26_2.jpg",
+            "image": "shopify://shop_images/FullSizeRender_38ef1061-86bb-4f17-89b4-1cfc9cbecc75.jpg",
             "desktop_content_pos": "center",
             "caption": "",
             "heading": "Monthly Classes",
@@ -84,7 +84,7 @@
             "desktop_content_pos": "center",
             "caption": "",
             "heading": "Book an Event",
-            "text": "<p>Birthday Party. Corporate Event. Date Night. Maison Brondeau can host it for you!</p><p>Indulge in a personalized interactive wine tasting experience at our bar and lounge, or at your company's location. We will design the tasting event that fits your needs.</p><p>Contact us today to plan your next private event.</p>",
+            "text": "<p>Birthday Party. Corporate Event. Date Night. Maison Brondeau can host it for you!</p><p>Indulge in a personalized interactive wine tasting experience at our bar and lounge, or at your company's location. We will design the tasting event that fits your needs.</p><p><em><strong>Want a private class? </strong></em>We do those too!</p><p>Contact us today to plan your next private event.</p>",
             "button_label": "Book private tasting",
             "button_link": "shopify://pages/custom-event-form",
             "button_color_scheme": "scheme-3"
