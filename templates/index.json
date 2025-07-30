@@ -284,8 +284,8 @@
         "ai_gen_block_521eaf2_hzFKqw": {
           "type": "ai_gen_block_521eaf2",
           "settings": {
-            "title": "New York or Nowhere!",
-            "message": "This Thursday we'll be tasting some New York gems! Sparkling wine from the Finger Lakes, Long Island Reds, Hudson Valley Vermouth and more! Stop by between 5-7pm!",
+            "title": "Table Takeover with Frederick Wildman",
+            "message": "Stop by Thursday between 5-7pm!",
             "hours_text": "<br>\n<a href=\"/apps/events/calendar\"> Click here to view our Events Calendar!</a>",
             "auto_show": true,
             "delay": 2,
