@@ -284,9 +284,9 @@
         "ai_gen_block_521eaf2_hzFKqw": {
           "type": "ai_gen_block_521eaf2",
           "settings": {
-            "title": "Table Takeover with Frederick Wildman",
-            "message": "Stop by Thursday between 5-7pm for a FREE tasting!",
-            "hours_text": "<br>\n<a href=\"/apps/events/calendar\"> Click here to view our Events Calendar!</a>",
+            "title": "Garage Parking  Available!",
+            "message": "If you drive to visit us, bring in your parking ticket for validation ($1 per hour). The entrance is on S.Lexington Ave: City Square Arcade Shops!",
+            "hours_text": "And if you want to check out what's coming up this month:<br>\n<a href=\"/apps/events/calendar\"> click here to view our events calendar!</a>",
             "auto_show": true,
             "delay": 2,
             "days_to_remember": 1,
