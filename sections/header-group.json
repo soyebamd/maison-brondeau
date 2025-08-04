@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_ePQaXY": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Upcoming Class: Island Wines! 🌋",
             "link": "shopify://products/island-wines-sicily-sardinia-canary-islands-corsica-more"
