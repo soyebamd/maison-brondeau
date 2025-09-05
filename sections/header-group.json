@@ -16,10 +16,9 @@
       "blocks": {
         "announcement_ePQaXY": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Upcoming Class: Island Wines! 🌋",
-            "link": "shopify://products/island-wines-sicily-sardinia-canary-islands-corsica-more"
+            "text": "Special FREE Tasting: Friday Sept.12",
+            "link": "shopify://products/free-armagnac-amp-bordeaux-tasting-with-chateau-de-laubade-and-haut-selve"
           }
         },
         "announcement-bar-0": {
