@@ -130,6 +130,7 @@
               aria-labelledby="predictive-search-products"
             >
               {%- for product in predictive_search.resources.products -%}
+                {% if  product.type == 'mws_fee_generated' or product.type == 'mw_hidden_cart_fee' or product.type == 'mws_fee_generated_clone' %}{% continue %}{% endif %}
                 <li
                   id="predictive-search-option-product-{{ forloop.index }}"
                   class="predictive-search__list-item"
