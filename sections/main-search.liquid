@@ -260,6 +260,7 @@
                 role="list"
               >
                 {%- for item in search.results -%}
+                  {% if  item.type == 'mws_fee_generated' or item.type == 'mw_hidden_cart_fee' or item.type == 'mws_fee_generated_clone' %}{% continue %}{% endif %}
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
                     {%- assign lazy_load = true -%}
