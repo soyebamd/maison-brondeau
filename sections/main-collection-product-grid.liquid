@@ -144,6 +144,7 @@
               "
             >
               {%- for product in collection.products -%}
+                {% if  product.type == 'mws_fee_generated' or product.type == 'mw_hidden_cart_fee' or product.type == 'mws_fee_generated_clone' %}{% continue %}{% endif %}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
