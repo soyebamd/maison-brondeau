@@ -16,10 +16,9 @@
       "blocks": {
         "announcement_ePQaXY": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Special FREE Bordeaux, Armagnac, & French Whiskey Tasting: Friday Sept.12",
-            "link": "shopify://products/free-armagnac-amp-bordeaux-tasting-with-chateau-de-laubade-and-haut-selve"
+            "text": "5% off 6 Bottles | 10% off 12 Bottles",
+            "link": ""
           }
         },
         "announcement-bar-0": {
