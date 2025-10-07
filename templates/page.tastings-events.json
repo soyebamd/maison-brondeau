@@ -89,12 +89,27 @@
             "button_link": "shopify://pages/custom-event-form",
             "button_color_scheme": "scheme-3"
           }
+        },
+        "row_C9P69V": {
+          "type": "row",
+          "settings": {
+            "row_bg": "",
+            "image": "shopify://shop_images/CarLogo_Square.png",
+            "desktop_content_pos": "center",
+            "caption": "what people are saying about us:",
+            "heading": "reviews",
+            "text": "<p><em>\"Maison Brondeau makes understanding wine approachable & exciting.  Not only do you get to experience amazing wines with the knowledgeable staff, they are welcoming & kind.  The classes give you a solid foundation to understand & choose wines. The beautiful space reflects the attention to detail &  curated selection to satisfy your curiosity about a variety of wines. I highly recommend exploring the selection & classes since you will only leave happy!\"</em></p><p>-MN</p><p></p>",
+            "button_label": "More Reviews",
+            "button_link": "https://share.google/5Z34ZR6PrvZ2BrPNo",
+            "button_color_scheme": "scheme-3"
+          }
         }
       },
       "block_order": [
         "row_nenneF",
         "row_gqFCAw",
-        "row_pLGeR6"
+        "row_pLGeR6",
+        "row_C9P69V"
       ],
       "settings": {
         "image_height": "large",
