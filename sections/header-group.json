@@ -24,8 +24,8 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Class this week, Wednesday the 29th! Then the Kir-Yianni Winemaker Visit for our Thursday tasting!",
-            "link": "shopify://pages/calendar-list-view"
+            "text": "FREE Tasting on Thursday 11/6 AND Friday 11/7, 5-7pm",
+            "link": "shopify://pages/tastings-events"
           }
         }
       },
