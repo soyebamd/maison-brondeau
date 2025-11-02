@@ -102,6 +102,7 @@
     },
     "image_banner_agzi9w": {
       "type": "image-banner",
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/November25_Images.png",
