@@ -100,6 +100,23 @@
         "show_text_below": true
       }
     },
+    "image_banner_agzi9w": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/November25_Images.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-ac610470-7a7f-48d7-b416-213b812b1186",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "17489741716bf23d6f": {
       "type": "apps",
       "blocks": {
@@ -138,6 +155,7 @@
     "header",
     "custom_liquid_EBxeAP",
     "image_banner_g4KKDr",
+    "image_banner_agzi9w",
     "17489741716bf23d6f"
   ]
 }
