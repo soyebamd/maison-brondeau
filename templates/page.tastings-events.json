@@ -56,7 +56,7 @@
             "desktop_content_pos": "center",
             "caption": "",
             "heading": "Free Weekly Tastings",
-            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. </p><p>Each week, we host tasting events at our store’s very own bar and lounge where we swirl, sample and discuss all things wine with educators, producers, experts, and more. </p><p>We always have our <span style=\"text-decoration:underline\"><em><strong>FREE</strong></em></span> <em><strong>Tasting Table on Thursdays from 5-7pm</strong></em>, but <a href=\"/pages/calendar-list-view\" title=\"Calendar List View\">check out the schedule for other upcoming tasting events! </a><br/><br/></p>",
+            "text": "<p>Whether you're a wine connoisseur or a curious novice, we invite you to step into the world of wine at Maison Brondeau. </p><p>Each week, we host tasting events at our store’s very own bar and lounge where we swirl, sample and discuss all things wine with educators, producers, experts, and more. </p><p>We always have our <span style=\"text-decoration:underline\"><em><strong>FREE</strong></em></span> <em><strong>Tasting Table on Thursdays from 5-7pm</strong></em>, but check out the schedule for other upcoming tasting events! <br/><br/></p>",
             "button_label": "VIEW SCHEDULE",
             "button_link": "/apps/events/calendar",
             "button_color_scheme": "scheme-2"
@@ -70,7 +70,7 @@
             "desktop_content_pos": "center",
             "caption": "",
             "heading": "Monthly Classes",
-            "text": "<p>Want to learn more about wine and spirits? </p><p>Maison Brondeau has you covered! Small group tastings up to 14 people, we cover the FUNdamentals of wine, various wine regions, and you better believe we'll have a map or two.</p><p>These tastings are great for date-night, gifting, or just for yourself.</p><p><em>*Class attendees get a special discount on 10% off their in-store purchase (exclusions apply).</em></p><p><a href=\"/pages/calendar-list-view\" title=\"Calendar List View\">See the schedule for upcoming classes to book your spot today! </a><br/><br/></p>",
+            "text": "<p>Want to learn more about wine and spirits? </p><p>Maison Brondeau has you covered! Small group tastings up to 14 people, we cover the FUNdamentals of wine, various wine regions, and you better believe we'll have a map or two.</p><p>These tastings are great for date-night, gifting, or just for yourself.</p><p><em>*Class attendees get a special discount on 10% off their in-store purchase (exclusions apply).</em></p><p>See the schedule for upcoming classes to book your spot today! <br/><br/></p>",
             "button_label": "VIEW SCHEDULE",
             "button_link": "/apps/events/calendar",
             "button_color_scheme": "scheme-2"
