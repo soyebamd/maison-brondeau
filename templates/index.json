@@ -284,9 +284,9 @@
         "ai_gen_block_521eaf2_hzFKqw": {
           "type": "ai_gen_block_521eaf2",
           "settings": {
-            "title": "Sip & Screen (11/19)!",
-            "message": "Taste some classic wines while we watch SIDEWAYS at Maison Brondeau! We'll have some movie snacks, Pinot Noir, and of course, some Merlot!",
-            "hours_text": "Tickets here and check out what's coming up this month:<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
+            "title": "Black Friday!",
+            "message": "The store will be closed, but we're always open online! Use code BLACKFRIDAY at checkout for 10% Wine and Spirits. *Exclusions apply.",
+            "hours_text": "Looking for in-store events this holiday season?<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
             "auto_show": true,
             "delay": 2,
             "days_to_remember": 1,
