@@ -16,8 +16,9 @@
       "blocks": {
         "announcement_ePQaXY": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
-            "text": "Code: BLACKFRIDAY for 10% Off*",
+            "text": "Code: Our BLACKFRIDAY for 10% Off*",
             "link": ""
           }
         },
