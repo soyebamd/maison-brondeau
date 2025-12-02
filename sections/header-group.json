@@ -23,6 +23,7 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Happy Thanksgiving!",
             "link": "shopify://pages/tastings-events"
