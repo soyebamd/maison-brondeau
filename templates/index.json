@@ -284,9 +284,9 @@
         "ai_gen_block_521eaf2_hzFKqw": {
           "type": "ai_gen_block_521eaf2",
           "settings": {
-            "title": "Black Friday Sale!",
-            "message": "The Sale extends all weekend long into Cyber Monday! <br>Cheers!",
-            "hours_text": "Looking for in-store events this holiday season?<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
+            "title": "Dececmber Events",
+            "message": "Don't miss our Sip & Screen Event, Wed., Dec 10th. We'll be watching ELF, there will be pizza, wines, a special cocktail, and other surprises! <a href=\"https://maisonbrondeau.com/products/sip-amp-screen-elf\"> Get Tickets here! </a>",
+            "hours_text": "Looking for other in-store events this holiday season?<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
             "auto_show": true,
             "delay": 2,
             "days_to_remember": 1,
