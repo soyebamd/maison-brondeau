@@ -23,10 +23,9 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Happy Thanksgiving!",
-            "link": "shopify://pages/tastings-events"
+            "text": "Maison Brondeau Wine Club is HERE!",
+            "link": "https://app.table22.com/product/maison-brondeau-wine-club"
           }
         }
       },
