@@ -165,21 +165,21 @@
         "heading_BbfMwh": {
           "type": "heading",
           "settings": {
-            "heading": "Deux Chevaux Wine Club",
+            "heading": "Maison Brondeau Wine Club",
             "heading_size": "h2"
           }
         },
         "text_HcUy3n": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Introducing our upcoming wine club—an intimate, curated experience for both adventurous beginners and devoted connoisseurs.</strong></p><ul><li>Hand-selected by our expert team, showcasing distinct terroirs and hidden gems from around the globe.</li><li>Thoughtful selections that overdeliver in the glass.</li><li>Be among the first to receive details and secure your spot below.</li></ul>",
+            "text": "<p><strong>Introducing our wine club—an intimate, curated experience for both adventurous beginners and devoted connoisseurs.</strong></p><ul><li>Hand-selected by our expert team, showcasing distinct terroirs and hidden gems from around the globe.</li><li>Thoughtful selections that overdeliver in the glass.</li><li>Be among the first to receive details and secure your spot below.</li></ul>",
             "text_style": "body"
           }
         },
         "button_p8pCif": {
           "type": "button",
           "settings": {
-            "button_label": "JOIN the Waitlist",
+            "button_label": "JOIN the MBWC!",
             "button_link": "shopify://pages/wine-club",
             "button_style_secondary": false
           }
