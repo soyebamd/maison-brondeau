@@ -168,7 +168,7 @@
         "heading_BbfMwh": {
           "type": "heading",
           "settings": {
-            "heading": "Deux Chevaux Wine Club",
+            "heading": "Maison Brondeau Wine Club",
             "heading_size": "h2"
           }
         },
@@ -182,7 +182,7 @@
         "button_p8pCif": {
           "type": "button",
           "settings": {
-            "button_label": "JOIN the Waitlist",
+            "button_label": "JOIN MBWC!",
             "button_link": "shopify://pages/wine-club",
             "button_style_secondary": false
           }
