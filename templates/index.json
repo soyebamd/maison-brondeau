@@ -284,8 +284,8 @@
         "ai_gen_block_521eaf2_hzFKqw": {
           "type": "ai_gen_block_521eaf2",
           "settings": {
-            "title": "Holiday Gift Packs!",
-            "message": "Want us to curate a custom order for you! Reach out to us at hello@maisonbrondeau.com and we'll design the perfect gift for you!",
+            "title": "Shipping Deadlines!",
+            "message": "Place an order by these dates for delivery before Christmas: <br>West Coast: Mon., Dec 15th\n<br>East Coast: Wed., Dec 17th\n<br>Westchester Delivery: Sun., Dec 21st\n<br>White Plains Delivery: Mon., Dec 22nd",
             "hours_text": "Looking for other in-store events this holiday season?<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
             "auto_show": true,
             "delay": 2,
