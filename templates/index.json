@@ -284,9 +284,9 @@
         "ai_gen_block_521eaf2_hzFKqw": {
           "type": "ai_gen_block_521eaf2",
           "settings": {
-            "title": "Shipping Deadlines!",
-            "message": "Place an order by these dates for delivery before Christmas: <br>West Coast: Mon., Dec 15th\n<br>East Coast: Wed., Dec 17th\n<br>Westchester Delivery: Sun., Dec 21st\n<br>White Plains Delivery: Mon., Dec 22nd",
-            "hours_text": "Looking for other in-store events this holiday season?<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
+            "title": "Holiday Hours!",
+            "message": "Monday, 12/22  ~ OPEN (10am-8pm)\n<br>Tuesday, 12/23 ~ FREE Holiday Tasting (5-7pm)\n<br>Wednesday, 12/24 ~ Closing at 3pm\n<br> Thursday 12/25 & Friday 12/26: CLOSED For Christmas Holiday",
+            "hours_text": "Looking for in-store events this holiday season?<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
             "auto_show": true,
             "delay": 2,
             "days_to_remember": 1,
