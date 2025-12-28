@@ -108,11 +108,63 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "image_with_text_89EbqK": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_b7RFNh": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_KAMFx6": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>1. Know Your Bubbles: The Two Main Methods</strong></p><p>The <em>traditional method</em> (or <em>méthode traditionnelle</em>) is the most time-intensive approach, with a secondary fermentation that happens inside each individual bottle. This process creates smaller, more persistent bubbles and layers of complexity. Expect notes of brioche, almond, and citrus zest - that signature “Champagne character.”</p><p>The <em>Charmat</em> (or <em>tank</em>) method, by contrast, allows the secondary fermentation to occur in large, pressurized tanks. It’s quicker and preserves the bright, fruit-forward aromatics of the grapes. The result? Juicy, accessible wines with lively bubbles - think <strong>Prosecco.</strong> These are fresh, floral, and easygoing; ideal for brunches, cocktail parties, or any occasion where you want a fun, crowd-pleasing pour.</p><p>Neither method is better; they simply express different styles.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_EarMzw": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_b7RFNh",
+        "text_KAMFx6",
+        "button_EarMzw"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "custom_style": false,
+        "image": "shopify://shop_images/TankvsBottle.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner_Y4pDXT",
     "main",
-    "rich_text_xCHgXg"
+    "rich_text_xCHgXg",
+    "image_with_text_89EbqK"
   ]
 }
