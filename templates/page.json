@@ -71,6 +71,14 @@
             "text_size_1": "s-small"
           }
         },
+        "text_ww7YYg": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>2. Champagne compared to Other Bubbles</strong></p><p><strong>Champagne</strong> will always be the benchmark — a combination of cool climate, famous chalky<br/>soils, and centuries of craftsmanship that yields wines of precision and depth.<br/>Expect tension and richness, balanced by mineral drive and a long, refined<br/>finish. Whether it is from a grand cru or premier cru village, Champagne is a<br/>luxury; and for many, the holidays are the perfect time to indulge.</p><p>If you love the Champagne style but not the price, look to <strong>Crémant</strong>,<br/>France’s best-kept secret. Made the same way, but in other French regions other<br/>than Champagne, Crémants can offer remarkable finesse at half the cost. </p><p>Spain’s <strong>Cava</strong> are historically undervalued, but quality has soared<br/>in recent years. Producers like <strong>L’Atzar </strong>and<strong> Raventós i Blanc</strong> are<br/>making serious, terroir-driven wines that stand shoulder to shoulder with their<br/>French counterparts.</p><p>From Italy, <strong>Franciacorta</strong> offers the country’s most refined<br/>traditional-method sparkling, typically from Chardonnay and Pinot Noir. Expect<br/>creamy texture, subtle toast, and elegance without ostentation.</p><p>For something truly unique, <strong>Lambrusco</strong>, a sparkling Charmat method<br/>wine from Emilia-Romagna, Italy might be your answer. These wines pair<br/>perfectly with any charcuterie board, or when you are craving a touch more<br/>red-fruit.</p><p>And of course, <strong>Prosecco</strong> remains the life of the party - all pear,<br/>white flowers, and effervescence. </p>",
+            "heading_caption": "",
+            "text_size_1": "s-small"
+          }
+        },
         "button_RnjYah": {
           "type": "button",
           "disabled": true,
@@ -88,6 +96,7 @@
         "heading_iRCdCi",
         "text_n4JWAK",
         "text_D7gfEg",
+        "text_ww7YYg",
         "button_RnjYah"
       ],
       "name": "t:sections.rich-text.presets.name",
