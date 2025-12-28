@@ -14,8 +14,16 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_BHrY4B": {
+          "type": "announcement",
+          "settings": {
+            "text": "Happy Holidays from all of us at Maison Brondeau!",
+            "link": ""
+          }
+        },
         "announcement_ePQaXY": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "FREE Tasting Tuesday: Holiday Favorites with Team MB (12/23)",
             "link": "shopify://products/free-tastingtable-holiday-favorites-with-the-mb-team"
@@ -30,6 +38,7 @@
         }
       },
       "block_order": [
+        "announcement_BHrY4B",
         "announcement_ePQaXY",
         "announcement-bar-0"
       ],
