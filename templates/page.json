@@ -77,6 +77,12 @@
             "text_size_1": "s-small"
           }
         },
+        "image_cjizQf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Map_Sparkling_MB.png"
+          }
+        },
         "text_n4JWAK": {
           "type": "text",
           "settings": {
@@ -91,6 +97,7 @@
         "text_D7gfEg",
         "image_TMkDYM",
         "text_ww7YYg",
+        "image_cjizQf",
         "text_n4JWAK"
       ],
       "name": "t:sections.rich-text.presets.name",
@@ -113,22 +120,10 @@
             "heading_caption": "",
             "text_size_1": "s-small"
           }
-        },
-        "button_U4GyUD": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
-        "text_Pt9PWN",
-        "button_U4GyUD"
+        "text_Pt9PWN"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
