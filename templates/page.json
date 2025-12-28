@@ -1,1 +1,109 @@
-{"sections":{"image_banner_Y4pDXT":{"type":"image-banner","blocks":{"heading_UMpXpJ":{"type":"heading","settings":{"heading":"Image banner","heading_size":"h1"}}},"block_order":["heading_UMpXpJ"],"settings":{"image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"main":{"type":"main-page","settings":{"padding_top":28,"padding_bottom":28}}},"order":["image_banner_Y4pDXT","main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_Y4pDXT": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_UMpXpJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sparkling Wines",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UMpXpJ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG_2490.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_xCHgXg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iRCdCi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>How to Choose the Perfect SparklingWine for the Holidays</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_n4JWAK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The holidays and bubbles are inextricably linked. The<br/>sound of a cork popping feels inherently celebratory — a small gesture that<br/>turns any gathering into an occasion. With all the selections on the shelves, choosing<br/>the right bottle can feel overwhelming. Here’s how to find the right one for<br/>your table, your mood, and your guests.</p>",
+            "heading_caption": "",
+            "text_size_1": "s-small"
+          }
+        },
+        "text_D7gfEg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The <em>traditional method</em> (or <em>méthode traditionnelle</em>) is the<br/>most time-intensive approach, with a secondary fermentation that happens inside<br/>each individual bottle. This process creates smaller, more persistent bubbles<br/>and layers of complexity. Expect notes of brioche, almond, and citrus zest - that<br/>signature “Champagne character.”</p><p>The <em>Charmat</em> (or <em>tank</em>) method, by contrast, allows the<br/>secondary fermentation to occur in large, pressurized tanks. It’s quicker and<br/>preserves the bright, fruit-forward aromatics of the grapes. The result? Juicy,<br/>accessible wines with lively bubbles - think <strong>Prosecco.</strong> These are fresh,<br/>floral, and easygoing; ideal for brunches, cocktail parties, or any occasion<br/>where you want a fun, crowd-pleasing pour.</p><p>Neither method is better; they simply express different styles.</p>",
+            "heading_caption": "",
+            "text_size_1": "s-small"
+          }
+        },
+        "button_RnjYah": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_iRCdCi",
+        "text_n4JWAK",
+        "text_D7gfEg",
+        "button_RnjYah"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "image_banner_Y4pDXT",
+    "main",
+    "rich_text_xCHgXg"
+  ]
+}
