@@ -55,18 +55,10 @@
             "heading_size": "h1"
           }
         },
-        "text_n4JWAK": {
-          "type": "text",
-          "settings": {
-            "text": "<h5><em>by Barbie J.H. Messa, a version was previously published for Best Version Media, December 2025</em></h5><p></p><p>The holidays and bubbles are inextricably linked. The sound of a cork popping feels inherently celebratory — a small gesture that turns any gathering into an occasion. With all the selections on the shelves, choosing the right bottle can feel overwhelming. Here’s how to find the right one for your table, your mood, and your guests.</p>",
-            "heading_caption": "",
-            "text_size_1": "s-small"
-          }
-        },
         "text_D7gfEg": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>1. Know Your Bubbles: The Two Main Methods</strong></p><p>The <em>traditional method</em> (or <em>méthode traditionnelle</em>) is the most time-intensive approach, with a secondary fermentation that happens inside each individual bottle. This process creates smaller, more persistent bubbles and layers of complexity. Expect notes of brioche, almond, and citrus zest - that signature “Champagne character.”</p><p>The <em>Charmat</em> (or <em>tank</em>) method, by contrast, allows the secondary fermentation to occur in large, pressurized tanks. It’s quicker and preserves the bright, fruit-forward aromatics of the grapes. The result? Juicy, accessible wines with lively bubbles - think <strong>Prosecco.</strong> These are fresh, floral, and easygoing; ideal for brunches, cocktail parties, or any occasion where you want a fun, crowd-pleasing pour.</p><p>Neither method is better; they simply express different styles.</p>",
+            "text": "<h5><em>by Barbie J.H. Messa, a version was previously published for Best Version Media, December 2025</em></h5><p><em>The holidays and bubbles are inextricably linked. The sound of a cork popping feels inherently celebratory — a small gesture that turns any gathering into an occasion. With all the selections on the shelves, choosing the right bottle can feel overwhelming. Here’s how to find the right one for your table, your mood, and your guests.</em></p><p><strong>1. Know Your Bubbles: The Two Main Methods</strong></p><p>The <em>traditional method</em> (or <em>méthode traditionnelle</em>) is the most time-intensive approach, with a secondary fermentation that happens inside each individual bottle. This process creates smaller, more persistent bubbles and layers of complexity. Expect notes of brioche, almond, and citrus zest - that signature “Champagne character.”</p><p>The <em>Charmat</em> (or <em>tank</em>) method, by contrast, allows the secondary fermentation to occur in large, pressurized tanks. It’s quicker and preserves the bright, fruit-forward aromatics of the grapes. The result? Juicy, accessible wines with lively bubbles - think <strong>Prosecco.</strong> These are fresh, floral, and easygoing; ideal for brunches, cocktail parties, or any occasion where you want a fun, crowd-pleasing pour.</p><p>Neither method is better; they simply express different styles.</p>",
             "heading_caption": "",
             "text_size_1": "s-small"
           }
@@ -84,14 +76,22 @@
             "heading_caption": "",
             "text_size_1": "s-small"
           }
+        },
+        "text_n4JWAK": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>3. Big Houses vs. Grower Producers</strong></p><p>Another decision point: do you reach for a big name or a small grower?</p><p><strong>The grandes marques</strong>, houses like Veuve Clicquot, Moët & Chandon, Krug, and Bollinger, are the icons of consistency. These wines are polished, reliable, and make an impressive gift when presentation matters as much as what’s inside the bottle.</p><p>On the other hand, <strong>grower-producer Champagnes</strong> (look for “RM” on the label, which stands for <em>Récoltant-Manipulant</em>) are made by the people who farm the grapes themselves. Each cuvée can offer more individuality and expression of terroir. They’re perfect for wine lovers who appreciate nuance, discovery and exclusivity over brand recognition. </p><p>Both have their place: the big houses deliver timeless glamour; the growers, soulful precision.</p><p><strong>4. A Blend of Vintages or a Moment in Time?</strong></p><p>Even though most Champagnes are a blend of different cuvées and vintages, often the <em>tête de cuvées</em> (top wines) are from a single vintage (aka year). In essence, vintage champagnes are unique in that instead of blending across years to make a consistent style, they become a snapshot of the weather/winemaking style from only <em>one year</em>.<br/></p><p>As such, Vintage Champagnes can be particularly sought after. For example, you might have heard of Dom Perignon (tête de cuvée from Moët & Chandon) or La Grande Dame (Veuve Clicquot) – these wines are famous with good reason!</p><p>If you are looking to really impress your guests, a vintage champagne can go a long way. </p><p><strong>5. Let the Vibes Guide You</strong></p><p>Ultimately, the best sparkling wine for the holidays is the one that fits your celebration. Toasting or gifting? Go for Champagne or Franciacorta. Hosting a brunch or cocktail hour? Reach for Prosecco or a Lambrusco. Sitting down to a long dinner? Crémant or Cava bring versatility and depth without<br/>overpowering the food (or budget).</p><p>The beauty of sparkling wine is that it adapts, equally at home with caviar<br/>or potato chips, black tie or slippers. Whatever your holiday looks like,<br/>there’s a bottle to match the mood.</p><p><strong>So go ahead -- pop, pour, and </strong><em><strong>let the season sparkle</strong></em><strong>. </strong></p>",
+            "heading_caption": "",
+            "text_size_1": "s-small"
+          }
         }
       },
       "block_order": [
         "heading_iRCdCi",
-        "text_n4JWAK",
         "text_D7gfEg",
         "image_TMkDYM",
-        "text_ww7YYg"
+        "text_ww7YYg",
+        "text_n4JWAK"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -109,7 +109,7 @@
         "text_Pt9PWN": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>3. Big Houses vs. Grower Producers</strong></p><p>Another decision point: do you reach for a big name or a small grower?</p><p><strong>The grandes marques</strong>, houses like Veuve Clicquot, Moët & Chandon, Krug, and Bollinger, are the icons of consistency. These wines are polished, reliable, and make an impressive gift when presentation matters as much as what’s inside the bottle.</p><p>On the other hand, <strong>grower-producer Champagnes</strong> (look for “RM” on the label, which stands for <em>Récoltant-Manipulant</em>) are made by the people who farm the grapes themselves. Each cuvée can offer more individuality and expression of terroir. They’re perfect for wine lovers who appreciate nuance, discovery and exclusivity over brand recognition. </p><p>Both have their place: the big houses deliver timeless glamour; the growers, soulful precision.</p><p><strong>4. A Blend of Vintages or a Moment in Time?</strong></p><p>Even though most Champagnes are a blend of different cuvées and vintages, often the <em>tête de cuvées</em> (top wines) are from a single vintage (aka year). In essence, vintage champagnes are unique in that instead of blending across years to make a consistent style, they become a snapshot of the weather/winemaking style from only <em>one year</em>.<br/></p><p>As such, Vintage Champagnes can be particularly sought after. For example, you might have heard of Dom Perignon (tête de cuvée from Moët & Chandon) or La Grande Dame (Veuve Clicquot) – these wines are famous with good reason!</p><p>If you are looking to really impress your guests, a vintage champagne can go a long way. </p><p><strong>5. Let the Vibes Guide You</strong></p><p>Ultimately, the best sparkling wine for the holidays is the one that fits your celebration. Toasting or gifting? Go for Champagne or Franciacorta. Hosting a brunch or cocktail hour? Reach for Prosecco or a Lambrusco. Sitting down to a long dinner? Crémant or Cava bring versatility and depth without<br/>overpowering the food (or budget).</p><p>The beauty of sparkling wine is that it adapts, equally at home with caviar<br/>or potato chips, black tie or slippers. Whatever your holiday looks like,<br/>there’s a bottle to match the mood.</p><p><strong>So go ahead -- pop, pour, and </strong><em><strong>let the season sparkle</strong></em><strong>. </strong></p>",
+            "text": "",
             "heading_caption": "",
             "text_size_1": "s-small"
           }
