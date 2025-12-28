@@ -14,6 +14,7 @@
       "blocks": {
         "heading_UMpXpJ": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Sparkling Wines",
             "heading_size": "h1"
