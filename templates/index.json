@@ -285,7 +285,7 @@
           "type": "ai_gen_block_521eaf2",
           "settings": {
             "title": "Holiday Hours!",
-            "message": "Monday, 12/29: OPEN!! (10am-8pm)\n<br>Tuesday, 12/30: 10am-8pm\n<br>Wednesday, 12/31: 10am-8pm\n<br> Thursday 1/1 (New Year's Day) CLOSED \n<br> \n<br> HAPPY NEW YEAR!",
+            "message": "Monday, 12/29: OPEN!! (10am-8pm)\n<br>Tuesday, 12/30: 10am-8pm\n<br>Wednesday, 12/31: 10am-8pm\n<br> Thursday 1/1 (New Year's Day) CLOSED \n\n<br> HAPPY NEW YEAR!",
             "hours_text": "Looking for in-store events this holiday season?<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
             "auto_show": true,
             "delay": 2,
