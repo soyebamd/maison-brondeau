@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_iCh9kn": {
+          "type": "announcement",
+          "settings": {
+            "text": "Hours update: DELAYED opening at 2pm on Tuesday, January 6!",
+            "link": ""
+          }
+        },
         "announcement_BHrY4B": {
           "type": "announcement",
           "settings": {
@@ -38,6 +45,7 @@
         }
       },
       "block_order": [
+        "announcement_iCh9kn",
         "announcement_BHrY4B",
         "announcement_ePQaXY",
         "announcement-bar-0"
