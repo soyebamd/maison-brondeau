@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_iCh9kn": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Hours update: DELAYED opening at 2pm on Tuesday, January 6!",
             "link": ""
