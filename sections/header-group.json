@@ -24,6 +24,7 @@
         },
         "announcement_BHrY4B": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Happy New Year!",
             "link": ""
@@ -33,8 +34,8 @@
           "type": "announcement",
           "disabled": true,
           "settings": {
-            "text": "FREE Tasting Tuesday: Holiday Favorites with Team MB (12/23)",
-            "link": "shopify://products/free-tastingtable-holiday-favorites-with-the-mb-team"
+            "text": "Watch SOMM with Sommeliers on Wed., 1/14",
+            "link": "shopify://products/sip-amp-sreen-somm"
           }
         },
         "announcement-bar-0": {
