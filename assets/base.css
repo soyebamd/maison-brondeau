@@ -3598,6 +3598,6 @@ details-disclosure > details {
   }
 }
 
-.facets__disclosure-vertical summary .facets__summary-label:has(span:contains("Producer")) {
+.facets__disclosure-vertical[data-id="data-8"] {
   display: none!important;
 }
