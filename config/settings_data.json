@@ -163,6 +163,35 @@
         "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
         "disabled": false,
         "settings": {}
+      },
+      "15014643352720781508": {
+        "type": "shopify://apps/wrapped/blocks/app-embed/1714fc7d-e525-4a14-8c3e-1b6ed95734c5",
+        "disabled": false,
+        "settings": {
+          "extension_background_primary_color": "#ffffff",
+          "extension_background_secondary_color": "#f3f3f3",
+          "extension_border_color": "rgba(0,0,0,0)",
+          "border_width": 1,
+          "border_radius": 60,
+          "spacing_scale": "--wrapped-spacing-scale-base",
+          "hover_style": "--wrapped-hover-style-light",
+          "font_color": "#000000",
+          "font_secondary_color": "#333333",
+          "font_scale": 100,
+          "form_element_text_color": "#333333",
+          "background_color": "#ffffff",
+          "border_color": "#0000000f",
+          "checkbox_radio_color": "#000000",
+          "primary_button_text": "#ffffff",
+          "primary_button_surface": "#000000",
+          "primary_button_border": "rgba(0,0,0,0)",
+          "secondary_button_text": "#333333",
+          "secondary_button_surface": "#0000000f",
+          "secondary_button_border": "rgba(0,0,0,0)",
+          "media_fit": "fill",
+          "gift_thumbnail_size": 60,
+          "gift_thumbnail_position": "--wrapped-thumbnail-position-start"
+        }
       }
     },
     "color_schemes": {

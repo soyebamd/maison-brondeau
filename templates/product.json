@@ -46,16 +46,18 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "wrapped_app_block_product_qGbqfm": {
+          "type": "shopify://apps/wrapped/blocks/app-block.product/1714fc7d-e525-4a14-8c3e-1b6ed95734c5",
+          "settings": {
+            "launcher_variant": "link"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
-        },
-        "zestard_gift_wrap_giftwrap_product_block_jY7qdY": {
-          "type": "shopify://apps/zestard-gift-wrap/blocks/giftwrap-product-block/812385b4-6785-4a00-a40d-150927008708",
-          "settings": {}
         },
         "share": {
           "type": "share",
@@ -80,8 +82,8 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "wrapped_app_block_product_qGbqfm",
         "buy_buttons",
-        "zestard_gift_wrap_giftwrap_product_block_jY7qdY",
         "share",
         "text_x37JF6"
       ],
