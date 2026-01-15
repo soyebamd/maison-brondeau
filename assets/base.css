@@ -3598,6 +3598,6 @@ details-disclosure > details {
   }
 }
 
-#Details-filter.p.m.custom.producer-template--16985639780515__product-grid {
-  display: none;
+.facets__disclosure-vertical summary .facets__summary-label:has(span:contains("Producer")) {
+  display: none!important;
 }
