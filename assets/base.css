@@ -3598,6 +3598,7 @@ details-disclosure > details {
   }
 }
 
-.facets__disclosure-vertical[data-id="data-8"] {
+.facets__disclosure-vertical[data-id="data-8"],
+.facets__disclosure-vertical[data-id="data-9"] {
   display: none!important;
 }
