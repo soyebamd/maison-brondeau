@@ -3597,3 +3597,7 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
+#Details-filter.p.m.custom.producer-template--16985639780515__product-grid {
+  display: none;
+}
