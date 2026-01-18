@@ -285,8 +285,8 @@
           "type": "ai_gen_block_521eaf2",
           "settings": {
             "title": "Free Tastings every Thursday!",
-            "message": "Join us on Thursdays from 5-7pm for FREE tastings! <br> This week we'll taste some fortified wines and spirits from Haus Alpenz.",
-            "hours_text": "Looking for in-store events this holiday season?<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
+            "message": "Join us on Thursdays from 5-7pm. <br> <br> \nReady for some wines from M. Touton on Thursday 1/22? We are! We'll even have a Châteauneuf-du-Pape in the line up!",
+            "hours_text": "Looking for other in-store events?<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
             "auto_show": true,
             "delay": 2,
             "days_to_remember": 1,
