@@ -32,9 +32,8 @@
         },
         "announcement_ePQaXY": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Watch SOMM with Sommeliers on Wed., 1/14",
+            "text": "CODE: SNOWDAY for up to 15% OFF!",
             "link": "shopify://products/sip-amp-sreen-somm"
           }
         },
