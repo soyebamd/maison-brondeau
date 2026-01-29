@@ -26,12 +26,13 @@
           "type": "announcement",
           "disabled": true,
           "settings": {
-            "text": "Happy New Year!",
+            "text": "Tasting Table: FREE Spanish & Portuguese Wines, 1/29 from 5-7pm",
             "link": ""
           }
         },
         "announcement_ePQaXY": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "CODE: SNOWDAY for up to 15% OFF!",
             "link": "shopify://collections"
