@@ -285,7 +285,7 @@
           "type": "ai_gen_block_521eaf2",
           "settings": {
             "title": "Happy Valentine's Day!",
-            "message": "💝  If you're looking for some wines to pair with chocolate on this romantic holiday weekend, we've put together a <a href=\"/a\"> collection for you!</a> 🍫",
+            "message": "💝  If you're looking for some wines to pair with chocolate on this romantic holiday weekend, we've put together a <a href=\"https://maisonbrondeau.com/collections/wines-for-chocolate\"> collection for you!</a> 🍫",
             "hours_text": "Looking for other in-store events?<br>\n<a href=\"/apps/events/calendar\"> Click here to view our events calendar!</a>",
             "auto_show": true,
             "delay": 2,
