@@ -24,7 +24,6 @@
         },
         "announcement_BHrY4B": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "💝 Bottles for Chocolate 🍫",
             "link": "shopify://collections/wines-for-chocolate"
