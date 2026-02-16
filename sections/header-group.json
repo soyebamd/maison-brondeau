@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_ePQaXY": {
+          "type": "announcement",
+          "settings": {
+            "text": "CODE: BDX for 15% OFF Bordeaux Wines!",
+            "link": "shopify://collections/bordeaux"
+          }
+        },
         "announcement_iCh9kn": {
           "type": "announcement",
           "settings": {
@@ -28,14 +35,6 @@
             "link": "shopify://collections/wines-for-chocolate"
           }
         },
-        "announcement_ePQaXY": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "CODE: BDX for 15% OFF Bordeaux Wines!",
-            "link": "shopify://collections/bordeaux"
-          }
-        },
         "announcement-bar-0": {
           "type": "announcement",
           "disabled": true,
@@ -46,9 +45,9 @@
         }
       },
       "block_order": [
+        "announcement_ePQaXY",
         "announcement_iCh9kn",
         "announcement_BHrY4B",
-        "announcement_ePQaXY",
         "announcement-bar-0"
       ],
       "settings": {
