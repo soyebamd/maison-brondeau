@@ -16,7 +16,6 @@
       "blocks": {
         "announcement_iCh9kn": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Free Local Delivery in Westchester!",
             "link": ""
@@ -33,12 +32,13 @@
           "type": "announcement",
           "disabled": true,
           "settings": {
-            "text": "CODE: SNOWDAY for up to 15% OFF!",
-            "link": "shopify://collections"
+            "text": "CODE: BDX for 15% OFF Bordeaux Wines!",
+            "link": "shopify://collections/bordeaux"
           }
         },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Maison Brondeau Wine Club is HERE!",
             "link": "https://app.table22.com/product/maison-brondeau-wine-club"
