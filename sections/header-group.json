@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_ePQaXY": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "CODE: BDX for 15% OFF Bordeaux Wines!",
             "link": "shopify://collections/bordeaux"
@@ -31,13 +32,12 @@
         "announcement_BHrY4B": {
           "type": "announcement",
           "settings": {
-            "text": "💝 Bottles for Chocolate 🍫",
-            "link": "shopify://collections/wines-for-chocolate"
+            "text": "Last chance for our South American Wine Class on Friday (2/20)!",
+            "link": "shopify://products/wine-class-wines-of-south-america"
           }
         },
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Maison Brondeau Wine Club is HERE!",
             "link": "https://app.table22.com/product/maison-brondeau-wine-club"
