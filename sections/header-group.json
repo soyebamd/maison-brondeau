@@ -31,9 +31,10 @@
         },
         "announcement_BHrY4B": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
-            "text": "Last chance for our South American Wine Class on Friday (2/20)!",
-            "link": "shopify://products/wine-class-wines-of-south-america"
+            "text": "FREE TASTING: VIETTI Wines on Thursday 2/26, 5-7pm",
+            "link": "shopify://products/free-tasting-table-vietti-wines-with-marco"
           }
         },
         "announcement-bar-0": {
