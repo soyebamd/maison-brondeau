@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_ePQaXY": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "CODE: SNOWDAY for up to 15% OFF",
             "link": "shopify://collections/all"
