@@ -54,8 +54,8 @@
         "color_scheme": "scheme-c9f4b5e4-1e37-4726-8fac-c78afc2e5da0",
         "show_line_separator": true,
         "show_social": false,
-        "auto_rotate": true,
-        "change_slides_speed": 4,
+        "auto_rotate": false,
+        "change_slides_speed": 6,
         "enable_country_selector": false,
         "enable_language_selector": false
       }
