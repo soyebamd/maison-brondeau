@@ -30,10 +30,9 @@
         },
         "announcement_BHrY4B": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "FREE TASTING: VIETTI Wines on Thursday 2/26, 5-7pm",
-            "link": "shopify://products/free-tasting-table-vietti-wines-with-marco"
+            "text": "Check out our *new* arrivals!",
+            "link": "shopify://collections/new-arrivals"
           }
         },
         "announcement-bar-0": {
