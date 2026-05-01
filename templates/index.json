@@ -311,6 +311,36 @@
         "ai_gen_block_521eaf2_hzFKqw"
       ],
       "settings": {}
+    },
+    "177766431773530ef2": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_4cf61fd_QTKGwU": {
+          "type": "ai_gen_block_4cf61fd",
+          "settings": {
+            "popup_image": "shopify://shop_images/5_d930f5b6-3164-418d-aa78-6f4b792c495a.png",
+            "image_link": "shopify://products/first-anniversary-party",
+            "image_border_radius": 8,
+            "delay_seconds": 2,
+            "max_width": 600,
+            "padding": 20,
+            "border_radius": 12,
+            "content_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0.7,
+            "close_button_size": 36,
+            "close_button_offset": 10,
+            "close_button_bg": "#ffffff",
+            "close_button_hover_bg": "#f4f4f4",
+            "close_button_color": "#000000"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_4cf61fd_QTKGwU"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -320,6 +350,7 @@
     "multirow_hWLqtm",
     "image_with_text_X6fkja",
     "multicolumn_imHgfq",
-    "1751302509b3ef4b77"
+    "1751302509b3ef4b77",
+    "177766431773530ef2"
   ]
 }
