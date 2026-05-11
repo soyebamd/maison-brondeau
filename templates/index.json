@@ -317,6 +317,7 @@
       "blocks": {
         "ai_gen_block_4cf61fd_QTKGwU": {
           "type": "ai_gen_block_4cf61fd",
+          "disabled": true,
           "settings": {
             "popup_image": "shopify://shop_images/5_d930f5b6-3164-418d-aa78-6f4b792c495a.png",
             "image_link": "shopify://products/first-anniversary-party",
