@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_ePQaXY": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "FIRST ANNIVERSARY! May 9th! 3-7pm | Free Tastings, Discounts & More!",
             "link": "shopify://products/first-anniversary-party"
