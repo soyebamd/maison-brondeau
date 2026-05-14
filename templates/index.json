@@ -317,7 +317,6 @@
       "blocks": {
         "ai_gen_block_4cf61fd_QTKGwU": {
           "type": "ai_gen_block_4cf61fd",
-          "disabled": true,
           "settings": {
             "popup_image": "shopify://shop_images/Maison_Brondeau_1.png",
             "image_link": "shopify://products/first-anniversary-party",
