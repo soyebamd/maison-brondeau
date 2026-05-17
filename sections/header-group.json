@@ -14,12 +14,11 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_ePQaXY": {
+        "announcement_7pqx6D": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "FIRST ANNIVERSARY! May 9th! 3-7pm | Free Tastings, Discounts & More!",
-            "link": "shopify://products/first-anniversary-party"
+            "text": "PARKING AVAILABLE! Entrance on S.Lexington (and we validate!)",
+            "link": ""
           }
         },
         "announcement_iCh9kn": {
@@ -45,7 +44,7 @@
         }
       },
       "block_order": [
-        "announcement_ePQaXY",
+        "announcement_7pqx6D",
         "announcement_iCh9kn",
         "announcement_BHrY4B",
         "announcement-bar-0"
