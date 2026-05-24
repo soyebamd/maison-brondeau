@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_jtdAnY": {
+          "type": "announcement",
+          "settings": {
+            "text": "Last chance to sign up for our FUNdamentals of Wine Class!",
+            "link": "shopify://products/fundamentals-of-wine-class-wine-101"
+          }
+        },
         "announcement_7pqx6D": {
           "type": "announcement",
           "settings": {
@@ -37,6 +44,7 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Maison Brondeau Wine Club is HERE!",
             "link": "https://app.table22.com/product/maison-brondeau-wine-club"
@@ -44,6 +52,7 @@
         }
       },
       "block_order": [
+        "announcement_jtdAnY",
         "announcement_7pqx6D",
         "announcement_iCh9kn",
         "announcement_BHrY4B",
