@@ -1,24 +1,281 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
-<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+{%- liquid
+  case section.settings.content_width
+    when 'full'
+      assign content_width_class = 'article-block article-block--full'
+    when 'narrow'
+      assign content_width_class = 'article-block article-block--narrow'
+    else
+      assign content_width_class = 'article-block article-block--page'
+  endcase
+
+  case section.settings.image_width
+    when 'full'
+      assign image_width_class = 'article-media article-media--full'
+    when 'narrow'
+      assign image_width_class = 'article-media article-media--narrow'
+    else
+      assign image_width_class = 'article-media article-media--page'
+  endcase
+
+  if section.settings.image_ratio == 'adapt'
+    assign article_image_ratio = 'auto'
+  else
+    assign article_image_ratio = section.settings.image_ratio
+  endif
+
+  if section.settings.content_link_underline
+    assign content_link_decoration = 'underline'
+  else
+    assign content_link_decoration = 'none'
+  endif
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* Font scale factors - overridden per breakpoint further down */
+  #shopify-section-{{ section.id }} .article-template {
+    --article-heading-scale: 1;
+    --article-body-scale: 1;
+  }
+
+  /* ---------- Width containers ---------- */
+  .article-block {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .article-block--page { max-width: var(--article-page-width); }
+  .article-block--narrow { max-width: 72rem; }
+  .article-block--full { max-width: 100%; }
+
+  .article-media {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .article-media--page {
+    max-width: var(--article-page-width);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .article-media--narrow {
+    max-width: 72rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .article-media--full { max-width: 100%; }
+
+  @media screen and (min-width: 750px) {
+    .article-block,
+    .article-media--page,
+    .article-media--narrow {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+
+  /* ---------- Featured image ---------- */
+  .article-hero {
+    margin-bottom: 3rem;
+  }
+
+  .article-hero__media {
+    overflow: hidden;
+    border-radius: var(--article-img-radius);
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .article-hero__media img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .article-hero__media--fixed {
+    aspect-ratio: var(--article-img-ratio);
+  }
+
+  .article-hero__media--fixed img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ---------- Title ---------- */
+  #shopify-section-{{ section.id }} .article-header {
+    text-align: var(--article-title-align);
+    margin-bottom: 2rem;
+  }
+
+  #shopify-section-{{ section.id }} .article-header .article-template__title {
+    font-size: calc(var(--article-title-size) * var(--article-heading-scale));
+    color: var(--article-title-color);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  /* ---------- Content headings ---------- */
+  #shopify-section-{{ section.id }} .article-template__content h1,
+  #shopify-section-{{ section.id }} .article-template__content h2,
+  #shopify-section-{{ section.id }} .article-template__content h3,
+  #shopify-section-{{ section.id }} .article-template__content h4,
+  #shopify-section-{{ section.id }} .article-template__content h5,
+  #shopify-section-{{ section.id }} .article-template__content h6 {
+    font-size: calc(var(--article-content-heading-size) * var(--article-heading-scale)) !important;
+    color: var(--article-content-heading-color);
+    margin-bottom: var(--article-content-heading-margin);
+  }
+
+  /* ---------- Content body text ---------- */
+  /* span / div are intentionally NOT targeted: text inside a heading
+     (e.g. <h2><span>...</span></h2>) must inherit the heading size,
+     not the body size. Inline elements inherit from their parent. */
+  #shopify-section-{{ section.id }} .article-template__content,
+  #shopify-section-{{ section.id }} .article-template__content p,
+  #shopify-section-{{ section.id }} .article-template__content li,
+  #shopify-section-{{ section.id }} .article-template__content ul,
+  #shopify-section-{{ section.id }} .article-template__content ol,
+  #shopify-section-{{ section.id }} .article-template__content blockquote,
+  #shopify-section-{{ section.id }} .article-template__content td,
+  #shopify-section-{{ section.id }} .article-template__content th {
+    font-size: calc(var(--article-content-size) * var(--article-body-scale));
+    color: var(--article-content-color);
+  }
+
+  #shopify-section-{{ section.id }} .article-template__content p,
+  #shopify-section-{{ section.id }} .article-template__content ul,
+  #shopify-section-{{ section.id }} .article-template__content ol,
+  #shopify-section-{{ section.id }} .article-template__content blockquote,
+  #shopify-section-{{ section.id }} .article-template__content table,
+  #shopify-section-{{ section.id }} .article-template__content pre,
+  #shopify-section-{{ section.id }} .article-template__content figure {
+    margin-bottom: var(--article-content-margin);
+  }
+
+  /* ---------- Content links ---------- */
+  #shopify-section-{{ section.id }} .article-template__content a {
+    color: var(--article-link-color);
+    text-decoration: var(--article-link-decoration);
+  }
+
+  #shopify-section-{{ section.id }} .article-template__content a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- Back to blog button ---------- */
+  .article-back {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .article-back__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+
+  .article-back__btn--filled,
+  .article-back__btn--outline {
+    padding: 1.2rem 2.4rem;
+    border-radius: var(--article-btn-radius);
+  }
+
+  .article-back__btn--filled {
+    background: var(--article-btn-bg);
+    color: var(--article-btn-color);
+    border: 1px solid var(--article-btn-bg);
+  }
+
+  .article-back__btn--filled:hover { opacity: 0.85; }
+
+  .article-back__btn--outline {
+    background: transparent;
+    color: var(--article-btn-bg);
+    border: 1px solid var(--article-btn-bg);
+  }
+
+  .article-back__btn--outline:hover {
+    background: var(--article-btn-bg);
+    color: var(--article-btn-color);
+  }
+
+  .article-back__btn--link {
+    color: var(--article-btn-bg);
+  }
+
+  .article-back__btn--link::before {
+    content: "\2190";
+    transition: transform 0.2s ease;
+  }
+
+  .article-back__btn--link:hover::before {
+    transform: translateX(-4px);
+  }
+
+  /* ---------- Responsive font scaling ---------- */
+  @media screen and (max-width: 989px) {
+    #shopify-section-{{ section.id }} .article-template {
+      --article-heading-scale: 0.9;
+      --article-body-scale: 0.97;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .article-template {
+      --article-heading-scale: 0.78;
+      --article-body-scale: 0.92;
+    }
+  }
+{%- endstyle -%}
+
+<article
+  class="article-template section-{{ section.id }}-padding"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+  style="--article-page-width: {{ settings.page_width | default: 1200 }}px; --article-content-heading-size: {{ section.settings.content_heading_size }}px; --article-content-heading-color: {{ section.settings.content_heading_color }}; --article-content-heading-margin: {{ section.settings.content_heading_margin }}px; --article-content-size: {{ section.settings.content_text_size }}px; --article-content-color: {{ section.settings.content_text_color }}; --article-content-margin: {{ section.settings.content_text_margin }}px; --article-link-color: {{ section.settings.content_link_color }}; --article-link-decoration: {{ content_link_decoration }}; --article-title-size: {{ section.settings.title_size }}px; --article-title-color: {{ section.settings.title_color }}; --article-title-align: {{ section.settings.title_alignment }}; --article-img-radius: {{ section.settings.image_radius }}px; --article-img-ratio: {{ article_image_ratio }}; --article-btn-bg: {{ section.settings.back_button_bg }}; --article-btn-color: {{ section.settings.back_button_text }}; --article-btn-radius: {{ section.settings.back_button_radius }}px;"
+>
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
-        <div class="page-width page-width--narrow">
+        <div class="{{ content_width_class }}">
           {% render block %}
         </div>
+
       {%- when 'featured_image' -%}
         {%- if article.image -%}
           <div
-            class="article-template__hero-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+            class="article-hero {{ image_width_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
             {{ block.shopify_attributes }}
           >
             <div
-              class="article-template__hero-{{ block.settings.image_height }} media"
+              class="article-hero__media{% if section.settings.image_ratio != 'adapt' %} article-hero__media--fixed{% endif %}"
               itemprop="image"
-              {% if block.settings.image_height == 'adapt' and article.image %}
-                style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
-              {% endif %}
             >
               <img
                 srcset="
@@ -44,7 +301,7 @@
 
       {%- when 'title' -%}
         <header
-          class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          class="article-header {{ content_width_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           {{ block.shopify_attributes }}
         >
           <h1
@@ -67,7 +324,7 @@
 
       {%- when 'content' -%}
         <div
-          class="article-template__content page-width page-width--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="article-template__content {{ content_width_class }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           itemprop="articleBody"
           {{ block.shopify_attributes }}
         >
@@ -76,7 +333,7 @@
 
       {%- when 'share' -%}
         <div
-          class="article-template__social-sharing page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="article-template__social-sharing {{ content_width_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
         >
           {% assign share_url = request.origin | append: article.url %}
@@ -85,17 +342,17 @@
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="article-template__back element-margin-top center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
-      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+  <div class="article-back {{ content_width_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <a href="{{ blog.url }}" class="article-back__btn article-back__btn--{{ section.settings.back_button_style }}">
       {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
     </a>
   </div>
+
   {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div
         id="comments"
-        class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        class="{{ content_width_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       >
         {%- if article.comments_count > 0 -%}
           {%- assign anchorId = '#Comments-' | append: article.id -%}
@@ -313,6 +570,283 @@
   "name": "t:sections.main-article.name",
   "tag": "section",
   "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Featured image"
+    },
+    {
+      "type": "select",
+      "id": "image_width",
+      "options": [
+        {
+          "value": "full",
+          "label": "Full width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        },
+        {
+          "value": "narrow",
+          "label": "Narrow"
+        }
+      ],
+      "default": "page-width",
+      "label": "Image width",
+      "info": "\"Full width\" displays the image edge to edge."
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "1/1",
+          "label": "Square (1:1)"
+        },
+        {
+          "value": "4/5",
+          "label": "Portrait (4:5)"
+        },
+        {
+          "value": "3/4",
+          "label": "Portrait (3:4)"
+        },
+        {
+          "value": "4/3",
+          "label": "Landscape (4:3)"
+        },
+        {
+          "value": "3/2",
+          "label": "Landscape (3:2)"
+        },
+        {
+          "value": "16/9",
+          "label": "Widescreen (16:9)"
+        }
+      ],
+      "default": "adapt",
+      "label": "Image ratio"
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image corner radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Article content"
+    },
+    {
+      "type": "select",
+      "id": "content_width",
+      "options": [
+        {
+          "value": "full",
+          "label": "Full width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        },
+        {
+          "value": "narrow",
+          "label": "Narrow"
+        }
+      ],
+      "default": "narrow",
+      "label": "Content width",
+      "info": "Controls the width of the title, body text, sharing and comments."
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Title font size",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "default": "#121212",
+      "label": "Title color"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left",
+      "label": "Title alignment"
+    },
+    {
+      "type": "header",
+      "content": "Content headings"
+    },
+    {
+      "type": "range",
+      "id": "content_heading_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 24,
+      "info": "A single size applied to every heading (H1-H6) in the article body."
+    },
+    {
+      "type": "color",
+      "id": "content_heading_color",
+      "default": "#121212",
+      "label": "Heading color"
+    },
+    {
+      "type": "range",
+      "id": "content_heading_margin",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading spacing below",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Article body text"
+    },
+    {
+      "type": "paragraph",
+      "content": "Styles paragraphs, lists, quotes and other non-heading text inside the article body."
+    },
+    {
+      "type": "range",
+      "id": "content_text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Body text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "content_text_margin",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Paragraph spacing below",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "content_text_color",
+      "default": "#404040",
+      "label": "Body text color"
+    },
+    {
+      "type": "color",
+      "id": "content_link_color",
+      "default": "#1773b0",
+      "label": "Link color"
+    },
+    {
+      "type": "checkbox",
+      "id": "content_link_underline",
+      "default": true,
+      "label": "Underline links"
+    },
+    {
+      "type": "header",
+      "content": "Back to blog button"
+    },
+    {
+      "type": "select",
+      "id": "back_button_style",
+      "options": [
+        {
+          "value": "link",
+          "label": "Text link"
+        },
+        {
+          "value": "filled",
+          "label": "Filled"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        }
+      ],
+      "default": "link",
+      "label": "Button style"
+    },
+    {
+      "type": "color",
+      "id": "back_button_bg",
+      "default": "#121212",
+      "label": "Button color"
+    },
+    {
+      "type": "color",
+      "id": "back_button_text",
+      "default": "#ffffff",
+      "label": "Button text color"
+    },
+    {
+      "type": "range",
+      "id": "back_button_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button corner radius",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
   "blocks": [
     {
       "type": "@app"
@@ -320,34 +854,7 @@
     {
       "type": "featured_image",
       "name": "t:sections.main-article.blocks.featured_image.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "select",
-          "id": "image_height",
-          "options": [
-            {
-              "value": "adapt",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__1.label"
-            },
-            {
-              "value": "small",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__2.label"
-            },
-            {
-              "value": "medium",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__3.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__4.label"
-            }
-          ],
-          "default": "adapt",
-          "label": "t:sections.main-article.blocks.featured_image.settings.image_height.label",
-          "info": "t:sections.main-article.blocks.featured_image.settings.image_height.info"
-        }
-      ]
+      "limit": 1
     },
     {
       "type": "title",
