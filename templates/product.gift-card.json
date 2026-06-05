@@ -88,40 +88,40 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_UbkRgU": {
+    "image_with_text_B6eLwT": {
       "type": "image-with-text",
       "blocks": {
-        "heading_fXTbhh": {
+        "heading_cdKrRm": {
           "type": "heading",
           "settings": {
-            "heading": "Maison Brondeau Wine Club",
+            "heading": "Maison Brondeau Wine Concierge",
             "heading_size": "h2"
           }
         },
-        "text_rxbCjx": {
+        "text_zb7wmB": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Introducing our wine club—an intimate, curated experience for both adventurous beginners and devoted connoisseurs.</strong></p><ul><li>Hand-selected by our expert team, showcasing distinct terroirs and hidden gems from around the globe.</li><li>Thoughtful selections that overdeliver in the glass.</li><li>Be among the first to receive details and secure your spot below.</li></ul>",
+            "text": "<p><strong>Welcome to the </strong><em><strong>Wine Concierge Program</strong></em><strong>, our way of conveniently bringing you the perfect assortment of wines with no month-to-month commitment.</strong></p><p>From everyday drinkers to special occasions, we're confident we have the right wine for you. Whether you want a few bottles to have on hand, or are looking to fill the cellar, we are here to help! </p><p><em><strong>10% off your first order with the Wine Concierge team!</strong></em></p>",
             "text_style": "body"
           }
         },
-        "button_ecJeC7": {
+        "button_DVy6pX": {
           "type": "button",
           "settings": {
-            "button_label": "Join the MBWC!",
-            "button_link": "shopify://pages/wine-club",
+            "button_label": "JOIN THE MBWC!",
+            "button_link": "shopify://pages/wine-concierge",
             "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "heading_fXTbhh",
-        "text_rxbCjx",
-        "button_ecJeC7"
+        "heading_cdKrRm",
+        "text_zb7wmB",
+        "button_DVy6pX"
       ],
       "settings": {
         "custom_style": true,
-        "image": "shopify://shop_images/wine-club.jpg",
+        "image": "shopify://shop_images/MJ-19_2_copy.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -129,7 +129,7 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "section_color_scheme": "scheme-5",
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 76,
@@ -158,7 +158,7 @@
   },
   "order": [
     "main",
-    "image_with_text_UbkRgU",
+    "image_with_text_B6eLwT",
     "related-products"
   ]
 }
