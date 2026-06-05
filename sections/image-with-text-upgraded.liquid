@@ -1,0 +1,1704 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* ----- Inner content wrapper (max-width toggle, bg, border, padding) ----- */
+  .iwt-{{ section.id }} .iwt__inner {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: {{ section.settings.inner_bg_color }};
+    max-width: 100%;
+    border-radius: {{ section.settings.inner_radius_mobile }}px;
+    padding: {{ section.settings.inner_padding_top_mobile }}px {{ section.settings.inner_padding_x_mobile }}px {{ section.settings.inner_padding_bottom_mobile }}px;
+    {%- if section.settings.inner_border_thickness > 0 -%}
+      border: {{ section.settings.inner_border_thickness }}px solid {{ section.settings.inner_border_color }};
+    {%- endif -%}
+    {%- comment -%}
+      position: sticky stops working when an ancestor is a scroll container
+      (any overflow value other than visible). With the sticky image enabled
+      we keep this wrapper's overflow visible. Background and border corners
+      stay rounded via border-radius regardless, and the sticky image is
+      bounded by the row so it never visually escapes — nothing is lost.
+    {%- endcomment -%}
+    {%- if section.settings.enable_sticky_image -%}
+      overflow: visible;
+    {%- else -%}
+      overflow: hidden;
+    {%- endif -%}
+  }
+
+  {%- if section.settings.enable_sticky_image -%}
+    /* Defensive: position: sticky is disabled by any ancestor that is a
+       scroll container — i.e. whose overflow is not 'visible' or 'clip'.
+       Neutralise the ancestors between the image and the viewport. */
+    #shopify-section-{{ section.id }},
+    .iwt-{{ section.id }},
+    .iwt-{{ section.id }} .page-width {
+      overflow: visible !important;
+    }
+  {%- endif -%}
+
+  @media screen and (min-width: 750px) {
+    .iwt-{{ section.id }} .iwt__inner {
+      {%- if section.settings.enable_inner_max_width -%}
+        max-width: {{ section.settings.inner_max_width }}px;
+      {%- else -%}
+        max-width: 100%;
+      {%- endif -%}
+      border-radius: {{ section.settings.inner_radius }}px;
+      padding: {{ section.settings.inner_padding_top }}px {{ section.settings.inner_padding_x }}px {{ section.settings.inner_padding_bottom }}px;
+    }
+  }
+
+  /* ----- Flex layout (managed widths so columns never collide) ----- */
+  {%- case section.settings.desktop_image_width -%}
+    {%- when 'small' -%}
+      {%- assign image_col = 33.333 -%}
+    {%- when 'large' -%}
+      {%- assign image_col = 66.667 -%}
+    {%- else -%}
+      {%- assign image_col = 50 -%}
+  {%- endcase -%}
+  {%- assign content_col = 100 | minus: image_col -%}
+
+  .iwt-{{ section.id }} .iwt__grid {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: {{ section.settings.gap_mobile }}px;
+    align-items: stretch;
+  }
+
+  .iwt-{{ section.id }} .iwt__media,
+  .iwt-{{ section.id }} .iwt__content {
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Mobile order */
+  {%- if section.settings.layout_mobile == 'text_first' -%}
+    .iwt-{{ section.id }} .iwt__media { order: 2; }
+    .iwt-{{ section.id }} .iwt__content { order: 1; }
+  {%- else -%}
+    .iwt-{{ section.id }} .iwt__media { order: 1; }
+    .iwt-{{ section.id }} .iwt__content { order: 2; }
+  {%- endif -%}
+
+  @media screen and (min-width: 750px) {
+    .iwt-{{ section.id }} .iwt__grid {
+      flex-direction: row;
+      gap: {{ section.settings.gap }}px;
+      align-items: {{ section.settings.desktop_content_position | replace: 'top', 'flex-start' | replace: 'middle', 'center' | replace: 'bottom', 'flex-end' }};
+    }
+
+    .iwt-{{ section.id }} .iwt__media {
+      flex: 0 0 calc({{ image_col }}% - ({{ section.settings.gap }}px / 2));
+      width: calc({{ image_col }}% - ({{ section.settings.gap }}px / 2));
+      max-width: calc({{ image_col }}% - ({{ section.settings.gap }}px / 2));
+    }
+
+    .iwt-{{ section.id }} .iwt__content {
+      flex: 0 0 calc({{ content_col }}% - ({{ section.settings.gap }}px / 2));
+      width: calc({{ content_col }}% - ({{ section.settings.gap }}px / 2));
+      max-width: calc({{ content_col }}% - ({{ section.settings.gap }}px / 2));
+    }
+
+    {%- if section.settings.layout == 'text_first' -%}
+      .iwt-{{ section.id }} .iwt__media { order: 2; }
+      .iwt-{{ section.id }} .iwt__content { order: 1; }
+    {%- else -%}
+      .iwt-{{ section.id }} .iwt__media { order: 1; }
+      .iwt-{{ section.id }} .iwt__content { order: 2; }
+    {%- endif -%}
+  }
+
+  /* ----- Image ----- */
+  .iwt-{{ section.id }} .iwt__media {
+    position: relative;
+    text-align: {{ section.settings.image_align_mobile }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .iwt-{{ section.id }} .iwt__media {
+      text-align: {{ section.settings.image_align }};
+    }
+  }
+
+  {%- if section.settings.enable_sticky_image -%}
+    /* Sticky image (desktop only). MUST live AFTER the .iwt__media base rule
+       above — both rules have equal specificity, so source order decides, and
+       this rule needs to win over the base 'position: relative' to take effect. */
+    @media screen and (min-width: 750px) {
+      .iwt-{{ section.id }} .iwt__media {
+        position: -webkit-sticky;
+        position: sticky;
+        top: {{ section.settings.sticky_image_offset }}px;
+        align-self: flex-start;
+      }
+    }
+  {%- endif -%}
+
+  .iwt-{{ section.id }} .iwt__media img,
+  .iwt-{{ section.id }} .iwt__media svg,
+  .iwt-{{ section.id }} .iwt__media .placeholder-svg {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: {{ section.settings.image_radius_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .iwt-{{ section.id }} .iwt__media img,
+    .iwt-{{ section.id }} .iwt__media svg,
+    .iwt-{{ section.id }} .iwt__media .placeholder-svg {
+      border-radius: {{ section.settings.image_radius }}px;
+    }
+  }
+
+  /* Wrap the placeholder so it stays within the media column */
+  .iwt-{{ section.id }} .iwt__media .iwt__placeholder {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ----- Content ----- */
+  .iwt-{{ section.id }} .iwt__content {
+    text-align: {{ section.settings.mobile_content_alignment }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .iwt-{{ section.id }} .iwt__content {
+      text-align: {{ section.settings.desktop_content_alignment }};
+    }
+  }
+
+  /* Force all content to use the inner color scheme's foreground */
+  .iwt-{{ section.id }} .iwt__section-title,
+  .iwt-{{ section.id }} .iwt__section-title *,
+  .iwt-{{ section.id }} .iwt__content,
+  .iwt-{{ section.id }} .iwt__content *,
+  .iwt-{{ section.id }} .iwt__heading,
+  .iwt-{{ section.id }} .iwt__heading *,
+  .iwt-{{ section.id }} .iwt__caption,
+  .iwt-{{ section.id }} .iwt__caption *,
+  .iwt-{{ section.id }} .iwt__text,
+  .iwt-{{ section.id }} .iwt__text *,
+  .iwt-{{ section.id }} .iwt__icon-list,
+  .iwt-{{ section.id }} .iwt__icon-list * {
+    color: rgb(var(--color-foreground)) !important;
+  }
+
+  .iwt-{{ section.id }} .iwt__text p {
+    letter-spacing: unset;
+  }
+
+  /* Section title */
+  .iwt-{{ section.id }} .iwt__section-title {
+    margin: 0 0 24px;
+    text-align: {{ section.settings.mobile_content_alignment }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .iwt-{{ section.id }} .iwt__section-title {
+      text-align: {{ section.settings.desktop_content_alignment }};
+    }
+  }
+
+  /* Heading block */
+  .iwt-{{ section.id }} .iwt__heading {
+    margin: 0 0 16px;
+  }
+
+  /* Buttons row */
+  .iwt-{{ section.id }} .iwt__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .iwt-{{ section.id }} .iwt__content[style*="text-align: center"] .iwt__buttons,
+  .iwt-{{ section.id }} .iwt__content[style*="text-align:center"] .iwt__buttons {
+    justify-content: center;
+  }
+
+  .iwt-{{ section.id }} .iwt__content[style*="text-align: right"] .iwt__buttons,
+  .iwt-{{ section.id }} .iwt__content[style*="text-align:right"] .iwt__buttons {
+    justify-content: flex-end;
+  }
+
+  /* Force button colors from the inner color scheme */
+  .iwt-{{ section.id }} .iwt__buttons .button--primary {
+    color: rgb(var(--color-button-text)) !important;
+    background-color: rgba(var(--color-button), var(--alpha-button-background)) !important;
+    border-color: rgba(var(--color-button), var(--alpha-button-border)) !important;
+  }
+
+  .iwt-{{ section.id }} .iwt__buttons .button--secondary {
+    color: rgb(var(--color-secondary-button-text)) !important;
+    background-color: transparent !important;
+    border-color: rgba(var(--color-secondary-button-text), var(--alpha-button-border)) !important;
+  }
+
+  /* ----- Steps (grouped step blocks with connecting line) ----- */
+  .iwt-{{ section.id }} .iwt__steps {
+    display: block;
+    margin: 0 0 24px;
+    text-align: left;
+  }
+
+  .iwt-{{ section.id }} .iwt__step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: {{ section.settings.steps_content_gap }}px;
+    padding-bottom: {{ section.settings.steps_vertical_spacing }}px;
+  }
+
+  .iwt-{{ section.id }} .iwt__step:last-of-type {
+    padding-bottom: 0;
+  }
+
+  /* Connecting vertical line — applied to every step, constrained to that
+     step's own height. Uses border-left so we can switch style between
+     solid / dotted via the theme editor. */
+  {%- assign line_left = section.settings.steps_icon_size | divided_by: 2 -%}
+  {%- assign line_offset = section.settings.steps_line_thickness | divided_by: 2 -%}
+  {%- assign line_left_final = line_left | minus: line_offset -%}
+  {%- comment -%}
+    Line starts just below the icon. Icon itself is offset 10px from the top
+    of the step (see .iwt__step-icon margin-top), so add that into the line's
+    top position: 10 (icon offset) + icon_size + 6 (small gap below icon).
+  {%- endcomment -%}
+  {%- assign line_top = section.settings.steps_icon_size | plus: 16 -%}
+  .iwt-{{ section.id }} .iwt__step::before {
+    content: '';
+    position: absolute;
+    display: none;
+    left: {{ line_left_final }}px;
+    top: {{ line_top }}px;
+    bottom: 6px;
+    width: 0;
+    border-left: {{ section.settings.steps_line_thickness }}px {{ section.settings.steps_line_style }} {{ section.settings.steps_line_color }};
+    background-color: transparent;
+    z-index: 0;
+  }
+
+  /* On the last step, keep the line strictly inside the item box (no overflow
+     into space below the steps group). */
+  .iwt-{{ section.id }} .iwt__step:last-of-type::before {
+    bottom: 0;
+  }
+
+  .iwt-{{ section.id }} .iwt__step-icon {
+    position: relative;
+    flex-shrink: 0;
+    width: {{ section.settings.steps_icon_size }}px;
+    height: {{ section.settings.steps_icon_size }}px;
+    /* !important needed to override the .iwt__content * force-color rule above */
+    color: {{ section.settings.steps_icon_color }} !important;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+  }
+
+  .iwt-{{ section.id }} .iwt__step-icon svg,
+  .iwt-{{ section.id }} .iwt__step-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* Force the SVG circle fill directly, in case currentColor inheritance is
+     blocked by the !important force-color rule on .iwt__content *. */
+  .iwt-{{ section.id }} .iwt__step-icon svg circle {
+    fill: {{ section.settings.steps_icon_color }} !important;
+  }
+
+  .iwt-{{ section.id }} .iwt__step-body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  /* Compute mobile font sizes as 80% of the configured desktop sizes */
+  {%- assign steps_label_size_mobile = section.settings.steps_label_font_size | times: 0.8 | round -%}
+  {%- assign steps_title_size_mobile = section.settings.steps_title_font_size | times: 0.8 | round -%}
+  {%- assign steps_description_size_mobile = section.settings.steps_description_font_size | times: 0.8 | round -%}
+
+  /* Override forced foreground color for step label (mobile base) */
+  .iwt-{{ section.id }} .iwt__content .iwt__step-label,
+  .iwt-{{ section.id }} .iwt__step-label {
+    color: {{ section.settings.steps_label_color }} !important;
+    font-weight: {{ section.settings.steps_label_font_weight }};
+    margin: 0 0 4px;
+    font-size: {{ steps_label_size_mobile }}px;
+    line-height: 1.3;
+    letter-spacing: unset;
+  }
+
+  .iwt-{{ section.id }} .iwt__content .iwt__step-title,
+  .iwt-{{ section.id }} .iwt__step-title {
+    color: {{ section.settings.steps_title_color }} !important;
+    font-weight: {{ section.settings.steps_title_font_weight }};
+    margin: 0 0 8px;
+    font-size: {{ steps_title_size_mobile }}px;
+    line-height: 1.3;
+    letter-spacing: unset;
+  }
+
+  .iwt-{{ section.id }} .iwt__content .iwt__step-description,
+  .iwt-{{ section.id }} .iwt__content .iwt__step-description p,
+  .iwt-{{ section.id }} .iwt__content .iwt__step-description li,
+  .iwt-{{ section.id }} .iwt__content .iwt__step-description span,
+  .iwt-{{ section.id }} .iwt__step-description,
+  .iwt-{{ section.id }} .iwt__step-description p,
+  .iwt-{{ section.id }} .iwt__step-description li,
+  .iwt-{{ section.id }} .iwt__step-description span {
+    color: {{ section.settings.steps_description_color }} !important;
+    margin: 0;
+    line-height: 1.5;
+    font-size: {{ steps_description_size_mobile }}px;
+    font-weight: {{ section.settings.steps_description_font_weight }};
+    letter-spacing: unset;
+  }
+
+  .iwt-{{ section.id }} .iwt__step-description p + p {
+    margin-top: 8px;
+  }
+
+  /* Desktop: bump step text back up to the configured full sizes */
+  @media screen and (min-width: 750px) {
+    .iwt-{{ section.id }} .iwt__content .iwt__step-label,
+    .iwt-{{ section.id }} .iwt__step-label {
+      font-size: {{ section.settings.steps_label_font_size }}px;
+    }
+
+    .iwt-{{ section.id }} .iwt__content .iwt__step-title,
+    .iwt-{{ section.id }} .iwt__step-title {
+      font-size: {{ section.settings.steps_title_font_size }}px;
+    }
+
+    .iwt-{{ section.id }} .iwt__content .iwt__step-description,
+    .iwt-{{ section.id }} .iwt__content .iwt__step-description p,
+    .iwt-{{ section.id }} .iwt__content .iwt__step-description li,
+    .iwt-{{ section.id }} .iwt__content .iwt__step-description span,
+    .iwt-{{ section.id }} .iwt__step-description,
+    .iwt-{{ section.id }} .iwt__step-description p,
+    .iwt-{{ section.id }} .iwt__step-description li,
+    .iwt-{{ section.id }} .iwt__step-description span {
+      font-size: {{ section.settings.steps_description_font_size }}px;
+    }
+  }
+
+  /* ----- Custom list style for text blocks ----- */
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'text' and block.settings.enable_custom_list -%}
+      {%- assign bullet_size = block.settings.custom_list_icon_size | default: 18 -%}
+      {%- assign bullet_gap = block.settings.custom_list_gap | default: 10 -%}
+      {%- assign row_gap = block.settings.custom_list_row_gap | default: 8 -%}
+
+      .iwt-{{ section.id }} .iwt__text--{{ block.id }} ul,
+      .iwt-{{ section.id }} .iwt__text--{{ block.id }} ol {
+        list-style: none !important;
+        padding-left: 0 !important;
+        margin: 0 0 16px;
+      }
+
+      .iwt-{{ section.id }} .iwt__text--{{ block.id }} ul li,
+      .iwt-{{ section.id }} .iwt__text--{{ block.id }} ol li {
+        position: relative;
+        padding-left: {{ bullet_size | plus: bullet_gap }}px;
+        margin: 0 0 {{ row_gap }}px;
+        list-style: none !important;
+        line-height: 1.5;
+      }
+
+      .iwt-{{ section.id }} .iwt__text--{{ block.id }} ul li::marker,
+      .iwt-{{ section.id }} .iwt__text--{{ block.id }} ol li::marker {
+        content: '';
+        display: none;
+      }
+
+      .iwt-{{ section.id }} .iwt__text--{{ block.id }} ul li::before,
+      .iwt-{{ section.id }} .iwt__text--{{ block.id }} ol li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.25em;
+        width: {{ bullet_size }}px;
+        height: {{ bullet_size }}px;
+        flex-shrink: 0;
+        {%- if block.settings.custom_list_icon != blank -%}
+          background-image: url('{{ block.settings.custom_list_icon | image_url: width: 80 }}');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        {%- else -%}
+          background-color: rgb(var(--color-foreground));
+          border-radius: 50%;
+          top: 0.5em;
+          width: 6px;
+          height: 6px;
+        {%- endif -%}
+      }
+    {%- endif -%}
+  {%- endfor -%}
+
+{%- endstyle -%}
+
+<div
+  {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %}
+  class="iwt-{{ section.id }} section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} {{ section.settings.custom_class }}"
+>
+  <div class="page-width">
+    {%- if section.settings.section_title != blank -%}
+      <h2 class="iwt__section-title">{{ section.settings.section_title }}</h2>
+    {%- endif -%}
+
+    <div class="iwt__inner color-{{ section.settings.inner_color_scheme }}">
+      <div class="iwt__grid">
+          {%- if section.settings.image != blank -%}
+            <div class="iwt__media">
+              {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+              {{
+                section.settings.image
+                | image_url: width: 1500
+                | image_tag:
+                  widths: widths,
+                  sizes: '(min-width: 750px) 50vw, 100vw',
+                  fetchpriority: fetch_priority,
+                  alt: section.settings.image.alt
+              }}
+            </div>
+          {%- else -%}
+            <div class="iwt__media">
+              <span class="iwt__placeholder">
+                {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              </span>
+            </div>
+          {%- endif -%}
+
+          <div class="iwt__content">
+            {%- assign in_steps = false -%}
+            {%- for block in section.blocks -%}
+              {%- assign mb = block.settings.margin_bottom | default: 0 -%}
+
+              {%- comment -%}
+                Group consecutive step blocks inside a single .iwt__steps wrapper so
+                the connecting vertical line renders across them as one unit.
+              {%- endcomment -%}
+              {%- if block.type == 'step' -%}
+                {%- if in_steps == false -%}
+                  <div class="iwt__steps">
+                  {%- assign in_steps = true -%}
+                {%- endif -%}
+              {%- else -%}
+                {%- if in_steps -%}
+                  </div>
+                  {%- assign in_steps = false -%}
+                {%- endif -%}
+              {%- endif -%}
+
+              {%- case block.type -%}
+                {%- when 'heading' -%}
+                  <h2
+                    class="iwt__heading inline-richtext {{ block.settings.heading_size }}"
+                    style="margin-bottom: {{ mb }}px;"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.heading }}
+                  </h2>
+                {%- when 'caption' -%}
+                  <p
+                    class="iwt__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}"
+                    style="margin-bottom: {{ mb }}px;"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.caption | escape }}
+                  </p>
+                {%- when 'text' -%}
+                  <div
+                    class="iwt__text iwt__text--{{ block.id }} rte {{ block.settings.text_style }}"
+                    style="margin-bottom: {{ mb }}px;"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.text }}
+                  </div>
+                {%- when 'button' -%}
+                  {%- if block.settings.button_label != blank -%}
+                    <div
+                      class="iwt__buttons"
+                      style="margin-bottom: {{ mb }}px;"
+                      {{ block.shopify_attributes }}
+                    >
+                      <a
+                        {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}
+                        {% if block.settings.open_in_new_tab and block.settings.button_link != blank %}target="_blank" rel="noopener noreferrer"{% endif %}
+                        class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                      >
+                        {{ block.settings.button_label | escape }}
+                      </a>
+                    </div>
+                  {%- endif -%}
+                {%- when 'icon_list' -%}
+                  {%- assign icon_row_gap = block.settings.icon_row_gap | default: 12 -%}
+                  {%- assign icon_col_gap = block.settings.icon_col_gap | default: 16 -%}
+                  {%- assign icon_layout = block.settings.icon_layout_style | default: 'grid' -%}
+                  {%- if icon_layout == 'flex' -%}
+                    {%- assign justify_value = block.settings.icon_flex_justify | default: 'flex-start' -%}
+                    {%- capture list_style -%}list-style:none;padding:0;margin:0 0 {{ mb }}px;display:flex;flex-wrap:wrap;gap:{{ icon_row_gap }}px {{ icon_col_gap }}px;justify-content:{{ justify_value }};{%- endcapture -%}
+                    {%- assign item_style = 'display:inline-flex;align-items:center;gap:10px;flex:0 0 auto;' -%}
+                  {%- else -%}
+                    {%- capture list_style -%}list-style:none;padding:0;margin:0 0 {{ mb }}px;display:grid;grid-template-columns:repeat({{ block.settings.icon_columns }},minmax(0,1fr));gap:{{ icon_row_gap }}px {{ icon_col_gap }}px;{%- endcapture -%}
+                    {%- assign item_style = 'display:flex;align-items:center;gap:10px;' -%}
+                  {%- endif -%}
+                  <ul
+                    class="iwt__icon-list iwt__icon-list--{{ icon_layout }}"
+                    {{ block.shopify_attributes }}
+                    style="{{ list_style }}"
+                  >
+                    {%- for i in (1..6) -%}
+                      {%- assign icon_key = 'icon_' | append: i -%}
+                      {%- assign text_key = 'icon_' | append: i | append: '_text' -%}
+                      {%- assign icon_text = block.settings[text_key] -%}
+                      {%- assign icon_img = block.settings[icon_key] -%}
+                      {%- if icon_text != blank -%}
+                        <li style="{{ item_style }}">
+                          {%- if icon_img != blank -%}
+                            <img
+                              src="{{ icon_img | image_url: width: 80 }}"
+                              alt=""
+                              loading="lazy"
+                              width="{{ block.settings.icon_size }}"
+                              height="{{ block.settings.icon_size }}"
+                              style="flex-shrink:0;width:{{ block.settings.icon_size }}px;height:{{ block.settings.icon_size }}px;object-fit:contain;"
+                            >
+                          {%- endif -%}
+                          <span>{{ icon_text }}</span>
+                        </li>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </ul>
+                {%- when 'step' -%}
+                  <div class="iwt__step" {{ block.shopify_attributes }}>
+                    <div class="iwt__step-icon">
+                      {%- if block.settings.step_icon != blank -%}
+                        <img
+                          src="{{ block.settings.step_icon | image_url: width: 120 }}"
+                          alt=""
+                          loading="lazy"
+                          width="{{ section.settings.steps_icon_size }}"
+                          height="{{ section.settings.steps_icon_size }}"
+                        >
+                      {%- else -%}
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                          <circle cx="12" cy="12" r="11" fill="currentColor"></circle>
+                          <path d="M7 12.5l3.2 3.2 6.8-7" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                        </svg>
+                      {%- endif -%}
+                    </div>
+                    <div class="iwt__step-body">
+                      {%- if block.settings.step_label != blank -%}
+                        <div class="iwt__step-label">{{ block.settings.step_label | escape }}</div>
+                      {%- endif -%}
+                      {%- if block.settings.step_title != blank -%}
+                        <div class="iwt__step-title">{{ block.settings.step_title | escape }}</div>
+                      {%- endif -%}
+                      {%- if block.settings.step_description != blank -%}
+                        <div class="iwt__step-description rte">{{ block.settings.step_description }}</div>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                {%- when '@app' -%}
+                  <div class="iwt__app-block" style="margin-bottom: {{ mb }}px;">
+                    {%- render block -%}
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+            {%- if in_steps -%}
+              </div>
+              {%- assign in_steps = false -%}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "Image with text upgraded",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_align",
+      "label": "Image alignment (desktop)",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "image_align_mobile",
+      "label": "Image alignment (mobile)",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "label": "Image border radius (desktop)",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_radius_mobile",
+      "label": "Image border radius (mobile)",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "desktop_image_width",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:sections.image-with-text.settings.desktop_image_width.options__1.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.image-with-text.settings.desktop_image_width.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-with-text.settings.desktop_image_width.options__3.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.image-with-text.settings.desktop_image_width.label",
+      "info": "t:sections.image-with-text.settings.desktop_image_width.info"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout (desktop)",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "Image first"
+        },
+        {
+          "value": "text_first",
+          "label": "Text first"
+        }
+      ],
+      "default": "image_first"
+    },
+    {
+      "type": "select",
+      "id": "layout_mobile",
+      "label": "Layout (mobile)",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "Image first"
+        },
+        {
+          "value": "text_first",
+          "label": "Text first"
+        }
+      ],
+      "default": "image_first"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "label": "Content vertical alignment (desktop)",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "middle",
+          "label": "Middle"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "middle"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "label": "Content alignment (desktop)",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "label": "Content alignment (mobile)",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Column gap (desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "label": "Column gap (mobile)",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Sticky image"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_image",
+      "label": "Make image sticky on desktop",
+      "info": "When the text content is taller than the image, the image stays pinned in view as the visitor scrolls. Desktop only — no effect on mobile.",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "sticky_image_offset",
+      "label": "Sticky offset from top",
+      "info": "Gap the image keeps from the top of the screen while pinned. Increase this if your store has a sticky header.",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 40,
+      "visible_if": "{{ section.settings.enable_sticky_image }}"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "Section color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "inner_color_scheme",
+      "label": "Inner content color scheme",
+      "info": "Controls text colors inside the inner content wrapper",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Inner content wrapper"
+    },
+    {
+      "type": "color",
+      "id": "inner_bg_color",
+      "label": "Background color",
+      "alpha": true,
+      "default": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_inner_max_width",
+      "label": "Enable max width (desktop)",
+      "info": "When off, the inner wrapper fills the full page width on desktop. Mobile is always 100%.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "inner_max_width",
+      "label": "Max width (desktop)",
+      "min": 400,
+      "max": 1600,
+      "step": 20,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "inner_radius",
+      "label": "Border radius (desktop)",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "inner_radius_mobile",
+      "label": "Border radius (mobile)",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "inner_border_thickness",
+      "label": "Border thickness",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "inner_border_color",
+      "label": "Border color",
+      "alpha": true,
+      "default": "rgba(0, 0, 0, 0.2)"
+    },
+    {
+      "type": "range",
+      "id": "inner_padding_top",
+      "label": "Padding top (desktop)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "inner_padding_bottom",
+      "label": "Padding bottom (desktop)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "inner_padding_x",
+      "label": "Horizontal padding (desktop)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "inner_padding_top_mobile",
+      "label": "Padding top (mobile)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "inner_padding_bottom_mobile",
+      "label": "Padding bottom (mobile)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "inner_padding_x_mobile",
+      "label": "Horizontal padding (mobile)",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Steps styling",
+      "info": "Controls the shared look of all Step blocks (icon color, connecting line, spacing)."
+    },
+    {
+      "type": "color",
+      "id": "steps_icon_color",
+      "label": "Step icon color",
+      "default": "#1e8ed4"
+    },
+    {
+      "type": "color",
+      "id": "steps_label_color",
+      "label": "Step label color",
+      "info": "Color for the small label like 'Step 1:'",
+      "default": "#1e8ed4"
+    },
+    {
+      "type": "color",
+      "id": "steps_title_color",
+      "label": "Step title color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "steps_description_color",
+      "label": "Step description color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "steps_line_color",
+      "label": "Connecting line color",
+      "default": "#cfdfee"
+    },
+    {
+      "type": "range",
+      "id": "steps_icon_size",
+      "label": "Step icon size",
+      "min": 16,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "select",
+      "id": "steps_line_style",
+      "label": "Connecting line style",
+      "info": "Tip: dotted looks best with a thickness of 2px or more.",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Simple line"
+        },
+        {
+          "value": "dotted",
+          "label": "Dotted"
+        }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "range",
+      "id": "steps_line_thickness",
+      "label": "Connecting line thickness",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "steps_content_gap",
+      "label": "Gap between icon and text",
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "steps_vertical_spacing",
+      "label": "Spacing between steps",
+      "min": 8,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "steps_label_font_size",
+      "label": "Step label font size",
+      "info": "Size of the small label like 'Step 1:'",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "steps_label_font_weight",
+      "label": "Step label font weight",
+      "options": [
+        { "value": "300", "label": "Light (300)" },
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi-bold (600)" },
+        { "value": "700", "label": "Bold (700)" },
+        { "value": "800", "label": "Extra bold (800)" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "steps_title_font_size",
+      "label": "Step title font size",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "steps_title_font_weight",
+      "label": "Step title font weight",
+      "options": [
+        { "value": "300", "label": "Light (300)" },
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi-bold (600)" },
+        { "value": "700", "label": "Bold (700)" },
+        { "value": "800", "label": "Extra bold (800)" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "steps_description_font_size",
+      "label": "Step description font size",
+      "min": 10,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "steps_description_font_weight",
+      "label": "Step description font weight",
+      "options": [
+        { "value": "300", "label": "Light (300)" },
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi-bold (600)" },
+        { "value": "700", "label": "Bold (700)" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Section class"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Section ID"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Image with text"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "Small"
+            },
+            {
+              "value": "h1",
+              "label": "Medium"
+            },
+            {
+              "value": "h0",
+              "label": "Large"
+            },
+            {
+              "value": "hxl",
+              "label": "Extra large"
+            },
+            {
+              "value": "hxxl",
+              "label": "Extra extra large"
+            }
+          ],
+          "default": "h1"
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "label": "Margin bottom",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "default": 16
+        }
+      ]
+    },
+    {
+      "type": "caption",
+      "name": "Caption",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption",
+          "default": "Add a tagline"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "label": "Text style",
+          "options": [
+            {
+              "value": "subtitle",
+              "label": "Subtitle"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "Uppercase"
+            }
+          ],
+          "default": "caption-with-letter-spacing"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "label": "Text size",
+          "options": [
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ],
+          "default": "medium"
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "label": "Margin bottom",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "default": 12
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "label": "Text style",
+          "options": [
+            {
+              "value": "body",
+              "label": "Body"
+            },
+            {
+              "value": "subtitle",
+              "label": "Subtitle"
+            }
+          ],
+          "default": "body"
+        },
+        {
+          "type": "header",
+          "content": "Custom list style"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_list",
+          "label": "Use custom list style",
+          "info": "Applies custom bullet styling to <ul>/<ol> in this text block",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_list_icon",
+          "label": "Custom list icon",
+          "info": "Used as the bullet for each list item. Leave empty to use a small filled circle."
+        },
+        {
+          "type": "range",
+          "id": "custom_list_icon_size",
+          "label": "Bullet icon size",
+          "min": 8,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "default": 18
+        },
+        {
+          "type": "range",
+          "id": "custom_list_gap",
+          "label": "Space between bullet and text",
+          "min": 0,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "custom_list_row_gap",
+          "label": "Space between list items",
+          "min": 0,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "default": 8
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "label": "Margin bottom",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "default": 20
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_in_new_tab",
+          "label": "Open link in new tab",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "Use outline style",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "label": "Margin bottom",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "icon_list",
+      "name": "Icon list",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon_layout_style",
+          "label": "Layout style",
+          "info": "Grid = fixed equal columns. Flex = items wrap based on content width.",
+          "options": [
+            {
+              "value": "grid",
+              "label": "Grid (fixed columns)"
+            },
+            {
+              "value": "flex",
+              "label": "Flex (wrapped content)"
+            }
+          ],
+          "default": "grid"
+        },
+        {
+          "type": "range",
+          "id": "icon_columns",
+          "label": "Columns (grid only)",
+          "info": "Only applies when layout is set to Grid.",
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "default": 2
+        },
+        {
+          "type": "select",
+          "id": "icon_flex_justify",
+          "label": "Item alignment (flex only)",
+          "info": "Only applies when layout is set to Flex.",
+          "options": [
+            {
+              "value": "flex-start",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "flex-end",
+              "label": "Right"
+            },
+            {
+              "value": "space-between",
+              "label": "Space between"
+            },
+            {
+              "value": "space-around",
+              "label": "Space around"
+            }
+          ],
+          "default": "flex-start"
+        },
+        {
+          "type": "range",
+          "id": "icon_size",
+          "label": "Icon size",
+          "min": 12,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "icon_row_gap",
+          "label": "Row gap",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 12
+        },
+        {
+          "type": "range",
+          "id": "icon_col_gap",
+          "label": "Column gap",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "label": "Margin bottom",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "default": 16
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon 1"
+        },
+        {
+          "type": "text",
+          "id": "icon_1_text",
+          "label": "Text 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "text",
+          "id": "icon_2_text",
+          "label": "Text 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon 3"
+        },
+        {
+          "type": "text",
+          "id": "icon_3_text",
+          "label": "Text 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4",
+          "label": "Icon 4"
+        },
+        {
+          "type": "text",
+          "id": "icon_4_text",
+          "label": "Text 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_5",
+          "label": "Icon 5"
+        },
+        {
+          "type": "text",
+          "id": "icon_5_text",
+          "label": "Text 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_6",
+          "label": "Icon 6"
+        },
+        {
+          "type": "text",
+          "id": "icon_6_text",
+          "label": "Text 6"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Add multiple Step blocks one after another and they will automatically connect with a vertical line. Shared icon/line/spacing styling is configured in the section's 'Steps styling' settings."
+        },
+        {
+          "type": "image_picker",
+          "id": "step_icon",
+          "label": "Step icon",
+          "info": "Optional. Leave blank to use a default checkmark badge."
+        },
+        {
+          "type": "text",
+          "id": "step_label",
+          "label": "Step label",
+          "info": "Small accent label shown above the title (e.g. 'Step 1:').",
+          "default": "Step 1:"
+        },
+        {
+          "type": "text",
+          "id": "step_title",
+          "label": "Step title",
+          "default": "Activate"
+        },
+        {
+          "type": "richtext",
+          "id": "step_description",
+          "label": "Step description",
+          "default": "<p>Describe what happens in this step.</p>"
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text upgraded",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

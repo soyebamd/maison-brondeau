@@ -9,122 +9,361 @@
  */
 {
   "sections": {
-    "image_banner_Y4pDXT": {
+    "image_banner_fqNiEq": {
       "type": "image-banner",
       "blocks": {
-        "heading_UMpXpJ": {
-          "type": "heading",
-          "disabled": true,
+        "text_hrJMCN": {
+          "type": "text",
           "settings": {
-            "heading": "Sparkling Wines",
+            "text": "THE MAISON BRONDEAU",
+            "text_style": "body"
+          }
+        },
+        "heading_KrTbTd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wine Concierge Program ",
             "heading_size": "h1"
+          }
+        },
+        "text_eKY9W4": {
+          "type": "text",
+          "settings": {
+            "text": "Welcome to the <em>Wine Concierge Program</em>, our way of conveniently bringing you the perfect assortment of wines with no month-to-month commitment. Unlike a traditional wine club, your order will be completely tailored to your liking. Whenever you need, whatever you want, from wherever you want, no subscription needed. ",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_UMpXpJ"
+        "text_hrJMCN",
+        "heading_KrTbTd",
+        "text_eKY9W4"
       ],
       "settings": {
-        "image": "shopify://shop_images/IMG_2490.jpg",
-        "image_overlay_opacity": 0,
+        "image": "shopify://shop_images/MJ-330.jpg",
+        "image_overlay_opacity": 50,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-ac610470-7a7f-48d7-b416-213b812b1186",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": true
+        "show_text_below": false
+      }
+    },
+    "image_with_text_upgraded_HHjp6c": {
+      "type": "image-with-text-upgraded",
+      "blocks": {
+        "heading_aXanQ3": {
+          "type": "heading",
+          "settings": {
+            "heading": "How it works",
+            "heading_size": "h2",
+            "margin_bottom": 24
+          }
+        },
+        "step_CCXVJi": {
+          "type": "step",
+          "settings": {
+            "step_label": "",
+            "step_title": "",
+            "step_description": "<p>Fill out a brief survey below to start building your wine profile </p>"
+          }
+        },
+        "step_HerBgf": {
+          "type": "step",
+          "settings": {
+            "step_label": "",
+            "step_title": "",
+            "step_description": "<p>We’ll contact you directly to discuss your preferences for this order (such as style, price point assortment, and quantity)</p>"
+          }
+        },
+        "step_RH4knb": {
+          "type": "step",
+          "settings": {
+            "step_label": "",
+            "step_title": "",
+            "step_description": "<p>Our in-house team of experts will get to work crafting a bundle for your review</p>"
+          }
+        },
+        "step_wgWXhN": {
+          "type": "step",
+          "settings": {
+            "step_label": "",
+            "step_title": "",
+            "step_description": "<p>Once approved, receive your wines anywhere nationwide and enjoy!</p>"
+          }
+        },
+        "step_nqfgn9": {
+          "type": "step",
+          "settings": {
+            "step_label": "",
+            "step_title": "",
+            "step_description": "<p>We'll contact you again at a cadence of your choosing to see what wine and spirits needs you may have </p>"
+          }
+        },
+        "text_da6DwJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From everyday drinkers to special occasions, we're confident we have the right wine for you. Whether you want a few bottles to have on hand, or are looking to fill the cellar, we are here to help! </p><p><em><strong>10% off your first order with the Wine Concierge team!</strong></em></p>",
+            "text_style": "body",
+            "enable_custom_list": false,
+            "custom_list_icon_size": 18,
+            "custom_list_gap": 10,
+            "custom_list_row_gap": 8,
+            "margin_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_aXanQ3",
+        "step_CCXVJi",
+        "step_HerBgf",
+        "step_RH4knb",
+        "step_wgWXhN",
+        "step_nqfgn9",
+        "text_da6DwJ"
+      ],
+      "name": "Image with text upgraded",
+      "settings": {
+        "section_title": "",
+        "image": "shopify://shop_images/IMG_0459.jpg",
+        "image_align": "center",
+        "image_align_mobile": "center",
+        "image_radius": 0,
+        "image_radius_mobile": 0,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "layout_mobile": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "gap": 40,
+        "gap_mobile": 24,
+        "enable_sticky_image": false,
+        "sticky_image_offset": 40,
+        "section_color_scheme": "",
+        "inner_color_scheme": "",
+        "inner_bg_color": "rgba(0,0,0,0)",
+        "enable_inner_max_width": false,
+        "inner_max_width": 1200,
+        "inner_radius": 0,
+        "inner_radius_mobile": 0,
+        "inner_border_thickness": 0,
+        "inner_border_color": "#00000033",
+        "inner_padding_top": 0,
+        "inner_padding_bottom": 0,
+        "inner_padding_x": 0,
+        "inner_padding_top_mobile": 0,
+        "inner_padding_bottom_mobile": 0,
+        "inner_padding_x_mobile": 0,
+        "steps_icon_color": "#82282a",
+        "steps_label_color": "#82282a",
+        "steps_title_color": "#121212",
+        "steps_description_color": "#000000",
+        "steps_line_color": "#dadada",
+        "steps_icon_size": 28,
+        "steps_line_style": "dotted",
+        "steps_line_thickness": 2,
+        "steps_content_gap": 20,
+        "steps_vertical_spacing": 24,
+        "steps_label_font_size": 16,
+        "steps_label_font_weight": "600",
+        "steps_title_font_size": 20,
+        "steps_title_font_weight": "600",
+        "steps_description_font_size": 16,
+        "steps_description_font_weight": "400",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "custom_class": "",
+        "custom_id": ""
+      }
+    },
+    "image_with_text_upgraded_BzNaQj": {
+      "type": "image-with-text-upgraded",
+      "blocks": {
+        "forms_inline_jNGC4x": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "970253",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 64,
+            "padding_bottom": 64,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_jNGC4x"
+      ],
+      "name": "Image with text upgraded",
+      "settings": {
+        "section_title": "",
+        "image": "shopify://shop_images/Rectangle_27_f9a90745-4547-47ae-8fa6-4297745dc7f0.png",
+        "image_align": "center",
+        "image_align_mobile": "center",
+        "image_radius": 0,
+        "image_radius_mobile": 0,
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "layout_mobile": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "gap": 40,
+        "gap_mobile": 24,
+        "enable_sticky_image": true,
+        "sticky_image_offset": 40,
+        "section_color_scheme": "scheme-64344b5e-ab98-4571-8c49-c9f8d40e5b18",
+        "inner_color_scheme": "scheme-64344b5e-ab98-4571-8c49-c9f8d40e5b18",
+        "inner_bg_color": "rgba(0,0,0,0)",
+        "enable_inner_max_width": false,
+        "inner_max_width": 1200,
+        "inner_radius": 0,
+        "inner_radius_mobile": 0,
+        "inner_border_thickness": 0,
+        "inner_border_color": "#00000033",
+        "inner_padding_top": 0,
+        "inner_padding_bottom": 0,
+        "inner_padding_x": 0,
+        "inner_padding_top_mobile": 0,
+        "inner_padding_bottom_mobile": 0,
+        "inner_padding_x_mobile": 0,
+        "steps_icon_color": "#82282a",
+        "steps_label_color": "#82282a",
+        "steps_title_color": "#121212",
+        "steps_description_color": "#000000",
+        "steps_line_color": "#dadada",
+        "steps_icon_size": 28,
+        "steps_line_style": "dotted",
+        "steps_line_thickness": 2,
+        "steps_content_gap": 20,
+        "steps_vertical_spacing": 24,
+        "steps_label_font_size": 16,
+        "steps_label_font_weight": "600",
+        "steps_title_font_size": 20,
+        "steps_title_font_weight": "600",
+        "steps_description_font_size": 16,
+        "steps_description_font_weight": "400",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "custom_class": "",
+        "custom_id": ""
       }
     },
     "main": {
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "rich_text_xCHgXg": {
+    "map_width_contact_hJXAzC": {
+      "type": "map-width-contact",
+      "blocks": {
+        "schedule_y9ztwr": {
+          "type": "schedule",
+          "settings": {
+            "day": "Monday",
+            "time": "Closed"
+          }
+        },
+        "schedule_9CVtrj": {
+          "type": "schedule",
+          "settings": {
+            "day": "Tuesday",
+            "time": "10am-8pm"
+          }
+        },
+        "schedule_iW8NJq": {
+          "type": "schedule",
+          "settings": {
+            "day": "Wednesday",
+            "time": "10am-8pm"
+          }
+        },
+        "schedule_zTaTFt": {
+          "type": "schedule",
+          "settings": {
+            "day": "Thursday",
+            "time": "10am-9pm"
+          }
+        },
+        "schedule_EGRxk7": {
+          "type": "schedule",
+          "settings": {
+            "day": "Friday",
+            "time": "10am-9pm"
+          }
+        },
+        "schedule_6Jc6Gx": {
+          "type": "schedule",
+          "settings": {
+            "day": "Saturday",
+            "time": "10am-9pm"
+          }
+        },
+        "schedule_QGqX8Q": {
+          "type": "schedule",
+          "settings": {
+            "day": "Sunday",
+            "time": "11am-7pm"
+          }
+        }
+      },
+      "block_order": [
+        "schedule_y9ztwr",
+        "schedule_9CVtrj",
+        "schedule_iW8NJq",
+        "schedule_zTaTFt",
+        "schedule_EGRxk7",
+        "schedule_6Jc6Gx",
+        "schedule_QGqX8Q"
+      ],
+      "settings": {
+        "desktop_content_alignment": "right",
+        "desktop_content_alignment1": "left",
+        "embed_code": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.7077931880376!2d-73.77610082354894!3d41.03164841798481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c294486881d549%3A0x3198a49a7492b7f3!2sLubin%20Graduate%20Center%2C%2050%20Main%20St%20Suite%20165%2C%20White%20Plains%2C%20NY%2010606%2C%20USA!5e0!3m2!1sen!2sin!4v1744527619992!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "title": "Garage Parking Available",
+        "title_2": "Store Hours",
+        "text2": "📞(646) 843 1029",
+        "url1": "tel:(646) 843 1029",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_MWTX9x": {
       "type": "rich-text",
       "blocks": {
-        "heading_iRCdCi": {
+        "heading_WMNKxM": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>How to Choose the Perfect Sparkling Wine for the Holidays</strong>",
-            "heading_size": "h1"
+            "heading": "Garage Parking Available",
+            "heading_size": "h2"
           }
         },
-        "text_D7gfEg": {
+        "text_i6FcmY": {
           "type": "text",
           "settings": {
-            "text": "<h5><em>by Barbie J.H. Messa, a version was previously published for Best Version Media, December 2025</em></h5><p><em>The holidays and bubbles are inextricably linked. The sound of a cork popping feels inherently celebratory — a small gesture that turns any gathering into an occasion. With all the selections on the shelves, choosing the right bottle can feel overwhelming. Here’s how to find the right one for your table, your mood, and your guests.</em></p><p><strong>1. Know Your Bubbles: The Two Main Methods</strong></p><p>The <em>traditional method</em> (or <em>méthode traditionnelle</em>) is the most time-intensive approach, with a secondary fermentation that happens inside each individual bottle. This process creates smaller, more persistent bubbles and layers of complexity. Expect notes of brioche, almond, and citrus zest - that signature “Champagne character.”</p><p>The <em>Charmat</em> (or <em>tank</em>) method, by contrast, allows the secondary fermentation to occur in large, pressurized tanks. It’s quicker and preserves the bright, fruit-forward aromatics of the grapes. The result? Juicy, accessible wines with lively bubbles - think <strong>Prosecco.</strong> These are fresh, floral, and easygoing; ideal for brunches, cocktail parties, or any occasion where you want a fun, crowd-pleasing pour.</p><p>Neither method is better; they simply express different styles.</p>",
-            "heading_caption": "",
-            "text_size_1": "s-small"
-          }
-        },
-        "image_TMkDYM": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/TankvsBottle.png"
-          }
-        },
-        "text_ww7YYg": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>2. Champagne compared to Other Bubbles</strong></p><p><strong>Champagne</strong> will always be the benchmark — a combination of cool climate, famous chalky<br/>soils, and centuries of craftsmanship that yields wines of precision and depth.<br/>Expect tension and richness, balanced by mineral drive and a long, refined<br/>finish. Whether it is from a grand cru or premier cru village, Champagne is a<br/>luxury; and for many, the holidays are the perfect time to indulge.</p><p>If you love the Champagne style but not the price, look to <strong>Crémant</strong>,<br/>France’s best-kept secret. Made the same way, but in other French regions other<br/>than Champagne, Crémants can offer remarkable finesse at half the cost. </p><p>Spain’s <strong>Cava</strong> are historically undervalued, but quality has soared in recent years. Producers like <strong>L’Atzar </strong>and<strong> Raventós i Blanc</strong> are making serious, terroir-driven wines that stand shoulder to shoulder with their<br/>French counterparts.</p><p>From Italy, <strong>Franciacorta</strong> offers the country’s most refined traditional-method sparkling, typically from Chardonnay and Pinot Noir. Expect creamy texture, subtle toast, and elegance without ostentation.</p><p>For something truly unique, <strong>Lambrusco</strong>, a sparkling Charmat method wine from Emilia-Romagna, Italy might be your answer. These wines pair perfectly with any charcuterie board, or when you are craving a touch more<br/>red-fruit.</p><p>And of course, <strong>Prosecco</strong> remains the life of the party - all pear, white flowers, and effervescence. </p><p></p>",
-            "heading_caption": "",
-            "text_size_1": "s-small"
-          }
-        },
-        "image_cjizQf": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Map_Sparkling_MB.png"
-          }
-        },
-        "text_n4JWAK": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>3. Big Houses vs. Grower Producers</strong></p><p>Another decision point: do you reach for a big name or a small grower?</p><p><strong>The grandes marques</strong>, houses like Veuve Clicquot, Moët & Chandon, Krug, and Bollinger, are the icons of consistency. These wines are polished, reliable, and make an impressive gift when presentation matters as much as what’s inside the bottle.</p><p>On the other hand, <strong>grower-producer Champagnes</strong> (look for “RM” on the label, which stands for <em>Récoltant-Manipulant</em>) are made by the people who farm the grapes themselves. Each cuvée can offer more individuality and expression of terroir. They’re perfect for wine lovers who appreciate nuance, discovery and exclusivity over brand recognition. </p><p>Both have their place: the big houses deliver timeless glamour; the growers, soulful precision.</p><p><strong>4. A Blend of Vintages or a Moment in Time?</strong></p><p>Even though most Champagnes are a blend of different cuvées and vintages, often the <em>tête de cuvées</em> (top wines) are from a single vintage (aka year). In essence, vintage champagnes are unique in that instead of blending across years to make a consistent style, they become a snapshot of the weather/winemaking style from only <em>one year</em>.<br/></p><p>As such, Vintage Champagnes can be particularly sought after. For example, you might have heard of Dom Perignon (tête de cuvée from Moët & Chandon) or La Grande Dame (Veuve Clicquot) – these wines are famous with good reason!</p><p>If you are looking to really impress your guests, a vintage champagne can go a long way. </p><p><strong>5. Let the Vibes Guide You</strong></p><p>Ultimately, the best sparkling wine for the holidays is the one that fits your celebration. Toasting or gifting? Go for Champagne or Franciacorta. Hosting a brunch or cocktail hour? Reach for Prosecco or a Lambrusco. Sitting down to a long dinner? Crémant or Cava bring versatility and depth without<br/>overpowering the food (or budget).</p><p>The beauty of sparkling wine is that it adapts, equally at home with caviar<br/>or potato chips, black tie or slippers. Whatever your holiday looks like,<br/>there’s a bottle to match the mood.</p><p><strong>So go ahead -- pop, pour, and </strong><em><strong>let the season sparkle</strong></em><strong>. </strong></p>",
+            "text": "<p>The City Square parking garage entrance is on S.Lexington Street for the Arcade Shops.</p><p> <em>Please bring in your parking ticket for validation!</em></p>",
             "heading_caption": "",
             "text_size_1": "s-small"
           }
         }
       },
       "block_order": [
-        "heading_iRCdCi",
-        "text_D7gfEg",
-        "image_TMkDYM",
-        "text_ww7YYg",
-        "image_cjizQf",
-        "text_n4JWAK"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_XEiE6z": {
-      "type": "rich-text",
-      "blocks": {
-        "text_Pt9PWN": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "heading_caption": "",
-            "text_size_1": "s-small"
-          }
-        }
-      },
-      "block_order": [
-        "text_Pt9PWN"
+        "heading_WMNKxM",
+        "text_i6FcmY"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -138,9 +377,11 @@
     }
   },
   "order": [
-    "image_banner_Y4pDXT",
+    "image_banner_fqNiEq",
+    "image_with_text_upgraded_HHjp6c",
+    "image_with_text_upgraded_BzNaQj",
     "main",
-    "rich_text_xCHgXg",
-    "rich_text_XEiE6z"
+    "map_width_contact_hJXAzC",
+    "rich_text_MWTX9x"
   ]
 }
