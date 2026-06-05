@@ -16,9 +16,8 @@
       "blocks": {
         "announcement_jtdAnY": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Last chance to sign up for our FUNdamentals of Wine Class!",
+            "text": "SALE ALL WEEK 15% OFF",
             "link": "shopify://products/fundamentals-of-wine-class-wine-101"
           }
         },
