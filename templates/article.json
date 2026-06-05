@@ -1,1 +1,71 @@
-{"sections":{"main":{"type":"main-article","blocks":{"featured_image":{"type":"featured_image","settings":{"image_height":"adapt"}},"title":{"type":"title","settings":{"blog_show_date":true,"blog_show_author":false}},"share":{"type":"share","settings":{"share_label":"Share"}},"content":{"type":"content","settings":{}}},"block_order":["featured_image","title","share","content"],"settings":{}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "featured_image",
+        "share",
+        "content"
+      ],
+      "settings": {
+        "image_width": "page-width",
+        "image_ratio": "adapt",
+        "image_radius": 12,
+        "content_width": "page-width",
+        "title_size": 32,
+        "title_color": "#000000",
+        "title_alignment": "left",
+        "content_heading_size": 24,
+        "content_heading_color": "#000000",
+        "content_heading_margin": 16,
+        "content_text_size": 16,
+        "content_text_margin": 16,
+        "content_text_color": "#000000",
+        "content_link_color": "#82282a",
+        "content_link_underline": true,
+        "back_button_style": "filled",
+        "back_button_bg": "#82282a",
+        "back_button_text": "#ffffff",
+        "back_button_radius": 6,
+        "padding_top": 36,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
