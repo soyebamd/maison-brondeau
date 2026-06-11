@@ -14,13 +14,6 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_jtdAnY": {
-          "type": "announcement",
-          "settings": {
-            "text": "SPIRITS SALE TODAY! 15% OFF",
-            "link": "shopify://collections/spirits"
-          }
-        },
         "announcement_7pqx6D": {
           "type": "announcement",
           "settings": {
@@ -52,7 +45,6 @@
         }
       },
       "block_order": [
-        "announcement_jtdAnY",
         "announcement_7pqx6D",
         "announcement_iCh9kn",
         "announcement_BHrY4B",
