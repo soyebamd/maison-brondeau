@@ -271,6 +271,88 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_iGdzmy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_VJN93m": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Maison Brondeau have wine recommendations for all occasions?",
+            "icon": "none",
+            "row_content": "<p>Of course! Whether you're shopping for a dinner party, wedding, gift, business event, or simply a weeknight bottle, our team provides personalized wine recommendations based on your taste preferences and budget. We specialize in helping customers discover new wines from around the world.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_67JfQr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What types of wine and spirits does Maison Brondeau carry?",
+            "icon": "none",
+            "row_content": "<p>We offer wines and spirits from around the globe, from large winemaking regions to the lesser-known territories. These countries include France, Italy, Spain, Portugal, Germany, Austria, USA, Argentina, Chile, Australia, New Zealand, South Africa, and many more. Our selection includes red wine, white wine, rosé, sparkling, fortified, and natural/biodynamic/sustainable wines, as well as all key spirits and digestifs, across a wide range of price points.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GUepmD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Maison Brondeau carry rare or collectible wines?",
+            "icon": "none",
+            "row_content": "<p>Yes. In addition to everyday drinking wines, Maison Brondeau offers limited-production wines, collectible bottles, and special allocations from highly regarded producers. Availability changes throughout the year, so we encourage customers to visit ‘La Cave’ in-person, browse our website selection, or join our mailing list.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_eTPain": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why shop at a local wine store instead of a big-box retailer?",
+            "icon": "none",
+            "row_content": "<p>Independent wine shops offer personalized recommendations, unique selections, and a more curated shopping experience. At Maison Brondeau, we taste extensively and seek out producers that offer quality, character, and value, helping customers discover wines they may never find elsewhere.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hpekKt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the best wine store in White Plains, NY?",
+            "icon": "none",
+            "row_content": "<p>Wine lovers in White Plains and throughout Westchester often seek a store that combines expert guidance, a curated global selection, educational experiences, and exceptional customer service. Maison Brondeau was founded to provide exactly that - a welcoming destination where customers can discover great wines and spirits, attend tastings and classes, and receive personalized recommendations for every occasion.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3CxMNq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why do you have a car in the store? ",
+            "icon": "none",
+            "row_content": "<p>As a nod to the owner’s family, the 1966 Citroen Deux Chevaux is almost identical to the family car that Ben Brondeau’s father drove growing up. Feel free to climb in and experience a true collectible!</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_VJN93m",
+        "collapsible_row_67JfQr",
+        "collapsible_row_GUepmD",
+        "collapsible_row_eTPain",
+        "collapsible_row_hpekKt",
+        "collapsible_row_3CxMNq"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Wine FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -279,6 +361,7 @@
     "rich_text_xCHgXg",
     "rich_text_XEiE6z",
     "collapsible_content_Wm8bmT",
-    "collapsible_content_zyrwFC"
+    "collapsible_content_zyrwFC",
+    "collapsible_content_iGdzmy"
   ]
 }
