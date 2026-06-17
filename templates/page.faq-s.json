@@ -209,6 +209,68 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_zyrwFC": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_VE3aFf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I sign up for the Maison Brondeau mailing list? ",
+            "icon": "none",
+            "row_content": "<p>We’d love to have you join our community! Simply enter your email in the “Stay Connected” banner at the bottom of this page, and you’ll be included in our next distribution. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ccpmCw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Maison Brondeau offer wine tastings?",
+            "icon": "none",
+            "row_content": "<p>Yes. Maison Brondeau hosts free weekly Thursday tastings from 5-7pm that allows customers to explore different regions, grape varieties, producers, and styles. No sign up required, just fun! Tastings are designed to be educational, relaxed, and welcoming for all experience levels. If you can’t make our Thursday tastings, we also always have our automated pouring machines running with a variety of reds, whites, and roses. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tArJNA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Maison Brondeau offer wine classes and private events?",
+            "icon": "none",
+            "row_content": "<p>Yes. Through École Brondeau, we offer wine education classes that explore wine regions, grape varieties, food pairings, and tasting techniques. Classes are designed for both beginners and wine enthusiasts looking to deepen their knowledge. See our Tasting & Events tab for upcoming events. </p><p>We also offer private, custom events, tailored to your budget, number of attendees, and desired level of education and involvement. Fill out the Contact Us form or reach out via phone or email to get started on planning your next party!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LQWRwq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Maison Brondeau do corporate gifting?",
+            "icon": "none",
+            "row_content": "<p>Yes, Maison Brondeau offers a menu of offerings for large, Corporate purchases. Fill out the Contact Us form or reach out via email or phone to get started.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_VE3aFf",
+        "collapsible_row_ccpmCw",
+        "collapsible_row_tArJNA",
+        "collapsible_row_LQWRwq"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Offering FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -216,6 +278,7 @@
     "main",
     "rich_text_xCHgXg",
     "rich_text_XEiE6z",
-    "collapsible_content_Wm8bmT"
+    "collapsible_content_Wm8bmT",
+    "collapsible_content_zyrwFC"
   ]
 }
