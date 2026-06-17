@@ -341,6 +341,68 @@
         "ai_gen_block_4cf61fd_QTKGwU"
       ],
       "settings": {}
+    },
+    "collapsible_content_dp3hNf": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_YmEDHg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Maison Brondeau have parking?",
+            "icon": "none",
+            "row_content": "<p>YES! Our parking garage, as part of City Square, has an entrance on S. Lexington Ave on the righthand side, and connects directly to the store from the inside. Bring your ticket in, we validate!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yy3WWK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Maison Brondeau different from other wine stores?",
+            "icon": "none",
+            "row_content": "<p>Maison Brondeau is an independent wine and spirits shop in White Plains, NY focused on hospitality, education, and discovery. Our team carefully curates wines and spirits from around the world, ranging from everyday favorites to rare and collectible bottles. We believe wine should be approachable, and we help customers find the perfect bottle for any occasion, budget, or level of wine knowledge.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Yk7BA9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Maison Brondeau deliver?",
+            "icon": "none",
+            "row_content": "<p>We offer FREE local delivery throughout all of Westchester. Upon checkout, select Local Delivery and we’ll be in touch with a delivery window that is convenient for your schedule. </p><p>We also offer Nationwide Shipping. See our Shipping Policy for terms and conditions.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pXndw3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is Maison Brondeau located?",
+            "icon": "none",
+            "row_content": "<p>Maison Brondeau is located right in the heart of Westchester, in White Plains, New York. Just steps from the Metro North train station on Main Street, our shop offers a carefully selected collection of red, white, rose and sparkling wines, as well as whiskey, vodka, tequila, gin, rum and other premium spirits and canned cocktails.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_YmEDHg",
+        "collapsible_row_yy3WWK",
+        "collapsible_row_Yk7BA9",
+        "collapsible_row_pXndw3"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQ's",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -351,6 +413,7 @@
     "image_with_text_X6fkja",
     "multicolumn_imHgfq",
     "1751302509b3ef4b77",
-    "177766431773530ef2"
+    "177766431773530ef2",
+    "collapsible_content_dp3hNf"
   ]
 }
