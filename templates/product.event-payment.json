@@ -55,11 +55,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "zestard_gift_wrap_giftwrap_product_block_jY7qdY": {
-          "type": "shopify://apps/zestard-gift-wrap/blocks/giftwrap-product-block/812385b4-6785-4a00-a40d-150927008708",
-          "disabled": true,
-          "settings": {}
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -84,7 +79,6 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "zestard_gift_wrap_giftwrap_product_block_jY7qdY",
         "share",
         "text_x37JF6"
       ],
@@ -165,14 +159,14 @@
         "heading_BbfMwh": {
           "type": "heading",
           "settings": {
-            "heading": "Maison Brondeau Wine Club",
+            "heading": "Maison Brondeau Wine Concierge",
             "heading_size": "h2"
           }
         },
         "text_HcUy3n": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Introducing our wine club—an intimate, curated experience for both adventurous beginners and devoted connoisseurs.</strong></p><ul><li>Hand-selected by our expert team, showcasing distinct terroirs and hidden gems from around the globe.</li><li>Thoughtful selections that overdeliver in the glass.</li><li>Be among the first to receive details and secure your spot below.</li></ul>",
+            "text": "<p><strong>Welcome to the </strong><em><strong>Wine Concierge Program</strong></em><strong>, our way of conveniently bringing you the perfect assortment of wines with no month-to-month commitment.</strong></p><p>From everyday drinkers to special occasions, we're confident we have the right wine for you. Whether you want a few bottles to have on hand, or are looking to fill the cellar, we are here to help! </p><p><em><strong>10% off your first order with the Wine Concierge team!</strong></em></p>",
             "text_style": "body"
           }
         },
@@ -180,7 +174,7 @@
           "type": "button",
           "settings": {
             "button_label": "JOIN the MBWC!",
-            "button_link": "shopify://pages/wine-club",
+            "button_link": "shopify://pages/wine-concierge",
             "button_style_secondary": false
           }
         }
