@@ -101,6 +101,7 @@
         "image_cjizQf",
         "text_n4JWAK"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "left",
@@ -126,6 +127,7 @@
       "block_order": [
         "text_Pt9PWN"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -135,12 +137,85 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "collapsible_content_Wm8bmT": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_KtN6Uz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Maison Brondeau different from other wine stores?",
+            "icon": "none",
+            "row_content": "<p>Maison Brondeau is an independent wine and spirits shop in White Plains, NY focused on hospitality, education, and discovery. Our team carefully curates wines and spirits from around the world, ranging from everyday favorites to rare and collectible bottles. We believe wine should be approachable, and we help customers find the perfect bottle for any occasion, budget, or level of wine knowledge.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PmLcKD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is Maison Brondeau located?",
+            "icon": "none",
+            "row_content": "<p>Maison Brondeau is located right in the heart of Westchester, in White Plains, New York. Just steps from the Metro North train station on Main Street, our shop offers a carefully selected collection of red, white, rose and sparkling wines, as well as whiskey, vodka, tequila, gin, rum and other premium spirits and canned cocktails.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EKGdHL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When is Maison Brondeau open? ",
+            "icon": "none",
+            "row_content": "<p>Maison Brondeau is open 6 days a week, Tuesday through Sunday, and also offers free Local Delivery throughout all of Westchester. Just select Local Delivery at checkout and your items will be brought right to your doorstep free of charge!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aPpGQP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Maison Brondeau have parking?",
+            "icon": "none",
+            "row_content": "<p>YES! Our parking garage, as part of City Square, has an entrance on S. Lexington Ave on the righthand side, and connects directly to the store from the inside. Bring your ticket in, we validate!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BJizCa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Maison Brondeau deliver?",
+            "icon": "none",
+            "row_content": "<p>We offer FREE local delivery throughout all of Westchester. Upon checkout, select Local Delivery and we’ll be in touch with a delivery window that is convenient for your schedule. </p><p>We also offer Nationwide Shipping. See our Shipping Policy for terms and conditions.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_KtN6Uz",
+        "collapsible_row_PmLcKD",
+        "collapsible_row_EKGdHL",
+        "collapsible_row_aPpGQP",
+        "collapsible_row_BJizCa"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Maison Brondeau FAQs</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner_Y4pDXT",
     "main",
     "rich_text_xCHgXg",
-    "rich_text_XEiE6z"
+    "rich_text_XEiE6z",
+    "collapsible_content_Wm8bmT"
   ]
 }
