@@ -177,7 +177,7 @@
           "type": "button",
           "settings": {
             "button_label": "JOIN MBWC!",
-            "button_link": "shopify://pages/wine-club",
+            "button_link": "shopify://pages/wine-concierge",
             "button_style_secondary": false
           }
         }
