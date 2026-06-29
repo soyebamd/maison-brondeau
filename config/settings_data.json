@@ -166,7 +166,7 @@
       },
       "15014643352720781508": {
         "type": "shopify://apps/wrapped/blocks/app-embed/1714fc7d-e525-4a14-8c3e-1b6ed95734c5",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "extension_background_primary_color": "#ffffff",
           "extension_background_secondary_color": "#f3f3f3",
