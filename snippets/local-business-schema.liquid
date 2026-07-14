@@ -1,0 +1,136 @@
+{% if request.page_type == 'index' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LiquorStore",
+  "name": "Maison Brondeau",
+  "url": "https://maisonbrondeau.com",
+  "logo": "https://maisonbrondeau.com/cdn/shop/files/MB_Logos_-_Light_Gray_Line.png",
+  "image": "https://maisonbrondeau.com/cdn/shop/files/meta_img.jpg?v=1748931517",
+  "description": "Independent wine and spirits store in White Plains, NY. Curated selection of wines and premium spirits, in-store tastings, private events, Wine Concierge program, and free local delivery throughout Westchester County.",
+  "telephone": "+16468431029",
+  "priceRange": "$$",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": [
+    "Credit Card",
+    "Debit Card",
+    "Apple Pay",
+    "Google Pay"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "50 Main St Ste 165",
+    "addressLocality": "White Plains",
+    "addressRegion": "NY",
+    "postalCode": "10606",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.0339,
+    "longitude": -73.7629
+  },
+  "hasMap": "https://maps.app.goo.gl/rrXoo8KuRF52HVJc6",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "11:00",
+      "closes": "18:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "41",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "White Plains",
+      "sameAs": "https://en.wikipedia.org/wiki/White_Plains,_New_York"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Westchester County",
+      "sameAs": "https://en.wikipedia.org/wiki/Westchester_County,_New_York"
+    }
+  ],
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Parking",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Parking Validation",
+      "value": true
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Wine, Spirits & Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Local Wine Delivery",
+          "description": "Free local wine and spirits delivery throughout Westchester County, NY."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Wine Concierge",
+          "description": "Personalized wine selection service with no month-to-month commitment."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Wine Tastings & Events",
+          "description": "Public and private wine tasting events with winemakers, educators, and experts in White Plains, NY."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Private Events",
+          "description": "Personalized private wine tasting experiences at our tasting bar or your location."
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61572500954411",
+    "https://www.instagram.com/maisonbrondeau",
+    "https://maps.app.goo.gl/rrXoo8KuRF52HVJc6"
+  ]
+}
+</script>
+{% endif %}
