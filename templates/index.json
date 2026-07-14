@@ -317,10 +317,9 @@
       "blocks": {
         "ai_gen_block_4cf61fd_QTKGwU": {
           "type": "ai_gen_block_4cf61fd",
-          "disabled": true,
           "settings": {
-            "popup_image": "shopify://shop_images/4th_2.png",
-            "image_link": "",
+            "popup_image": "shopify://shop_images/Bastille_Day_Sale.png",
+            "image_link": "shopify://collections/france",
             "image_border_radius": 8,
             "delay_seconds": 2,
             "max_width": 500,
@@ -341,6 +340,7 @@
       "block_order": [
         "ai_gen_block_4cf61fd_QTKGwU"
       ],
+      "name": "Popup Image",
       "settings": {}
     },
     "collapsible_content_dp3hNf": {
