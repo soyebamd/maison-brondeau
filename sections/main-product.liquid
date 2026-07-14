@@ -755,50 +755,139 @@
       endif
     -%}
 
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org/",
-        "@type": "Product",
-        "name": {{ product.title | json }},
-        "url": {{ request.origin | append: product.url | json }},
-        {% if seo_media -%}
-          "image": [
-            {{ seo_media | image_url: width: 1920 | prepend: "https:" | json }}
-          ],
-        {%- endif %}
-        "description": {{ product.description | strip_html | json }},
-        {% if product.selected_or_first_available_variant.sku != blank -%}
-          "sku": {{ product.selected_or_first_available_variant.sku | json }},
-        {%- endif %}
-        "brand": {
-          "@type": "Brand",
-          "name": {{ product.vendor | json }}
-        },
-        "offers": [
-          {%- for variant in product.variants -%}
-            {
-              "@type" : "Offer",
-              {%- if variant.sku != blank -%}
-                "sku": {{ variant.sku | json }},
-              {%- endif -%}
-              {%- if variant.barcode.size == 12 -%}
-                "gtin12": {{ variant.barcode }},
-              {%- endif -%}
-              {%- if variant.barcode.size == 13 -%}
-                "gtin13": {{ variant.barcode }},
-              {%- endif -%}
-              {%- if variant.barcode.size == 14 -%}
-                "gtin14": {{ variant.barcode }},
-              {%- endif -%}
-              "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-              "price" : {{ variant.price | divided_by: 100.00 | json }},
-              "priceCurrency" : {{ cart.currency.iso_code | json }},
-              "url" : {{ request.origin | append: variant.url | json }}
-            }{% unless forloop.last %},{% endunless %}
-          {%- endfor -%}
-        ]
-      }
-    </script>
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "url": {{ request.origin | append: product.url | json }},
+  {% if seo_media %}
+  "image": [
+    {{ seo_media | image_url: width: 1920 | prepend: "https:" | json }}
+  ],
+  {% endif %}
+  "description": {{ product.description | strip_html | json }},
+
+  {% if product.selected_or_first_available_variant.sku != blank %}
+  "sku": {{ product.selected_or_first_available_variant.sku | json }},
+  {% endif %}
+
+  "brand": {
+    "@type": "Brand",
+    "name": {% if product.metafields.custom.producer != blank %}{{ product.metafields.custom.producer | json }}{% else %}{{ product.vendor | json }}{% endif %}
+  },
+
+  "category": {{ product.type | json }},
+
+  "additionalProperty": [
+    {% assign first = true %}
+
+    {% if product.metafields.custom.country != blank %}
+    {
+      "@type":"PropertyValue",
+      "name":"Country",
+      "value":{{ product.metafields.custom.country | json }}
+    }
+    {% assign first = false %}
+    {% endif %}
+
+    {% if product.metafields.custom.region != blank %}
+    {% unless first %},{% endunless %}
+    {
+      "@type":"PropertyValue",
+      "name":"Region",
+      "value":{{ product.metafields.custom.region | json }}
+    }
+    {% assign first = false %}
+    {% endif %}
+
+    {% if product.metafields.custom.sub_region != blank %}
+    {% unless first %},{% endunless %}
+    {
+      "@type":"PropertyValue",
+      "name":"Sub Region",
+      "value":{{ product.metafields.custom.sub_region | json }}
+    }
+    {% assign first = false %}
+    {% endif %}
+
+    {% if product.metafields.custom.appellation != blank %}
+    {% unless first %},{% endunless %}
+    {
+      "@type":"PropertyValue",
+      "name":"Appellation",
+      "value":{{ product.metafields.custom.appellation | json }}
+    }
+    {% assign first = false %}
+    {% endif %}
+
+    {% if product.metafields.custom.grapes != blank %}
+    {% unless first %},{% endunless %}
+    {
+      "@type":"PropertyValue",
+      "name":"Varietals",
+      "value":{{ product.metafields.custom.grapes | json }}
+    }
+    {% assign first = false %}
+    {% endif %}
+
+    {% if product.metafields.custom.flavor_profile != blank %}
+    {% unless first %},{% endunless %}
+    {
+      "@type":"PropertyValue",
+      "name":"Body & Style",
+      "value":{{ product.metafields.custom.flavor_profile | json }}
+    }
+    {% assign first = false %}
+    {% endif %}
+
+    {% if product.metafields.custom.farming_practices != blank %}
+    {% unless first %},{% endunless %}
+    {
+      "@type":"PropertyValue",
+      "name":"Farming Practices",
+      "value":{{ product.metafields.custom.farming_practices | json }}
+    }
+    {% assign first = false %}
+    {% endif %}
+
+    {% if product.metafields.custom.volume_of_the_product != blank %}
+    {% unless first %},{% endunless %}
+    {
+      "@type":"PropertyValue",
+      "name":"Bottle Size",
+      "value":{{ product.metafields.custom.volume_of_the_product | json }}
+    }
+    {% endif %}
+  ],
+
+  "offers": [
+    {% for variant in product.variants %}
+    {
+      "@type": "Offer",
+      {% if variant.sku != blank %}
+      "sku": {{ variant.sku | json }},
+      {% endif %}
+
+      {% if variant.barcode.size == 12 %}
+      "gtin12": "{{ variant.barcode }}",
+      {% endif %}
+      {% if variant.barcode.size == 13 %}
+      "gtin13": "{{ variant.barcode }}",
+      {% endif %}
+      {% if variant.barcode.size == 14 %}
+      "gtin14": "{{ variant.barcode }}",
+      {% endif %}
+
+      "availability": "https://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+      "price": {{ variant.price | divided_by: 100.00 | json }},
+      "priceCurrency": {{ cart.currency.iso_code | json }},
+      "url": {{ request.origin | append: variant.url | json }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
   </div>
 </section>
 
