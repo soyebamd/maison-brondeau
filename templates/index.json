@@ -15,8 +15,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "",
-            "heading_size": "h2"
+            "heading": "<strong>Wine Store in White Plains, NY</strong>",
+            "heading_size": "h0"
           }
         },
         "text_9WYtH7": {
@@ -50,7 +50,7 @@
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-6417b91d-cb41-4df6-a1bd-7cc59a6c1364",
+        "color_scheme": "scheme-5",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
