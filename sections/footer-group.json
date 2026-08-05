@@ -75,6 +75,13 @@
             "menu": "find-us"
           }
         },
+        "text_HzVXxe": {
+          "type": "text",
+          "settings": {
+            "heading": "Contact Us",
+            "subtext": "<h5>Address: 50 Main Street, Suite 165, White Plains, NY 10606, EE. UU.</h5><h5>Phone: (646) 843-1029</h5>"
+          }
+        },
         "checkbox_rgXVAz": {
           "type": "checkbox",
           "settings": {
@@ -87,6 +94,7 @@
         "link_list_JEMNzA",
         "image_KbeT86",
         "link_list_FzpRBY",
+        "text_HzVXxe",
         "checkbox_rgXVAz"
       ],
       "settings": {
