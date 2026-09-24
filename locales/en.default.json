@@ -521,12 +521,5 @@
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
     }
-  },
-  "shopify": {
-    "checkout": {
-      "shipping": {
-        "shipping_method_rollup_accessibility_label": "Shipping/Local Delivery"
-      }
-    }
   }
 }
