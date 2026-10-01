@@ -1,6 +1,100 @@
+{% doc %}
+  @prompt
+    Create a diagonal “SOLD OUT” ribbon overlay across product images for products Shopify marks as sold out, such as when tracked inventory reaches zero. Show it on product cards in collection listings and search results, keep the ribbon readable on desktop and mobile, and leave in-stock product images unchanged. Do not change inventory, product availability, or purchasing behavior.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-sold-out-ribbon-block-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    position: relative;
+  }
+  .ai-sold-out-ribbon-block-{{ ai_gen_id }}__stage {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .ai-sold-out-ribbon-block-{{ ai_gen_id }}__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .ai-sold-out-ribbon-block-{{ ai_gen_id }}__placeholder {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #ebeae9;
+  }
+  .ai-sold-out-ribbon-block-{{ ai_gen_id }}__placeholder svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ai-sold-out-ribbon-block-{{ ai_gen_id }}__empty {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    color: #121212;
+    font-size: 13px;
+    text-align: center;
+  }
+  .ai-sold-out-ribbon-block-{{ ai_gen_id }}__ribbon {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    padding: 10px 0;
+    transform: translate(-50%, -50%) rotate(-35deg);
+    background: {{ block.settings.ribbon_color }};
+    color: {{ block.settings.text_color }};
+    font-family: {{ block.settings.text_font.family }}, {{ block.settings.text_font.fallback_families }};
+    font-size: clamp(12px, {{ block.settings.text_size }}px, 24px);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+{% endstyle %}
+
+<div class="ai-sold-out-ribbon-block-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-sold-out-ribbon-block-{{ ai_gen_id }}__stage">
+    {% if block.settings.product != blank and block.settings.product.featured_image %}
+      <img class="ai-sold-out-ribbon-block-{{ ai_gen_id }}__image" src="{{ block.settings.product.featured_image | image_url: width: 1600 }}" alt="{{ block.settings.product.featured_image.alt | default: block.settings.product.title | escape }}" width="{{ block.settings.product.featured_image.width }}" height="{{ block.settings.product.featured_image.height }}" loading="lazy">
+      {% unless block.settings.product.available %}
+        <span class="ai-sold-out-ribbon-block-{{ ai_gen_id }}__ribbon" aria-label="Sold out">{{ block.settings.ribbon_text | escape }}</span>
+      {% endunless %}
+    {% else %}
+      <div class="ai-sold-out-ribbon-block-{{ ai_gen_id }}__placeholder">
+        {{ 'product-apparel-1' | placeholder_svg_tag }}
+        <span class="ai-sold-out-ribbon-block-{{ ai_gen_id }}__empty">Choose a product to preview its image and availability.</span>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Sold-out image ribbon",
+  "settings": [
+    { "type": "product", "id": "product", "label": "Product" },
+    { "type": "range", "id": "desktop_width_percent", "label": "Desktop width", "min": 50, "max": 100, "step": 5, "unit": "%", "default": 100 },
+    { "type": "text", "id": "ribbon_text", "label": "Ribbon text", "default": "Sold out" },
+    { "type": "font_picker", "id": "text_font", "label": "Ribbon font", "default": "assistant_n4" },
+    { "type": "range", "id": "text_size", "label": "Text size", "min": 12, "max": 24, "step": 2, "unit": "px", "default": 16 },
+    { "type": "color", "id": "ribbon_color", "label": "Ribbon background", "default": "#5D1619" },
+    { "type": "color", "id": "text_color", "label": "Ribbon text", "default": "#FFFFFF" }
+  ],
+  "presets": [{ "name": "Sold-out image ribbon" }],
+  "tag": null,
+  "class": "sold-out-image-ribbon"
+}
 {% endschema %}
