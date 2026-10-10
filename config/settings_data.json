@@ -192,6 +192,19 @@
           "gift_thumbnail_size": 60,
           "gift_thumbnail_position": "--wrapped-thumbnail-position-start"
         }
+      },
+      "1462470501251789457": {
+        "type": "shopify://apps/evey-events-tickets/blocks/evey/0ff19eb4-83c2-40c2-b780-a501fc99b6d8",
+        "disabled": false,
+        "settings": {
+          "wait_for_script": true,
+          "add_to_cart_selector": "",
+          "checkout_button_selector": "",
+          "variant_picker_selector": "",
+          "product_form_selector": "",
+          "price_container_selector": "",
+          "injection_point_selector": ""
+        }
       }
     },
     "color_schemes": {
