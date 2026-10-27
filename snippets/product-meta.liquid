@@ -123,11 +123,11 @@
 
 
 
-  {% if product.metafields.custom.farming_practices != blank %}
+  {% if product.metafields.custom.farming_practice != blank %}
     <li>
       <span><strong>Farming Practices:</strong></span>
-      <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.farming_practices={{ product.metafields.custom.farming_practices | url_encode }}" class="text-link">
-        <span>{{ product.metafields.custom.farming_practices }}</span>
+      <a href="/collections/all?sort_by=title-ascending&filter.p.m.custom.farming_practice={{ product.metafields.custom.farming_practice | url_encode }}" class="text-link">
+        <span>{{ product.metafields.custom.farming_practice }}</span>
       </a>
     </li>
   {% endif %}
