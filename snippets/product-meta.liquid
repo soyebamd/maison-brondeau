@@ -131,6 +131,13 @@
       </a>
     </li>
   {% endif %}
+  
+  {% assign practices = product.metafields.custom.farming_practice.value %}
+
+{% if practices != blank %}
+  {{ practices | join: ', ' | escape }}
+{% endif %}
+
 
   {% if product.metafields.custom.extras != blank %}
     <li>
