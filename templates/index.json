@@ -317,6 +317,7 @@
       "blocks": {
         "ai_gen_block_4cf61fd_QTKGwU": {
           "type": "ai_gen_block_4cf61fd",
+          "disabled": true,
           "settings": {
             "popup_image": "shopify://shop_images/2_6ce3aa09-998f-448a-818f-dd73d4596f88.png",
             "image_link": "shopify://products/free-blind-tasting",
