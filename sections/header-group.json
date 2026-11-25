@@ -35,6 +35,13 @@
             "link": "shopify://collections/new-arrivals"
           }
         },
+        "announcement_8q4YgH": {
+          "type": "announcement",
+          "settings": {
+            "text": "BLACK FRIDAY SALE - 11/27 - Applied at Checkout!",
+            "link": ""
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "disabled": true,
@@ -48,6 +55,7 @@
         "announcement_7pqx6D",
         "announcement_iCh9kn",
         "announcement_BHrY4B",
+        "announcement_8q4YgH",
         "announcement-bar-0"
       ],
       "settings": {
